@@ -62,7 +62,7 @@ function renderPage(o: PageOpts): string {
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <style>
   /* Tokens references/airbnb/DESIGN.md : canvas blanc, encre #222, Rausch #ff385c, Inter, cartes 14px, ombre signature */
-  :root{--p:#ff385c;--p-active:#e00b41;--ink:#222222;--body:#3f3f3f;--muted:#6a6a6a;--hairline:#dddddd;--surface:#f7f7f7}
+  :root{--p:#186749;--p-active:#1b4332;--ink:#222222;--body:#3f3f3f;--muted:#6a6a6a;--hairline:#dddddd;--surface:#f7f7f7}
   *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
   a{color:var(--ink)} .wrap{max-width:1000px;margin:0 auto;padding:0 16px}
   header{background:#fff;border-bottom:1px solid var(--hairline)} header .wrap{display:flex;align-items:center;gap:8px;height:64px;font-weight:700}
@@ -71,7 +71,7 @@ function renderPage(o: PageOpts): string {
   .card{background:#fff;border:1px solid var(--hairline);border-radius:14px;padding:16px;transition:box-shadow .2s}
   .card:hover{box-shadow:rgba(0,0,0,.02) 0 0 0 1px,rgba(0,0,0,.04) 0 2px 6px 0,rgba(0,0,0,.1) 0 4px 8px 0}
   .card .t{font-weight:600;display:block;margin-bottom:4px;color:var(--ink)} .muted{color:var(--muted);font-size:.9rem}
-  .badge{display:inline-block;font-size:.72rem;font-weight:600;background:rgba(255,56,92,.1);color:var(--p);border-radius:99px;padding:3px 9px;margin-bottom:6px}
+  .badge{display:inline-block;font-size:.72rem;font-weight:600;background:rgba(24,103,73,.1);color:var(--p);border-radius:99px;padding:3px 9px;margin-bottom:6px}
   .price{color:var(--ink);font-weight:700;margin-top:8px;display:block}
   nav.crumb{font-size:.85rem;color:var(--muted);margin:18px 0} nav.crumb a{text-decoration:none}
   .mesh{margin:28px 0} .mesh h2{font-size:1.1rem} .chips{display:flex;flex-wrap:wrap;gap:8px}

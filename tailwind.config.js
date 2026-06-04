@@ -5,9 +5,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#ff385c", // Rausch — accent unique (CTA, orbe de recherche)
-        "primary-active": "#e00b41",
-        accent: "#ff385c",
+        primary: "#186749", // vert Naturo — accent unique (CTA, orbe de recherche)
+        "primary-active": "#1b4332", // vert foncé (hover/press)
+        accent: "#186749",
         dark: "#222222", // ink — texte/titres (jamais noir pur)
         ink: "#222222",
         body: "#3f3f3f",
