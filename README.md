@@ -21,27 +21,24 @@ npm run ingest      # télécharge + normalise + upsert le pôle (~3 200 lignes 
 npm run db:stats    # stats de la base
 ```
 
-## État (Lot 1 ✅)
+## État (Lot 1 ✅ · Lot 2 ✅)
 
-Pipeline d'ingestion opérationnel :
-- **~2 084 formations** / **577 organismes** / **16 catégories** (métiers Formacode).
+- **~2 084 formations** / **577 organismes** / **16 catégories** / **2 931 couples formation×département**.
 - Clés propres : `siret` (organismes), `numero_formation` (formations).
-- Catégories dérivées du Formacode principal (slug SEO-ready).
+- Grain géo réel via `formation_departements` (multiplicité préservée → pages métier×dept).
+- Recherche **FTS5** (unicode, sans accents) + facettes catégories/départements.
+- API publique Express (`npm run dev`) :
+  - `GET /api/public/formations?q=&categorie=&dept=&distance=&prixMax=&page=&pageSize=`
+  - `GET /api/public/formations/:numero`
+  - `GET /api/public/organismes/:siret`
+  - `GET /api/public/categories` · `GET /api/public/departements`
 
-## ⚠️ Réserve de modélisation à traiter en Lot 2 (grain géographique)
-
-Le dataset a un grain **(formation × département)** : 3 252 lignes brutes → 2 084 formations distinctes.
-Une même formation est proposée dans plusieurs départements. Le modèle actuel garde **un seul
-département par formation** (collision sur `numero_formation`), ce qui **perd la multiplicité géo**.
-
-➡️ **Lot 2, tâche n°1** : table `formation_departements (numero_formation, code_departement, departement)`
-pour alimenter les pages SEO **métier × département** (le cœur de l'angle local). La géo *ville* viendra
-via enrichissement SIRENE (Lot post-MVP).
+> Géo *ville* (enrichissement SIRENE) = Lot post-MVP. Le delta au-delà de l'offset 10 000 (export) = L6.
 
 ## Feuille de route (lots)
 
 - **L1** ✅ Scaffold + schéma + ingestion du pôle.
-- **L2** Grain géo (formation_departements) + recherche FTS5 + facettes + endpoints `/api/public`.
+- **L2** ✅ Grain géo (formation_departements) + recherche FTS5 + facettes + endpoints `/api/public`.
 - **L3** Front (accueil, résultats, fiche formation, fiche organisme).
 - **L4** Lead form + consentement RGPD + routing Voie B + back-office.
 - **L5** Pages SEO programmatiques métier × département + sitemap + JSON-LD.

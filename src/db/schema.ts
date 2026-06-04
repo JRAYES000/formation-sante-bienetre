@@ -52,6 +52,15 @@ export const formations = sqliteTable("formations", {
   updatedAt: text("updated_at").notNull(),
 });
 
+// Disponibilité géographique d'une formation (grain réel du dataset : formation × département).
+// Une formation peut être proposée dans plusieurs départements → 1 ligne par couple.
+export const formationDepartements = sqliteTable("formation_departements", {
+  numeroFormation: text("numero_formation").notNull().references(() => formations.numeroFormation),
+  codeDepartement: text("code_departement").notNull(),
+  departement: text("departement"),
+  region: text("region"),
+});
+
 // Partenaires Voie B (organismes qui reçoivent les leads captifs — École Naturo au départ)
 export const partenaires = sqliteTable("partenaires", {
   id: integer("id").primaryKey({ autoIncrement: true }),

@@ -87,9 +87,28 @@ export function ensureSchema(): void {
       created_at TEXT NOT NULL
     );
 
+    CREATE TABLE IF NOT EXISTS formation_departements (
+      numero_formation TEXT NOT NULL REFERENCES formations(numero_formation),
+      code_departement TEXT NOT NULL,
+      departement TEXT,
+      region TEXT,
+      PRIMARY KEY (numero_formation, code_departement)
+    );
+
     CREATE INDEX IF NOT EXISTS idx_formations_categorie ON formations(categorie_id);
     CREATE INDEX IF NOT EXISTS idx_formations_dept ON formations(code_departement);
     CREATE INDEX IF NOT EXISTS idx_formations_siret ON formations(siret);
     CREATE INDEX IF NOT EXISTS idx_formations_active ON formations(is_active);
+    CREATE INDEX IF NOT EXISTS idx_fd_dept ON formation_departements(code_departement);
+    CREATE INDEX IF NOT EXISTS idx_fd_num ON formation_departements(numero_formation);
+
+    -- Recherche plein-texte (FTS5) sur les formations. Reconstruite à chaque ingestion.
+    CREATE VIRTUAL TABLE IF NOT EXISTS formations_fts USING fts5(
+      numero_formation UNINDEXED,
+      intitule,
+      certification,
+      organisme,
+      tokenize = 'unicode61 remove_diacritics 2'
+    );
   `);
 }

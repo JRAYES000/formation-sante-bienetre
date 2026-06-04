@@ -1,8 +1,8 @@
 // Lot 1 — pipeline d'ingestion : fetch pôle → normalise → upsert.
 // Lancer : npm run ingest
 import { sql } from "drizzle-orm";
-import { db, ensureSchema } from "../db/index.ts";
-import { organismes, formations, categories } from "../db/schema.ts";
+import { db, sqlite, ensureSchema } from "../db/index.ts";
+import { organismes, formations, categories, formationDepartements } from "../db/schema.ts";
 import { fetchPole, type OdsRecord } from "./fetch-pole.ts";
 
 function slugify(s: string): string {
@@ -134,16 +134,49 @@ async function main() {
     }
   });
 
+  // 3b) Grain géo réel : disponibilité par département (1 ligne par couple formation×dept)
+  const fdSeen = new Set<string>();
+  sqlite.exec("DELETE FROM formation_departements");
+  db.transaction((tx) => {
+    for (const r of records) {
+      const code = clean(r.code_departement);
+      if (!r.numero_formation || !code) continue;
+      const key = `${r.numero_formation}|${code}`;
+      if (fdSeen.has(key)) continue;
+      fdSeen.add(key);
+      tx.insert(formationDepartements)
+        .values({
+          numeroFormation: r.numero_formation,
+          codeDepartement: code,
+          departement: clean(r.nom_departement),
+          region: clean(r.nom_region),
+        })
+        .onConflictDoNothing()
+        .run();
+    }
+  });
+
+  // 3c) Reconstruction de l'index plein-texte FTS5
+  sqlite.exec("DELETE FROM formations_fts");
+  sqlite.exec(`
+    INSERT INTO formations_fts (numero_formation, intitule, certification, organisme)
+    SELECT f.numero_formation, f.intitule, COALESCE(f.intitule_certification, ''), o.nom
+    FROM formations f JOIN organismes o ON o.siret = f.siret
+    WHERE f.is_active = 1
+  `);
+
   // 4) Résumé
   const cF = db.select({ n: sql<number>`count(*)` }).from(formations).get();
   const cO = db.select({ n: sql<number>`count(*)` }).from(organismes).get();
   const cC = db.select({ n: sql<number>`count(*)` }).from(categories).get();
   const cD = db.select({ n: sql<number>`count(*)` }).from(formations).where(sql`a_distance = 1`).get();
+  const cFD = db.select({ n: sql<number>`count(*)` }).from(formationDepartements).get();
 
   console.log("\n──────── INGESTION TERMINÉE ────────");
   console.log(`Formations  : ${cF?.n}`);
   console.log(`Organismes  : ${cO?.n}`);
   console.log(`Catégories  : ${cC?.n}`);
+  console.log(`Couples formation×dept : ${cFD?.n}`);
   console.log(`Dont à distance : ${cD?.n}`);
   console.log(`Traitées    : ${inserted} en ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }

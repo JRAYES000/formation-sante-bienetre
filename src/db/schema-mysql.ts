@@ -49,6 +49,13 @@ export const formations = mysqlTable("formations", {
   updatedAt: varchar("updated_at", { length: 32 }).notNull(),
 });
 
+export const formationDepartements = mysqlTable("formation_departements", {
+  numeroFormation: varchar("numero_formation", { length: 128 }).notNull(),
+  codeDepartement: varchar("code_departement", { length: 8 }).notNull(),
+  departement: varchar("departement", { length: 128 }),
+  region: varchar("region", { length: 128 }),
+});
+
 export const partenaires = mysqlTable("partenaires", {
   id: int("id").primaryKey().autoincrement(),
   nom: varchar("nom", { length: 256 }).notNull(),
