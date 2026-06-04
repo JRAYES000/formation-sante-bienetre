@@ -1,0 +1,60 @@
+{
+  "slug": "manucurie",
+  "metier": "Prothésiste ongulaire / Manucure",
+  "titre": "Prothésiste ongulaire / Manucure : métier, formations et débouchés en France (2026)",
+  "metaDescription": "Découvrez le métier de prothésiste ongulaire et manucure en France : missions, salaires indicatifs, formations CPF reconnues et perspectives d'évolution en 2026.",
+  "intro": "La prothésiste ongulaire et la manucure prennent soin des mains et des pieds en proposant soins esthétiques, pose d'ongles en gel ou en résine, nail art et modelage. Ce métier alliant technique et sens artistique se pratique en institut, en bar à ongles ou à son propre compte. La demande est soutenue et les possibilités d'installation en indépendant sont réelles dès l'obtention d'une certification reconnue.",
+  "missions": [
+    "Réaliser des manucures et pédicures esthétiques (limage, cuticules, soins de la plaque)",
+    "Poser des ongles en gel, résine acrylique ou polygel (capsules, prolongations, baby-boomer…)",
+    "Créer des nail arts (dégradés, stamping, chromes, décors en relief)",
+    "Conseiller la clientèle sur l'entretien des ongles naturels et les produits adaptés",
+    "Assurer la désinfection et la stérilisation du matériel dans le respect des règles d'hygiène",
+    "Gérer les rendez-vous, accueillir et fidéliser la clientèle",
+    "Suivre les tendances et se former en continu aux nouvelles techniques"
+  ],
+  "competences": [
+    "Maîtrise des techniques de pose (gel, acrylique, polygel) et des étapes de préparation",
+    "Précision gestuelle et sens artistique développé",
+    "Connaissance des règles d'hygiène, de désinfection et de biosécurité",
+    "Capacité à conseiller et à personnaliser les prestations selon le type d'ongles",
+    "Aisance relationnelle et sens du service client",
+    "Gestion du temps et organisation de l'espace de travail"
+  ],
+  "debouches": [
+    "Salarié(e) en institut de beauté ou spa",
+    "Salarié(e) en bar à ongles (nail bar) en centre commercial ou centre-ville",
+    "Intervenant(e) en salon de coiffure proposant des soins beauté mains",
+    "Prothésiste ongulaire à domicile (auto-entrepreneur)",
+    "Gérant(e) de son propre bar à ongles ou nail studio",
+    "Formateur/formatrice en école esthétique ou centre de formation",
+    "Technicien(ne) beauté en croisière, hôtellerie de luxe ou resort"
+  ],
+  "salaire": {
+    "debutant": "1 500 – 1 700 € brut/mois",
+    "confirme": "1 900 – 2 500 € brut/mois",
+    "note": "Indicatif, variable selon statut (salarié ou indépendant), région et expérience. Un indépendant bien établi peut dépasser ces niveaux selon sa clientèle et ses tarifs."
+  },
+  "evolution": [
+    "Responsable ou gérante d'un bar à ongles ou d'un salon esthétique",
+    "Lancement de son propre studio à domicile ou en local dédié",
+    "Spécialisation nail art (compétitions, démonstrations, réseaux sociaux)",
+    "Formation à d'autres disciplines esthétiques (soins du visage, épilation, maquillage)",
+    "Activité de formation professionnelle continue en prothésie ongulaire"
+  ],
+  "formationConseil": "Il n'existe pas de CAP spécifique à la prothésie ongulaire en France : la voie académique la plus solide reste le CAP Esthétique Cosmétique Parfumerie, qui couvre les soins des mains et constitue un socle reconnu. Pour se spécialiser, il est fortement conseillé d'obtenir une certification professionnelle inscrite au RNCP ou au Répertoire Spécifique (RS), telles que les titres RS portant sur la prothésie ongulaire délivrés par des organismes certificateurs agréés. Ces certifications RS sont éligibles au Compte Personnel de Formation (CPF), ce qui permet de financer tout ou partie de la formation. Les formations durent généralement de quelques jours à plusieurs semaines selon le niveau et l'organisme. Vérifier systématiquement l'éligibilité CPF sur moncompteformation.gouv.fr avant de s'inscrire.",
+  "faq": [
+    {
+      "q": "Faut-il un diplôme obligatoire pour exercer comme prothésiste ongulaire en France ?",
+      "a": "Aucun diplôme n'est légalement obligatoire pour réaliser des poses d'ongles à titre commercial, mais disposer d'une certification reconnue (CAP Esthétique ou titre RS inscrit au RNCP/RS) renforce la crédibilité auprès de la clientèle, facilite l'accès à certains locaux professionnels et peut être exigée par des employeurs. Pour s'installer en auto-entrepreneur, une formation sérieuse reste fortement recommandée pour maîtriser les règles d'hygiène et limiter les risques sanitaires."
+    },
+    {
+      "q": "Les formations en prothésie ongulaire sont-elles finançables par le CPF ?",
+      "a": "Certaines formations en prothésie ongulaire sont éligibles au CPF, notamment celles adossées à une certification inscrite au Répertoire Spécifique (RS) ou au RNCP. Pour vérifier l'éligibilité d'une formation et consulter son solde CPF, il faut se connecter sur moncompteformation.gouv.fr. Attention : une formation non certifiante ou non référencée n'est pas finançable par le CPF."
+    },
+    {
+      "q": "Quel est le salaire moyen d'une prothésiste ongulaire en France ?",
+      "a": "À titre indicatif, une prothésiste ongulaire débutante salariée perçoit généralement entre 1 500 et 1 700 € brut par mois. Avec de l'expérience et selon la région, ce montant peut atteindre 1 900 à 2 500 € brut. En tant qu'indépendante (auto-entrepreneur ou gérante de salon), les revenus varient fortement en fonction de la clientèle, des tarifs pratiqués et des charges. Ces chiffres sont indicatifs et ne constituent pas une garantie de rémunération."
+    }
+  ]
+}

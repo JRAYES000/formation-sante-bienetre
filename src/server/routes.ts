@@ -15,6 +15,10 @@ import {
   listPartenaires,
   getPartenaireById,
   getFormationIntitule,
+  createAvis,
+  avisForOrganisme,
+  listAvisAdmin,
+  moderateAvis,
 } from "./storage.ts";
 import { sendLeadNotification } from "./mailer.ts";
 
@@ -60,12 +64,32 @@ publicRouter.get("/categories", (_req, res) => res.json(listCategories()));
 publicRouter.get("/departements", (_req, res) => res.json(listDepartements()));
 publicRouter.get("/stats", (_req, res) => res.json(globalStats()));
 
+// Avis organismes (modérés avant publication)
+publicRouter.get("/organismes/:siret/avis", (req, res) => res.json(avisForOrganisme(req.params.siret)));
+const avisSchema = z.object({
+  siret: z.string().trim().min(9).max(20),
+  note: z.coerce.number().int().min(1).max(5),
+  auteur: z.string().trim().max(80).optional(),
+  commentaire: z.string().trim().max(1000).optional(),
+});
+publicRouter.post("/avis", (req, res) => {
+  const parsed = avisSchema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: "Avis invalide" });
+  const id = createAvis(parsed.data);
+  res.status(201).json({ ok: true, id });
+});
+
 // Lead capture (Voie B). Le consentement RGPD doit être explicitement true.
 const leadSchema = z.object({
   numeroFormation: z.string().trim().max(128).optional(),
   nom: z.string().trim().min(2).max(120),
   email: z.string().trim().email().max(160),
   tel: z.string().trim().max(30).optional(),
+  // Champs de qualification (améliorent la valeur du lead en Voie B)
+  budget: z.string().trim().max(60).optional(),
+  delai: z.string().trim().max(60).optional(),
+  financement: z.string().trim().max(60).optional(),
+  niveau: z.string().trim().max(60).optional(),
   consentement: z.literal(true, {
     errorMap: () => ({ message: "Le consentement RGPD est requis." }),
   }),
@@ -74,8 +98,13 @@ const leadSchema = z.object({
 publicRouter.post("/leads", (req, res) => {
   const parsed = leadSchema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: "Formulaire invalide", details: parsed.error.flatten() });
-  const { consentement, ...lead } = parsed.data;
-  const created = createLead(lead);
+  const { consentement, budget, delai, financement, niveau, ...lead } = parsed.data;
+  const qualification: Record<string, string> = {};
+  if (budget) qualification.budget = budget;
+  if (delai) qualification.delai = delai;
+  if (financement) qualification.financement = financement;
+  if (niveau) qualification.niveau = niveau;
+  const created = createLead({ ...lead, qualification: Object.keys(qualification).length ? qualification : undefined });
 
   // Notification Voie B au partenaire (non bloquant)
   if (created.partenaireId) {
@@ -88,6 +117,7 @@ publicRouter.post("/leads", (req, res) => {
         email: lead.email,
         tel: lead.tel,
         formationTitre: lead.numeroFormation ? getFormationIntitule(lead.numeroFormation) : null,
+        qualification: Object.keys(qualification).length ? qualification : undefined,
       });
     }
   }
@@ -116,5 +146,15 @@ adminRouter.patch("/leads/:id", (req, res) => {
   if (!parsed.success) return res.status(400).json({ error: "Statut invalide" });
   const changed = updateLeadStatut(Number(req.params.id), parsed.data.statut);
   if (!changed) return res.status(404).json({ error: "Lead introuvable" });
+  res.json({ ok: true });
+});
+
+adminRouter.get("/avis", (_req, res) => res.json(listAvisAdmin()));
+const avisModSchema = z.object({ statut: z.enum(["publie", "rejete"]) });
+adminRouter.patch("/avis/:id", (req, res) => {
+  const parsed = avisModSchema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: "Statut invalide" });
+  const changed = moderateAvis(Number(req.params.id), parsed.data.statut);
+  if (!changed) return res.status(404).json({ error: "Avis introuvable" });
   res.json({ ok: true });
 });

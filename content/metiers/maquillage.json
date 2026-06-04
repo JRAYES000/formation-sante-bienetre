@@ -1,0 +1,60 @@
+{
+  "slug": "maquillage",
+  "metier": "Maquilleur(se) professionnel(le)",
+  "titre": "Maquilleur(se) professionnel(le) : métier, formations et débouchés en France (2026)",
+  "metaDescription": "Découvrez le métier de maquilleur(se) professionnel(le) en France : missions, compétences, salaires indicatifs, débouchés et formations CPF pour vous lancer.",
+  "intro": "Le maquilleur ou la maquilleuse professionnel(le) met en valeur le visage et le corps de ses clients en utilisant des techniques et des produits adaptés à chaque situation — mariage, défilé, tournage ou soin en institut. Ce métier créatif et précis s'exerce dans des environnements très variés, du plateau de cinéma au salon de beauté, et peut aussi bien relever du salariat que d'une activité indépendante. Il allie savoir-faire technique, sens artistique et écoute du client pour produire un résultat fidèle aux attentes.",
+  "missions": [
+    "Analyser la morphologie et le teint du client afin de définir le maquillage le plus adapté",
+    "Préparer la peau (nettoyage, hydratation, base de teint) avant toute application",
+    "Réaliser des maquillages de jour, de soirée, de mariée ou de scène selon la demande",
+    "Appliquer des techniques spécifiques : maquillage de plateau, maquillage de caractère, maquillage semi-permanent ou airbrush",
+    "Conseiller le client sur les produits, les soins et les tendances beauté",
+    "Gérer et entretenir le matériel et les produits (hygène, réassort, contrôle des dates de péremption)",
+    "Assurer le suivi et les retouches lors de longs événements (mariage, tournage, défilé)"
+  ],
+  "competences": [
+    "Maîtrise des techniques d'application (fond de teint, contouring, smoky eye, lèvres, maquillage artistique)",
+    "Connaissance des produits cosmétiques, de leur composition et de leurs interactions avec les types de peau",
+    "Sens artistique, créativité et capacité à s'adapter aux tendances actuelles",
+    "Qualités relationnelles : écoute, bienveillance, capacité à rassurer et à conseiller",
+    "Rigueur en matière d'hygiène et de sécurité (matériel stérile, allergènes, réactions cutanées)",
+    "Organisation et gestion du temps, notamment lors d'événements à contraintes horaires strictes"
+  ],
+  "debouches": [
+    "Institut de beauté et salon de maquillage (employé ou gérant)",
+    "Maquilleur(se) de mariée ou prestataire événementiel (soirées, galas, comités d'entreprise)",
+    "Maquilleur(se) de plateau : cinéma, séries télévisées, publicités et clips musicaux",
+    "Secteur de la mode : défilés, shootings photo, mannequinat",
+    "Auto-entrepreneur et maquilleuse à domicile",
+    "Conseil beauté en boutique ou en grande surface spécialisée (retail beauté)",
+    "Formation et transmission : formateur(trice) en école de beauté ou CAP esthétique"
+  ],
+  "salaire": {
+    "debutant": "1 500 – 1 700 € brut/mois",
+    "confirme": "2 000 – 2 800 € brut/mois",
+    "note": "Indicatif, variable selon statut (salarié, auto-entrepreneur, intermittent du spectacle), région, spécialité (plateau, mariage, retail) et expérience. Les maquilleurs plateau peuvent facturer à la journée ou bénéficier du statut d'intermittent du spectacle."
+  },
+  "evolution": [
+    "Chef maquilleur(se) sur des productions cinématographiques ou télévisuelles de grande envergure",
+    "Ouverture d'un studio ou salon de maquillage en propre",
+    "Spécialisation en maquillage de caractère ou effets spéciaux (prothèses, vieillissement, blessures simulées)",
+    "Direction artistique beauté pour des campagnes publicitaires ou éditoriaux mode",
+    "Formation et pédagogie : devenir formateur(trice) agréé(e) en école professionnelle"
+  ],
+  "formationConseil": "Le CAP Esthétique Cosmétique Parfumerie constitue le socle de référence pour entrer dans le secteur et est accessible en alternance dès 15 ans ou en formation continue. Des certifications professionnelles enregistrées au Répertoire Spécifique (RS) — comme les RS « Techniques de maquillage » ou « Maquillage artistique » — permettent une spécialisation reconnue par l'État et sont finançables via le Compte Personnel de Formation (CPF). Des formations courtes proposées par des organismes privés ou des marques peuvent compléter le parcours mais nécessitent de vérifier leur éligibilité CPF sur Mon Compte Formation. Le Brevet Professionnel (BP) Esthétique ou un BTS Métiers de l'Esthétique ouvrent des perspectives d'encadrement et de création d'entreprise.",
+  "faq": [
+    {
+      "q": "Faut-il obligatoirement un diplôme pour exercer comme maquilleur(se) professionnel(le) ?",
+      "a": "Aucun diplôme n'est légalement obligatoire pour exercer comme maquilleur(se) indépendant(e) dans les secteurs événementiel ou artistique. Cependant, le CAP Esthétique est requis pour ouvrir ou gérer un établissement pratiquant des soins esthétiques, et il constitue un atout fort pour la crédibilité professionnelle et l'accès à certains postes salariés. Des certifications RS reconnues et finançables CPF permettent de valoriser ses compétences sans passer par un diplôme complet."
+    },
+    {
+      "q": "Les formations de maquillage sont-elles finançables via le CPF ?",
+      "a": "Oui, à condition que la formation soit enregistrée au Répertoire National des Certifications Professionnelles (RNCP) ou au Répertoire Spécifique (RS). Certaines certifications « techniques de maquillage » y figurent et sont mobilisables depuis Mon Compte Formation (moncompteformation.gouv.fr). Les formations proposées par des marques ou des organismes privés non certifiés ne sont en revanche pas éligibles au CPF. Vérifiez systématiquement le numéro RNCP ou RS avant tout engagement."
+    },
+    {
+      "q": "Quel statut choisir pour exercer en indépendant(e) ?",
+      "a": "La micro-entreprise (auto-entrepreneur) est le statut le plus couramment adopté pour démarrer, grâce à sa simplicité administrative et à ses charges proportionnelles au chiffre d'affaires. Pour les activités liées au spectacle vivant ou au cinéma, le statut d'intermittent du spectacle (sous conditions de cachets) peut être plus avantageux. Une consultation avec un expert-comptable ou un centre de formalités des entreprises (CFE) permet de choisir le statut le mieux adapté à sa situation."
+    }
+  ]
+}

@@ -306,6 +306,7 @@ export interface LeadInput {
   nom: string;
   email: string;
   tel?: string;
+  qualification?: Record<string, string>; // budget, delai, financement, niveau
 }
 
 // Routage Voie B : choisit le partenaire (École Naturo par défaut = catch-all priorité haute).
@@ -336,8 +337,8 @@ export function createLead(input: LeadInput): { id: number; partenaireId: number
   const res = sqlite
     .prepare(
       `INSERT INTO leads
-        (numero_formation, nom, email, tel, consentement_rgpd, consentement_at, statut, partenaire_id, created_at)
-       VALUES (@numeroFormation, @nom, @email, @tel, 1, @now, 'nouveau', @partenaireId, @now)`
+        (numero_formation, nom, email, tel, consentement_rgpd, consentement_at, statut, partenaire_id, qualification, created_at)
+       VALUES (@numeroFormation, @nom, @email, @tel, 1, @now, 'nouveau', @partenaireId, @qualification, @now)`
     )
     .run({
       numeroFormation: input.numeroFormation ?? null,
@@ -346,6 +347,7 @@ export function createLead(input: LeadInput): { id: number; partenaireId: number
       tel: input.tel ?? null,
       now,
       partenaireId,
+      qualification: input.qualification ? JSON.stringify(input.qualification) : null,
     });
   return { id: Number(res.lastInsertRowid), partenaireId };
 }
@@ -353,7 +355,7 @@ export function createLead(input: LeadInput): { id: number; partenaireId: number
 export function listLeads() {
   return sqlite
     .prepare(
-      `SELECT l.id, l.nom, l.email, l.tel, l.statut, l.created_at,
+      `SELECT l.id, l.nom, l.email, l.tel, l.statut, l.created_at, l.qualification,
               l.numero_formation, f.intitule AS formation,
               p.nom AS partenaire
        FROM leads l
@@ -370,6 +372,42 @@ export function updateLeadStatut(id: number, statut: string): number {
 
 export function listPartenaires() {
   return sqlite.prepare(`SELECT * FROM partenaires ORDER BY priorite DESC, id ASC`).all();
+}
+
+// ─────────────── Avis organismes ───────────────
+
+export function createAvis(input: { siret: string; note: number; auteur?: string; commentaire?: string }): number {
+  const res = sqlite
+    .prepare(
+      `INSERT INTO avis (siret, note, auteur, commentaire, statut, created_at)
+       VALUES (@siret, @note, @auteur, @commentaire, 'en_attente', @now)`
+    )
+    .run({
+      siret: input.siret,
+      note: Math.max(1, Math.min(5, Math.round(input.note))),
+      auteur: input.auteur ?? null,
+      commentaire: input.commentaire ?? null,
+      now: new Date().toISOString(),
+    });
+  return Number(res.lastInsertRowid);
+}
+
+export function avisForOrganisme(siret: string) {
+  const items = sqlite
+    .prepare(`SELECT id, note, auteur, commentaire, created_at FROM avis WHERE siret = @siret AND statut = 'publie' ORDER BY created_at DESC LIMIT 50`)
+    .all({ siret });
+  const agg = sqlite
+    .prepare(`SELECT count(*) n, avg(note) moy FROM avis WHERE siret = @siret AND statut = 'publie'`)
+    .get({ siret }) as { n: number; moy: number | null };
+  return { note: agg.moy ? Math.round(agg.moy * 10) / 10 : null, count: agg.n, items };
+}
+
+export function listAvisAdmin() {
+  return sqlite.prepare(`SELECT * FROM avis ORDER BY (statut = 'en_attente') DESC, created_at DESC LIMIT 500`).all();
+}
+
+export function moderateAvis(id: number, statut: "publie" | "rejete"): number {
+  return sqlite.prepare(`UPDATE avis SET statut = @statut WHERE id = @id`).run({ id, statut }).changes;
 }
 
 export function getPartenaireById(id: number) {

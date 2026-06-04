@@ -11,6 +11,16 @@ interface Lead {
   created_at: string;
   formation?: string | null;
   partenaire?: string | null;
+  qualification?: string | null;
+}
+
+function qualifSummary(raw?: string | null): string {
+  if (!raw) return "";
+  try {
+    return Object.values(JSON.parse(raw) as Record<string, string>).filter(Boolean).join(" · ");
+  } catch {
+    return "";
+  }
 }
 
 const STATUTS = ["nouveau", "contacte", "converti", "perdu"];
@@ -47,7 +57,12 @@ export default function Admin() {
     );
   }
 
-  return <LeadsTable token={token} onLogout={() => setEntered(false)} />;
+  return (
+    <>
+      <LeadsTable token={token} onLogout={() => setEntered(false)} />
+      <AvisModeration token={token} />
+    </>
+  );
 }
 
 function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }) {
@@ -107,6 +122,9 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
                     <div className="font-medium text-dark">{l.nom}</div>
                     <div className="text-gray-500">{l.email}</div>
                     {l.tel && <div className="text-gray-400">{l.tel}</div>}
+                    {qualifSummary(l.qualification) && (
+                      <div className="text-xs text-primary mt-1">{qualifSummary(l.qualification)}</div>
+                    )}
                   </td>
                   <td className="px-3 py-2 text-gray-600">{l.formation ?? "—"}</td>
                   <td className="px-3 py-2 text-gray-600">{l.partenaire ?? "—"}</td>
@@ -130,6 +148,62 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
           </table>
         </div>
       )}
+    </div>
+  );
+}
+
+interface AvisRow {
+  id: number;
+  siret: string;
+  note: number;
+  auteur?: string | null;
+  commentaire?: string | null;
+  statut: string;
+  created_at: string;
+}
+
+function AvisModeration({ token }: { token: string }) {
+  const qc = useQueryClient();
+  const auth = { headers: { Authorization: `Bearer ${token}` } };
+  const { data: avis } = useQuery<AvisRow[]>({
+    queryKey: ["admin-avis"],
+    queryFn: () => apiRequest("/api/admin/avis", auth),
+    retry: false,
+  });
+  const mod = useMutation({
+    mutationFn: ({ id, statut }: { id: number; statut: string }) =>
+      apiRequest(`/api/admin/avis/${id}`, { method: "PATCH", ...auth, body: JSON.stringify({ statut }) }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["admin-avis"] }),
+  });
+  if (!avis || avis.length === 0) return null;
+  const stars = (n: number) => "★".repeat(n) + "☆".repeat(5 - n);
+  return (
+    <div className="max-w-6xl mx-auto px-4 pb-12">
+      <h2 className="font-bold text-xl text-dark mb-4">Avis ({avis.length})</h2>
+      <div className="card-naturo divide-y divide-gray-100">
+        {avis.map((a) => (
+          <div key={a.id} className="p-4 flex items-start justify-between gap-4" data-testid={`row-avis-${a.id}`}>
+            <div>
+              <div className="text-primary text-sm">
+                {stars(a.note)} <span className="text-xs text-gray-400">· {a.statut}</span>
+              </div>
+              {a.auteur && <div className="text-sm font-medium text-dark">{a.auteur}</div>}
+              {a.commentaire && <p className="text-sm text-gray-600">{a.commentaire}</p>}
+              <div className="text-xs text-gray-400 mt-1">SIRET {a.siret} · {a.created_at?.slice(0, 10)}</div>
+            </div>
+            {a.statut === "en_attente" && (
+              <div className="flex gap-2 shrink-0">
+                <button onClick={() => mod.mutate({ id: a.id, statut: "publie" })} className="btn-primary !py-1.5 !px-3 text-xs" data-testid={`button-avis-publier-${a.id}`}>
+                  Publier
+                </button>
+                <button onClick={() => mod.mutate({ id: a.id, statut: "rejete" })} className="text-xs text-gray-500 hover:text-red-600 border border-gray-200 rounded px-3">
+                  Rejeter
+                </button>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,62 @@
+{
+  "slug": "massage-bien-etre",
+  "metier": "Praticien(ne) en massage bien-être",
+  "titre": "Praticien(ne) en massage bien-être : métier, formations et débouchés en France (2026)",
+  "metaDescription": "Découvrez le métier de praticien(ne) en massage bien-être en France : missions, compétences, salaires indicatifs, formations CPF et débouchés professionnels.",
+  "intro": "Le praticien ou la praticienne en massage bien-être propose des séances de massage à visée relaxante et de confort, sans aucun objectif thérapeutique ni médical. Ce professionnel intervient dans des lieux dédiés au bien-être (spas, instituts, centres de relaxation) ou en tant qu'indépendant, pour aider ses clients à réduire le stress, améliorer leur confort corporel et favoriser la détente. Il s'agit d'un métier réglementé par le cadre légal français : le massage bien-être est strictement distinct de la kinésithérapie et de tout acte de soin médical.",
+  "missions": [
+    "Accueillir et écouter le client pour identifier ses attentes en matière de relaxation et de confort (sans recueillir d'anamnèse médicale)",
+    "Réaliser des massages bien-être (suédois, californien, thaï, pierres chaudes, etc.) dans le respect du cadre non médical et non thérapeutique",
+    "Adapter les techniques de massage aux besoins de détente du client (pression, rythme, zones de travail)",
+    "Préparer et entretenir l'espace de soin : table de massage, draps, huiles végétales, ambiance sensorielle",
+    "Informer le client sur le déroulement de la séance, les contre-indications absolues (grossesse à risque, plaies, fièvre, etc.) et orienter vers un professionnel de santé si nécessaire",
+    "Gérer la relation client, la prise de rendez-vous et la facturation dans le cadre d'une activité indépendante ou salariée",
+    "Respecter scrupuleusement les règles d'hygiène, de déontologie et le cadre légal du massage bien-être en France"
+  ],
+  "competences": [
+    "Maîtrise des principales techniques de massage bien-être (effleurage, pétrissage, pressions, étirements doux) sans visée médicale",
+    "Connaissance de l'anatomie et de la physiologie de base, utile pour adapter les manœuvres et repérer les contre-indications absolues",
+    "Sens de l'écoute, bienveillance et discrétion pour instaurer un cadre de confiance et de sécurité",
+    "Rigueur en matière d'hygiène (entretien du matériel, protocoles de désinfection, utilisation d'huiles adaptées)",
+    "Capacité à gérer une activité indépendante : prospection, communication, gestion administrative et comptable de base",
+    "Connaissance du cadre légal français du massage bien-être et aptitude à orienter le client vers un professionnel de santé si nécessaire"
+  ],
+  "debouches": [
+    "Spa et thalassothérapie (hôtels, centres de cure, balnéothérapie)",
+    "Institut de beauté proposant des soins corps",
+    "Centre de bien-être, de relaxation ou de méditation",
+    "Espace bien-être en entreprise (programmes QVT)",
+    "Activité indépendante à domicile (praticien itinérant)",
+    "Cabinet libéral ou location de salle à la séance",
+    "Résidence pour seniors ou structures d'accompagnement (sans acte paramédical)",
+    "Boutique ou concept-store bien-être"
+  ],
+  "salaire": {
+    "debutant": "1 600 – 1 900 € brut/mois (salarié, équivalent temps plein)",
+    "confirme": "2 200 – 3 000 € brut/mois (salarié expérimenté ou indépendant avec clientèle établie)",
+    "note": "Indicatif, variable selon statut (salarié/indépendant), région, type d'établissement et ancienneté. Un praticien indépendant peut atteindre des revenus plus élevés selon son volume de clientèle, mais supporte également les charges sociales et les frais professionnels."
+  },
+  "evolution": [
+    "Spécialisation dans une technique particulière (massage ayurvédique, shiatsu bien-être, massage prénatal sans contre-indication, réflexologie plantaire bien-être)",
+    "Ouverture de son propre cabinet ou institut bien-être",
+    "Formation complémentaire en esthétique pour élargir l'offre de soins corps (sous réserve du diplôme requis)",
+    "Passage au statut de formateur dans un organisme de formation Qualiopi",
+    "Développement d'une activité en entreprise (ateliers QVT, bien-être au travail)",
+    "Évolution vers la direction d'un spa ou d'un centre de bien-être (avec expérience managériale complémentaire)"
+  ],
+  "formationConseil": "Pour exercer légalement le massage bien-être en France, il est fortement recommandé d'obtenir une certification enregistrée au Répertoire Spécifique (RS) de France Compétences — notamment la certification RS « Praticien en massages bien-être » (ex. RS5149 ou équivalents à jour). Ces certifications sont délivrées par des organismes de formation certifiés Qualiopi, condition indispensable pour mobiliser le Compte Personnel de Formation (CPF). La durée de formation varie généralement de 150 à 400 heures selon les organismes et les techniques couvertes. Vérifiez systématiquement que la certification visée est bien éligible CPF sur Mon Compte Formation (moncompteformation.gouv.fr) avant de vous inscrire.",
+  "faq": [
+    {
+      "q": "Le massage bien-être est-il un acte médical ou paramédical ?",
+      "a": "Non. En France, le massage bien-être n'est pas un acte médical ni paramédical. Il est à visée exclusivement relaxante et de confort. Seuls les masseurs-kinésithérapeutes (diplôme d'État) sont autorisés à pratiquer des massages à visée thérapeutique ou de rééducation. Le praticien en massage bien-être ne pose pas de diagnostic, ne traite aucune pathologie et oriente systématiquement son client vers un professionnel de santé en cas de besoin."
+    },
+    {
+      "q": "Faut-il un diplôme spécifique pour exercer le massage bien-être en France ?",
+      "a": "Il n'existe pas de diplôme d'État obligatoire pour le massage bien-être, contrairement à la kinésithérapie. En revanche, obtenir une certification enregistrée au Répertoire Spécifique (RS) de France Compétences auprès d'un organisme Qualiopi est fortement conseillé : cela garantit une formation sérieuse, permet le financement CPF et apporte une crédibilité professionnelle. Exercer sans formation ni certification expose à des risques juridiques et professionnels."
+    },
+    {
+      "q": "Peut-on financer sa formation de praticien en massage bien-être avec le CPF ?",
+      "a": "Oui, sous conditions. La formation doit mener à une certification éligible CPF (enregistrée au Répertoire Spécifique ou au RNCP) et être dispensée par un organisme certifié Qualiopi. Vous pouvez vérifier l'éligibilité d'une formation directement sur moncompteformation.gouv.fr. Le montant du CPF disponible dépend de vos droits acquis ; un abondement complémentaire est parfois possible via Pôle emploi (France Travail), l'OPCO de votre branche ou votre Région."
+    }
+  ]
+}

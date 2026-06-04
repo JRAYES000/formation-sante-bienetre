@@ -5,6 +5,8 @@ import Resultats from "./pages/Resultats";
 import FicheFormation from "./pages/FicheFormation";
 import FicheOrganisme from "./pages/FicheOrganisme";
 import Admin from "./pages/Admin";
+import Comparer from "./pages/Comparer";
+import { CompareProvider, CompareBar } from "./lib/compare";
 
 function Header() {
   return (
@@ -29,6 +31,8 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-500 space-y-2">
         <p className="font-semibold text-dark">Formation Santé Bien-être</p>
         <nav className="flex flex-wrap gap-x-5 gap-y-1">
+          <a href="/metiers" className="hover:text-primary" data-testid="link-metiers">Métiers</a>
+          <a href="/blog" className="hover:text-primary" data-testid="link-blog">Blog</a>
           <a href="/financement-cpf" className="hover:text-primary" data-testid="link-cpf">Financement CPF</a>
           <a href="/formations" className="hover:text-primary" data-testid="link-toutes-formations">Toutes les formations</a>
         </nav>
@@ -46,9 +50,10 @@ function Footer() {
 
 export default function App() {
   return (
-    <Router hook={useHashLocation}>
-      <div className="min-h-screen flex flex-col">
-        <Header />
+    <CompareProvider>
+      <Router hook={useHashLocation}>
+        <div className="min-h-screen flex flex-col">
+          <Header />
         <main className="flex-1">
           <Switch>
             <Route path="/" component={Home} />
@@ -57,6 +62,7 @@ export default function App() {
             <Route path="/categorie/:slug" component={Resultats} />
             <Route path="/formation/:numero" component={FicheFormation} />
             <Route path="/organisme/:siret" component={FicheOrganisme} />
+            <Route path="/comparer" component={Comparer} />
             <Route path="/admin" component={Admin} />
             <Route>
               <div className="max-w-6xl mx-auto px-4 py-16 text-center text-gray-500">Page introuvable.</div>
@@ -64,7 +70,9 @@ export default function App() {
           </Switch>
         </main>
         <Footer />
+        <CompareBar />
       </div>
-    </Router>
+      </Router>
+    </CompareProvider>
   );
 }

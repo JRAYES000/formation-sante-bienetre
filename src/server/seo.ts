@@ -2,6 +2,7 @@
 // La SPA (hash routing) gère l'interactif ; ces pages portent le référencement.
 import { Router, type Request } from "express";
 import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats } from "./storage.ts";
+import { getMetier, listMetiers, getArticle, listArticles } from "./content.ts";
 
 export const seoRouter = Router();
 
@@ -78,6 +79,9 @@ function renderPage(o: PageOpts): string {
   .chip{background:var(--surface);border:1px solid var(--hairline);border-radius:99px;padding:6px 12px;text-decoration:none;font-size:.9rem;color:var(--body)}
   .cta{display:inline-block;background:var(--p);color:#fff;font-weight:500;border-radius:8px;padding:11px 20px;text-decoration:none;margin:8px 0 24px}
   .cta:hover{background:var(--p-active)}
+  .mesh ul{margin:.4rem 0 0 1.1rem} .mesh li{margin:.25rem 0}
+  .article{line-height:1.7;color:var(--body)} .article h2{font-size:1.25rem;color:var(--ink);margin:1.6rem 0 .5rem} .article h3{font-size:1.05rem;color:var(--ink);margin:1.2rem 0 .4rem} .article p{margin:.7rem 0} .article ul,.article ol{margin:.6rem 0 .6rem 1.2rem} .article li{margin:.25rem 0} .article a{color:var(--p)} .article strong{color:var(--ink)}
+  .article table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.92rem} .article th,.article td{border:1px solid var(--hairline);padding:8px 10px;text-align:left} .article th{background:var(--surface)}
   footer{border-top:1px solid var(--hairline);background:#fff;margin-top:40px;color:var(--muted);font-size:.85rem}
 </style>
 </head>
@@ -90,6 +94,7 @@ function renderPage(o: PageOpts): string {
 ${o.body}
 </main>
 <footer><div class="wrap" style="padding:20px 16px">
+<p style="margin:0 0 10px"><a href="/metiers">Métiers</a> · <a href="/blog">Blog</a> · <a href="/financement-cpf">Financement CPF</a> · <a href="/formations">Toutes les formations</a></p>
 <p>Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Données issues du catalogue public Mon Compte Formation.</p>
 </div></footer>
 </body>
@@ -154,8 +159,10 @@ seoRouter.get("/sitemap.xml", (req, res) => {
   const base = baseUrl(req);
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
-  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`];
+  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/metiers`, `${base}/blog`];
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
+  for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
+  for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
   for (const combo of seoCombos()) {
     const d = dcode.get(combo.code);
     if (d) urls.push(`${base}/formations/${combo.categorie}/${d.slug}`);
@@ -240,6 +247,110 @@ ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} ($
       canonical,
       jsonLd: [faq],
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Financement CPF" }],
+      body,
+    })
+  );
+});
+
+// ---------- fiches métier (contenu éditorial) ----------
+function ulBlock(title: string, items?: string[]): string {
+  if (!items?.length) return "";
+  return `<div class="mesh"><h2>${esc(title)}</h2><ul>${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div>`;
+}
+
+seoRouter.get("/metiers", (req, res) => {
+  const base = baseUrl(req);
+  const body = `<h1>Les métiers de la beauté et du bien-être</h1>
+<p class="lead">Missions, formations, salaires et débouchés — tout pour choisir votre voie.</p>
+<div class="grid">${listMetiers()
+    .map((m) => `<div class="card"><a class="t" href="/metier/${m.slug}">${esc(m.metier)}</a></div>`)
+    .join("")}</div>`;
+  res.send(
+    renderPage({
+      title: "Métiers de la beauté et du bien-être | Formation Santé Bien-être",
+      description: "Découvrez les métiers de la beauté et du bien-être : missions, formations CPF, salaires et débouchés.",
+      canonical: `${base}/metiers`,
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers" }],
+      body,
+    })
+  );
+});
+
+seoRouter.get("/metier/:slug", (req, res, next) => {
+  const m = getMetier(req.params.slug);
+  if (!m) return next();
+  const base = baseUrl(req);
+  const canonical = `${base}/metier/${m.slug}`;
+  const hasCat = catIndex().has(m.slug);
+  const faqLd = m.faq?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: m.faq.map((x) => ({ "@type": "Question", name: x.q, acceptedAnswer: { "@type": "Answer", text: x.a } })),
+      }
+    : null;
+  const body = `<h1>${esc(m.titre)}</h1>
+<p class="lead">${esc(m.intro ?? "")}</p>
+<a class="cta" href="${hasCat ? `/formations/${m.slug}` : "/#/recherche"}">Voir les formations ${esc(m.metier)}</a>
+${ulBlock("Missions", m.missions)}
+${ulBlock("Compétences", m.competences)}
+${ulBlock("Débouchés", m.debouches)}
+${m.salaire ? `<div class="mesh"><h2>Salaire</h2><p>Débutant : <strong>${esc(m.salaire.debutant ?? "—")}</strong> · Confirmé : <strong>${esc(m.salaire.confirme ?? "—")}</strong><br><span class="muted">${esc(m.salaire.note ?? "")}</span></p></div>` : ""}
+${ulBlock("Évolutions de carrière", m.evolution)}
+${m.formationConseil ? `<div class="mesh"><h2>Quelle formation choisir ?</h2><p>${esc(m.formationConseil)}</p></div>` : ""}
+${m.faq?.length ? `<div class="mesh"><h2>Questions fréquentes</h2>${m.faq.map((x) => `<p><strong>${esc(x.q)}</strong><br>${esc(x.a)}</p>`).join("")}</div>` : ""}
+<div class="mesh"><h2>Autres métiers</h2><div class="chips">${listMetiers()
+    .filter((x) => x.slug !== m.slug)
+    .map((x) => `<a class="chip" href="/metier/${x.slug}">${esc(x.metier)}</a>`)
+    .join("")}</div></div>`;
+  res.send(
+    renderPage({
+      title: `${m.titre} | Formation Santé Bien-être`,
+      description: m.metaDescription ?? m.intro ?? "",
+      canonical,
+      jsonLd: faqLd ? [faqLd] : [],
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers", url: `${base}/metiers` }, { name: m.metier }],
+      body,
+    })
+  );
+});
+
+// ---------- blog ----------
+seoRouter.get("/blog", (req, res) => {
+  const base = baseUrl(req);
+  const arts = listArticles();
+  const body = `<h1>Blog — formations & métiers du bien-être</h1>
+<p class="lead">Conseils, financement CPF et orientation pour se former et se reconvertir.</p>
+<div class="grid">${arts
+    .map((a) => `<div class="card"><a class="t" href="/blog/${a.slug}">${esc(a.title)}</a><p class="muted">${esc(a.excerpt)}</p></div>`)
+    .join("")}</div>`;
+  res.send(
+    renderPage({
+      title: "Blog | Formation Santé Bien-être",
+      description: "Conseils formation, financement CPF et métiers de la beauté et du bien-être.",
+      canonical: `${base}/blog`,
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog" }],
+      body,
+    })
+  );
+});
+
+seoRouter.get("/blog/:slug", (req, res, next) => {
+  const a = getArticle(req.params.slug);
+  if (!a) return next();
+  const base = baseUrl(req);
+  const canonical = `${base}/blog/${a.slug}`;
+  const ld = { "@context": "https://schema.org", "@type": "Article", headline: a.title, description: a.metaDescription, mainEntityOfPage: canonical };
+  const body = `<h1>${esc(a.title)}</h1>
+<article class="article">${a.html}</article>
+<a class="cta" href="/#/recherche">Explorer les formations</a>`;
+  res.send(
+    renderPage({
+      title: `${a.title} | Formation Santé Bien-être`,
+      description: a.metaDescription,
+      canonical,
+      jsonLd: [ld],
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog", url: `${base}/blog` }, { name: a.title }],
       body,
     })
   );

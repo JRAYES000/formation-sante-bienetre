@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useCompare } from "../lib/compare";
 
 export interface FormationItem {
   numero_formation: string;
@@ -25,6 +26,8 @@ function prixLabel(f: FormationItem): string {
 }
 
 export default function FormationCard({ f }: { f: FormationItem }) {
+  const { toggle, has } = useCompare();
+  const inCompare = has(f.numero_formation);
   return (
     <div className="card-naturo p-5 flex flex-col gap-3" data-testid={`card-formation-${f.numero_formation}`}>
       <div className="flex items-start justify-between gap-3">
@@ -47,6 +50,13 @@ export default function FormationCard({ f }: { f: FormationItem }) {
         <span className="badge">CPF</span>
         {f.organisme_qualiopi ? <span className="badge">Qualiopi</span> : null}
       </div>
+      <button
+        onClick={() => toggle(f)}
+        className={`self-start text-xs ${inCompare ? "text-primary font-semibold" : "text-muted"} hover:text-primary`}
+        data-testid={`button-compare-${f.numero_formation}`}
+      >
+        {inCompare ? "✓ Dans le comparateur" : "+ Comparer"}
+      </button>
       <div className="flex items-center justify-between mt-1">
         <span className="font-bold text-primary" data-testid={`text-prix-${f.numero_formation}`}>{prixLabel(f)}</span>
         <Link href={`/formation/${encodeURIComponent(f.numero_formation)}`} className="btn-accent !py-2 !px-4 text-sm">

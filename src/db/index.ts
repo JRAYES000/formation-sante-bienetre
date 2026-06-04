@@ -84,6 +84,17 @@ export function ensureSchema(): void {
       consentement_at TEXT,
       statut TEXT NOT NULL DEFAULT 'nouveau',
       partenaire_id INTEGER REFERENCES partenaires(id),
+      qualification TEXT,
+      created_at TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS avis (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      siret TEXT NOT NULL,
+      note INTEGER NOT NULL,
+      auteur TEXT,
+      commentaire TEXT,
+      statut TEXT NOT NULL DEFAULT 'en_attente',
       created_at TEXT NOT NULL
     );
 
@@ -110,5 +121,14 @@ export function ensureSchema(): void {
       organisme,
       tokenize = 'unicode61 remove_diacritics 2'
     );
+
+    CREATE INDEX IF NOT EXISTS idx_avis_siret ON avis(siret);
   `);
+
+  // Migrations idempotentes pour les bases existantes (colonne ajoutée après coup).
+  try {
+    sqlite.exec("ALTER TABLE leads ADD COLUMN qualification TEXT");
+  } catch {
+    /* colonne déjà présente */
+  }
 }

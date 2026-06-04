@@ -1,5 +1,6 @@
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
+import OrganismeAvis from "../components/OrganismeAvis";
 
 interface OrganismeDetail {
   siret: string;
@@ -34,6 +35,8 @@ export default function FicheOrganisme() {
         </p>
         <p className="text-sm text-gray-500 mt-2">SIRET {o.siret}</p>
       </div>
+
+      <OrganismeAvis siret={o.siret} />
 
       <h2 className="font-bold text-lg text-dark mt-8 mb-4">
         {o.formations.length} formation{o.formations.length > 1 ? "s" : ""}

@@ -1,0 +1,60 @@
+{
+  "slug": "coiffure",
+  "metier": "Coiffeur(se)",
+  "titre": "Coiffeur(se) : métier, formations CPF et salaires en France (2026)",
+  "metaDescription": "Découvrez le métier de coiffeur(se) en France : missions, compétences, salaires indicatifs, débouchés et formations éligibles CPF (CAP, BP, titres RNCP) en 2026.",
+  "intro": "Le(la) coiffeur(se) réalise des coupes, colorations et soins capillaires adaptés aux attentes et à la morphologie de chaque client. Ce métier de contact, exercé en salon, à domicile ou en indépendant, combine technique, sens artistique et relation client. En France, la profession est réglementée et l'accès requiert un diplôme reconnu par l'État.",
+  "missions": [
+    "Accueillir le client, analyser ses besoins et conseiller sur les soins ou styles adaptés à son type de cheveux et à sa morphologie",
+    "Réaliser des coupes femme, homme et enfant (ciseaux, tondeuse, rasoir)",
+    "Effectuer des colorations, décolorations, balayages et techniques de mise en couleur",
+    "Pratiquer des permanentes, défrisages, lissages et traitements chimiques capillaires",
+    "Réaliser des mises en forme (brushing, mise en plis, tresses, chignons, coiffures de cérémonie)",
+    "Appliquer des soins du cuir chevelu et des traitements capillaires hydratants ou réparateurs",
+    "Gérer l'hygiène et la désinfection du matériel et de l'espace de travail, encaisser et fidéliser la clientèle"
+  ],
+  "competences": [
+    "Maîtrise des techniques de coupe, couleur et coiffage sur tous types de cheveux",
+    "Connaissance des produits capillaires (compositions, contre-indications, protocoles d'application)",
+    "Sens de l'esthétique, créativité et aptitude à traduire les souhaits du client en résultat concret",
+    "Qualités relationnelles : écoute active, bienveillance, capacité à instaurer une relation de confiance durable",
+    "Rigueur en matière d'hygiène, de sécurité et de manipulation des produits chimiques",
+    "Capacité à gérer son planning, à travailler debout plusieurs heures et à s'adapter aux pics d'activité"
+  ],
+  "debouches": [
+    "Salon de coiffure mixte (employé ou gérant)",
+    "Coiffeur(se) à domicile (particuliers, personnes à mobilité réduite, EHPAD)",
+    "Exercice en indépendant / auto-entrepreneur",
+    "Coiffure événementielle (mariages, défilés, plateaux TV, cinéma)",
+    "Intervenant(e) en école de coiffure ou centre de formation",
+    "Directeur(trice) ou gérant(e) de salon, franchise de coiffure",
+    "Conseil produits ou formateur(trice) pour des marques capillaires (L'Oréal, Wella, Schwarzkopf…)"
+  ],
+  "salaire": {
+    "debutant": "1 500 – 1 650 € brut/mois",
+    "confirme": "1 800 – 2 400 € brut/mois",
+    "note": "Indicatif, variable selon statut (salarié, indépendant), région, clientèle et expérience. Les coiffeurs indépendants ou gérants de salon peuvent dépasser ces fourchettes en fonction de leur chiffre d'affaires."
+  },
+  "evolution": [
+    "Responsable de salon ou co-gérant après quelques années d'expérience",
+    "Création ou reprise de salon (aide à la création d'entreprise, prêts ADIE, dispositifs BGE)",
+    "Spécialisation : coloriste expert, barbier, coiffure afro-texturée, extensions capillaires",
+    "Formation continue et montée en compétences vers le Brevet Professionnel (BP) ou le BM",
+    "Reconversion vers l'enseignement en CFA ou l'animation de formations professionnelles"
+  ],
+  "formationConseil": "La voie principale est le CAP Coiffure (2 ans en apprentissage ou en formation continue, éligible CPF), qui donne accès à l'exercice légal de la profession. Pour approfondir et encadrer une équipe, le Brevet Professionnel (BP) Coiffure (2 ans après le CAP) est recommandé. La Mention Complémentaire Coloriste-Permanentiste permet une spécialisation supplémentaire. Des titres professionnels inscrits au RNCP (niveaux 3 et 4) sont également accessibles en formation courte pour les reconversions et finançables via le CPF (Compte Personnel de Formation). Le Brevet de Maîtrise (BM) Coiffure est requis pour enseigner en apprentissage. Renseignez-vous sur Mon Compte Formation (moncompteformation.gouv.fr) pour vérifier l'éligibilité et le montant des droits disponibles.",
+  "faq": [
+    {
+      "q": "Faut-il obligatoirement un diplôme pour exercer comme coiffeur(se) en France ?",
+      "a": "Oui. La loi française impose de détenir au minimum un CAP Coiffure (ou un titre équivalent inscrit au RNCP de niveau 3) pour exercer à titre professionnel, que ce soit en salon, à domicile ou en indépendant. Exercer sans diplôme reconnu expose à des sanctions pénales."
+    },
+    {
+      "q": "Le CAP Coiffure est-il finançable via le CPF ?",
+      "a": "Dans la plupart des cas, oui. Les formations CAP Coiffure dispensées par des organismes certifiés Qualiopi et référencées sur Mon Compte Formation sont éligibles au CPF. Le montant pris en charge dépend des droits accumulés sur votre compte et peut être complété par Pôle emploi (France Travail), la Région ou votre OPCO selon votre situation."
+    },
+    {
+      "q": "Quelle est la différence entre le CAP Coiffure et le BP Coiffure ?",
+      "a": "Le CAP Coiffure (niveau 3, Bac-2) est le diplôme d'entrée dans la profession : il valide les techniques de base (coupe, couleur, coiffage) et permet d'exercer légalement. Le BP Coiffure (niveau 4, équivalent Bac) est un diplôme de perfectionnement préparé après le CAP, axé sur les techniques avancées, le management d'équipe et la gestion d'un salon. Il est souvent requis pour encadrer des apprentis ou ouvrir son propre salon."
+    }
+  ]
+}

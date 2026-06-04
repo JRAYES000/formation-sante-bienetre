@@ -1,0 +1,61 @@
+{
+  "slug": "esthetique-soin-corporel",
+  "metier": "Esthéticien(ne)",
+  "titre": "Esthéticienne : métier, formation et salaire en 2026",
+  "metaDescription": "Tout savoir sur le métier d'esthéticien(ne) en France : missions, formations CPF (CAP, BP, BTS), salaires indicatifs et perspectives d'évolution.",
+  "intro": "L'esthéticien(ne) accompagne ses clients dans la mise en valeur de leur apparence et le soin de leur corps, en proposant des soins du visage, des soins corporels et des techniques de beauté adaptées à chaque profil. C'est un métier de contact et de bien-être, exercé aussi bien en institut qu'en spa, en centre de thalassothérapie ou en indépendant. Accessible via plusieurs diplômes professionnels financés par le CPF, il offre de réelles perspectives pour les personnes en reconversion.",
+  "missions": [
+    "Réaliser des soins du visage (nettoyage de peau, hydratation, soin anti-âge)",
+    "Effectuer des épilations (cire chaude, tiède, lumière pulsée IPL)",
+    "Prodiguer des soins corporels (enveloppements, massages de détente, modelages)",
+    "Appliquer des techniques de beauté des mains et des pieds (manucure, pédicure esthétique, pose de vernis semi-permanent)",
+    "Conseiller les clients sur les soins à domicile et les produits cosmétiques adaptés",
+    "Assurer l'accueil, le suivi et la fidélisation de la clientèle",
+    "Veiller à l'hygiène et à la conformité du poste de travail selon les normes en vigueur"
+  ],
+  "competences": [
+    "Maîtrise des techniques de soins esthétiques et des appareils professionnels",
+    "Sens du contact et de l'écoute pour cerner les besoins de chaque client",
+    "Connaissance des produits cosmétiques, de leurs composants et de leurs contre-indications",
+    "Rigueur en matière d'hygiène et de sécurité (normes sanitaires, matériel stérile)",
+    "Capacité à travailler en équipe ou en autonomie selon le contexte",
+    "Aptitude commerciale : conseil, vente additionnelle, gestion de la relation client"
+  ],
+  "debouches": [
+    "Institut de beauté (employé(e) ou gérant(e))",
+    "Spa urbain ou spa hôtelier",
+    "Centre de thalassothérapie et de remise en forme",
+    "Centre médico-esthétique (en collaboration avec des médecins ou dermatologues)",
+    "Salon de coiffure proposant des prestations beauté",
+    "Exercice à domicile (auto-entrepreneur ou micro-entreprise)",
+    "Grande surface spécialisée (espaces beauté de parfumerie, chaînes nationales)"
+  ],
+  "salaire": {
+    "debutant": "1 600–1 900 € brut/mois",
+    "confirme": "2 100–3 000 € brut/mois (selon spécialisation et statut)",
+    "note": "Indicatif, variable selon le statut (salarié, indépendant), la région, la clientèle et l'expérience. Les esthéticien(ne)s à leur compte peuvent avoir des revenus très variables."
+  },
+  "evolution": [
+    "Responsable ou directeur(trice) d'un institut de beauté",
+    "Spécialisation en esthétique médicale ou paramédical (épilation laser, soins avancés)",
+    "Formation en sophrologie, massages bien-être ou soins holistiques pour diversifier l'offre",
+    "Création ou reprise d'un institut de beauté en tant qu'indépendant(e)",
+    "Formateur(trice) ou enseignant(e) dans un centre de formation professionnelle",
+    "Représentant(e) commercial(e) pour une marque de cosmétiques ou de matériel esthétique"
+  ],
+  "formationConseil": "Le diplôme d'entrée dans le métier est le CAP Esthétique Cosmétique Parfumerie (2 ans en formation initiale, accessible en 1 an en VAE ou formation continue), éligible au financement via le CPF. Pour évoluer, le Brevet Professionnel (BP) Esthétique Cosmétique Parfumerie et le BTS Métiers de l'Esthétique-Cosmétique-Parfumerie (MCP) permettent d'accéder à des postes à responsabilité ou à la création d'entreprise. Des titres RNCP reconnus par France Compétences permettent également de se spécialiser (soin du corps, épilation définitive, maquillage permanent), avec un financement possible via le Compte Personnel de Formation (CPF) sur Mon Compte Formation.",
+  "faq": [
+    {
+      "q": "Faut-il obligatoirement un diplôme pour exercer comme esthéticien(ne) en France ?",
+      "a": "Oui. En France, l'exercice de la profession d'esthéticien(ne) à titre onéreux est réglementé : il est obligatoire de détenir au minimum un CAP Esthétique Cosmétique Parfumerie (ou un diplôme équivalent reconnu) pour ouvrir ou diriger un établissement. Cette exigence est fixée par la loi afin de garantir la sécurité et la qualité des soins dispensés aux clients."
+    },
+    {
+      "q": "Peut-on financer une formation d'esthéticien(ne) avec le CPF ?",
+      "a": "Oui, la plupart des formations menant au CAP, au BP ou à des titres RNCP en esthétique sont éligibles au CPF. Il suffit de vérifier la disponibilité sur la plateforme Mon Compte Formation (moncompteformation.gouv.fr) et de s'assurer que l'organisme choisi est certifié Qualiopi. En cas de solde insuffisant, un financement complémentaire peut être demandé auprès de France Travail (Pôle emploi), d'un OPCO ou d'une Région."
+    },
+    {
+      "q": "Quelles sont les perspectives pour s'installer à son compte en esthétique ?",
+      "a": "S'installer en tant qu'esthéticien(ne) indépendant(e) est tout à fait envisageable, à domicile ou dans un local dédié. Le statut d'auto-entrepreneur est souvent choisi en début d'activité pour sa simplicité administrative. Il est conseillé de suivre une formation à la gestion d'entreprise et de bien vérifier les normes d'hygiène et d'accessibilité applicables aux établissements recevant du public. La clientèle se construit progressivement, souvent grâce au bouche-à-oreille et aux réseaux sociaux."
+    }
+  ]
+}

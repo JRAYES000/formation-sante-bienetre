@@ -1,0 +1,61 @@
+{
+  "slug": "specialisation-coiffure",
+  "metier": "Barbier / Coloriste",
+  "titre": "Barbier et Coloriste : métiers, formations et débouchés en France (2026)",
+  "metaDescription": "Découvrez les métiers de barbier et coloriste en France : missions, compétences, salaires indicatifs, formations CPF et évolutions de carrière en 2026.",
+  "intro": "Le barbier et le coloriste sont deux spécialisations du secteur coiffure qui connaissent un regain d'intérêt fort depuis plusieurs années. Le barbier se consacre aux soins du visage masculin — coupe, rasage et entretien de la barbe — tandis que le coloriste maîtrise les techniques de coloration, décoloration et mise en couleur des cheveux. Ces deux profils peuvent exercer en salon classique, en barbershop ou à leur compte, dans un secteur porteur et en constante évolution.",
+  "missions": [
+    "Accueillir et conseiller la clientèle sur les coupes, colorations et soins adaptés à leur morphologie et à leurs cheveux",
+    "Réaliser des coupes hommes classiques, dégradés, coupes à la tondeuse et entretien de la barbe (taille, rasage au rasoir droit ou coupe-chou)",
+    "Préparer et appliquer des colorations, teintures, mèches, balayages et techniques de décoloration en respectant les protocoles techniques",
+    "Effectuer des soins capillaires avant et après la coloration (masques, neutralisations, traitements protecteurs)",
+    "Assurer le diagnostic capillaire et colorimétrique pour orienter les clients vers les formules les plus adaptées",
+    "Gérer l'hygiène et la stérilisation des outils conformément aux règles sanitaires en vigueur",
+    "Participer à la fidélisation de la clientèle et à la vente de produits capillaires complémentaires"
+  ],
+  "competences": [
+    "Maîtrise des techniques de coupe homme (ciseau, tondeuse, rasoir) et des styles barbershop contemporains",
+    "Connaissance approfondie des colorants capillaires, de la chimie des colorations et des précautions d'emploi (tests allergiques, temps de pause)",
+    "Sens artistique et esthétique pour proposer des styles personnalisés et adaptés aux tendances",
+    "Rigueur dans l'application des protocoles d'hygiène, de sécurité et de protection du client",
+    "Aisance relationnelle et écoute active pour créer une relation de confiance avec la clientèle",
+    "Capacité d'organisation pour gérer les rendez-vous, les stocks de produits et l'entretien du poste de travail"
+  ],
+  "debouches": [
+    "Barbershop indépendant ou en franchise (enseigne spécialisée)",
+    "Salon de coiffure mixte ou masculin en tant que salarié",
+    "Institut de beauté proposant des prestations coiffure et soins du visage",
+    "Installation en tant que coiffeur/barbier indépendant (auto-entrepreneur ou société)",
+    "Coiffeur-coloriste dans des établissements haut de gamme, hôtels ou spas",
+    "Formateur dans un centre de formation professionnelle en coiffure",
+    "Conseiller technique ou commercial pour des marques de produits capillaires professionnels"
+  ],
+  "salaire": {
+    "debutant": "1 550 € – 1 800 € brut/mois",
+    "confirme": "2 000 € – 2 800 € brut/mois",
+    "note": "Indicatif, variable selon statut, région et expérience. Les indépendants et chefs d'entreprise peuvent percevoir des revenus très différents selon leur clientèle et leur localisation."
+  },
+  "evolution": [
+    "Chef de rang ou responsable technique dans un salon multi-collaborateurs",
+    "Ouverture de son propre salon ou barbershop après quelques années d'expérience",
+    "Spécialisation avancée en coloration créative, techniques brésiliennes ou soins kératine",
+    "Formation en management et gestion d'entreprise pour développer une enseigne ou une franchise",
+    "Passage dans la formation professionnelle comme formateur en coiffure/barbering",
+    "Développement d'une activité annexe : tutoriels en ligne, coaching capillaire, vente de produits professionnels"
+  ],
+  "formationConseil": "Le point d'entrée principal est le CAP Coiffure (2 ans en lycée professionnel ou en apprentissage), qui donne les bases du métier et est souvent exigé pour accéder aux spécialisations. Pour le barbier, la Mention Complémentaire (MC) Barbier-Coiffeur permet d'approfondir les techniques masculines en 1 an après le CAP. Pour la colorisation, des certifications professionnelles reconnues (CQP, titres RNCP de niveau 4 ou 5) couvrent les techniques de coloration avancée. Certaines de ces formations sont éligibles au Compte Personnel de Formation (CPF) : vérifiez votre solde sur moncompteformation.gouv.fr et recherchez les formations enregistrées au RNCP ou au répertoire spécifique RS. Des organismes privés proposent également des stages courts en barbering ou coloration, parfois finançables via le CPF selon la certification délivrée.",
+  "faq": [
+    {
+      "q": "Faut-il obligatoirement un CAP Coiffure pour devenir barbier ou coloriste ?",
+      "a": "En France, l'exercice de la coiffure à titre onéreux est réglementé par la loi : il faut être titulaire d'un diplôme reconnu (CAP Coiffure minimum) ou justifier d'une expérience professionnelle validée. Le CAP Coiffure est donc le prérequis habituel avant de se spécialiser en barbering ou en coloration via une mention complémentaire ou une certification professionnelle."
+    },
+    {
+      "q": "Les formations de barbier ou coloriste sont-elles finançables par le CPF ?",
+      "a": "Certaines formations spécialisées en barbier ou en coloriste sont éligibles au CPF si elles débouchent sur une certification enregistrée au Répertoire National des Certifications Professionnelles (RNCP) ou au Répertoire Spécifique (RS). Il est conseillé de vérifier l'éligibilité directement sur le site moncompteformation.gouv.fr avant de s'inscrire, car toutes les formations du marché ne le sont pas."
+    },
+    {
+      "q": "Quelles sont les différences entre le métier de barbier et celui de coloriste ?",
+      "a": "Le barbier se spécialise dans la coiffure et les soins du visage masculins : coupes homme, rasage traditionnel, taille et mise en forme de la barbe. Le coloriste, lui, se concentre sur la transformation de la couleur des cheveux : teintures, balayages, mèches, décolorations. Un même professionnel peut exercer les deux activités, notamment dans les salons mixtes ou en tant qu'indépendant, après avoir suivi les formations adaptées à chaque spécialisation."
+    }
+  ]
+}

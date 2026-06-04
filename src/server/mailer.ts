@@ -8,6 +8,22 @@ interface LeadMail {
   email: string;
   tel?: string | null;
   formationTitre?: string | null;
+  qualification?: Record<string, string>;
+}
+
+const QUALIF_LABELS: Record<string, string> = {
+  budget: "Budget",
+  delai: "Délai de démarrage",
+  financement: "Financement",
+  niveau: "Niveau actuel",
+};
+
+function qualifText(q?: Record<string, string>): string {
+  if (!q) return "";
+  const lines = Object.entries(q)
+    .filter(([, v]) => v)
+    .map(([k, v]) => `${QUALIF_LABELS[k] ?? k} : ${v}`);
+  return lines.length ? "\nQualification :\n" + lines.map((l) => "  " + l).join("\n") + "\n" : "";
 }
 
 export async function sendLeadNotification(m: LeadMail): Promise<void> {
@@ -35,7 +51,8 @@ export async function sendLeadNotification(m: LeadMail): Promise<void> {
         TextPart:
           `Nouvelle demande d'information :\n\n` +
           `Nom : ${m.nom}\nEmail : ${m.email}\nTéléphone : ${m.tel ?? "—"}\n` +
-          `Formation : ${m.formationTitre ?? "—"}\n`,
+          `Formation : ${m.formationTitre ?? "—"}\n` +
+          qualifText(m.qualification),
       },
     ],
   };
