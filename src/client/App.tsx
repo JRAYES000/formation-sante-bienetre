@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Resultats from "./pages/Resultats";
 import FicheFormation from "./pages/FicheFormation";
 import FicheOrganisme from "./pages/FicheOrganisme";
+import Admin from "./pages/Admin";
 
 function Header() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
             <Route path="/categorie/:slug" component={Resultats} />
             <Route path="/formation/:numero" component={FicheFormation} />
             <Route path="/organisme/:siret" component={FicheOrganisme} />
+            <Route path="/admin" component={Admin} />
             <Route>
               <div className="max-w-6xl mx-auto px-4 py-16 text-center text-gray-500">Page introuvable.</div>
             </Route>

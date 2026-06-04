@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
+import LeadForm from "../components/LeadForm";
 
 interface FormationDetail {
   numero_formation: string;
@@ -64,17 +65,14 @@ export default function FicheFormation() {
 
         <p className="text-2xl font-bold text-primary mt-5" data-testid="text-formation-prix">{prix(f)}</p>
 
-        {/* CTA Voie B — le formulaire de demande arrive au Lot 4 */}
+        {/* CTA Voie B — formulaire de demande + routing partenaire */}
         <div className="mt-6 border-t border-gray-100 pt-6">
           {!asked ? (
             <button onClick={() => setAsked(true)} className="btn-accent w-full sm:w-auto" data-testid="button-je-minforme">
               Je m'informe gratuitement
             </button>
           ) : (
-            <div className="bg-primary/5 rounded-naturo p-4 text-sm text-dark" data-testid="text-lead-placeholder">
-              ✅ Formulaire de demande d'information <strong>(Lot 4)</strong> : nom, email, téléphone + consentement RGPD,
-              puis routage du lead vers École Naturo / partenaires. À implémenter à l'étape suivante.
-            </div>
+            <LeadForm numeroFormation={f.numero_formation} />
           )}
         </div>
       </div>

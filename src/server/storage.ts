@@ -177,3 +177,88 @@ export function listDepartements() {
     )
     .all();
 }
+
+// ─────────────── Leads & Voie B ───────────────
+
+export interface LeadInput {
+  numeroFormation?: string;
+  nom: string;
+  email: string;
+  tel?: string;
+}
+
+// Routage Voie B : choisit le partenaire (École Naturo par défaut = catch-all priorité haute).
+function routePartenaire(numeroFormation?: string): number | null {
+  let slug = "";
+  if (numeroFormation) {
+    const f = sqlite
+      .prepare(
+        `SELECT c.slug FROM formations f LEFT JOIN categories c ON c.id = f.categorie_id
+         WHERE f.numero_formation = @n`
+      )
+      .get({ n: numeroFormation }) as { slug?: string } | undefined;
+    slug = f?.slug ?? "";
+  }
+  const p = sqlite
+    .prepare(
+      `SELECT id FROM partenaires
+       WHERE actif = 1 AND (categories_slugs IS NULL OR categories_slugs LIKE '%' || @slug || '%')
+       ORDER BY priorite DESC, id ASC LIMIT 1`
+    )
+    .get({ slug }) as { id: number } | undefined;
+  return p?.id ?? null;
+}
+
+export function createLead(input: LeadInput): { id: number; partenaireId: number | null } {
+  const now = new Date().toISOString();
+  const partenaireId = routePartenaire(input.numeroFormation);
+  const res = sqlite
+    .prepare(
+      `INSERT INTO leads
+        (numero_formation, nom, email, tel, consentement_rgpd, consentement_at, statut, partenaire_id, created_at)
+       VALUES (@numeroFormation, @nom, @email, @tel, 1, @now, 'nouveau', @partenaireId, @now)`
+    )
+    .run({
+      numeroFormation: input.numeroFormation ?? null,
+      nom: input.nom,
+      email: input.email,
+      tel: input.tel ?? null,
+      now,
+      partenaireId,
+    });
+  return { id: Number(res.lastInsertRowid), partenaireId };
+}
+
+export function listLeads() {
+  return sqlite
+    .prepare(
+      `SELECT l.id, l.nom, l.email, l.tel, l.statut, l.created_at,
+              l.numero_formation, f.intitule AS formation,
+              p.nom AS partenaire
+       FROM leads l
+       LEFT JOIN formations f ON f.numero_formation = l.numero_formation
+       LEFT JOIN partenaires p ON p.id = l.partenaire_id
+       ORDER BY l.created_at DESC LIMIT 500`
+    )
+    .all();
+}
+
+export function updateLeadStatut(id: number, statut: string): number {
+  return sqlite.prepare(`UPDATE leads SET statut = @statut WHERE id = @id`).run({ id, statut }).changes;
+}
+
+export function listPartenaires() {
+  return sqlite.prepare(`SELECT * FROM partenaires ORDER BY priorite DESC, id ASC`).all();
+}
+
+// Seed Voie B : École Naturo seule au départ, catch-all (categories_slugs = NULL).
+export function seedPartenaires(): void {
+  const n = (sqlite.prepare(`SELECT count(*) n FROM partenaires`).get() as { n: number }).n;
+  if (n > 0) return;
+  sqlite
+    .prepare(
+      `INSERT INTO partenaires (nom, email, categories_slugs, priorite, actif, created_at)
+       VALUES ('École Naturo', 'contact@ecole-naturo.fr', NULL, 100, 1, @now)`
+    )
+    .run({ now: new Date().toISOString() });
+}

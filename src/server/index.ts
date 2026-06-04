@@ -2,15 +2,18 @@
 import "dotenv/config";
 import express from "express";
 import { ensureSchema } from "../db/index.ts";
-import { publicRouter } from "./routes.ts";
+import { seedPartenaires } from "./storage.ts";
+import { publicRouter, adminRouter } from "./routes.ts";
 
 ensureSchema();
+seedPartenaires();
 
 const app = express();
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 app.use("/api/public", publicRouter);
+app.use("/api/admin", adminRouter);
 
 const port = Number(process.env.PORT ?? 3001);
 app.listen(port, () => {
