@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#f6faf8] text-dark antialiased;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .card-naturo {
+    @apply bg-white rounded-naturo border border-gray-100 shadow-sm;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-primary text-white rounded-naturo py-3 px-6 font-bold hover:bg-dark transition-colors;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center bg-accent text-dark rounded-naturo py-3 px-6 font-bold hover:brightness-95 transition;
+  }
+  .badge {
+    @apply inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary;
+  }
+}

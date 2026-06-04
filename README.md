@@ -19,6 +19,10 @@ cp .env.example .env
 npm install
 npm run ingest      # télécharge + normalise + upsert le pôle (~3 200 lignes → ~2 100 formations)
 npm run db:stats    # stats de la base
+
+# App (2 terminaux) :
+npm run serve       # API Express sur :3001
+npm run web         # front Vite sur :5173 (proxy /api → :3001)
 ```
 
 ## État (Lot 1 ✅ · Lot 2 ✅)
@@ -39,7 +43,7 @@ npm run db:stats    # stats de la base
 
 - **L1** ✅ Scaffold + schéma + ingestion du pôle.
 - **L2** ✅ Grain géo (formation_departements) + recherche FTS5 + facettes + endpoints `/api/public`.
-- **L3** Front (accueil, résultats, fiche formation, fiche organisme).
+- **L3** ✅ Front React/Vite/Tailwind/Wouter (accueil, résultats+facettes, fiche formation, fiche organisme).
 - **L4** Lead form + consentement RGPD + routing Voie B + back-office.
 - **L5** Pages SEO programmatiques métier × département + sitemap + JSON-LD.
 - **L6** Cron de fraîcheur + enrichissement Qualiopi (API QuiForme).
