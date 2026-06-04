@@ -11,6 +11,8 @@
     "serve": "tsx src/server/index.ts",
     "web": "vite",
     "build": "vite build",
+    "start": "tsx src/server/index.ts",
+    "start:prod": "npm run build && npm run start",
     "check": "tsc --noEmit"
   },
   "dependencies": {

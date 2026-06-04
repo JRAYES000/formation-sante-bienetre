@@ -23,6 +23,37 @@ npm run db:stats    # stats de la base
 # App (2 terminaux) :
 npm run serve       # API Express sur :3001
 npm run web         # front Vite sur :5173 (proxy /api → :3001)
+
+## Déploiement production
+
+1. Construire la SPA :
+
+```bash
+npm run build
+```
+
+2. Démarrer le serveur de production :
+
+```bash
+npm start
+```
+
+3. Ou enchaîner build + démarrage :
+
+```bash
+npm run start:prod
+```
+
+### Variables d'environnement essentielles
+
+- `PORT` : port HTTP de l'API/serveur express (défaut `3001`)
+- `ADMIN_TOKEN` : token pour accéder au back-office `/api/admin`
+- `PUBLIC_URL` : URL publique du site pour les canonical et le sitemap
+- `INGEST_INTERVAL_HOURS` : intervalle de re-ingestion automatique (0 = désactivé)
+- `MAILJET_API_KEY`, `MAILJET_API_SECRET`, `MAIL_FROM` : configuration d'envoi d'email partenaire
+- `DB_DRIVER`, `SQLITE_PATH` : si vous déployez en SQLite
+
+> En production, le serveur Express sert à la fois les pages SEO SSR et la SPA construite depuis `dist/public`.
 ```
 
 ## État (Lot 1 ✅ · Lot 2 ✅)

@@ -1,6 +1,8 @@
 // Bootstrap Express. En dev : npm run dev (tsx watch). Sert l'API publique.
 import "dotenv/config";
 import express from "express";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { ensureSchema } from "../db/index.ts";
 import { seedPartenaires } from "./storage.ts";
 import { publicRouter, adminRouter } from "./routes.ts";
@@ -10,8 +12,12 @@ import { ingestPole } from "../ingest/ingest.ts";
 ensureSchema();
 seedPartenaires();
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
+const publicDir = resolve(__dirname, "../../dist/public");
+
 app.use(express.json());
+app.use(express.static(publicDir));
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 app.use("/api/public", publicRouter);
@@ -19,6 +25,9 @@ app.use("/api/admin", adminRouter);
 
 // Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots
 app.use("/", seoRouter);
+
+// SPA fallback pour les routes client (hash routing)
+app.get("*", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
 
 const port = Number(process.env.PORT ?? 3001);
 app.listen(port, () => {
