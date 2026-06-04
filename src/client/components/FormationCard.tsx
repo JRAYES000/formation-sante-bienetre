@@ -13,6 +13,7 @@ export interface FormationItem {
   categorie_slug?: string | null;
   categorie_nom?: string | null;
   organisme?: string;
+  organisme_qualiopi?: number;
   siret?: string;
 }
 
@@ -44,6 +45,7 @@ export default function FormationCard({ f }: { f: FormationItem }) {
         <span className="bg-gray-100 rounded-full px-2 py-0.5">{f.a_distance ? "À distance possible" : "Présentiel"}</span>
         {f.heures ? <span className="bg-gray-100 rounded-full px-2 py-0.5">{f.heures} h</span> : null}
         <span className="badge">CPF</span>
+        {f.organisme_qualiopi ? <span className="badge">Qualiopi</span> : null}
       </div>
       <div className="flex items-center justify-between mt-1">
         <span className="font-bold text-primary" data-testid={`text-prix-${f.numero_formation}`}>{prixLabel(f)}</span>

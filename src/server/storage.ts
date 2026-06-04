@@ -78,7 +78,7 @@ export function searchFormations(p: SearchParams) {
       `SELECT f.numero_formation, f.intitule, f.intitule_certification, f.type_referentiel,
               f.niveau, f.heures, f.prix_min, f.prix_max, f.a_distance, f.nb_sessions,
               c.slug AS categorie_slug, c.nom AS categorie_nom,
-              o.siret, o.nom AS organisme, o.departement AS organisme_dept
+              o.siret, o.nom AS organisme, o.departement AS organisme_dept, o.qualiopi AS organisme_qualiopi
        FROM formations f
        JOIN organismes o ON o.siret = f.siret
        LEFT JOIN categories c ON c.id = f.categorie_id
@@ -126,7 +126,8 @@ export function getFormation(numero: string) {
   const f = sqlite
     .prepare(
       `SELECT f.*, c.slug AS categorie_slug, c.nom AS categorie_nom,
-              o.nom AS organisme, o.departement AS organisme_dept, o.region AS organisme_region
+              o.nom AS organisme, o.departement AS organisme_dept, o.region AS organisme_region,
+              o.qualiopi AS organisme_qualiopi
        FROM formations f
        JOIN organismes o ON o.siret = f.siret
        LEFT JOIN categories c ON c.id = f.categorie_id
@@ -292,6 +293,19 @@ export function updateLeadStatut(id: number, statut: string): number {
 
 export function listPartenaires() {
   return sqlite.prepare(`SELECT * FROM partenaires ORDER BY priorite DESC, id ASC`).all();
+}
+
+export function getPartenaireById(id: number) {
+  return sqlite.prepare(`SELECT * FROM partenaires WHERE id = @id`).get({ id }) as
+    | { id: number; nom: string; email: string }
+    | undefined;
+}
+
+export function getFormationIntitule(numero: string): string | null {
+  const r = sqlite.prepare(`SELECT intitule FROM formations WHERE numero_formation = @n`).get({ n: numero }) as
+    | { intitule: string }
+    | undefined;
+  return r?.intitule ?? null;
 }
 
 // Seed Voie B : École Naturo seule au départ, catch-all (categories_slugs = NULL).

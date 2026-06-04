@@ -11,7 +11,10 @@ import {
   listLeads,
   updateLeadStatut,
   listPartenaires,
+  getPartenaireById,
+  getFormationIntitule,
 } from "./storage.ts";
+import { sendLeadNotification } from "./mailer.ts";
 
 export const publicRouter = Router();
 
@@ -62,6 +65,22 @@ publicRouter.post("/leads", (req, res) => {
   if (!parsed.success) return res.status(400).json({ error: "Formulaire invalide", details: parsed.error.flatten() });
   const { consentement, ...lead } = parsed.data;
   const created = createLead(lead);
+
+  // Notification Voie B au partenaire (non bloquant)
+  if (created.partenaireId) {
+    const p = getPartenaireById(created.partenaireId);
+    if (p) {
+      void sendLeadNotification({
+        partenaireEmail: p.email,
+        partenaireNom: p.nom,
+        nom: lead.nom,
+        email: lead.email,
+        tel: lead.tel,
+        formationTitre: lead.numeroFormation ? getFormationIntitule(lead.numeroFormation) : null,
+      });
+    }
+  }
+
   res.status(201).json({ ok: true, id: created.id });
 });
 

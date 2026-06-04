@@ -45,6 +45,9 @@ npm run web         # front Vite sur :5173 (proxy /api → :3001)
   - `<title>`/meta/H1 uniques + JSON-LD (BreadcrumbList + ItemList/Course) + maillage interne.
 
 > ⚠️ La SPA est en **hash routing** (non indexable) ; le SEO repose sur ces pages **SSR**. En prod, Express sert les pages SEO **et** la SPA (même origine).
+- **Fraîcheur** : `ingestPole()` réutilisable (CLI `npm run ingest` + cron in-process si `INGEST_INTERVAL_HOURS>0`) ; les fiches absentes du dernier extract passent `is_active=0`.
+- **Qualiopi** : badge sur cartes/fiche/SEO (présence sur EDOF ⇒ Qualiopi obligatoire ; vérif live QuiForme = enrichissement futur via token API Entreprise).
+- **Email** : notification Mailjet (API HTTP, sans dépendance) au partenaire à chaque lead ; stub loggé si clés absentes.
 
 > Géo *ville* (enrichissement SIRENE) = Lot post-MVP. Le delta au-delà de l'offset 10 000 (export) = L6.
 
@@ -55,4 +58,4 @@ npm run web         # front Vite sur :5173 (proxy /api → :3001)
 - **L3** ✅ Front React/Vite/Tailwind/Wouter (accueil, résultats+facettes, fiche formation, fiche organisme).
 - **L4** ✅ Lead form + consentement RGPD + routing Voie B (École Naturo) + back-office `/admin`.
 - **L5** ✅ Pages SEO SSR métier × département + sitemap (517 URLs) + JSON-LD + maillage.
-- **L6** Cron de fraîcheur + enrichissement Qualiopi (API QuiForme).
+- **L6** ✅ Cron de fraîcheur (re-ingest + fiches mortes désactivées) + badge Qualiopi + email Mailjet au partenaire.

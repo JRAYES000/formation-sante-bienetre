@@ -19,6 +19,7 @@ interface FormationDetail {
   siret?: string;
   organisme?: string;
   organisme_dept?: string | null;
+  organisme_qualiopi?: number;
   categorie_nom?: string | null;
   departements: { code: string; nom: string; region?: string }[];
 }
@@ -61,6 +62,7 @@ export default function FicheFormation() {
           {f.heures ? <span className="bg-gray-100 rounded-full px-3 py-1">{f.heures} heures</span> : null}
           {f.niveau && <span className="bg-gray-100 rounded-full px-3 py-1">{f.niveau}</span>}
           <span className="badge">Éligible CPF</span>
+          {f.organisme_qualiopi ? <span className="badge" data-testid="badge-qualiopi">Qualiopi</span> : null}
         </div>
 
         <p className="text-2xl font-bold text-primary mt-5" data-testid="text-formation-prix">{prix(f)}</p>

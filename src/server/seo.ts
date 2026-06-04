@@ -98,7 +98,7 @@ function formationCards(items: any[]): string {
 ${f.categorie_nom ? `<span class="badge">${esc(f.categorie_nom)}</span>` : ""}
 <a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
 <span class="muted">${esc(f.organisme ?? "")}</span>
-<span class="muted">${f.a_distance ? "À distance possible" : "Présentiel"}${f.type_referentiel ? " · " + esc(f.type_referentiel) : ""} · Éligible CPF</span>
+<span class="muted">${f.a_distance ? "À distance possible" : "Présentiel"}${f.type_referentiel ? " · " + esc(f.type_referentiel) : ""} · Éligible CPF${f.organisme_qualiopi ? " · Qualiopi" : ""}</span>
 <span class="price">${eur(f.prix_min)}</span>
 </div>`
     )
