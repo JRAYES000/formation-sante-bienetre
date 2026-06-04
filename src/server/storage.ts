@@ -301,6 +301,10 @@ export function getPartenaireById(id: number) {
     | undefined;
 }
 
+export function countFormations(): number {
+  return (sqlite.prepare(`SELECT count(*) AS n FROM formations`).get() as { n: number }).n;
+}
+
 export function getFormationIntitule(numero: string): string | null {
   const r = sqlite.prepare(`SELECT intitule FROM formations WHERE numero_formation = @n`).get({ n: numero }) as
     | { intitule: string }
