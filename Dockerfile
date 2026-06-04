@@ -16,6 +16,6 @@ COPY --from=builder /app .
 # La base SQLite (leads, catalogue) vit dans /app/data.
 # NB : ne PAS déclarer VOLUME ici — Railway rejette les Dockerfiles avec VOLUME.
 # La persistance se fait en attachant un Railway Volume (dashboard) monté sur /app/data.
-ENV PORT=3001
-EXPOSE 3001
+# Pas de ENV PORT figé : l'app écoute sur process.env.PORT injecté par la plateforme
+# (Railway, etc.). En local, fallback sur 3001 (cf. src/server/index.ts).
 CMD ["npx", "tsx", "src/server/index.ts"]
