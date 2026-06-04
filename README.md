@@ -39,6 +39,12 @@ npm run web         # front Vite sur :5173 (proxy /api → :3001)
   - `POST /api/public/leads` (consentement RGPD obligatoire) → routing Voie B
 - **Lead capture + Voie B** : formulaire fiche formation, lead routé vers un partenaire (École Naturo = catch-all priorité haute).
 - **Back-office** `/#/admin` (token `ADMIN_TOKEN`) : liste des leads + changement de statut.
+- **SEO SSR** (pages crawlables à URLs propres, servies par Express) :
+  - `/formations` (hub) · `/formations/:metier` · `/formations/:metier/:departement`
+  - `/sitemap.xml` (517 URLs) · `/robots.txt`
+  - `<title>`/meta/H1 uniques + JSON-LD (BreadcrumbList + ItemList/Course) + maillage interne.
+
+> ⚠️ La SPA est en **hash routing** (non indexable) ; le SEO repose sur ces pages **SSR**. En prod, Express sert les pages SEO **et** la SPA (même origine).
 
 > Géo *ville* (enrichissement SIRENE) = Lot post-MVP. Le delta au-delà de l'offset 10 000 (export) = L6.
 
@@ -48,5 +54,5 @@ npm run web         # front Vite sur :5173 (proxy /api → :3001)
 - **L2** ✅ Grain géo (formation_departements) + recherche FTS5 + facettes + endpoints `/api/public`.
 - **L3** ✅ Front React/Vite/Tailwind/Wouter (accueil, résultats+facettes, fiche formation, fiche organisme).
 - **L4** ✅ Lead form + consentement RGPD + routing Voie B (École Naturo) + back-office `/admin`.
-- **L5** Pages SEO programmatiques métier × département + sitemap + JSON-LD.
+- **L5** ✅ Pages SEO SSR métier × département + sitemap (517 URLs) + JSON-LD + maillage.
 - **L6** Cron de fraîcheur + enrichissement Qualiopi (API QuiForme).

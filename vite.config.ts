@@ -10,8 +10,11 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      // L'API Express tourne sur 3001 (npm run serve)
+      // L'API Express + les pages SEO SSR tournent sur 3001 (npm run serve)
       "/api": "http://localhost:3001",
+      "/formations": "http://localhost:3001",
+      "/sitemap.xml": "http://localhost:3001",
+      "/robots.txt": "http://localhost:3001",
     },
   },
   build: { outDir: "dist/public", emptyOutDir: true },

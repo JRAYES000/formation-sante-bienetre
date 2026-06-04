@@ -178,6 +178,49 @@ export function listDepartements() {
     .all();
 }
 
+// ─────────────── SEO (pages programmatiques) ───────────────
+
+export function slugify(s: string): string {
+  return (s || "")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+export interface SeoDept {
+  code: string;
+  nom: string;
+  slug: string;
+  n: number;
+}
+
+export function seoDepartements(): SeoDept[] {
+  return (listDepartements() as { code: string; nom: string | null; n: number }[]).map((d) => ({
+    code: d.code,
+    nom: d.nom ?? d.code,
+    slug: slugify(d.nom ?? d.code),
+    n: d.n,
+  }));
+}
+
+// Couples (catégorie × département) existants → pour le sitemap et la validation des routes.
+export function seoCombos(): { categorie: string; code: string; dept: string; n: number }[] {
+  return sqlite
+    .prepare(
+      `SELECT c.slug AS categorie, fd.code_departement AS code, fd.departement AS dept,
+              count(DISTINCT f.numero_formation) AS n
+       FROM formations f
+       JOIN categories c ON c.id = f.categorie_id
+       JOIN formation_departements fd ON fd.numero_formation = f.numero_formation
+       WHERE f.is_active = 1 AND fd.departement IS NOT NULL
+       GROUP BY c.slug, fd.code_departement
+       HAVING n > 0`
+    )
+    .all() as { categorie: string; code: string; dept: string; n: number }[];
+}
+
 // ─────────────── Leads & Voie B ───────────────
 
 export interface LeadInput {
