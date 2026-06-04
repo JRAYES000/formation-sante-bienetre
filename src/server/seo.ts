@@ -1,7 +1,7 @@
 // Pages SEO rendues côté serveur (SSR), à URLs propres et crawlables.
 // La SPA (hash routing) gère l'interactif ; ces pages portent le référencement.
 import { Router, type Request } from "express";
-import { searchFormations, listCategories, seoDepartements, seoCombos } from "./storage.ts";
+import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats } from "./storage.ts";
 
 export const seoRouter = Router();
 
@@ -154,7 +154,7 @@ seoRouter.get("/sitemap.xml", (req, res) => {
   const base = baseUrl(req);
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
-  const urls: string[] = [`${base}/formations`];
+  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`];
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
   for (const combo of seoCombos()) {
     const d = dcode.get(combo.code);
@@ -183,6 +183,63 @@ ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} ($
       description: "Comparez les formations en esthétique, massage bien-être, coiffure et soins, financées par le CPF, par métier et par département.",
       canonical,
       breadcrumb: [{ name: "Accueil", url: `${baseUrl(req)}/formations` }, { name: "Formations" }],
+      body,
+    })
+  );
+});
+
+// ---------- page financement CPF (explainer + confiance) ----------
+seoRouter.get("/financement-cpf", (req, res) => {
+  const base = baseUrl(req);
+  const canonical = `${base}/financement-cpf`;
+  const s = globalStats();
+  const cats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0).slice(0, 8);
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Les formations bien-être sont-elles éligibles au CPF ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Oui : les formations certifiantes (titre RNCP ou certification RS) dispensées par des organismes certifiés Qualiopi sont finançables par le CPF, parfois jusqu'à 100 %.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Comment utiliser mon CPF pour une formation ?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Connectez-vous sur moncompteformation.gouv.fr, recherchez votre formation, puis mobilisez vos droits. Un reste à charge peut être complété par Pôle emploi, votre employeur ou vos fonds propres.",
+        },
+      },
+    ],
+  };
+  const body = `<h1>Financer sa formation bien-être avec le CPF</h1>
+<p class="lead">Le Compte Personnel de Formation (CPF) finance les formations certifiantes en esthétique, massage bien-être, coiffure et soins — souvent <strong>jusqu'à 100 %</strong>.</p>
+<div class="chips" style="margin:0 0 24px">
+  <span class="chip"><strong>${s.formations.toLocaleString("fr-FR")}</strong> formations CPF</span>
+  <span class="chip"><strong>${s.organismes}</strong> organismes</span>
+  <span class="chip"><strong>${s.qualiopi}</strong> certifiés Qualiopi</span>
+</div>
+<div class="mesh"><h2>Comment ça marche, en 3 étapes</h2>
+  <p>1. <strong>Vérifiez vos droits</strong> sur moncompteformation.gouv.fr.<br>
+     2. <strong>Choisissez votre formation</strong> certifiante (RNCP ou RS) dispensée par un organisme Qualiopi.<br>
+     3. <strong>Mobilisez votre CPF</strong> ; un éventuel reste à charge peut être complété (Pôle emploi, employeur, fonds propres).</p>
+</div>
+<div class="mesh"><h2>Explorer les formations finançables</h2><div class="chips">
+${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} (${c.n})</a>`).join("")}
+</div></div>
+<a class="cta" href="/#/recherche">Trouver ma formation CPF</a>`;
+
+  res.send(
+    renderPage({
+      title: "Financer sa formation bien-être avec le CPF | Formation Santé Bien-être",
+      description: "Comment financer une formation bien-être (esthétique, massage, coiffure) avec le CPF : éligibilité, démarches, jusqu'à 100 % pris en charge.",
+      canonical,
+      jsonLd: [faq],
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Financement CPF" }],
       body,
     })
   );

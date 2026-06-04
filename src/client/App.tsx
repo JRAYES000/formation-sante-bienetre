@@ -28,6 +28,10 @@ function Footer() {
     <footer className="border-t border-gray-100 mt-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 py-8 text-sm text-gray-500 space-y-2">
         <p className="font-semibold text-dark">Formation Santé Bien-être</p>
+        <nav className="flex flex-wrap gap-x-5 gap-y-1">
+          <a href="/financement-cpf" className="hover:text-primary" data-testid="link-cpf">Financement CPF</a>
+          <a href="/formations" className="hover:text-primary" data-testid="link-toutes-formations">Toutes les formations</a>
+        </nav>
         <p>
           Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins.
           Données issues du catalogue public Mon Compte Formation.

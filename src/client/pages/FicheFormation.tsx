@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import LeadForm from "../components/LeadForm";
+import FormationCard, { type FormationItem } from "../components/FormationCard";
 
 interface FormationDetail {
   numero_formation: string;
@@ -35,6 +36,9 @@ export default function FicheFormation() {
   const [asked, setAsked] = useState(false);
   const { data: f, isLoading, isError } = useQuery<FormationDetail>({
     queryKey: [`/api/public/formations/${encodeURIComponent(numero!)}`],
+  });
+  const { data: similaires } = useQuery<FormationItem[]>({
+    queryKey: [`/api/public/formations/${encodeURIComponent(numero!)}/similaires`],
   });
 
   if (isLoading) return <div className="max-w-4xl mx-auto px-4 py-12 text-gray-500">Chargement…</div>;
@@ -95,6 +99,17 @@ export default function FicheFormation() {
               <span key={d.code} className="bg-gray-100 rounded-full px-3 py-1 text-sm" data-testid={`dept-${d.code}`}>
                 {d.nom}
               </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {similaires && similaires.length > 0 && (
+        <div className="mt-8">
+          <h2 className="font-bold text-lg text-ink mb-4">Formations similaires</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {similaires.map((s) => (
+              <FormationCard key={s.numero_formation} f={s} />
             ))}
           </div>
         </div>

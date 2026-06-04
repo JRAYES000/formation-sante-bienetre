@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
 import SearchBar from "../components/SearchBar";
+import TrustBar from "../components/TrustBar";
 
 interface Categorie {
   slug: string;
@@ -26,6 +27,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TrustBar />
 
       <section className="max-w-6xl mx-auto px-4 py-10">
         <h2 className="font-bold text-xl text-dark mb-5">Explorer par métier</h2>

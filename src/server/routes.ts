@@ -5,6 +5,8 @@ import {
   searchFormations,
   getFormation,
   getOrganisme,
+  similarFormations,
+  globalStats,
   listCategories,
   listDepartements,
   createLead,
@@ -23,7 +25,11 @@ const searchSchema = z.object({
   categorie: z.string().trim().max(120).optional(),
   dept: z.string().trim().max(8).optional(),
   distance: z.coerce.boolean().optional(),
+  prixMin: z.coerce.number().nonnegative().max(100000).optional(),
   prixMax: z.coerce.number().positive().max(100000).optional(),
+  niveau: z.string().trim().max(120).optional(),
+  type: z.string().trim().max(20).optional(),
+  sort: z.enum(["pertinence", "prix_asc", "prix_desc"]).optional(),
   page: z.coerce.number().int().positive().max(1000).optional(),
   pageSize: z.coerce.number().int().positive().max(50).optional(),
 });
@@ -32,6 +38,10 @@ publicRouter.get("/formations", (req, res) => {
   const parsed = searchSchema.safeParse(req.query);
   if (!parsed.success) return res.status(400).json({ error: "Paramètres invalides", details: parsed.error.flatten() });
   res.json(searchFormations(parsed.data));
+});
+
+publicRouter.get("/formations/:numero/similaires", (req, res) => {
+  res.json(similarFormations(req.params.numero));
 });
 
 publicRouter.get("/formations/:numero", (req, res) => {
@@ -48,6 +58,7 @@ publicRouter.get("/organismes/:siret", (req, res) => {
 
 publicRouter.get("/categories", (_req, res) => res.json(listCategories()));
 publicRouter.get("/departements", (_req, res) => res.json(listDepartements()));
+publicRouter.get("/stats", (_req, res) => res.json(globalStats()));
 
 // Lead capture (Voie B). Le consentement RGPD doit être explicitement true.
 const leadSchema = z.object({

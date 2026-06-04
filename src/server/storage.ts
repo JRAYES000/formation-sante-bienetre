@@ -7,7 +7,11 @@ export interface SearchParams {
   categorie?: string; // slug
   dept?: string; // code département
   distance?: boolean; // uniquement à distance
+  prixMin?: number; // budget min (€)
   prixMax?: number; // budget max (€)
+  niveau?: string; // libellé niveau de sortie
+  type?: string; // type de référentiel (RNCP / RS)
+  sort?: "pertinence" | "prix_asc" | "prix_desc";
   page?: number;
   pageSize?: number;
 }
@@ -25,7 +29,7 @@ interface Filters {
   params: Record<string, unknown>;
 }
 
-function buildFilters(p: SearchParams, opts: { skip?: "categorie" | "dept" } = {}): Filters {
+function buildFilters(p: SearchParams, opts: { skip?: "categorie" | "dept" | "niveau" | "type" } = {}): Filters {
   const joins: string[] = [];
   const where: string[] = ["f.is_active = 1"];
   const params: Record<string, unknown> = {};
@@ -46,9 +50,21 @@ function buildFilters(p: SearchParams, opts: { skip?: "categorie" | "dept" } = {
     params.dept = p.dept;
   }
   if (p.distance) where.push("f.a_distance = 1");
+  if (p.prixMin != null) {
+    where.push("(f.prix_min IS NOT NULL AND f.prix_min >= @prixMin)");
+    params.prixMin = p.prixMin;
+  }
   if (p.prixMax != null) {
     where.push("(f.prix_min IS NULL OR f.prix_min <= @prixMax)");
     params.prixMax = p.prixMax;
+  }
+  if (p.niveau && opts.skip !== "niveau") {
+    where.push("f.niveau = @niveau");
+    params.niveau = p.niveau;
+  }
+  if (p.type && opts.skip !== "type") {
+    where.push("f.type_referentiel = @type");
+    params.type = p.type;
   }
   return { joins, where, params };
 }
@@ -60,7 +76,10 @@ export function searchFormations(p: SearchParams) {
   const { joins, where, params } = buildFilters(p);
   const j = joins.join("\n");
   const w = where.join(" AND ");
-  const orderBy = params.fts ? "ORDER BY bm25(formations_fts)" : "ORDER BY f.nb_sessions DESC, f.intitule ASC";
+  let orderBy: string;
+  if (p.sort === "prix_asc") orderBy = "ORDER BY f.prix_min IS NULL, f.prix_min ASC, f.nb_sessions DESC";
+  else if (p.sort === "prix_desc") orderBy = "ORDER BY f.prix_min DESC, f.nb_sessions DESC";
+  else orderBy = params.fts ? "ORDER BY bm25(formations_fts)" : "ORDER BY f.nb_sessions DESC, f.intitule ASC";
 
   const total = (
     sqlite
@@ -112,13 +131,71 @@ export function searchFormations(p: SearchParams) {
     )
     .all(fd.params);
 
+  const fn = buildFilters(p, { skip: "niveau" });
+  const facetNiveaux = sqlite
+    .prepare(
+      `SELECT f.niveau nom, count(*) n FROM formations f
+       JOIN organismes o ON o.siret = f.siret
+       LEFT JOIN categories c ON c.id = f.categorie_id
+       ${fn.joins.join("\n")} WHERE ${fn.where.join(" AND ")} AND f.niveau IS NOT NULL
+       GROUP BY f.niveau ORDER BY n DESC LIMIT 12`
+    )
+    .all(fn.params);
+
+  const ft = buildFilters(p, { skip: "type" });
+  const facetTypes = sqlite
+    .prepare(
+      `SELECT f.type_referentiel nom, count(*) n FROM formations f
+       JOIN organismes o ON o.siret = f.siret
+       LEFT JOIN categories c ON c.id = f.categorie_id
+       ${ft.joins.join("\n")} WHERE ${ft.where.join(" AND ")} AND f.type_referentiel IS NOT NULL
+       GROUP BY f.type_referentiel ORDER BY n DESC`
+    )
+    .all(ft.params);
+
   return {
     total,
     page,
     pageSize,
     pages: Math.ceil(total / pageSize),
     items,
-    facets: { categories: facetCategories, departements: facetDepartements },
+    facets: {
+      categories: facetCategories,
+      departements: facetDepartements,
+      niveaux: facetNiveaux,
+      types: facetTypes,
+    },
+  };
+}
+
+// Formations similaires (même catégorie, hors elle-même) — engagement + maillage SEO.
+export function similarFormations(numero: string, limit = 6) {
+  const row = sqlite
+    .prepare(`SELECT categorie_id FROM formations WHERE numero_formation = @n`)
+    .get({ n: numero }) as { categorie_id: number | null } | undefined;
+  if (!row || row.categorie_id == null) return [];
+  return sqlite
+    .prepare(
+      `SELECT f.numero_formation, f.intitule, f.prix_min, f.prix_max, f.a_distance, f.type_referentiel,
+              c.slug AS categorie_slug, c.nom AS categorie_nom,
+              o.nom AS organisme, o.qualiopi AS organisme_qualiopi
+       FROM formations f
+       JOIN organismes o ON o.siret = f.siret
+       LEFT JOIN categories c ON c.id = f.categorie_id
+       WHERE f.is_active = 1 AND f.categorie_id = @cat AND f.numero_formation <> @n
+       ORDER BY f.nb_sessions DESC, f.intitule ASC LIMIT @limit`
+    )
+    .all({ cat: row.categorie_id, n: numero, limit });
+}
+
+// Statistiques globales pour le bandeau de confiance.
+export function globalStats() {
+  const one = (sql: string) => (sqlite.prepare(sql).get() as { n: number }).n;
+  return {
+    formations: one(`SELECT count(*) n FROM formations WHERE is_active = 1`),
+    organismes: one(`SELECT count(DISTINCT siret) n FROM formations WHERE is_active = 1`),
+    categories: one(`SELECT count(*) n FROM categories`),
+    qualiopi: one(`SELECT count(*) n FROM organismes WHERE qualiopi = 1`),
   };
 }
 
