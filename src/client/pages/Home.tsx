@@ -13,12 +13,12 @@ export default function Home() {
 
   return (
     <div>
-      <section className="bg-gradient-to-b from-primary/5 to-transparent">
+      <section className="bg-surface border-b border-hairline">
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-dark leading-tight">
+          <h1 className="text-3xl sm:text-4xl font-bold text-ink leading-tight tracking-tight">
             Trouvez votre formation <span className="text-primary">bien-être</span> financée par le CPF
           </h1>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-body">
             Esthétique, massage bien-être, coiffure, soins… Comparez les organismes et demandez vos informations gratuitement.
           </p>
           <div className="mt-8">

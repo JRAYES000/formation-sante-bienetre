@@ -2,23 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design tokens issus de references/airbnb/DESIGN.md :
+   canvas blanc, encre #222, accent Rausch #ff385c, Inter, cartes 14px,
+   boutons 8px (primaire) / pilule, une seule tier d'ombre. */
+
 @layer base {
   body {
-    @apply bg-[#f6faf8] text-dark antialiased;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    @apply bg-white text-ink antialiased;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
+  h1, h2, h3 { @apply text-ink; }
 }
 
 @layer components {
+  /* Carte Airbnb : bord hairline fin, coins 14px, lift à l'ombre signature au survol */
   .card-naturo {
-    @apply bg-white rounded-naturo border border-gray-100 shadow-sm;
+    @apply bg-white rounded-naturo border border-hairline transition-shadow duration-200;
   }
+  .card-naturo:hover {
+    @apply shadow-airbnb;
+  }
+  /* CTA primaire : Rausch plein, blanc, 8px, weight 500 */
   .btn-primary {
-    @apply inline-flex items-center justify-center bg-primary text-white rounded-naturo py-3 px-6 font-bold hover:bg-dark transition-colors;
+    @apply inline-flex items-center justify-center bg-primary text-white rounded-[8px] py-3 px-6 font-medium hover:bg-primary-active transition-colors;
   }
+  /* "Je m'informe" : même voltage Rausch (accent unique chez Airbnb) */
   .btn-accent {
-    @apply inline-flex items-center justify-center bg-accent text-dark rounded-naturo py-3 px-6 font-bold hover:brightness-95 transition;
+    @apply inline-flex items-center justify-center bg-primary text-white rounded-[8px] py-3 px-6 font-medium hover:bg-primary-active transition-colors;
   }
+  /* Bouton secondaire blanc + contour encre (pattern Airbnb) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center bg-white text-ink border border-ink rounded-[8px] py-3 px-6 font-medium hover:bg-surface transition-colors;
+  }
+  /* Badge : pill, teinte Rausch */
   .badge {
     @apply inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary;
   }
