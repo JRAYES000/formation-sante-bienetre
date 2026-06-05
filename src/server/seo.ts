@@ -95,6 +95,7 @@ ${o.body}
 </main>
 <footer><div class="wrap" style="padding:20px 16px">
 <p style="margin:0 0 10px"><a href="/metiers">Métiers</a> · <a href="/blog">Blog</a> · <a href="/financement-cpf">Financement CPF</a> · <a href="/formations">Toutes les formations</a></p>
+<p style="margin:0 0 10px"><a href="/mentions-legales">Mentions légales</a> · <a href="/politique-confidentialite">Politique de confidentialité</a></p>
 <p>Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Données issues du catalogue public Mon Compte Formation.</p>
 </div></footer>
 </body>
@@ -159,7 +160,7 @@ seoRouter.get("/sitemap.xml", (req, res) => {
   const base = baseUrl(req);
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
-  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/metiers`, `${base}/blog`];
+  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/metiers`, `${base}/blog`, `${base}/mentions-legales`, `${base}/politique-confidentialite`];
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
   for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
   for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
@@ -250,6 +251,59 @@ ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} ($
       body,
     })
   );
+});
+
+// ---------- pages légales (RGPD) ----------
+const LEGAL_DISCLAIMER = `<p class="muted" style="background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:12px"><strong>⚠️ Modèle à faire valider par un professionnel du droit.</strong> Les mentions <em>[À COMPLÉTER]</em> doivent être renseignées avec vos informations réelles d'éditeur.</p>`;
+
+seoRouter.get("/mentions-legales", (req, res) => {
+  const base = baseUrl(req);
+  const body = `<h1>Mentions légales</h1>
+${LEGAL_DISCLAIMER}
+<div class="mesh"><h2>Éditeur du site</h2><p>
+Le site <strong>formation-sante-bienetre.fr</strong> est édité par :<br>
+Nom / Raison sociale : <em>[À COMPLÉTER]</em><br>
+Statut juridique : <em>[À COMPLÉTER — ex. micro-entreprise, SAS]</em><br>
+Adresse : <em>[À COMPLÉTER]</em><br>
+N° SIRET / RCS : <em>[À COMPLÉTER]</em><br>
+Email : <a href="mailto:contact@formation-sante-bienetre.fr">contact@formation-sante-bienetre.fr</a><br>
+Directeur de la publication : <em>[À COMPLÉTER — ex. Julien Rayes]</em>
+</p></div>
+<div class="mesh"><h2>Hébergement</h2><p>
+Le site est hébergé par <strong>Railway Corporation</strong> (548 Market Street, San Francisco, CA 94104, États-Unis — railway.com). Le nom de domaine est géré via Hostinger.
+</p></div>
+<div class="mesh"><h2>Propriété intellectuelle</h2><p>
+La présentation, la charte graphique et les contenus éditoriaux du site sont protégés. Les données relatives aux formations proviennent du catalogue public « Mon Compte Formation » (Caisse des Dépôts) et restent la propriété de leurs organismes respectifs.
+</p></div>
+<div class="mesh"><h2>Données personnelles</h2><p>
+Le traitement de vos données est décrit dans notre <a href="/politique-confidentialite">Politique de confidentialité</a>.
+</p></div>`;
+  res.send(renderPage({ title: "Mentions légales | Formation Santé Bien-être", description: "Mentions légales du site formation-sante-bienetre.fr.", canonical: `${base}/mentions-legales`, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Mentions légales" }], body }));
+});
+
+seoRouter.get("/politique-confidentialite", (req, res) => {
+  const base = baseUrl(req);
+  const body = `<h1>Politique de confidentialité</h1>
+${LEGAL_DISCLAIMER}
+<p class="lead">Cette politique explique comment vos données personnelles sont collectées et utilisées lorsque vous demandez des informations sur une formation via ce site.</p>
+<div class="mesh"><h2>Responsable du traitement</h2><p><em>[À COMPLÉTER — éditeur ci-dessus]</em>, joignable à <a href="mailto:contact@formation-sante-bienetre.fr">contact@formation-sante-bienetre.fr</a>.</p></div>
+<div class="mesh"><h2>Données collectées</h2><ul>
+<li><strong>Formulaire « Je m'informe »</strong> : nom et prénom, email, téléphone (facultatif), et informations de qualification facultatives (budget, délai, mode de financement, niveau).</li>
+<li><strong>Avis</strong> : prénom (facultatif) et commentaire.</li>
+<li><strong>Newsletter</strong> : adresse email.</li>
+</ul></div>
+<div class="mesh"><h2>Finalités</h2><ul>
+<li>Vous mettre en relation avec l'organisme de formation concerné et nos partenaires afin qu'ils vous recontactent.</li>
+<li>Vous transmettre des informations sur les formations demandées.</li>
+<li>Vous envoyer notre lettre d'information (si vous y avez consenti).</li>
+</ul></div>
+<div class="mesh"><h2>Base légale</h2><p>Vos données sont traitées sur la base de <strong>votre consentement</strong>, recueilli explicitement via la case à cocher du formulaire. Vous pouvez le retirer à tout moment.</p></div>
+<div class="mesh"><h2>Destinataires</h2><p>Vos coordonnées sont <strong>transmises à l'organisme de formation</strong> concerné ainsi qu'à <strong>nos partenaires</strong> (dont École Naturo) dans le seul but de répondre à votre demande. Elles ne sont jamais vendues à des tiers à des fins publicitaires.</p></div>
+<div class="mesh"><h2>Transfert hors Union européenne</h2><p>Le site étant hébergé par Railway (États-Unis), vos données peuvent être stockées hors UE. Des garanties appropriées (clauses contractuelles types) encadrent ce transfert. <em>[À FAIRE VALIDER]</em></p></div>
+<div class="mesh"><h2>Durée de conservation</h2><p>Vos données sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées au plus tard <em>[À COMPLÉTER — ex. 3 ans]</em> après le dernier contact.</p></div>
+<div class="mesh"><h2>Vos droits</h2><p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité et de retrait du consentement. Pour les exercer : <a href="mailto:contact@formation-sante-bienetre.fr">contact@formation-sante-bienetre.fr</a>. Vous pouvez aussi introduire une réclamation auprès de la <strong>CNIL</strong> (cnil.fr).</p></div>
+<div class="mesh"><h2>Cookies</h2><p>Ce site n'utilise <strong>aucun cookie publicitaire ni outil de traçage analytique</strong> à ce jour. Seules des ressources techniques nécessaires à son affichage sont utilisées (dont la police d'écriture chargée via Google Fonts).</p></div>`;
+  res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Politique de confidentialité" }], body }));
 });
 
 // ---------- fiches métier (contenu éditorial) ----------

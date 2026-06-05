@@ -43,7 +43,13 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-hairline">
-        <div className="max-w-6xl mx-auto px-4 py-4 text-xs text-muted">© 2026 Formation Santé Bien-être</div>
+        <div className="max-w-6xl mx-auto px-4 py-4 text-xs text-muted flex flex-wrap gap-x-4 gap-y-1 justify-between">
+          <span>© 2026 Formation Santé Bien-être</span>
+          <span className="flex gap-4">
+            <a href="/mentions-legales" className="hover:text-primary" data-testid="link-mentions">Mentions légales</a>
+            <a href="/politique-confidentialite" className="hover:text-primary" data-testid="link-confidentialite">Politique de confidentialité</a>
+          </span>
+        </div>
       </div>
     </footer>
   );

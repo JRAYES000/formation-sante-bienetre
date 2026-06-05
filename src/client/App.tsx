@@ -9,6 +9,7 @@ import Comparer from "./pages/Comparer";
 import { CompareProvider, CompareBar } from "./lib/compare";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
+import PrivacyBanner from "./components/PrivacyBanner";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           </main>
           <SiteFooter />
           <CompareBar />
+          <PrivacyBanner />
         </div>
       </Router>
     </CompareProvider>

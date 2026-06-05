@@ -86,7 +86,8 @@ export default function LeadForm({ numeroFormation }: { numeroFormation: string 
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-1" data-testid="checkbox-lead-consent" />
         <span>
           J'accepte que mes coordonnées soient transmises à l'organisme de formation et à ses partenaires afin d'être
-          recontacté(e) au sujet de cette formation (consentement RGPD).
+          recontacté(e) au sujet de cette formation, conformément à la{" "}
+          <a href="/politique-confidentialite" target="_blank" rel="noopener" className="text-primary underline">politique de confidentialité</a>.
         </span>
       </label>
       {mutation.isError && <p className="text-red-600 text-sm">Une erreur est survenue. Réessayez.</p>}
