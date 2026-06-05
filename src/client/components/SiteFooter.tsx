@@ -24,6 +24,7 @@ export default function SiteFooter() {
             <li><a href="/financement-cpf" className="hover:text-primary">Financement CPF</a></li>
             <li><a href="/formations" className="hover:text-primary">Toutes les formations</a></li>
             <li><a href="/metiers" className="hover:text-primary">Tous les métiers</a></li>
+            <li><a href="/villes" className="hover:text-primary">Par ville</a></li>
           </ul>
         </div>
         <div>

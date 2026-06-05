@@ -6,6 +6,7 @@
   "description": "Agrégateur de formations CPF — vertical Santé / Bien-être / Social (lancement pôle Beauté & bien-être). Modèle Voie B (leads captifs).",
   "scripts": {
     "ingest": "tsx src/ingest/run.ts",
+    "enrich:villes": "tsx src/enrich/run-villes.ts",
     "db:stats": "tsx src/ingest/stats.ts",
     "dev": "tsx watch src/server/index.ts",
     "serve": "tsx src/server/index.ts",

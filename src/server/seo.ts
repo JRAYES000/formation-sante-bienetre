@@ -1,7 +1,8 @@
 // Pages SEO rendues côté serveur (SSR), à URLs propres et crawlables.
 // La SPA (hash routing) gère l'interactif ; ces pages portent le référencement.
 import { Router, type Request } from "express";
-import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats } from "./storage.ts";
+import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille } from "./storage.ts";
+import { slugify } from "./storage.ts";
 import { getMetier, listMetiers, getArticle, listArticles } from "./content.ts";
 
 export const seoRouter = Router();
@@ -94,7 +95,7 @@ function renderPage(o: PageOpts): string {
 ${o.body}
 </main>
 <footer><div class="wrap" style="padding:20px 16px">
-<p style="margin:0 0 10px"><a href="/metiers">Métiers</a> · <a href="/blog">Blog</a> · <a href="/financement-cpf">Financement CPF</a> · <a href="/formations">Toutes les formations</a></p>
+<p style="margin:0 0 10px"><a href="/metiers">Métiers</a> · <a href="/villes">Villes</a> · <a href="/blog">Blog</a> · <a href="/financement-cpf">Financement CPF</a> · <a href="/formations">Toutes les formations</a></p>
 <p style="margin:0 0 10px"><a href="/mentions-legales">Mentions légales</a> · <a href="/politique-confidentialite">Politique de confidentialité</a></p>
 <p>Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Données issues du catalogue public Mon Compte Formation.</p>
 </div></footer>
@@ -164,6 +165,9 @@ seoRouter.get("/sitemap.xml", (req, res) => {
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
   for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
   for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
+  urls.push(`${base}/villes`);
+  for (const v of seoVilles()) urls.push(`${base}/ville/${v.slug}`);
+  for (const c of seoVilleCombos()) urls.push(`${base}/ville/${slugify(c.ville)}/${c.categorie}`);
   for (const combo of seoCombos()) {
     const d = dcode.get(combo.code);
     if (d) urls.push(`${base}/formations/${combo.categorie}/${d.slug}`);
@@ -304,6 +308,94 @@ ${LEGAL_DISCLAIMER}
 <div class="mesh"><h2>Vos droits</h2><p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité et de retrait du consentement. Pour les exercer : <a href="mailto:contact@ecole-naturo.fr">contact@ecole-naturo.fr</a>. Vous pouvez aussi introduire une réclamation auprès de la <strong>CNIL</strong> (cnil.fr).</p></div>
 <div class="mesh"><h2>Cookies</h2><p>Ce site n'utilise <strong>aucun cookie publicitaire ni outil de traçage analytique</strong> à ce jour. Seules des ressources techniques nécessaires à son affichage sont utilisées (dont la police d'écriture chargée via Google Fonts).</p></div>`;
   res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Politique de confidentialité" }], body }));
+});
+
+// ---------- pages ville ----------
+function titleCaseVille(v: string): string {
+  return v.toLowerCase().replace(/(^|[\s-])(.)/g, (_m, sep, ch) => sep + (ch as string).toUpperCase());
+}
+function villeBySlug() {
+  const map = new Map<string, { ville: string; slug: string; n: number }>();
+  for (const v of seoVilles()) map.set(v.slug, v);
+  return map;
+}
+
+seoRouter.get("/villes", (req, res) => {
+  const base = baseUrl(req);
+  const villes = seoVilles();
+  const body = `<h1>Se former près de chez vous</h1>
+<p class="lead">Trouvez une formation beauté &amp; bien-être dans votre ville.</p>
+<div class="chips">${villes.map((v) => `<a class="chip" href="/ville/${v.slug}">${esc(titleCaseVille(v.ville))} (${v.n})</a>`).join("")}</div>`;
+  res.send(
+    renderPage({
+      title: "Formations par ville | Formation Santé Bien-être",
+      description: "Trouvez une formation beauté et bien-être dans votre ville (esthétique, massage, coiffure).",
+      canonical: `${base}/villes`,
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Villes" }],
+      body,
+    })
+  );
+});
+
+seoRouter.get("/ville/:slug", (req, res, next) => {
+  const v = villeBySlug().get(req.params.slug);
+  if (!v) return next();
+  const base = baseUrl(req);
+  const nomV = titleCaseVille(v.ville);
+  const items = formationsForVille(v.ville);
+  const cats = catIndex();
+  const mesh = seoVilleCombos()
+    .filter((c) => slugify(c.ville) === v.slug)
+    .map((c) => {
+      const cat = cats.get(c.categorie);
+      return cat ? `<a class="chip" href="/ville/${v.slug}/${c.categorie}">${esc(cat.nom)} (${c.n})</a>` : "";
+    })
+    .join("");
+  const canonical = `${base}/ville/${v.slug}`;
+  const body = `<h1>Formations beauté &amp; bien-être à ${esc(nomV)}</h1>
+<p class="lead">${v.n} formations CPF dispensées par des organismes situés à ${esc(nomV)}.</p>
+${mesh ? `<div class="mesh"><h2>Par métier à ${esc(nomV)}</h2><div class="chips">${mesh}</div></div>` : ""}
+${formationCards(items)}`;
+  res.send(
+    renderPage({
+      title: `Formations beauté & bien-être à ${nomV} – CPF | Formation Santé Bien-être`,
+      description: `${v.n} formations CPF en beauté et bien-être à ${nomV}. Comparez les organismes et demandez vos informations.`,
+      canonical,
+      jsonLd: [courseListLd(items, canonical)],
+      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Villes", url: `${base}/villes` }, { name: nomV }],
+      body,
+    })
+  );
+});
+
+seoRouter.get("/ville/:slug/:categorie", (req, res, next) => {
+  const v = villeBySlug().get(req.params.slug);
+  const cat = catIndex().get(req.params.categorie);
+  if (!v || !cat) return next();
+  const items = formationsForVille(v.ville, req.params.categorie);
+  if (items.length === 0) return next();
+  const base = baseUrl(req);
+  const nomV = titleCaseVille(v.ville);
+  const canonical = `${base}/ville/${v.slug}/${req.params.categorie}`;
+  const body = `<h1>Formation ${esc(cat.nom)} à ${esc(nomV)}</h1>
+<p class="lead">${items.length} formation(s) ${esc(cat.nom)} à ${esc(nomV)}, éligibles au CPF.</p>
+<a class="cta" href="/ville/${v.slug}">Toutes les formations à ${esc(nomV)}</a>
+${formationCards(items)}`;
+  res.send(
+    renderPage({
+      title: `Formation ${cat.nom} à ${nomV} – CPF | Formation Santé Bien-être`,
+      description: `Formations ${cat.nom} à ${nomV} éligibles au CPF. Organismes, tarifs, à distance ou présentiel.`,
+      canonical,
+      jsonLd: [courseListLd(items, canonical)],
+      breadcrumb: [
+        { name: "Accueil", url: `${base}/formations` },
+        { name: "Villes", url: `${base}/villes` },
+        { name: nomV, url: `${base}/ville/${v.slug}` },
+        { name: cat.nom },
+      ],
+      body,
+    })
+  );
 });
 
 // ---------- fiches métier (contenu éditorial) ----------

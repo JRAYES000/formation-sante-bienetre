@@ -6,6 +6,7 @@ import OrgAvatar from "../components/OrgAvatar";
 interface OrganismeDetail {
   siret: string;
   nom: string;
+  ville?: string | null;
   departement?: string | null;
   region?: string | null;
   formations: {
@@ -35,6 +36,8 @@ export default function FicheOrganisme() {
           <h1 className="text-2xl font-bold text-dark" data-testid="text-organisme-nom">{o.nom}</h1>
         </div>
         <p className="text-gray-600 mt-1">
+          <span className="capitalize">{(o.ville ?? "").toLowerCase()}</span>
+          {o.ville && (o.departement || o.region) ? " · " : ""}
           {[o.departement, o.region].filter(Boolean).join(" · ")}
         </p>
         <p className="text-sm text-gray-500 mt-2">SIRET {o.siret}</p>

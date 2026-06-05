@@ -8,6 +8,7 @@ import { seedPartenaires, countFormations } from "./storage.ts";
 import { publicRouter, adminRouter } from "./routes.ts";
 import { seoRouter } from "./seo.ts";
 import { ingestPole } from "../ingest/ingest.ts";
+import { enrichVilles, villesAEnrichirCount } from "../enrich/villes.ts";
 
 ensureSchema();
 seedPartenaires();
@@ -34,12 +35,27 @@ app.listen(port, () => {
   console.log(`▶ API formation-sante-bienetre sur http://localhost:${port}`);
   console.log(`  ex: http://localhost:${port}/api/public/formations?q=massage&dept=75`);
 
-  // Auto-amorçage : si la base est vide (1er boot sur volume neuf), on ingère.
+  // Enrichissement villes (SIRENE) en arrière-plan, une seule fois (organismes sans ville).
+  const startEnrich = () => {
+    const n = villesAEnrichirCount();
+    if (n === 0) return;
+    console.log(`🏙️ Enrichissement villes : ${n} organismes (arrière-plan, ~${Math.round((n * 0.14) / 60)} min)…`);
+    enrichVilles()
+      .then((s) => console.log(`🏙️ Villes : ${s.ok} trouvées, ${s.vides} non résolues.`))
+      .catch((e) => console.error("🏙️ Échec enrichissement villes :", e));
+  };
+
+  // Auto-amorçage : si la base est vide (1er boot sur volume neuf), on ingère puis on enrichit.
   if (countFormations() === 0) {
     console.log("📦 Base vide → ingestion initiale du pôle…");
     ingestPole()
-      .then((s) => console.log(`✅ Ingestion initiale : ${s.formations} formations.`))
+      .then((s) => {
+        console.log(`✅ Ingestion initiale : ${s.formations} formations.`);
+        startEnrich();
+      })
       .catch((e) => console.error("❌ Ingestion initiale échouée :", e));
+  } else {
+    startEnrich();
   }
 });
 

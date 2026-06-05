@@ -97,7 +97,7 @@ export function searchFormations(p: SearchParams) {
       `SELECT f.numero_formation, f.intitule, f.intitule_certification, f.type_referentiel,
               f.niveau, f.heures, f.prix_min, f.prix_max, f.a_distance, f.nb_sessions,
               c.slug AS categorie_slug, c.nom AS categorie_nom,
-              o.siret, o.nom AS organisme, o.departement AS organisme_dept, o.qualiopi AS organisme_qualiopi
+              o.siret, o.nom AS organisme, o.departement AS organisme_dept, o.ville AS organisme_ville, o.qualiopi AS organisme_qualiopi
        FROM formations f
        JOIN organismes o ON o.siret = f.siret
        LEFT JOIN categories c ON c.id = f.categorie_id
@@ -297,6 +297,50 @@ export function seoCombos(): { categorie: string; code: string; dept: string; n:
        HAVING n > 0`
     )
     .all() as { categorie: string; code: string; dept: string; n: number }[];
+}
+
+// Villes (ville du siège des organismes) ayant assez de formations pour une page dédiée.
+export function seoVilles(min = 3): { ville: string; slug: string; n: number }[] {
+  return (
+    sqlite
+      .prepare(
+        `SELECT o.ville ville, count(DISTINCT f.numero_formation) n
+         FROM formations f JOIN organismes o ON o.siret = f.siret
+         WHERE f.is_active = 1 AND o.ville IS NOT NULL AND o.ville <> ''
+         GROUP BY o.ville HAVING n >= @min ORDER BY n DESC`
+      )
+      .all({ min }) as { ville: string; n: number }[]
+  ).map((r) => ({ ville: r.ville, slug: slugify(r.ville), n: r.n }));
+}
+
+export function seoVilleCombos(min = 3): { categorie: string; ville: string; n: number }[] {
+  return sqlite
+    .prepare(
+      `SELECT c.slug categorie, o.ville ville, count(DISTINCT f.numero_formation) n
+       FROM formations f JOIN organismes o ON o.siret = f.siret JOIN categories c ON c.id = f.categorie_id
+       WHERE f.is_active = 1 AND o.ville IS NOT NULL AND o.ville <> ''
+       GROUP BY c.slug, o.ville HAVING n >= @min`
+    )
+    .all({ min }) as { categorie: string; ville: string; n: number }[];
+}
+
+export function formationsForVille(ville: string, categorieSlug?: string) {
+  const where = ["f.is_active = 1", "o.ville = @ville"];
+  const params: Record<string, unknown> = { ville };
+  if (categorieSlug) {
+    where.push("c.slug = @cat");
+    params.cat = categorieSlug;
+  }
+  return sqlite
+    .prepare(
+      `SELECT f.numero_formation, f.intitule, f.intitule_certification, f.type_referentiel, f.niveau,
+              f.heures, f.prix_min, f.prix_max, f.a_distance,
+              c.slug categorie_slug, c.nom categorie_nom,
+              o.siret, o.nom organisme, o.qualiopi organisme_qualiopi
+       FROM formations f JOIN organismes o ON o.siret = f.siret LEFT JOIN categories c ON c.id = f.categorie_id
+       WHERE ${where.join(" AND ")} ORDER BY f.nb_sessions DESC, f.intitule LIMIT 60`
+    )
+    .all(params);
 }
 
 // ─────────────── Leads & Voie B ───────────────

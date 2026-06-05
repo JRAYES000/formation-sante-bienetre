@@ -130,10 +130,16 @@ export function ensureSchema(): void {
     CREATE INDEX IF NOT EXISTS idx_avis_siret ON avis(siret);
   `);
 
-  // Migrations idempotentes pour les bases existantes (colonne ajoutée après coup).
+  // Migrations idempotentes pour les bases existantes (colonnes ajoutées après coup).
   try {
     sqlite.exec("ALTER TABLE leads ADD COLUMN qualification TEXT");
   } catch {
     /* colonne déjà présente */
   }
+  try {
+    sqlite.exec("ALTER TABLE organismes ADD COLUMN code_postal TEXT");
+  } catch {
+    /* colonne déjà présente */
+  }
+  sqlite.exec("CREATE INDEX IF NOT EXISTS idx_organismes_ville ON organismes(ville)");
 }

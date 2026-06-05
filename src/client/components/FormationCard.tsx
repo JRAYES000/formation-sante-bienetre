@@ -15,6 +15,7 @@ export interface FormationItem {
   categorie_slug?: string | null;
   categorie_nom?: string | null;
   organisme?: string;
+  organisme_ville?: string | null;
   organisme_qualiopi?: number;
   siret?: string;
 }
@@ -44,7 +45,10 @@ export default function FormationCard({ f }: { f: FormationItem }) {
           {f.organisme && (
             <div className="flex items-center gap-2 mt-1.5">
               <OrgAvatar nom={f.organisme} size={26} />
-              <p className="text-sm text-gray-500">{f.organisme}</p>
+              <p className="text-sm text-gray-500">
+                {f.organisme}
+                {f.organisme_ville ? <span className="text-muted"> · <span className="capitalize">{f.organisme_ville.toLowerCase()}</span></span> : null}
+              </p>
             </div>
           )}
         </div>
