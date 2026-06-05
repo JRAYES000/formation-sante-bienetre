@@ -157,8 +157,8 @@ seoRouter.get("/robots.txt", (req, res) => {
   res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
 });
 
-seoRouter.get("/sitemap.xml", (req, res) => {
-  const base = baseUrl(req);
+// Liste de toutes les URLs indexables (sitemap + IndexNow).
+export function allIndexableUrls(base: string): string[] {
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
   const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/metiers`, `${base}/blog`, `${base}/mentions-legales`, `${base}/politique-confidentialite`];
@@ -172,6 +172,11 @@ seoRouter.get("/sitemap.xml", (req, res) => {
     const d = dcode.get(combo.code);
     if (d) urls.push(`${base}/formations/${combo.categorie}/${d.slug}`);
   }
+  return urls;
+}
+
+seoRouter.get("/sitemap.xml", (req, res) => {
+  const urls = allIndexableUrls(baseUrl(req));
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     urls.map((u) => `  <url><loc>${esc(u)}</loc></url>`).join("\n") +

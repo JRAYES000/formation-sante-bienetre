@@ -7,6 +7,7 @@ import { ensureSchema } from "../db/index.ts";
 import { seedPartenaires, countFormations } from "./storage.ts";
 import { publicRouter, adminRouter } from "./routes.ts";
 import { seoRouter } from "./seo.ts";
+import { INDEXNOW_KEY } from "./indexnow.ts";
 import { ingestPole } from "../ingest/ingest.ts";
 import { enrichVilles, villesAEnrichirCount } from "../enrich/villes.ts";
 
@@ -21,6 +22,9 @@ app.use(express.json());
 app.use(express.static(publicDir));
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
+
+// Fichier de vérification IndexNow (prouve la propriété du domaine pour Bing/Yandex).
+app.get(`/${INDEXNOW_KEY}.txt`, (_req, res) => res.type("text/plain").send(INDEXNOW_KEY));
 app.use("/api/public", publicRouter);
 app.use("/api/admin", adminRouter);
 

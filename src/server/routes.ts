@@ -23,6 +23,8 @@ import {
 } from "./storage.ts";
 import { listMetiers, listArticles } from "./content.ts";
 import { sendLeadNotification } from "./mailer.ts";
+import { allIndexableUrls } from "./seo.ts";
+import { submitIndexNow } from "./indexnow.ts";
 
 export const publicRouter = Router();
 
@@ -159,6 +161,13 @@ adminRouter.patch("/leads/:id", (req, res) => {
   const changed = updateLeadStatut(Number(req.params.id), parsed.data.statut);
   if (!changed) return res.status(404).json({ error: "Lead introuvable" });
   res.json({ ok: true });
+});
+
+// Soumet toutes les URLs indexables à IndexNow (Bing/Yandex).
+adminRouter.post("/indexnow", async (req, res) => {
+  const base = process.env.PUBLIC_URL || `https://${req.get("host")}`;
+  const r = await submitIndexNow(allIndexableUrls(base));
+  res.json({ submitted: r.count, status: r.status, ok: r.ok });
 });
 
 adminRouter.get("/avis", (_req, res) => res.json(listAvisAdmin()));
