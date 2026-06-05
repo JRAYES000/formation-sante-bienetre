@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import OrganismeAvis from "../components/OrganismeAvis";
+import OrgAvatar from "../components/OrgAvatar";
 
 interface OrganismeDetail {
   siret: string;
@@ -29,7 +30,10 @@ export default function FicheOrganisme() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="card-naturo p-6">
-        <h1 className="text-2xl font-bold text-dark" data-testid="text-organisme-nom">{o.nom}</h1>
+        <div className="flex items-center gap-3">
+          <OrgAvatar nom={o.nom} size={56} />
+          <h1 className="text-2xl font-bold text-dark" data-testid="text-organisme-nom">{o.nom}</h1>
+        </div>
         <p className="text-gray-600 mt-1">
           {[o.departement, o.region].filter(Boolean).join(" · ")}
         </p>

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useCompare } from "../lib/compare";
+import OrgAvatar from "./OrgAvatar";
 
 export interface FormationItem {
   numero_formation: string;
@@ -40,7 +41,12 @@ export default function FormationCard({ f }: { f: FormationItem }) {
           >
             {f.intitule}
           </Link>
-          {f.organisme && <p className="text-sm text-gray-500 mt-1">{f.organisme}</p>}
+          {f.organisme && (
+            <div className="flex items-center gap-2 mt-1.5">
+              <OrgAvatar nom={f.organisme} size={26} />
+              <p className="text-sm text-gray-500">{f.organisme}</p>
+            </div>
+          )}
         </div>
       </div>
       <div className="flex flex-wrap gap-2 text-xs text-gray-600">
