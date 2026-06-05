@@ -98,6 +98,11 @@ export function ensureSchema(): void {
       created_at TEXT NOT NULL
     );
 
+    CREATE TABLE IF NOT EXISTS newsletter (
+      email TEXT PRIMARY KEY,
+      created_at TEXT NOT NULL
+    );
+
     CREATE TABLE IF NOT EXISTS formation_departements (
       numero_formation TEXT NOT NULL REFERENCES formations(numero_formation),
       code_departement TEXT NOT NULL,

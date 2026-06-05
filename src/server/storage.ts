@@ -410,6 +410,12 @@ export function moderateAvis(id: number, statut: "publie" | "rejete"): number {
   return sqlite.prepare(`UPDATE avis SET statut = @statut WHERE id = @id`).run({ id, statut }).changes;
 }
 
+export function subscribeNewsletter(email: string): void {
+  sqlite
+    .prepare(`INSERT INTO newsletter (email, created_at) VALUES (@email, @now) ON CONFLICT(email) DO NOTHING`)
+    .run({ email: email.toLowerCase().trim(), now: new Date().toISOString() });
+}
+
 export function getPartenaireById(id: number) {
   return sqlite.prepare(`SELECT * FROM partenaires WHERE id = @id`).get({ id }) as
     | { id: number; nom: string; email: string }

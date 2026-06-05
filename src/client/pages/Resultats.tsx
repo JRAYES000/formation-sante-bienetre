@@ -20,10 +20,10 @@ interface SearchResponse {
 
 export default function Resultats() {
   const params = useParams();
-  const q = params.q ? decodeURIComponent(params.q) : "";
+  const q = params.q && params.q !== "-" ? decodeURIComponent(params.q) : "";
 
   const [categorie, setCategorie] = useState<string | undefined>(params.slug);
-  const [dept, setDept] = useState<string | undefined>();
+  const [dept, setDept] = useState<string | undefined>(params.dept);
   const [distance, setDistance] = useState(false);
   const [prixMax, setPrixMax] = useState<string>("");
   const [niveau, setNiveau] = useState<string | undefined>();
@@ -34,6 +34,9 @@ export default function Resultats() {
   useEffect(() => {
     setCategorie(params.slug);
   }, [params.slug]);
+  useEffect(() => {
+    setDept(params.dept);
+  }, [params.dept]);
   useEffect(() => {
     setPage(1);
   }, [q, categorie, dept, distance, prixMax, niveau, type, sort]);
@@ -59,7 +62,7 @@ export default function Resultats() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-6">
-        <SearchBar initial={q} />
+        <SearchBar initial={q} initialDept={dept ?? ""} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-6">

@@ -19,7 +19,9 @@ import {
   avisForOrganisme,
   listAvisAdmin,
   moderateAvis,
+  subscribeNewsletter,
 } from "./storage.ts";
+import { listMetiers, listArticles } from "./content.ts";
 import { sendLeadNotification } from "./mailer.ts";
 
 export const publicRouter = Router();
@@ -63,6 +65,16 @@ publicRouter.get("/organismes/:siret", (req, res) => {
 publicRouter.get("/categories", (_req, res) => res.json(listCategories()));
 publicRouter.get("/departements", (_req, res) => res.json(listDepartements()));
 publicRouter.get("/stats", (_req, res) => res.json(globalStats()));
+publicRouter.get("/metiers", (_req, res) => res.json(listMetiers()));
+publicRouter.get("/articles", (_req, res) => res.json(listArticles()));
+
+const newsletterSchema = z.object({ email: z.string().trim().email().max(160) });
+publicRouter.post("/newsletter", (req, res) => {
+  const parsed = newsletterSchema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: "Email invalide" });
+  subscribeNewsletter(parsed.data.email);
+  res.status(201).json({ ok: true });
+});
 
 // Avis organismes (modérés avant publication)
 publicRouter.get("/organismes/:siret/avis", (req, res) => res.json(avisForOrganisme(req.params.siret)));
