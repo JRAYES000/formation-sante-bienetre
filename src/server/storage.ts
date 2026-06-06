@@ -454,10 +454,13 @@ export function moderateAvis(id: number, statut: "publie" | "rejete"): number {
   return sqlite.prepare(`UPDATE avis SET statut = @statut WHERE id = @id`).run({ id, statut }).changes;
 }
 
-export function subscribeNewsletter(email: string): void {
-  sqlite
+// Retourne true si l'email vient d'être ajouté (false si déjà inscrit) → permet
+// de n'envoyer l'email de bienvenue que pour une vraie nouvelle inscription.
+export function subscribeNewsletter(email: string): boolean {
+  const res = sqlite
     .prepare(`INSERT INTO newsletter (email, created_at) VALUES (@email, @now) ON CONFLICT(email) DO NOTHING`)
     .run({ email: email.toLowerCase().trim(), now: new Date().toISOString() });
+  return res.changes > 0;
 }
 
 // Liste des inscrits newsletter (back-office). Les plus récents d'abord.

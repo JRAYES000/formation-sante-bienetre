@@ -24,7 +24,7 @@ import {
   seoVilles,
 } from "./storage.ts";
 import { listMetiers, listArticles } from "./content.ts";
-import { sendLeadNotification } from "./mailer.ts";
+import { sendLeadNotification, sendWelcomeEmail } from "./mailer.ts";
 import { allIndexableUrls } from "./seo.ts";
 import { submitIndexNow } from "./indexnow.ts";
 
@@ -77,7 +77,8 @@ const newsletterSchema = z.object({ email: z.string().trim().email().max(160) })
 publicRouter.post("/newsletter", (req, res) => {
   const parsed = newsletterSchema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: "Email invalide" });
-  subscribeNewsletter(parsed.data.email);
+  const isNew = subscribeNewsletter(parsed.data.email);
+  if (isNew) void sendWelcomeEmail(parsed.data.email.toLowerCase().trim()); // bienvenue, non bloquant
   res.status(201).json({ ok: true });
 });
 
