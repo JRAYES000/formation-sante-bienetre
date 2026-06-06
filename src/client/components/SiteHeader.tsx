@@ -55,6 +55,7 @@ export default function SiteHeader() {
           <a href="/blog" className="hover:text-primary hidden sm:inline" data-testid="nav-blog">Blog</a>
           <a href="/financement-cpf" className="hover:text-primary hidden md:inline" data-testid="nav-cpf">CPF</a>
           <Link href="/recherche" className="btn-primary !py-2 !px-4 text-sm" data-testid="nav-rechercher">Rechercher</Link>
+          <Link href="/admin" className="text-gray-400 hover:text-primary text-xs hidden sm:inline" data-testid="nav-admin" title="Espace administrateur">Admin</Link>
         </nav>
       </div>
     </header>

@@ -460,6 +460,13 @@ export function subscribeNewsletter(email: string): void {
     .run({ email: email.toLowerCase().trim(), now: new Date().toISOString() });
 }
 
+// Liste des inscrits newsletter (back-office). Les plus récents d'abord.
+export function listNewsletter() {
+  return sqlite
+    .prepare(`SELECT email, created_at FROM newsletter ORDER BY created_at DESC LIMIT 5000`)
+    .all() as { email: string; created_at: string }[];
+}
+
 export function getPartenaireById(id: number) {
   return sqlite.prepare(`SELECT * FROM partenaires WHERE id = @id`).get({ id }) as
     | { id: number; nom: string; email: string }

@@ -20,6 +20,7 @@ import {
   listAvisAdmin,
   moderateAvis,
   subscribeNewsletter,
+  listNewsletter,
   seoVilles,
 } from "./storage.ts";
 import { listMetiers, listArticles } from "./content.ts";
@@ -155,6 +156,7 @@ adminRouter.use(requireAdmin);
 
 adminRouter.get("/leads", (_req, res) => res.json(listLeads()));
 adminRouter.get("/partenaires", (_req, res) => res.json(listPartenaires()));
+adminRouter.get("/newsletter", (_req, res) => res.json(listNewsletter()));
 
 const statutSchema = z.object({ statut: z.enum(["nouveau", "contacte", "converti", "perdu"]) });
 adminRouter.patch("/leads/:id", (req, res) => {

@@ -25,10 +25,24 @@ function qualifSummary(raw?: string | null): string {
 
 const STATUTS = ["nouveau", "contacte", "converti", "perdu"];
 
+const TOKEN_KEY = "fsb_admin_token";
+
 export default function Admin() {
-  // Token gardé en mémoire (pas de localStorage — convention naturo-pro). Re-saisie au reload.
-  const [token, setToken] = useState<string>("");
-  const [entered, setEntered] = useState(false);
+  // « Rester connecté » : le mot de passe admin est mémorisé dans le navigateur
+  // (exception assumée à la convention « pas de stockage client », demandée explicitement).
+  const [token, setToken] = useState<string>(() => localStorage.getItem(TOKEN_KEY) ?? "");
+  const [entered, setEntered] = useState<boolean>(() => !!localStorage.getItem(TOKEN_KEY));
+
+  const login = () => {
+    if (!token) return;
+    localStorage.setItem(TOKEN_KEY, token);
+    setEntered(true);
+  };
+  const logout = () => {
+    localStorage.removeItem(TOKEN_KEY);
+    setToken("");
+    setEntered(false);
+  };
 
   if (!entered) {
     return (
@@ -37,7 +51,7 @@ export default function Admin() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            if (token) setEntered(true);
+            login();
           }}
           className="space-y-3"
         >
@@ -45,7 +59,7 @@ export default function Admin() {
             type="password"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            placeholder="Token d'accès"
+            placeholder="Mot de passe admin"
             className="w-full rounded-naturo border border-gray-200 px-4 py-2.5"
             data-testid="input-admin-token"
           />
@@ -59,9 +73,95 @@ export default function Admin() {
 
   return (
     <>
-      <LeadsTable token={token} onLogout={() => setEntered(false)} />
+      <NewsletterTable token={token} onLogout={logout} />
+      <LeadsTable token={token} onLogout={logout} />
       <AvisModeration token={token} />
     </>
+  );
+}
+
+interface Subscriber {
+  email: string;
+  created_at: string;
+}
+
+function NewsletterTable({ token, onLogout }: { token: string; onLogout: () => void }) {
+  const auth = { headers: { Authorization: `Bearer ${token}` } };
+  const { data: subs, isLoading, isError } = useQuery<Subscriber[]>({
+    queryKey: ["admin-newsletter"],
+    queryFn: () => apiRequest("/api/admin/newsletter", auth),
+    retry: false,
+  });
+
+  const exportCsv = () => {
+    if (!subs?.length) return;
+    const esc = (v: string) => `"${(v ?? "").replace(/"/g, '""')}"`;
+    const csv =
+      "email,date_inscription\n" +
+      subs.map((s) => `${esc(s.email)},${esc(s.created_at)}`).join("\n");
+    // BOM pour qu'Excel lise correctement les accents.
+    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `newsletter-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  if (isError)
+    return (
+      <div className="max-w-md mx-auto px-4 py-16 text-center">
+        <p className="text-red-600 mb-4">Mot de passe invalide ou accès refusé.</p>
+        <button onClick={onLogout} className="btn-primary">Réessayer</button>
+      </div>
+    );
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="flex items-center justify-between mb-6 gap-4 flex-wrap">
+        <h1 className="font-bold text-xl text-dark">
+          Inscrits newsletter{" "}
+          {subs ? <span className="text-gray-400 font-normal">({subs.length})</span> : null}
+        </h1>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={exportCsv}
+            disabled={!subs?.length}
+            className="btn-primary !py-2 !px-4 text-sm disabled:opacity-40"
+            data-testid="button-export-newsletter"
+          >
+            ⬇ Exporter en CSV
+          </button>
+          <button onClick={onLogout} className="text-sm text-primary hover:underline">Se déconnecter</button>
+        </div>
+      </div>
+
+      {isLoading ? (
+        <p className="text-gray-500">Chargement…</p>
+      ) : subs && subs.length === 0 ? (
+        <p className="text-gray-500 card-naturo p-6">Aucun inscrit pour l'instant.</p>
+      ) : (
+        <div className="card-naturo overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead className="bg-gray-50 text-left text-gray-500">
+              <tr>
+                <th className="px-3 py-2">Date d'inscription</th>
+                <th className="px-3 py-2">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              {subs?.map((s) => (
+                <tr key={s.email} className="border-t border-gray-100" data-testid={`row-sub-${s.email}`}>
+                  <td className="px-3 py-2 text-gray-500 whitespace-nowrap">{s.created_at.slice(0, 10)}</td>
+                  <td className="px-3 py-2 text-dark">{s.email}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
   );
 }
 
