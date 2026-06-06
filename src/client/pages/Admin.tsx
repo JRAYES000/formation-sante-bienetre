@@ -14,12 +14,20 @@ interface Lead {
   qualification?: string | null;
 }
 
-function qualifSummary(raw?: string | null): string {
-  if (!raw) return "";
+// Champs de qualification du lead, dans l'ordre d'affichage souhaité.
+const QUALIF_FIELDS: { key: string; label: string }[] = [
+  { key: "financement", label: "Financement" },
+  { key: "budget", label: "Budget envisagé" },
+  { key: "delai", label: "Délai de démarrage" },
+  { key: "niveau", label: "Niveau actuel" },
+];
+
+function parseQualif(raw?: string | null): Record<string, string> {
+  if (!raw) return {};
   try {
-    return Object.values(JSON.parse(raw) as Record<string, string>).filter(Boolean).join(" · ");
+    return JSON.parse(raw) as Record<string, string>;
   } catch {
-    return "";
+    return {};
   }
 }
 
@@ -209,6 +217,7 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
               <tr>
                 <th className="px-3 py-2">Date</th>
                 <th className="px-3 py-2">Contact</th>
+                <th className="px-3 py-2">Qualification</th>
                 <th className="px-3 py-2">Formation</th>
                 <th className="px-3 py-2">Partenaire</th>
                 <th className="px-3 py-2">Statut</th>
@@ -217,18 +226,32 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
             <tbody>
               {leads?.map((l) => (
                 <tr key={l.id} className="border-t border-gray-100" data-testid={`row-lead-${l.id}`}>
-                  <td className="px-3 py-2 text-gray-500 whitespace-nowrap">{l.created_at.slice(0, 10)}</td>
-                  <td className="px-3 py-2">
+                  <td className="px-3 py-2 text-gray-500 whitespace-nowrap align-top">{l.created_at.slice(0, 10)}</td>
+                  <td className="px-3 py-2 align-top">
                     <div className="font-medium text-dark">{l.nom}</div>
                     <div className="text-gray-500">{l.email}</div>
-                    {l.tel && <div className="text-gray-400">{l.tel}</div>}
-                    {qualifSummary(l.qualification) && (
-                      <div className="text-xs text-primary mt-1">{qualifSummary(l.qualification)}</div>
-                    )}
+                    <div className="text-gray-400">{l.tel || "—"}</div>
                   </td>
-                  <td className="px-3 py-2 text-gray-600">{l.formation ?? "—"}</td>
-                  <td className="px-3 py-2 text-gray-600">{l.partenaire ?? "—"}</td>
-                  <td className="px-3 py-2">
+                  <td className="px-3 py-2 align-top">
+                    {(() => {
+                      const q = parseQualif(l.qualification);
+                      const present = QUALIF_FIELDS.filter((f) => q[f.key]);
+                      if (!present.length) return <span className="text-gray-400">—</span>;
+                      return (
+                        <div className="space-y-0.5">
+                          {present.map((f) => (
+                            <div key={f.key} className="text-xs whitespace-nowrap">
+                              <span className="text-gray-400">{f.label} : </span>
+                              <span className="text-dark">{q[f.key]}</span>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
+                  </td>
+                  <td className="px-3 py-2 text-gray-600 align-top">{l.formation ?? "—"}</td>
+                  <td className="px-3 py-2 text-gray-600 align-top">{l.partenaire ?? "—"}</td>
+                  <td className="px-3 py-2 align-top">
                     <select
                       value={l.statut}
                       onChange={(e) => setStatut.mutate({ id: l.id, statut: e.target.value })}
