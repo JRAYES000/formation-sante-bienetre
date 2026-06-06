@@ -189,6 +189,38 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
     onSuccess: () => qc.invalidateQueries({ queryKey: ["admin-leads"] }),
   });
 
+  const del = useMutation({
+    mutationFn: (id: number) => apiRequest(`/api/admin/leads/${id}`, { method: "DELETE", ...auth }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["admin-leads"] }),
+  });
+
+  const exportCsv = () => {
+    if (!leads?.length) return;
+    const esc = (v: unknown) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+    const header = [
+      "Date", "Nom", "Email", "Téléphone",
+      "Financement", "Budget", "Délai de démarrage", "Niveau actuel",
+      "Formation", "Partenaire", "Statut",
+    ];
+    const rows = leads.map((l) => {
+      const q = parseQualif(l.qualification);
+      return [
+        l.created_at?.slice(0, 10), l.nom, l.email, l.tel,
+        q.financement, q.budget, q.delai, q.niveau,
+        l.formation, l.partenaire, l.statut,
+      ].map(esc).join(",");
+    });
+    const csv = header.map(esc).join(",") + "\n" + rows.join("\n");
+    // BOM pour qu'Excel lise correctement les accents.
+    const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `leads-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   if (isError)
     return (
       <div className="max-w-md mx-auto px-4 py-16 text-center">
@@ -199,11 +231,21 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6 gap-4 flex-wrap">
         <h1 className="font-bold text-xl text-dark">
           Leads {leads ? <span className="text-gray-400 font-normal">({leads.length})</span> : null}
         </h1>
-        <button onClick={onLogout} className="text-sm text-primary hover:underline">Se déconnecter</button>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={exportCsv}
+            disabled={!leads?.length}
+            className="btn-primary !py-2 !px-4 text-sm disabled:opacity-40"
+            data-testid="button-export-leads"
+          >
+            ⬇ Exporter en CSV
+          </button>
+          <button onClick={onLogout} className="text-sm text-primary hover:underline">Se déconnecter</button>
+        </div>
       </div>
 
       {isLoading ? (
@@ -221,6 +263,7 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
                 <th className="px-3 py-2">Formation</th>
                 <th className="px-3 py-2">Partenaire</th>
                 <th className="px-3 py-2">Statut</th>
+                <th className="px-3 py-2"></th>
               </tr>
             </thead>
             <tbody>
@@ -264,6 +307,18 @@ function LeadsTable({ token, onLogout }: { token: string; onLogout: () => void }
                         </option>
                       ))}
                     </select>
+                  </td>
+                  <td className="px-3 py-2 align-top">
+                    <button
+                      onClick={() => {
+                        if (window.confirm(`Supprimer définitivement le lead « ${l.nom} » ?`)) del.mutate(l.id);
+                      }}
+                      className="text-xs text-gray-400 hover:text-red-600 border border-gray-200 rounded px-2 py-1"
+                      title="Supprimer ce lead"
+                      data-testid={`button-delete-lead-${l.id}`}
+                    >
+                      Supprimer
+                    </button>
                   </td>
                 </tr>
               ))}

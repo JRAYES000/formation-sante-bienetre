@@ -12,6 +12,7 @@ import {
   createLead,
   listLeads,
   updateLeadStatut,
+  deleteLead,
   listPartenaires,
   getPartenaireById,
   getFormationIntitule,
@@ -164,6 +165,12 @@ adminRouter.patch("/leads/:id", (req, res) => {
   const parsed = statutSchema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: "Statut invalide" });
   const changed = updateLeadStatut(Number(req.params.id), parsed.data.statut);
+  if (!changed) return res.status(404).json({ error: "Lead introuvable" });
+  res.json({ ok: true });
+});
+
+adminRouter.delete("/leads/:id", (req, res) => {
+  const changed = deleteLead(Number(req.params.id));
   if (!changed) return res.status(404).json({ error: "Lead introuvable" });
   res.json({ ok: true });
 });

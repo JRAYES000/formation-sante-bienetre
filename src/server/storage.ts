@@ -414,6 +414,10 @@ export function updateLeadStatut(id: number, statut: string): number {
   return sqlite.prepare(`UPDATE leads SET statut = @statut WHERE id = @id`).run({ id, statut }).changes;
 }
 
+export function deleteLead(id: number): number {
+  return sqlite.prepare(`DELETE FROM leads WHERE id = @id`).run({ id }).changes;
+}
+
 export function listPartenaires() {
   return sqlite.prepare(`SELECT * FROM partenaires ORDER BY priorite DESC, id ASC`).all();
 }
