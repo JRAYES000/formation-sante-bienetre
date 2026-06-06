@@ -20,6 +20,7 @@ import {
   listAvisAdmin,
   moderateAvis,
   subscribeNewsletter,
+  seoVilles,
 } from "./storage.ts";
 import { listMetiers, listArticles } from "./content.ts";
 import { sendLeadNotification } from "./mailer.ts";
@@ -69,6 +70,7 @@ publicRouter.get("/departements", (_req, res) => res.json(listDepartements()));
 publicRouter.get("/stats", (_req, res) => res.json(globalStats()));
 publicRouter.get("/metiers", (_req, res) => res.json(listMetiers()));
 publicRouter.get("/articles", (_req, res) => res.json(listArticles()));
+publicRouter.get("/villes", (_req, res) => res.json(seoVilles(3)));
 
 const newsletterSchema = z.object({ email: z.string().trim().email().max(160) });
 publicRouter.post("/newsletter", (req, res) => {
