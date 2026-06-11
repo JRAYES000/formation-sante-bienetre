@@ -4,6 +4,7 @@ import { Router, type Request } from "express";
 import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille } from "./storage.ts";
 import { slugify } from "./storage.ts";
 import { getMetier, listMetiers, getArticle, listArticles } from "./content.ts";
+import { gaId } from "./analytics.ts";
 
 export const seoRouter = Router();
 
@@ -62,6 +63,7 @@ function renderPage(o: PageOpts): string {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
+<script src="/analytics.js" defer></script>
 <style>
   /* Tokens references/airbnb/DESIGN.md : canvas blanc, encre #222, Rausch #ff385c, Inter, cartes 14px, ombre signature */
   :root{--p:#186749;--p-active:#1b4332;--ink:#222222;--body:#3f3f3f;--muted:#6a6a6a;--hairline:#dddddd;--surface:#f7f7f7}
@@ -292,6 +294,9 @@ Le traitement de vos données est décrit dans notre <a href="/politique-confide
 
 seoRouter.get("/politique-confidentialite", (req, res) => {
   const base = baseUrl(req);
+  const cookiesSection = gaId()
+    ? `<div class="mesh"><h2>Cookies &amp; mesure d'audience</h2><p>Ce site utilise <strong>Google Analytics 4</strong> (fourni par Google) pour mesurer son audience de façon agrégée, <strong>uniquement si vous y consentez</strong> via la bannière affichée lors de votre première visite. Aucun cookie de mesure n'est déposé tant que vous n'avez pas accepté ; vous pouvez retirer votre consentement à tout moment en supprimant les cookies de ce site dans votre navigateur. Google Analytics 4 ne conserve pas votre adresse IP. Les statistiques sont susceptibles d'être traitées par Google hors de l'Union européenne, dans le cadre du Data Privacy Framework UE–États-Unis. Aucun cookie publicitaire n'est utilisé. La police d'écriture est chargée via Google Fonts.</p></div>`
+    : `<div class="mesh"><h2>Cookies</h2><p>Ce site n'utilise <strong>aucun cookie publicitaire ni outil de traçage analytique</strong> à ce jour. Seules des ressources techniques nécessaires à son affichage sont utilisées (dont la police d'écriture chargée via Google Fonts).</p></div>`;
   const body = `<h1>Politique de confidentialité</h1>
 ${LEGAL_DISCLAIMER}
 <p class="lead">Cette politique explique comment vos données personnelles sont collectées et utilisées lorsque vous demandez des informations sur une formation via ce site.</p>
@@ -311,7 +316,7 @@ ${LEGAL_DISCLAIMER}
 <div class="mesh"><h2>Transfert hors Union européenne</h2><p>Le site étant hébergé par Railway (États-Unis), vos données peuvent être stockées hors UE. Des garanties appropriées (clauses contractuelles types) encadrent ce transfert.</p></div>
 <div class="mesh"><h2>Durée de conservation</h2><p>Vos données sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées au plus tard <strong>3 ans</strong> après le dernier contact.</p></div>
 <div class="mesh"><h2>Vos droits</h2><p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité et de retrait du consentement. Pour les exercer : <a href="mailto:contact@ecole-naturo.fr">contact@ecole-naturo.fr</a>. Vous pouvez aussi introduire une réclamation auprès de la <strong>CNIL</strong> (cnil.fr).</p></div>
-<div class="mesh"><h2>Cookies</h2><p>Ce site n'utilise <strong>aucun cookie publicitaire ni outil de traçage analytique</strong> à ce jour. Seules des ressources techniques nécessaires à son affichage sont utilisées (dont la police d'écriture chargée via Google Fonts).</p></div>`;
+${cookiesSection}`;
   res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Politique de confidentialité" }], body }));
 });
 

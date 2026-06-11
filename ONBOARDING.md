@@ -86,7 +86,7 @@ Aujourd'hui le site **n'a ni Search Console vérifiée ni analytics** (confirmé
    - Soumettre `https://formation-sante-bienetre.fr/sitemap.xml`.
    - Ajouter le collaborateur comme *utilisateur* (Paramètres → Utilisateurs et autorisations).
 2. **Bing Webmaster Tools** — import direct depuis GSC (IndexNow est déjà branché côté code, autant exploiter Bing).
-3. **Analytics léger** — choisir **Plausible** (sans cookie, RGPD-friendly, cohérent avec la politique « zéro traçage » actuelle) **ou GA4**. Décision à valider avec Julien avant d'ajouter un script.
+3. **Analytics — Google Analytics 4** *(la plomberie est déjà en place, voir [src/server/analytics.ts](src/server/analytics.ts))* : créer la propriété GA4, récupérer l'ID `G-XXXXXXXXXX`, le poser dans **Railway → Variables → `GA4_MEASUREMENT_ID`**. Le **bandeau de consentement (CNIL)** et la mise à jour de la **politique de confidentialité** s'activent alors **automatiquement**. Tant que la variable est vide, rien ne se déclenche (aucun cookie).
 
 > Tant que §5 n'est pas fait, on travaille le SEO « technique/contenu » (pages, maillage, schema, contenu) sans données de performance.
 
