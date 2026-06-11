@@ -4,6 +4,8 @@ Bienvenue 👋 Ce document te donne **tout ce qu'il faut pour être opérationne
 [formation-sante-bienetre.fr](https://formation-sante-bienetre.fr) : développement, **SEO** et **design**.
 
 > Ton Claude Code lira automatiquement [CLAUDE.md](CLAUDE.md) (contexte technique). Ce fichier-ci est l'**onboarding humain** : accès, setup, où travailler, priorités.
+>
+> 🚀 **Pressé ? Les étapes concrètes de démarrage (pas à pas) sont dans [docs/DEMARRAGE.md](docs/DEMARRAGE.md).**
 
 ---
 
@@ -77,18 +79,13 @@ Conventions SEO détaillées dans [CLAUDE.md](CLAUDE.md) (#Conventions SEO). Res
 
 ---
 
-## 5. Priorité immédiate : poser la mesure SEO (elle n'existe pas encore)
+## 5. Mesure SEO — état (déjà en place ✅)
 
-Aujourd'hui le site **n'a ni Search Console vérifiée ni analytics** (confirmé dans le code : aucun outil de traçage). Impossible de piloter le SEO à l'aveugle — c'est donc le **chantier #0** :
+- **Google Search Console** : ✅ propriété **domaine** `formation-sante-bienetre.fr` **vérifiée** (depuis le 4 juin 2026), Google **crawle déjà**. **Sitemap** `https://formation-sante-bienetre.fr/sitemap.xml` soumis et **valide (517 URLs, 0 erreur)**. Reste juste à t'**ajouter comme utilisateur** (Paramètres → Utilisateurs et autorisations).
+- **Google Analytics 4** : ✅ installé avec **bandeau de consentement (CNIL)**. ID `G-3FBL0W6EXC` posé dans Railway (`GA4_MEASUREMENT_ID`). GA4 ne se charge qu'après « Accepter ». Voir [src/server/analytics.ts](src/server/analytics.ts).
+- **Bing Webmaster Tools** : à faire — « Importer depuis GSC » en 1 clic (l'IndexNow est déjà branché côté code, [src/server/indexnow.ts](src/server/indexnow.ts)).
 
-1. **Google Search Console** — créer/valider la propriété `formation-sante-bienetre.fr`.
-   - Méthode recommandée : **propriété domaine** via un **enregistrement TXT DNS chez Hostinger** (couvre http/https + sous-domaines).
-   - Soumettre `https://formation-sante-bienetre.fr/sitemap.xml`.
-   - Ajouter le collaborateur comme *utilisateur* (Paramètres → Utilisateurs et autorisations).
-2. **Bing Webmaster Tools** — import direct depuis GSC (IndexNow est déjà branché côté code, autant exploiter Bing).
-3. **Analytics — Google Analytics 4** *(la plomberie est déjà en place, voir [src/server/analytics.ts](src/server/analytics.ts))* : créer la propriété GA4, récupérer l'ID `G-XXXXXXXXXX`, le poser dans **Railway → Variables → `GA4_MEASUREMENT_ID`**. Le **bandeau de consentement (CNIL)** et la mise à jour de la **politique de confidentialité** s'activent alors **automatiquement**. Tant que la variable est vide, rien ne se déclenche (aucun cookie).
-
-> Tant que §5 n'est pas fait, on travaille le SEO « technique/contenu » (pages, maillage, schema, contenu) sans données de performance.
+> Le site est **récent** (≈ 0 clic pour l'instant) : la phase actuelle est l'**indexation + la montée en contenu**, pas le diagnostic d'un trafic existant. À surveiller dans GSC : *Pages* (URLs indexées vs découvertes) et *Performances* (premières impressions/requêtes).
 
 ---
 
