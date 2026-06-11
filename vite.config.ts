@@ -12,6 +12,7 @@ export default defineConfig({
     proxy: {
       // L'API Express + les pages SEO SSR tournent sur 3001 (npm run serve)
       "/api": "http://localhost:3001",
+      "/analytics.js": "http://localhost:3001",
       "/formations": "http://localhost:3001",
       "/sitemap.xml": "http://localhost:3001",
       "/robots.txt": "http://localhost:3001",

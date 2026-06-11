@@ -7,6 +7,7 @@ import { ensureSchema } from "../db/index.ts";
 import { seedPartenaires, countFormations } from "./storage.ts";
 import { publicRouter, adminRouter } from "./routes.ts";
 import { seoRouter } from "./seo.ts";
+import { analyticsRouter } from "./analytics.ts";
 import { INDEXNOW_KEY } from "./indexnow.ts";
 import { ingestPole } from "../ingest/ingest.ts";
 import { enrichVilles, villesAEnrichirCount } from "../enrich/villes.ts";
@@ -27,6 +28,9 @@ app.get("/api/health", (_req, res) => res.json({ ok: true }));
 app.get(`/${INDEXNOW_KEY}.txt`, (_req, res) => res.type("text/plain").send(INDEXNOW_KEY));
 app.use("/api/public", publicRouter);
 app.use("/api/admin", adminRouter);
+
+// Script de mesure d'audience (GA4, chargé après consentement). Inerte si GA4_MEASUREMENT_ID absent.
+app.use("/", analyticsRouter);
 
 // Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots
 app.use("/", seoRouter);

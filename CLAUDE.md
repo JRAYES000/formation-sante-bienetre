@@ -53,6 +53,7 @@ npm run check         # tsc --noEmit (typecheck, pas de build)
 | **Pages SEO SSR** (le cœur du SEO) | [src/server/seo.ts](src/server/seo.ts) |
 | robots.txt / sitemap.xml | [src/server/seo.ts](src/server/seo.ts) (`allIndexableUrls`) |
 | **IndexNow** (ping Bing/Yandex) | [src/server/indexnow.ts](src/server/indexnow.ts) |
+| Mesure d'audience GA4 (consentement) | [src/server/analytics.ts](src/server/analytics.ts) |
 | Contenu éditorial — fiches métier | [content/metiers/*.json](content/metiers) (typé `Metier` dans [src/server/content.ts](src/server/content.ts)) |
 | Contenu éditorial — articles blog | [content/blog/*.md](content/blog) (front-matter : `slug,title,metaDescription,excerpt,image`) |
 | API publique + leads + admin | [src/server/routes.ts](src/server/routes.ts) |
@@ -81,6 +82,7 @@ npm run check         # tsc --noEmit (typecheck, pas de build)
 | `INGEST_INTERVAL_HOURS` | re-ingestion in-process périodique (`0` = off) |
 | `MAILJET_API_KEY` / `MAILJET_API_SECRET` / `MAIL_FROM` / `MAIL_FROM_NAME` | notif email partenaire à chaque lead (sinon log stub) |
 | `INDEXNOW_KEY` / `INDEXNOW_HOST` | clé IndexNow (publique par design) + host |
+| `GA4_MEASUREMENT_ID` | active GA4 + bandeau de consentement (vide = inerte : aucun bandeau, aucun cookie ; cf. [src/server/analytics.ts](src/server/analytics.ts)) |
 | `DB_DRIVER` / `SQLITE_PATH` | driver DB + chemin SQLite |
 
 Les **secrets ne sont jamais commités** (`.env` est gitignored). Les valeurs réelles vivent dans NordPass (coffre partagé du projet) et dans les variables Railway.
