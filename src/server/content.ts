@@ -52,6 +52,8 @@ export interface Article {
   metaDescription: string;
   excerpt: string;
   image?: string;
+  publishedAt?: string;
+  updatedAt?: string;
   html?: string;
 }
 
@@ -77,6 +79,8 @@ export function getArticle(slug: string): Article | null {
     metaDescription: meta.metaDescription || "",
     excerpt: meta.excerpt || "",
     image: meta.image || undefined,
+    publishedAt: meta.publishedAt || undefined,
+    updatedAt: meta.updatedAt || undefined,
     html: marked.parse(body, { async: false }) as string,
   };
 }
@@ -87,7 +91,7 @@ export function listArticles(): Article[] {
     .filter((f) => f.endsWith(".md"))
     .map((f) => {
       const a = getArticle(f.replace(/\.md$/, ""));
-      return a ? { slug: a.slug, title: a.title, metaDescription: a.metaDescription, excerpt: a.excerpt, image: a.image } : null;
+      return a ? { slug: a.slug, title: a.title, metaDescription: a.metaDescription, excerpt: a.excerpt, image: a.image, publishedAt: a.publishedAt, updatedAt: a.updatedAt } : null;
     })
     .filter(Boolean) as Article[];
 }

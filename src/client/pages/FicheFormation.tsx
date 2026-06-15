@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import LeadForm from "../components/LeadForm";
@@ -33,7 +34,7 @@ function prix(f: FormationDetail) {
 
 export default function FicheFormation() {
   const { numero } = useParams();
-  const [asked, setAsked] = useState(false);
+  const [asked, setAsked] = useState(true);
   const { data: f, isLoading, isError } = useQuery<FormationDetail>({
     queryKey: [`/api/public/formations/${encodeURIComponent(numero!)}`],
   });
@@ -118,11 +119,38 @@ export default function FicheFormation() {
   );
 }
 
+function formatText(text: string): React.ReactNode[] {
+  return text.split(/\n+/).filter(Boolean).map((line, i) => {
+    const trimmed = line.trim();
+    // Lines that look like bullet points already (•, -, *, ·)
+    const isBullet = /^[-•*·]/.test(trimmed);
+    if (isBullet) {
+      return (
+        <li key={i} className="flex gap-2 text-gray-700 text-sm leading-relaxed">
+          <span className="text-primary mt-0.5 shrink-0">–</span>
+          <span>{trimmed.replace(/^[-•*·]\s*/, "")}</span>
+        </li>
+      );
+    }
+    // Short ALL-CAPS or colon-ending lines → treat as sub-heading
+    if (trimmed.endsWith(":") || (trimmed === trimmed.toUpperCase() && trimmed.length < 60)) {
+      return <p key={i} className="font-semibold text-dark text-sm mt-3">{trimmed}</p>;
+    }
+    return <p key={i} className="text-gray-700 text-sm leading-relaxed">{trimmed}</p>;
+  });
+}
+
 function Section({ title, text }: { title: string; text: string }) {
+  const nodes = formatText(text);
+  const hasBullets = nodes.some((n) => (n as React.ReactElement).type === "li");
   return (
-    <div>
-      <h2 className="font-bold text-dark mb-1">{title}</h2>
-      <p className="text-gray-700 whitespace-pre-line text-sm leading-relaxed">{text}</p>
+    <div className="pt-2">
+      <h2 className="font-bold text-dark text-base mb-3">{title}</h2>
+      {hasBullets ? (
+        <ul className="space-y-2">{nodes}</ul>
+      ) : (
+        <div className="space-y-2">{nodes}</div>
+      )}
     </div>
   );
 }

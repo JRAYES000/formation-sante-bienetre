@@ -2,10 +2,8 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "../lib/queryClient";
 
-const BUDGETS = ["< 1 500 €", "1 500 – 3 000 €", "3 000 – 5 000 €", "> 5 000 €", "Je ne sais pas encore"];
 const DELAIS = ["Dès que possible", "Sous 3 mois", "Sous 6 mois", "Je me renseigne"];
 const FINANCEMENTS = ["CPF", "France Travail", "Employeur / OPCO", "Personnel", "À définir"];
-const NIVEAUX = ["Débutant(e) / reconversion", "Quelques bases", "Déjà dans le métier"];
 
 const inputCls = "rounded-[8px] border border-hairline px-4 py-2.5 focus:outline-none focus:border-ink bg-white";
 
@@ -13,10 +11,8 @@ export default function LeadForm({ numeroFormation }: { numeroFormation: string 
   const [nom, setNom] = useState("");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
-  const [budget, setBudget] = useState("");
   const [delai, setDelai] = useState("");
   const [financement, setFinancement] = useState("");
-  const [niveau, setNiveau] = useState("");
   const [consent, setConsent] = useState(false);
 
   const mutation = useMutation({
@@ -28,10 +24,8 @@ export default function LeadForm({ numeroFormation }: { numeroFormation: string 
           nom,
           email,
           tel: tel || undefined,
-          budget: budget || undefined,
           delai: delai || undefined,
           financement: financement || undefined,
-          niveau: niveau || undefined,
           consentement: consent,
         }),
       }),
@@ -68,17 +62,9 @@ export default function LeadForm({ numeroFormation }: { numeroFormation: string 
           <option value="">Mode de financement</option>
           {FINANCEMENTS.map((o) => <option key={o} value={o}>{o}</option>)}
         </select>
-        <select value={budget} onChange={(e) => setBudget(e.target.value)} className={inputCls} data-testid="select-lead-budget">
-          <option value="">Budget envisagé</option>
-          {BUDGETS.map((o) => <option key={o} value={o}>{o}</option>)}
-        </select>
         <select value={delai} onChange={(e) => setDelai(e.target.value)} className={inputCls} data-testid="select-lead-delai">
           <option value="">Délai de démarrage</option>
           {DELAIS.map((o) => <option key={o} value={o}>{o}</option>)}
-        </select>
-        <select value={niveau} onChange={(e) => setNiveau(e.target.value)} className={inputCls} data-testid="select-lead-niveau">
-          <option value="">Niveau actuel</option>
-          {NIVEAUX.map((o) => <option key={o} value={o}>{o}</option>)}
         </select>
       </div>
 

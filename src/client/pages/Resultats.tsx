@@ -164,7 +164,7 @@ export default function Resultats() {
             <p className="text-muted card-naturo p-6">Aucune formation ne correspond. Élargissez vos critères.</p>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {data?.items.map((f) => (
               <FormationCard key={f.numero_formation} f={f} />
             ))}

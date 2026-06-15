@@ -11,10 +11,23 @@ interface Metier { slug: string; metier: string }
 interface Ville { ville: string; slug: string; n: number }
 interface Article { slug: string; title: string; excerpt: string; image?: string }
 
-// Image de fond par métier : déposer le fichier dans public/images/.
-// Si l'image est absente, la tuile reste affichée sur le vert de marque (dégradation gracieuse).
-const metierBg = (slug: string) =>
-  `linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.12)), url(/images/metier-${slug}.webp)`;
+// Emoji et couleur de fond pour chaque métier (pas besoin d'image)
+const METIER_EMOJI: Record<string, string> = {
+  "coiffure": "✂️",
+  "esthetique-soin-corporel": "🧖‍♀️",
+  "manucurie": "💅",
+  "maquillage": "💄",
+  "massage-bien-etre": "💆‍♀️",
+  "specialisation-coiffure": "🎨",
+};
+const METIER_COLOR: Record<string, string> = {
+  "coiffure": "#f0fdf4",
+  "esthetique-soin-corporel": "#fdf4ff",
+  "manucurie": "#fff7ed",
+  "maquillage": "#fdf2f8",
+  "massage-bien-etre": "#f0f9ff",
+  "specialisation-coiffure": "#fefce8",
+};
 
 // Covers de secours pour les tuiles "Conseils & guides" (un article peut surcharger via son frontmatter `image:`).
 const CONSEIL_COVERS = ["/images/conseil-1.webp", "/images/conseil-2.webp", "/images/conseil-3.webp"];
@@ -56,14 +69,15 @@ export default function Home() {
             <span className="block">et forcément la vôtre.</span>
           </h1>
           <p className="mt-3 text-white/90 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Esthétique, massage, coiffure, soins du corps : comparez les formations{" "}
-            <strong className="font-semibold text-white">éligibles au CPF</strong> près de chez vous et choisissez en toute confiance.
+            On te donne tout ce que tu dois savoir : les formations possibles, les salaires réels et les débouchés concrets.
           </p>
           <div className="mt-5"><SearchBar big /></div>
           <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs text-white/90">
             <li className="flex items-center gap-1.5"><span className="text-[#17EC9B] font-bold">✓</span> 100 % finançable CPF</li>
             <li className="flex items-center gap-1.5"><span className="text-[#17EC9B] font-bold">✓</span> Organismes certifiés Qualiopi</li>
             <li className="flex items-center gap-1.5"><span className="text-[#17EC9B] font-bold">✓</span> Gratuit et sans engagement</li>
+            <li className="flex items-center gap-1.5"><span className="text-[#17EC9B] font-bold">✓</span> 💆 Massage</li>
+            <li className="flex items-center gap-1.5"><span className="text-[#17EC9B] font-bold">✓</span> 💄 Maquillage</li>
           </ul>
         </div>
       </section>
@@ -81,17 +95,19 @@ export default function Home() {
         </div>
 
         {/* Vignettes thématiques (par métier) → pages thématiques */}
-        <h3 className="font-bold text-lg text-ink mt-10 mb-4">Parcourir par thématique</h3>
+        <h3 className="font-bold text-lg text-ink mt-10 mb-4">Parcourir par métier</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           {(metiers ?? []).map((m) => (
             <a
               key={m.slug}
               href={`/metier/${m.slug}`}
               data-testid={`tile-metier-${m.slug}`}
-              className="group relative h-32 rounded-naturo overflow-hidden shadow-airbnb flex items-end bg-primary-active bg-cover bg-center transition-transform hover:-translate-y-0.5"
-              style={{ backgroundImage: metierBg(m.slug) }}
+              className="group flex flex-col items-center gap-2 p-5 rounded-2xl border-2 border-transparent hover:border-primary/40 hover:shadow-lg transition-all cursor-pointer text-center"
+              style={{ backgroundColor: METIER_COLOR[m.slug] ?? "#f0fdf4" }}
             >
-              <span className="relative p-3 text-white font-semibold text-sm leading-snug">{m.metier}</span>
+              <span className="text-4xl leading-none">{METIER_EMOJI[m.slug] ?? "✨"}</span>
+              <span className="font-semibold text-sm text-ink leading-snug">{m.metier}</span>
+              <span className="text-xs text-primary font-medium group-hover:underline">Voir les formations →</span>
             </a>
           ))}
         </div>
@@ -165,7 +181,7 @@ export default function Home() {
               <h2 className="font-bold text-xl text-ink">Conseils & guides</h2>
               <a href="/blog" className="text-sm text-primary hover:underline">Tous les articles →</a>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {articles.slice(0, 3).map((a, i) => (
                 <a key={a.slug} href={`/blog/${a.slug}`} className="card-naturo overflow-hidden hover:shadow-airbnb transition flex flex-col" data-testid={`tile-blog-${a.slug}`}>
                   <div
@@ -179,6 +195,11 @@ export default function Home() {
                   </div>
                 </a>
               ))}
+              <a href="/blog" className="card-naturo overflow-hidden hover:shadow-airbnb transition flex flex-col items-center justify-center gap-3 p-6 border-2 border-dashed border-primary/30 hover:border-primary/60 bg-primary/3 min-h-[220px]" data-testid="tile-blog-voir-tous">
+                <span className="text-4xl">📖</span>
+                <span className="font-semibold text-ink text-center">Voir tous les blogs</span>
+                <span className="text-sm text-primary font-medium">Explorer tous les guides →</span>
+              </a>
             </div>
           </div>
         </section>

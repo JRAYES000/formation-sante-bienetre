@@ -27,51 +27,128 @@ function prixLabel(f: FormationItem): string {
   return fmt(f.prix_min);
 }
 
+// Deterministic pseudo-random number based on formation ID
+function fomoHash(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) & 0xffff;
+  return h;
+}
+
+function fomoViews(id: string): number {
+  return 15 + (fomoHash(id) % 44);
+}
+
+const URGENCY_BADGES = [
+  { label: "⚡ Places limitées", cls: "bg-red-50 border-red-200 text-red-600" },
+  { label: "🔥 2 places disponibles", cls: "bg-orange-50 border-orange-200 text-orange-600" },
+  { label: "⏰ Dernier moment pour s'inscrire", cls: "bg-amber-50 border-amber-200 text-amber-700" },
+  { label: "🎯 Forte demande ce mois-ci", cls: "bg-rose-50 border-rose-200 text-rose-600" },
+];
+
+function urgencyBadge(id: string): { label: string; cls: string } | null {
+  const h = fomoHash(id);
+  const views = 15 + (h % 44);
+  if (views <= 42) return null; // only top ~30%
+  return URGENCY_BADGES[h % URGENCY_BADGES.length];
+}
+
 export default function FormationCard({ f }: { f: FormationItem }) {
   const { toggle, has } = useCompare();
   const inCompare = has(f.numero_formation);
+  const views = fomoViews(f.numero_formation);
+  const isPopular = views > 40;
+  const urgency = urgencyBadge(f.numero_formation);
+
   return (
-    <div className="card-naturo p-5 flex flex-col gap-3" data-testid={`card-formation-${f.numero_formation}`}>
-      <div className="flex items-start justify-between gap-3">
+    <div
+      className="card-naturo flex flex-col gap-0 overflow-hidden hover:shadow-airbnb transition-shadow"
+      data-testid={`card-formation-${f.numero_formation}`}
+    >
+      {/* Bande colorée en haut + badge FOMO si populaire */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-primary to-primary-active" />
+
+      <div className="p-5 flex flex-col gap-3 flex-1">
+        {/* Catégorie + badges FOMO */}
+        <div className="flex flex-wrap gap-1.5">
+          {f.categorie_nom && <span className="badge">{f.categorie_nom}</span>}
+          {isPopular && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 border border-orange-200 px-2 py-0.5 text-[11px] font-semibold text-orange-600">
+              🔥 Très demandée
+            </span>
+          )}
+          {urgency && (
+            <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold ${urgency.cls}`}>
+              {urgency.label}
+            </span>
+          )}
+        </div>
+
+        {/* Titre + organisme */}
         <div>
-          {f.categorie_nom && <span className="badge mb-2">{f.categorie_nom}</span>}
           <Link
             href={`/formation/${encodeURIComponent(f.numero_formation)}`}
-            className="block font-bold text-dark hover:text-primary leading-snug"
+            className="block font-bold text-dark hover:text-primary leading-snug text-[15px]"
             data-testid={`link-formation-${f.numero_formation}`}
           >
             {f.intitule}
           </Link>
           {f.organisme && (
             <div className="flex items-center gap-2 mt-1.5">
-              <OrgAvatar nom={f.organisme} size={26} />
+              <OrgAvatar nom={f.organisme} size={24} />
               <p className="text-sm text-gray-500">
                 {f.organisme}
-                {f.organisme_ville ? <span className="text-muted"> · <span className="capitalize">{f.organisme_ville.toLowerCase()}</span></span> : null}
+                {f.organisme_ville ? (
+                  <span className="text-muted"> · <span className="capitalize">{f.organisme_ville.toLowerCase()}</span></span>
+                ) : null}
               </p>
             </div>
           )}
         </div>
-      </div>
-      <div className="flex flex-wrap gap-2 text-xs text-gray-600">
-        {f.type_referentiel && <span className="bg-gray-100 rounded-full px-2 py-0.5">{f.type_referentiel}</span>}
-        <span className="bg-gray-100 rounded-full px-2 py-0.5">{f.a_distance ? "À distance possible" : "Présentiel"}</span>
-        {f.heures ? <span className="bg-gray-100 rounded-full px-2 py-0.5">{f.heures} h</span> : null}
-        <span className="badge">CPF</span>
-        {f.organisme_qualiopi ? <span className="badge">Qualiopi</span> : null}
-      </div>
-      <button
-        onClick={() => toggle(f)}
-        className={`self-start text-xs ${inCompare ? "text-primary font-semibold" : "text-muted"} hover:text-primary`}
-        data-testid={`button-compare-${f.numero_formation}`}
-      >
-        {inCompare ? "✓ Dans le comparateur" : "+ Comparer"}
-      </button>
-      <div className="flex items-center justify-between mt-1">
-        <span className="font-bold text-primary" data-testid={`text-prix-${f.numero_formation}`}>{prixLabel(f)}</span>
-        <Link href={`/formation/${encodeURIComponent(f.numero_formation)}`} className="btn-accent !py-2 !px-4 text-sm">
-          Je m'informe
-        </Link>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-1.5 text-xs text-gray-600">
+          {f.type_referentiel && <span className="bg-gray-100 rounded-full px-2.5 py-0.5">{f.type_referentiel}</span>}
+          <span className="bg-gray-100 rounded-full px-2.5 py-0.5">{f.a_distance ? "À distance" : "Présentiel"}</span>
+          {f.heures ? <span className="bg-gray-100 rounded-full px-2.5 py-0.5">{f.heures} h</span> : null}
+          <span className="badge">CPF</span>
+          {f.organisme_qualiopi ? <span className="badge">Qualiopi ✓</span> : null}
+        </div>
+
+        {/* FOMO social proof */}
+        <p className="text-[11px] text-muted flex items-center gap-1">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          {views} personnes ont consulté cette semaine
+        </p>
+
+        {/* Séparateur */}
+        <div className="border-t border-hairline" />
+
+        {/* Prix + CTA */}
+        <div className="flex items-center justify-between">
+          <div>
+            <span className="font-bold text-primary text-lg" data-testid={`text-prix-${f.numero_formation}`}>
+              {prixLabel(f)}
+            </span>
+            {f.prix_min != null && (
+              <span className="block text-[11px] text-muted">finançable CPF</span>
+            )}
+          </div>
+          <Link
+            href={`/formation/${encodeURIComponent(f.numero_formation)}`}
+            className="btn-accent !py-2 !px-5 text-sm shrink-0"
+          >
+            Je m'informe →
+          </Link>
+        </div>
+
+        {/* Comparer */}
+        <button
+          onClick={() => toggle(f)}
+          className={`self-start text-xs ${inCompare ? "text-primary font-semibold" : "text-muted"} hover:text-primary`}
+          data-testid={`button-compare-${f.numero_formation}`}
+        >
+          {inCompare ? "✓ Dans le comparateur" : "+ Comparer"}
+        </button>
       </div>
     </div>
   );
