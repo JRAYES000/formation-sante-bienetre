@@ -54,14 +54,17 @@ interface PageOpts {
 }
 
 function renderPage(o: PageOpts): string {
-  const ogImage = o.ogImage ?? DEFAULT_OG_IMAGE;
+  const siteBase = o.canonical.split("/").slice(0, 3).join("/");
+  const ogImage = o.ogImage
+    ? (o.ogImage.startsWith("http") ? o.ogImage : `${siteBase}${o.ogImage}`)
+    : DEFAULT_OG_IMAGE;
   const ld = [
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Formation Santé Bien-être",
-      url: o.canonical.replace(/\/[^/]*$/, "") || o.canonical,
-      logo: `${o.canonical.split("/").slice(0, 3).join("/")}/favicon.ico`,
+      url: `${siteBase}/formations`,
+      logo: { "@type": "ImageObject", url: `${siteBase}/images/logo-header.png` },
       description: "Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Toutes nos formations sont proposées par des organismes certifiés Qualiopi.",
       sameAs: [],
     },
@@ -84,8 +87,9 @@ function renderPage(o: PageOpts): string {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(o.title)}</title>
 <meta name="description" content="${esc(o.description)}">
+<meta name="robots" content="${o.noindex ? "noindex,follow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"}">
 <link rel="canonical" href="${esc(o.canonical)}">
-${o.noindex ? `<meta name="robots" content="noindex,follow">` : ""}
+<meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="${esc(o.title)}">
 <meta property="og:description" content="${esc(o.description)}">
 <meta property="og:type" content="${o.publishedAt ? "article" : "website"}">
@@ -96,10 +100,17 @@ ${o.noindex ? `<meta name="robots" content="noindex,follow">` : ""}
 <meta property="og:site_name" content="Formation Santé Bien-être">
 ${o.publishedAt ? `<meta property="article:published_time" content="${esc(o.publishedAt)}">` : ""}
 ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updatedAt)}">` : ""}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(o.title)}">
+<meta name="twitter:description" content="${esc(o.description)}">
+<meta name="twitter:image" content="${esc(ogImage)}">
+<meta name="theme-color" content="#186749">
 <link rel="icon" href="/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/analytics.js" defer></script>
 <style>
@@ -195,9 +206,8 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .filter-toggle-btn{display:none}
   @media(max-width:760px){
     .filter-toggle-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:10px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:16px;width:100%}
-    .sidebar{display:none;order:2}
+    .sidebar{display:none}
     .sidebar.open{display:block}
-    .page-layout > div{order:1}
   }
   .sb-section{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:14px 16px;margin-bottom:14px}
   .sb-section h3{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
@@ -536,7 +546,7 @@ function withSidebar(sidebar: string, content: string): string {
   <div>
     <div id="cards-grid">${content}</div>
     <p class="cards-empty" id="cards-empty">Aucune formation ne correspond à ce budget. <button class="p-chip active" data-max="" style="display:inline;width:auto;padding:4px 10px" onclick="document.querySelectorAll('.p-chip').forEach(function(b){b.classList.remove('active')});this.classList.add('active');document.querySelectorAll('.card').forEach(function(c){c.style.display=''});document.getElementById('cards-empty').style.display='none'">Réinitialiser</button></p>
-    <button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Afficher les filtres'">⚙️ Afficher les filtres</button>
+    <button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Filtrer par métier'">⚙️ Filtrer par métier</button>
   </div>
 </div>${PRICE_FILTER_JS}`;
 }
@@ -551,7 +561,7 @@ function courseListLd(items: any[], canonical: string): object {
       item: {
         "@type": "Course",
         name: f.intitule,
-        url: `https://www.moncompteformation.gouv.fr/espace/pub/index.html#/formation/${encodeURIComponent(f.numero_formation)}`,
+        url: `${canonical}`,
         inLanguage: "fr",
         ...(f.organisme ? { provider: { "@type": "Organization", name: f.organisme } } : {}),
         ...(f.prix_min != null ? {
@@ -625,10 +635,11 @@ seoRouter.get("/robots.txt", (req, res) => {
 });
 
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
+// Les pages légales sont exclues : elles ne génèrent pas de trafic SEO et diluent le PageRank.
 export function allIndexableUrls(base: string): string[] {
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
-  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`, `${base}/mentions-legales`, `${base}/politique-confidentialite`];
+  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`];
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
   for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
   for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
@@ -642,6 +653,22 @@ export function allIndexableUrls(base: string): string[] {
   return urls;
 }
 
+function sitemapPriority(url: string): string {
+  if (/\/formations$/.test(url)) return "1.0";
+  if (/\/formations\/[^/]+$/.test(url)) return "0.9";
+  if (/\/metier\//.test(url)) return "0.8";
+  if (/\/blog$/.test(url) || /\/financement-cpf$/.test(url) || /\/faq$/.test(url)) return "0.8";
+  if (/\/blog\//.test(url)) return "0.7";
+  if (/\/ville\/[^/]+$/.test(url) || /\/villes$/.test(url)) return "0.6";
+  return "0.5";
+}
+
+function sitemapChangefreq(url: string): string {
+  if (/\/formations/.test(url) || /\/ville/.test(url)) return "weekly";
+  if (/\/blog\//.test(url) || /\/metier\//.test(url)) return "monthly";
+  return "weekly";
+}
+
 seoRouter.get("/sitemap.xml", (req, res) => {
   const base = baseUrl(req);
   const today = new Date().toISOString().split("T")[0];
@@ -651,7 +678,7 @@ seoRouter.get("/sitemap.xml", (req, res) => {
   const urls = allIndexableUrls(base);
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    urls.map((u) => `  <url><loc>${esc(u)}</loc><lastmod>${articleDates.get(u) ?? today}</lastmod></url>`).join("\n") +
+    urls.map((u) => `  <url><loc>${esc(u)}</loc><lastmod>${articleDates.get(u) ?? today}</lastmod><changefreq>${sitemapChangefreq(u)}</changefreq><priority>${sitemapPriority(u)}</priority></url>`).join("\n") +
     `\n</urlset>\n`;
   res.type("application/xml").send(xml);
 });
@@ -926,7 +953,7 @@ La présentation, la charte graphique et les contenus éditoriaux du site sont p
 <div class="mesh"><h2>Données personnelles</h2><p>
 Le traitement de vos données est décrit dans notre <a href="/politique-confidentialite">Politique de confidentialité</a>.
 </p></div>`;
-  res.send(renderPage({ title: "Mentions légales | Formation Santé Bien-être", description: "Mentions légales du site formation-sante-bienetre.fr.", canonical: `${base}/mentions-legales`, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Mentions légales" }], body }));
+  res.send(renderPage({ title: "Mentions légales | Formation Santé Bien-être", description: "Mentions légales du site formation-sante-bienetre.fr.", canonical: `${base}/mentions-legales`, noindex: true, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Mentions légales" }], body }));
 });
 
 // ---------- FAQ ----------
@@ -1087,7 +1114,7 @@ seoRouter.get("/politique-confidentialite", (req, res) => {
 <div class="mesh"><h2>Durée de conservation</h2><p>Vos données sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées au plus tard <strong>3 ans</strong> après le dernier contact.</p></div>
 <div class="mesh"><h2>Vos droits</h2><p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité et de retrait du consentement. Pour les exercer : <a href="mailto:contact@ecole-naturo.fr">contact@ecole-naturo.fr</a>. Vous pouvez aussi introduire une réclamation auprès de la <strong>CNIL</strong> (cnil.fr).</p></div>
 ${cookiesSection}`;
-  res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Politique de confidentialité" }], body }));
+  res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, noindex: true, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Politique de confidentialité" }], body }));
 });
 
 // ---------- pages ville ----------
@@ -1388,11 +1415,27 @@ ${gridHtml}
   </div>
 </div>`;
 
+  const blogLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Blog Formation Santé Bien-être",
+    url: `${base}/blog`,
+    description: "Conseils pratiques, guides financement CPF et fiches métiers pour se former en esthétique, massage, coiffure et bien-être.",
+    publisher: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
+    blogPost: arts.slice(0, 10).map((a) => ({
+      "@type": "BlogPosting",
+      headline: a.title,
+      url: `${base}/blog/${a.slug}`,
+      description: a.metaDescription,
+      ...(a.publishedAt ? { datePublished: a.publishedAt } : {}),
+    })),
+  };
   res.send(
     renderPage({
       title: "Blog formations beauté & bien-être | Formation Santé Bien-être",
       description: "Conseils pratiques, guides financement CPF et fiches métiers pour se former en esthétique, massage, coiffure et bien-être.",
       canonical: `${base}/blog`,
+      jsonLd: [blogLd],
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog" }],
       body,
     })
@@ -1404,7 +1447,13 @@ seoRouter.get("/blog/:slug", (req, res, next) => {
   if (!a) return next();
   const base = baseUrl(req);
   const canonical = `${base}/blog/${a.slug}`;
-  const arts = listArticles().filter((x) => x.slug !== a.slug).slice(0, 3);
+  const allArts = listArticles().filter((x) => x.slug !== a.slug);
+  const slugWords = new Set(a.slug.split("-").filter((w) => w.length > 3));
+  const scored = allArts.map((x) => ({
+    art: x,
+    score: x.slug.split("-").filter((w) => slugWords.has(w)).length,
+  })).sort((a, b) => b.score - a.score);
+  const arts = scored.slice(0, 3).map((s) => s.art);
   const ld = {
     "@context": "https://schema.org",
     "@type": "Article",
