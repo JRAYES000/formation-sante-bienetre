@@ -205,7 +205,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   /* Bouton filtres mobile */
   .filter-toggle-btn{display:none}
   @media(max-width:760px){
-    .filter-toggle-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:10px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:16px;width:100%}
+    .filter-toggle-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:10px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:12px;width:100%}
     .sidebar{display:none}
     .sidebar.open{display:block}
   }
@@ -541,12 +541,12 @@ function buildSidebar(o: SidebarOpts): string {
 }
 
 function withSidebar(sidebar: string, content: string): string {
-  return `<div class="page-layout">
+  return `<button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Filtres'">⚙️ Filtres</button>
+<div class="page-layout">
   <aside class="sidebar" id="mob-sidebar">${sidebar}</aside>
   <div>
     <div id="cards-grid">${content}</div>
     <p class="cards-empty" id="cards-empty">Aucune formation ne correspond à ce budget. <button class="p-chip active" data-max="" style="display:inline;width:auto;padding:4px 10px" onclick="document.querySelectorAll('.p-chip').forEach(function(b){b.classList.remove('active')});this.classList.add('active');document.querySelectorAll('.card').forEach(function(c){c.style.display=''});document.getElementById('cards-empty').style.display='none'">Réinitialiser</button></p>
-    <button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Filtrer par métier'">⚙️ Filtrer par métier</button>
   </div>
 </div>${PRICE_FILTER_JS}`;
 }
