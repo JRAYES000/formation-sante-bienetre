@@ -210,6 +210,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
     .sidebar.open{display:block}
   }
   .sb-section{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+  @media(max-width:760px){.sb-section:first-child .sb-scroll{max-height:calc(3 * 38px);overflow-y:auto}}
   .sb-section h3{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
   .sb-link{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:8px;text-decoration:none;font-size:.88rem;color:var(--body);transition:background .12s;line-height:1.3}
   .sb-link:hover,.sb-link.active{background:var(--p-light);color:var(--p);font-weight:600}
