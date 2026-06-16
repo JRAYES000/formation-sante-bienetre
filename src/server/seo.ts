@@ -194,9 +194,10 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   /* Bouton filtres mobile */
   .filter-toggle-btn{display:none}
   @media(max-width:760px){
-    .filter-toggle-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:10px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:14px;width:100%}
-    .sidebar{display:none}
+    .filter-toggle-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:10px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:16px;width:100%}
+    .sidebar{display:none;order:2}
     .sidebar.open{display:block}
+    .page-layout > div{order:1}
   }
   .sb-section{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:14px 16px;margin-bottom:14px}
   .sb-section h3{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
@@ -286,7 +287,8 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .cat-nav a{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:7px 14px;text-decoration:none;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;transition:background .15s}
   .cat-nav a:hover{background:rgba(255,255,255,.28)}
   @media(max-width:600px){.cat-nav{flex-wrap:wrap;overflow-x:visible;padding-bottom:0}}
-  @media(max-width:600px){.cat-nav a{flex:1 1 calc(33.333% - 8px);justify-content:center;font-size:.8rem;padding:8px 6px}}
+  @media(max-width:600px){.cat-nav a{flex:0 0 auto;font-size:.8rem;padding:8px 10px}}
+  @media(max-width:600px){.cat-nav a:nth-child(-n+3){flex:1 1 calc(33.333% - 8px);justify-content:center}}
 
   /* Benefits bar */
   .benefits{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;font-size:.88rem;color:rgba(255,255,255,.9)}
@@ -529,12 +531,12 @@ function buildSidebar(o: SidebarOpts): string {
 }
 
 function withSidebar(sidebar: string, content: string): string {
-  return `<button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Afficher les filtres'">⚙️ Afficher les filtres</button>
-<div class="page-layout">
+  return `<div class="page-layout">
   <aside class="sidebar" id="mob-sidebar">${sidebar}</aside>
   <div>
     <div id="cards-grid">${content}</div>
     <p class="cards-empty" id="cards-empty">Aucune formation ne correspond à ce budget. <button class="p-chip active" data-max="" style="display:inline;width:auto;padding:4px 10px" onclick="document.querySelectorAll('.p-chip').forEach(function(b){b.classList.remove('active')});this.classList.add('active');document.querySelectorAll('.card').forEach(function(c){c.style.display=''});document.getElementById('cards-empty').style.display='none'">Réinitialiser</button></p>
+    <button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Afficher les filtres'">⚙️ Afficher les filtres</button>
   </div>
 </div>${PRICE_FILTER_JS}`;
 }
