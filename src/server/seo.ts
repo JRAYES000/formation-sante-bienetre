@@ -162,6 +162,11 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .search-wrap input{width:100%;padding:14px 52px 14px 18px;border:none;border-radius:12px;font-size:1rem;font-family:inherit;outline:none;background:#fff;color:var(--ink);box-shadow:0 2px 16px rgba(0,0,0,.18)}
   .search-wrap input::placeholder{color:#aaa}
   .search-btn{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:var(--p-dark);border:none;border-radius:8px;padding:8px 14px;cursor:pointer;color:#fff;font-size:.95rem;font-family:inherit;font-weight:600}
+  @media(max-width:600px){.search-btn{display:none}}
+  @media(max-width:600px){.search-wrap input{padding-right:42px}}
+  .search-wrap::after{content:none}
+  @media(max-width:600px){.search-wrap::after{content:'▼';position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.65rem;color:#aaa;pointer-events:none}}
+  @media(max-width:600px){.city-search-wrap::after{content:'▼';position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.65rem;color:#aaa;pointer-events:none}}
   .search-dropdown{display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:#fff;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.15);overflow:hidden;z-index:200;max-height:320px;overflow-y:auto}
   .search-dropdown.open{display:block}
   .sd-item{display:flex;align-items:center;gap:10px;padding:11px 16px;text-decoration:none;color:var(--ink);font-size:.95rem;transition:background .12s;border-bottom:1px solid var(--hairline)}
@@ -186,6 +191,13 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   @media(max-width:760px){.page-layout{grid-template-columns:1fr}}
   .sidebar{position:sticky;top:72px}
   @media(max-width:760px){.sidebar{position:static}}
+  /* Bouton filtres mobile */
+  .filter-toggle-btn{display:none}
+  @media(max-width:760px){
+    .filter-toggle-btn{display:flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--p);color:var(--p);border-radius:10px;padding:10px 18px;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;margin-bottom:14px;width:100%}
+    .sidebar{display:none}
+    .sidebar.open{display:block}
+  }
   .sb-section{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:14px 16px;margin-bottom:14px}
   .sb-section h3{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
   .sb-link{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:8px;text-decoration:none;font-size:.88rem;color:var(--body);transition:background .12s;line-height:1.3}
@@ -273,6 +285,8 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .cat-nav::-webkit-scrollbar{display:none}
   .cat-nav a{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:7px 14px;text-decoration:none;color:#fff;font-size:.85rem;font-weight:600;white-space:nowrap;transition:background .15s}
   .cat-nav a:hover{background:rgba(255,255,255,.28)}
+  @media(max-width:600px){.cat-nav{flex-wrap:wrap;overflow-x:visible;padding-bottom:0}}
+  @media(max-width:600px){.cat-nav a{flex:1 1 calc(33.333% - 8px);justify-content:center;font-size:.8rem;padding:8px 6px}}
 
   /* Benefits bar */
   .benefits{display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;font-size:.88rem;color:rgba(255,255,255,.9)}
@@ -515,8 +529,9 @@ function buildSidebar(o: SidebarOpts): string {
 }
 
 function withSidebar(sidebar: string, content: string): string {
-  return `<div class="page-layout">
-  <aside class="sidebar">${sidebar}</aside>
+  return `<button class="filter-toggle-btn" onclick="var s=document.getElementById('mob-sidebar');s.classList.toggle('open');this.innerHTML=s.classList.contains('open')?'✕ Masquer les filtres':'⚙️ Afficher les filtres'">⚙️ Afficher les filtres</button>
+<div class="page-layout">
+  <aside class="sidebar" id="mob-sidebar">${sidebar}</aside>
   <div>
     <div id="cards-grid">${content}</div>
     <p class="cards-empty" id="cards-empty">Aucune formation ne correspond à ce budget. <button class="p-chip active" data-max="" style="display:inline;width:auto;padding:4px 10px" onclick="document.querySelectorAll('.p-chip').forEach(function(b){b.classList.remove('active')});this.classList.add('active');document.querySelectorAll('.card').forEach(function(c){c.style.display=''});document.getElementById('cards-empty').style.display='none'">Réinitialiser</button></p>
