@@ -1,6 +1,5 @@
 import { Router, Route, Switch } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
-import Home from "./pages/Home";
 import Resultats from "./pages/Resultats";
 import FicheFormation from "./pages/FicheFormation";
 import FicheOrganisme from "./pages/FicheOrganisme";
@@ -19,7 +18,7 @@ export default function App() {
           <SiteHeader />
           <main className="flex-1">
             <Switch>
-              <Route path="/" component={Home} />
+              <Route path="/">{() => { window.location.replace("/formations"); return null; }}</Route>
               <Route path="/recherche" component={Resultats} />
               <Route path="/recherche/:q" component={Resultats} />
               <Route path="/recherche/:q/:dept" component={Resultats} />

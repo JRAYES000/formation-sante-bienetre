@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { useCompare } from "../lib/compare";
 import OrgAvatar from "./OrgAvatar";
 
 export interface FormationItem {
@@ -28,36 +27,44 @@ function prixLabel(f: FormationItem): string {
 }
 
 // Deterministic pseudo-random number based on formation ID
-function fomoHash(id: string): number {
+export function fomoHash(id: string): number {
   let h = 0;
   for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) & 0xffff;
   return h;
 }
 
-function fomoViews(id: string): number {
+export function fomoViews(id: string): number {
   return 15 + (fomoHash(id) % 44);
 }
 
-const URGENCY_BADGES = [
-  { label: "⚡ Places limitées", cls: "bg-red-50 border-red-200 text-red-600" },
-  { label: "🔥 2 places disponibles", cls: "bg-orange-50 border-orange-200 text-orange-600" },
-  { label: "⏰ Dernier moment pour s'inscrire", cls: "bg-amber-50 border-amber-200 text-amber-700" },
+// Exactly 1 FOMO badge per formation, or none. Only fires for top ~30% by hash.
+// "Places X disponibles" is rare (1 in 5 eligible formations).
+const FOMO_BADGES = [
   { label: "🎯 Forte demande ce mois-ci", cls: "bg-rose-50 border-rose-200 text-rose-600" },
+  { label: "⚡ Places limitées", cls: "bg-red-50 border-red-200 text-red-600" },
+  { label: "🔥 Très demandée", cls: "bg-orange-50 border-orange-200 text-orange-600" },
+  { label: "🎯 Forte demande ce mois-ci", cls: "bg-rose-50 border-rose-200 text-rose-600" },
+  { label: "⚡ Places limitées", cls: "bg-red-50 border-red-200 text-red-600" },
+  { label: "🔥 Très demandée", cls: "bg-orange-50 border-orange-200 text-orange-600" },
+  { label: "🎯 Forte demande ce mois-ci", cls: "bg-rose-50 border-rose-200 text-rose-600" },
+  { label: "⚡ Places limitées", cls: "bg-red-50 border-red-200 text-red-600" },
+  { label: "🔥 Très demandée", cls: "bg-orange-50 border-orange-200 text-orange-600" },
+  // Rare: specific seat count (1 in 10 eligible)
+  { label: "⚡ 3 places disponibles", cls: "bg-red-50 border-red-200 text-red-700" },
+  { label: "⚡ 5 places disponibles", cls: "bg-red-50 border-red-200 text-red-700" },
+  { label: "⚡ 4 places disponibles", cls: "bg-red-50 border-red-200 text-red-700" },
 ];
 
-function urgencyBadge(id: string): { label: string; cls: string } | null {
+export function fomoBadge(id: string): { label: string; cls: string } | null {
   const h = fomoHash(id);
-  const views = 15 + (h % 44);
-  if (views <= 42) return null; // only top ~30%
-  return URGENCY_BADGES[h % URGENCY_BADGES.length];
+  // Activate for ~30% of formations (h % 10 >= 7)
+  if (h % 10 < 7) return null;
+  return FOMO_BADGES[h % FOMO_BADGES.length];
 }
 
 export default function FormationCard({ f }: { f: FormationItem }) {
-  const { toggle, has } = useCompare();
-  const inCompare = has(f.numero_formation);
   const views = fomoViews(f.numero_formation);
-  const isPopular = views > 40;
-  const urgency = urgencyBadge(f.numero_formation);
+  const fomo = fomoBadge(f.numero_formation);
 
   return (
     <div
@@ -71,14 +78,9 @@ export default function FormationCard({ f }: { f: FormationItem }) {
         {/* Catégorie + badges FOMO */}
         <div className="flex flex-wrap gap-1.5">
           {f.categorie_nom && <span className="badge">{f.categorie_nom}</span>}
-          {isPopular && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-orange-50 border border-orange-200 px-2 py-0.5 text-[11px] font-semibold text-orange-600">
-              🔥 Très demandée
-            </span>
-          )}
-          {urgency && (
-            <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold ${urgency.cls}`}>
-              {urgency.label}
+          {fomo && (
+            <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold ${fomo.cls}`}>
+              {fomo.label}
             </span>
           )}
         </div>
@@ -126,11 +128,11 @@ export default function FormationCard({ f }: { f: FormationItem }) {
         {/* Prix + CTA */}
         <div className="flex items-center justify-between">
           <div>
-            <span className="font-bold text-primary text-lg" data-testid={`text-prix-${f.numero_formation}`}>
+            <span className="text-gray-400 text-xs font-normal" data-testid={`text-prix-${f.numero_formation}`}>
               {prixLabel(f)}
             </span>
             {f.prix_min != null && (
-              <span className="block text-[11px] text-muted">finançable CPF</span>
+              <span className="block text-[10px] text-muted">finançable CPF</span>
             )}
           </div>
           <Link
@@ -141,14 +143,6 @@ export default function FormationCard({ f }: { f: FormationItem }) {
           </Link>
         </div>
 
-        {/* Comparer */}
-        <button
-          onClick={() => toggle(f)}
-          className={`self-start text-xs ${inCompare ? "text-primary font-semibold" : "text-muted"} hover:text-primary`}
-          data-testid={`button-compare-${f.numero_formation}`}
-        >
-          {inCompare ? "✓ Dans le comparateur" : "+ Comparer"}
-        </button>
       </div>
     </div>
   );

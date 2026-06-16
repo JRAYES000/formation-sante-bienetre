@@ -81,7 +81,7 @@ export function getArticle(slug: string): Article | null {
     image: meta.image || undefined,
     publishedAt: meta.publishedAt || undefined,
     updatedAt: meta.updatedAt || undefined,
-    html: marked.parse(body, { async: false }) as string,
+    html: (marked.parse(body, { async: false }) as string).replace(/^<h1[^>]*>[\s\S]*?<\/h1>\s*/i, ""),
   };
 }
 

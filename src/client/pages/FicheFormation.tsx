@@ -3,7 +3,7 @@ import React from "react";
 import { useParams, Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import LeadForm from "../components/LeadForm";
-import FormationCard, { type FormationItem } from "../components/FormationCard";
+import FormationCard, { type FormationItem, fomoBadge, fomoViews } from "../components/FormationCard";
 
 interface FormationDetail {
   numero_formation: string;
@@ -50,7 +50,28 @@ export default function FicheFormation() {
       <Link href="/recherche" className="text-sm text-primary hover:underline">← Retour aux résultats</Link>
 
       <div className="card-naturo p-6 mt-4">
-        {f.categorie_nom && <span className="badge mb-3">{f.categorie_nom}</span>}
+        {/* Catégorie + FOMO sur la même ligne */}
+        {(() => {
+          const fomo = fomoBadge(f.numero_formation);
+          const views = fomoViews(f.numero_formation);
+          return (
+            <>
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                {f.categorie_nom && <span className="badge">{f.categorie_nom}</span>}
+                {fomo && (
+                  <span className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${fomo.cls}`}>
+                    {fomo.label}
+                  </span>
+                )}
+                <span className="text-xs text-gray-500 flex items-center gap-1 ml-auto">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  {views} personnes cette semaine
+                </span>
+              </div>
+            </>
+          );
+        })()}
+
         <h1 className="text-2xl font-bold text-dark" data-testid="text-formation-titre">{f.intitule}</h1>
         {f.organisme && (
           <p className="text-gray-600 mt-1">
@@ -70,10 +91,11 @@ export default function FicheFormation() {
           {f.organisme_qualiopi ? <span className="badge" data-testid="badge-qualiopi">Qualiopi</span> : null}
         </div>
 
-        <p className="text-2xl font-bold text-primary mt-5" data-testid="text-formation-prix">{prix(f)}</p>
+        <p className="text-gray-400 text-xs mt-4 font-normal" data-testid="text-formation-prix">{prix(f)}</p>
 
         {/* CTA Voie B — formulaire de demande + routing partenaire */}
-        <div className="mt-6 border-t border-gray-100 pt-6">
+        <div className="mt-5 border-t border-gray-100 pt-5">
+          <p className="text-xs text-gray-500 mb-4">Demande gratuite · Sans engagement · Réponse sous 24h</p>
           {!asked ? (
             <button onClick={() => setAsked(true)} className="btn-accent w-full sm:w-auto" data-testid="button-je-minforme">
               Je m'informe gratuitement

@@ -96,6 +96,7 @@ ${o.noindex ? `<meta name="robots" content="noindex,follow">` : ""}
 <meta property="og:site_name" content="Formation Santé Bien-être">
 ${o.publishedAt ? `<meta property="article:published_time" content="${esc(o.publishedAt)}">` : ""}
 ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updatedAt)}">` : ""}
+<link rel="icon" href="/images/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -109,11 +110,11 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
 
   /* Header */
-  header{background:#fff;border-bottom:1px solid var(--hairline);position:sticky;top:0;z-index:100}
+  header{background:var(--p);border-bottom:1px solid rgba(0,0,0,.12);position:sticky;top:0;z-index:100}
   header .wrap{display:flex;align-items:center;justify-content:space-between;gap:8px;height:60px;font-weight:800;font-size:1rem}
   .header-nav{display:flex;align-items:center;gap:2px}
-  .header-nav a{color:var(--body);text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 10px;border-radius:8px;transition:background .12s,color .12s;white-space:nowrap}
-  .header-nav a:hover{background:var(--p-light);color:var(--p)}
+  .header-nav a{color:rgba(255,255,255,.92);text-decoration:none;font-size:.85rem;font-weight:600;padding:6px 10px;border-radius:8px;transition:background .12s,color .12s;white-space:nowrap}
+  .header-nav a:hover{background:rgba(255,255,255,.15);color:#fff}
   @media(max-width:700px){.header-nav .hide-mobile{display:none}}
   @media(max-width:480px){.header-nav{display:none}}
 
@@ -133,11 +134,25 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .blog-card-title{font-size:1rem;font-weight:700;color:var(--ink);margin:0;line-height:1.4}
   .blog-card-excerpt{color:var(--muted);font-size:.88rem;margin:0;line-height:1.5;flex:1}
   .blog-read-more{color:var(--p);font-size:.88rem;font-weight:700;margin-top:auto}
+  .blog-featured .blog-read-more{color:#fff}
   .article-cta-block{background:var(--p-light);border-radius:14px;padding:24px;margin:32px 0;border-left:4px solid var(--p)}
 
   /* Popular card flame badge */
   .flame-badge{display:inline-flex;align-items:center;gap:4px;background:#fff3e0;color:#e65100;font-size:.72rem;font-weight:800;border-radius:99px;padding:3px 9px;margin-bottom:4px}
   .pop-card{border:2px solid #ffe0b2}
+  /* Urgency badges */
+  .urgency-badge{display:inline-flex;align-items:center;gap:4px;border-radius:99px;padding:3px 10px;font-size:.72rem;font-weight:800}
+  .urgency-limited{background:#fff3e0;color:#e65100}
+  .urgency-last{background:#fce4ec;color:#c62828}
+  .urgency-spots{background:#e3f2fd;color:#1565c0}
+  /* Metier tiles grid */
+  .metier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0 32px}
+  @media(max-width:700px){.metier-grid{grid-template-columns:repeat(2,1fr)}}
+  .metier-tile{display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 14px;border-radius:18px;border:2px solid transparent;text-decoration:none;transition:all .2s;text-align:center}
+  .metier-tile:hover{border-color:var(--p);box-shadow:0 6px 24px rgba(0,0,0,.12);transform:translateY(-3px)}
+  .metier-tile .mt-em{font-size:2.6rem;line-height:1}
+  .metier-tile .mt-name{font-weight:700;font-size:.88rem;color:var(--ink);line-height:1.3}
+  .metier-tile .mt-cta{font-size:.76rem;color:var(--p);font-weight:700}
 
   /* Hero */
   .hero{background:var(--p);color:#fff;padding:52px 0 56px}
@@ -193,7 +208,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .card .t:hover{color:var(--p)}
   .card-org{color:var(--muted);font-size:.85rem;font-weight:500}
   .card-info{color:var(--muted);font-size:.8rem}
-  .card-price{color:var(--muted);font-size:.85rem;font-weight:500;margin-top:2px}
+  .card-price{color:var(--muted);font-size:.8rem;font-weight:400;margin-top:2px}
   .card-cta{display:block;background:var(--p);color:#fff;font-weight:700;font-size:.95rem;border-radius:10px;padding:13px 16px;text-decoration:none;text-align:center;margin-top:auto;transition:background .15s}
   .card-cta:hover{background:var(--p-active)}
   .badge{display:inline-block;font-size:.72rem;font-weight:700;background:var(--p-light);color:var(--p);border-radius:99px;padding:3px 10px}
@@ -265,7 +280,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .benefits .chk{background:rgba(255,255,255,.25);border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800}
 
   /* Card cat line (emoji + badge inline) */
-  .card-cat-line{display:flex;align-items:center;gap:7px;margin-bottom:6px}
+  .card-cat-line{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:6px}
   .card-cat-line .em{font-size:1.4rem;line-height:1}
 
   /* Back button */
@@ -287,7 +302,9 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 </head>
 <body>
 <header><div class="wrap">
-  <a href="/formations" style="text-decoration:none;color:var(--p);flex-shrink:0">🌿 Formation Santé Bien-être</a>
+  <a href="/formations" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
+    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" style="height:36px;width:auto;display:block">
+  </a>
   <nav class="header-nav">
     <a href="/formations">Formations</a>
     <a href="/metiers" class="hide-mobile">Métiers</a>
@@ -376,17 +393,33 @@ function categoryEmoji(nom: string): string {
   return "🌿";
 }
 
+function urgencyBadge(index: number, total: number): string {
+  if (index >= Math.ceil(total * 0.3)) return "";
+  // Rare seat-count badges appear only every 10th eligible card
+  const rare = index % 10 === 9;
+  if (rare) {
+    const seats = [3, 4, 5, 6][index % 4];
+    return `<span class="urgency-badge urgency-limited">⚡ ${seats} places disponibles</span>`;
+  }
+  const badges = [
+    `<span class="urgency-badge urgency-limited">⚡ Places limitées</span>`,
+    `<span class="urgency-badge urgency-spots">🎯 Forte demande ce mois-ci</span>`,
+    `<span class="urgency-badge urgency-last">🔥 Très demandée</span>`,
+  ];
+  return badges[index % badges.length];
+}
+
 function formationCards(items: any[]): string {
   if (!items.length) return `<p class="muted">Aucune formation disponible pour ce critère pour le moment.</p>`;
   return `<div class="grid">${items
     .map(
-      (f) => `<div class="card" data-price="${f.prix_min ?? 0}">
-<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}</div>
-<a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
-<span class="card-org">${esc(f.organisme ?? "")}</span>
-<span class="card-info">${f.a_distance ? "📍 À distance possible" : "📍 Présentiel"}${f.type_referentiel ? " · " + esc(f.type_referentiel) : ""} · ✅ Éligible CPF${f.organisme_qualiopi ? " · Qualiopi" : ""}</span>
+      (f, i) => `<div class="card" data-price="${f.prix_min ?? 0}">
+<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}${urgencyBadge(i, items.length)}</div>
+<a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}" style="font-size:1.02rem">${esc(f.intitule)}</a>
+<span class="card-org" style="font-weight:600;color:var(--body)">${esc(f.organisme ?? "")}</span>
+<span class="card-info">${f.a_distance ? "🌐 À distance possible" : "📍 Présentiel"}${f.type_referentiel ? " &middot; " + esc(f.type_referentiel) : ""} &middot; ✅ CPF${f.organisme_qualiopi ? " &middot; <strong>Qualiopi</strong>" : ""}</span>
 <span class="card-price">${eur(f.prix_min)}</span>
-<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement</a>
+<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
 </div>`
     )
     .join("")}</div>`;
@@ -619,11 +652,13 @@ seoRouter.get("/formations", (req, res) => {
   const catsJson = JSON.stringify(cats.map((c) => ({ slug: c.slug, nom: normCat(c.nom), n: c.n, emoji: categoryEmoji(c.nom) })));
   const villesJson = JSON.stringify(allVilles.map((v) => ({ slug: v.slug, ville: titleCaseVille(v.ville), n: v.n })));
 
-  // 3 chips fixes dans le hero (sous les coches)
+  // chips fixes dans le hero (sous les coches)
   const heroChips = [
-    { label: "💆 Esthétique", href: "/formations/esthetique-soin-corporel" },
-    { label: "✂️ Coiffure",   href: "/formations/coiffure" },
-    { label: "💅 Manucure",   href: "/formations/manucurie" },
+    { label: "🧖‍♀️ Esthétique", href: "/formations/esthetique-soin-corporel" },
+    { label: "✂️ Coiffure",    href: "/formations/coiffure" },
+    { label: "💅 Manucure",    href: "/formations/manucurie" },
+    { label: "💆 Massage",     href: "/formations/massage-bien-etre" },
+    { label: "💄 Maquillage",  href: "/formations/maquillage" },
   ];
   // 6 formations populaires (premières du catalogue général)
   const popularFormations = searchFormations({ pageSize: 6 }).items;
@@ -652,7 +687,8 @@ seoRouter.get("/formations", (req, res) => {
   const hero = `<h1 style="color:#fff">2&nbsp;086 formations santé et bien-être éligibles au CPF</h1>
 <p class="sub">Trouvez gratuitement la meilleure formation près de chez vous</p>
 <div class="search-wrap" id="sw">
-  <input type="text" id="hero-q" placeholder="Ex : massage, esthétique, coiffure…" autocomplete="off" aria-label="Rechercher une formation" style="padding-right:16px">
+  <input type="text" id="hero-q" placeholder="Ex : massage, esthétique, coiffure…" autocomplete="off" aria-label="Rechercher une formation">
+  <button class="search-btn" id="search-submit-btn" type="button">🔍 Rechercher</button>
   <div class="search-dropdown" id="sd" role="listbox" aria-label="Suggestions de métiers"></div>
 </div>
 <div class="city-search-wrap" id="csw">
@@ -678,6 +714,7 @@ ${heroChips.map((c) => `<a href="${c.href}">${esc(c.label)}</a>`).join("")}
   inp.addEventListener('focus',function(){renderCats(cats);sd.classList.add('open');});
   inp.addEventListener('input',function(){var q=inp.value.toLowerCase().trim();renderCats(q?cats.filter(function(c){return c.nom.toLowerCase().includes(q);}):cats);sd.classList.add('open');});
   inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=inp.value.trim();window.location.href=q?'/#/recherche/'+encodeURIComponent(q):'/#/recherche';}});
+  document.getElementById('search-submit-btn').addEventListener('click',function(){renderCats(cats);sd.classList.add('open');inp.focus();});
   // City search
   var cinp=document.getElementById('city-q'),csd=document.getElementById('csd');
   function renderVilles(list){csd.innerHTML=list.slice(0,8).map(function(v){return'<a class="sd-item" href="/ville/'+v.slug+'" role="option"><span class="em">📍</span><span class="sdn">'+v.ville+'</span><span class="sdc">'+v.n+' organisme'+(v.n>1?'s':'')+'</span></a>';}).join('');}
@@ -712,15 +749,26 @@ function filterReg(btn,reg){
 
 <div class="section-label"><h2>🔥 Formations populaires</h2><span class="section-label-line"></span></div>
 <div class="grid">
-${popularFormations.map((f: any) => `<div class="card pop-card">
-<span class="flame-badge">🔥 Très demandée</span>
-<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}</div>
+${popularFormations.map((f: any, i: number) => `<div class="card pop-card" data-price="${f.prix_min ?? 0}">
+<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}${urgencyBadge(i, popularFormations.length)}</div>
 <a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
 <span class="card-org">${esc(f.organisme ?? "")}</span>
-<span class="card-info">${f.a_distance ? "📍 À distance" : "📍 Présentiel"} · ✅ CPF${f.organisme_qualiopi ? " · Qualiopi" : ""}</span>
+<span class="card-info">${f.a_distance ? "🌐 À distance" : "📍 Présentiel"} &middot; ✅ CPF${f.organisme_qualiopi ? " &middot; <strong>Qualiopi</strong>" : ""}</span>
 <span class="card-price">${eur(f.prix_min)}</span>
-<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement</a>
+<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
 </div>`).join("")}
+</div>
+
+<div class="section-label"><h2>🎯 Parcourir par métier</h2><span class="section-label-line"></span></div>
+<div class="metier-grid">
+${listMetiers().map((m) => {
+  const METIER_EMOJI: Record<string,string> = {"coiffure":"✂️","esthetique-soin-corporel":"🧖‍♀️","manucurie":"💅","maquillage":"💄","massage-bien-etre":"💆‍♀️","specialisation-coiffure":"🎨"};
+  const METIER_COLOR: Record<string,string> = {"coiffure":"#f0fdf4","esthetique-soin-corporel":"#fdf4ff","manucurie":"#fff7ed","maquillage":"#fdf2f8","massage-bien-etre":"#f0f9ff","specialisation-coiffure":"#fefce8"};
+  return `<a class="metier-tile" href="/metier/${m.slug}" style="background:${METIER_COLOR[m.slug]??'#f0fdf4'}">
+  <span class="mt-em">${METIER_EMOJI[m.slug]??'✨'}</span>
+  <span class="mt-name">${esc(m.metier)}</span>
+  <span class="mt-cta">Voir les formations →</span>
+</a>`;}).join("")}
 </div>
 
 <div class="section-label"><h2>📖 Conseils &amp; guides</h2><span class="section-label-line"></span></div>
@@ -728,6 +776,32 @@ ${popularFormations.map((f: any) => `<div class="card pop-card">
 <div class="card"><div class="card-cat-line"><span class="em">💰</span><span class="badge">Financement</span></div><a class="t" href="/financement-cpf">Comment financer sa formation avec le CPF ?</a><p class="card-org">Guide complet — éligibilité, démarches, jusqu'à 100 % pris en charge</p><a class="card-cta" href="/financement-cpf">Lire le guide</a></div>
 <div class="card"><div class="card-cat-line"><span class="em">🎯</span><span class="badge">Métiers</span></div><a class="t" href="/metiers">Quel métier de la beauté vous correspond ?</a><p class="card-org">Missions, salaires, débouchés — toutes les fiches métier</p><a class="card-cta" href="/metiers">Découvrir les métiers</a></div>
 ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class="em">📝</span><span class="badge">Blog</span></div><a class="t" href="/blog/${a.slug}">${esc(a.title)}</a><p class="card-org">${esc(a.excerpt)}</p><a class="card-cta" href="/blog/${a.slug}">Lire l'article</a></div>`).join("")}
+<div class="card" style="border:2px dashed var(--hairline);background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:200px">
+  <span style="font-size:2.2rem">📖</span>
+  <a class="t" href="/blog" style="font-size:1.05rem">Voir tous les articles</a>
+  <p class="card-org">Guides, conseils métier, financements &amp; salaires</p>
+  <a class="card-cta" href="/blog">Explorer le blog →</a>
+</div>
+</div>
+
+<div class="section-label" style="margin-top:48px"><h2>❓ Les 10 questions les plus posées</h2><span class="section-label-line"></span></div>
+<div class="mesh" style="padding:0">
+<ol style="margin:0;padding:0 0 0 20px;display:flex;flex-direction:column;gap:0">
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-1" style="color:var(--body);text-decoration:none">Comment utiliser mon CPF pour une formation beauté ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Connectez-vous sur moncompteformation.gouv.fr, choisissez votre formation certifiée Qualiopi et mobilisez vos droits en quelques clics.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-2" style="color:var(--body);text-decoration:none">Combien ai-je sur mon CPF ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Vous cumulez 500 € par an travaillé, plafonné à 5 000 €. Consultez votre solde sur moncompteformation.gouv.fr ou appelez le 3699 (gratuit).</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-4" style="color:var(--body);text-decoration:none">Qu'est-ce que la certification Qualiopi ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">C'est le label qualité obligatoire pour tout organisme souhaitant proposer des formations finançables par le CPF.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-5" style="color:var(--body);text-decoration:none">Quelle est la différence entre le CAP et le BP esthétique ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Le CAP est le diplôme d'entrée (2 ans). Le BP est supérieur, accessible après le CAP, et ouvre l'encadrement et la gestion de salon.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-6" style="color:var(--body);text-decoration:none">Peut-on se former à tout âge ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Oui, aucune limite d'âge. Le CPF est ouvert à tous les actifs, salariés comme demandeurs d'emploi, jusqu'à la retraite.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-3" style="color:var(--body);text-decoration:none">Mon CPF est insuffisant, que faire ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Votre OPCO, une aide régionale ou l'AIF de France Travail peuvent compléter votre CPF. Ces aides sont cumulables.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-16" style="color:var(--body);text-decoration:none">Combien gagne une esthéticienne en France ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Entre le SMIC (~1 400 € nets) en début de carrière et 2 500 € nets en libéral avec une clientèle fidélisée.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-7" style="color:var(--body);text-decoration:none">Les formations à distance sont-elles reconnues ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Oui si l'organisme est certifié Qualiopi et que la formation mène à un titre RNCP ou RS reconnu par l'État.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-17" style="color:var(--body);text-decoration:none">Quels débouchés après une formation massage bien-être ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Spa, hôtel, thalasso, libéral, yacht... La demande est forte dans les grandes villes et les zones touristiques.</span></li>
+  <li style="padding:16px 20px 16px 4px"><strong><a href="/faq#faq-18" style="color:var(--body);text-decoration:none">Comment vérifier qu'une formation est éligible au CPF ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Rendez-vous sur moncompteformation.gouv.fr et tapez le nom de la formation. Seules les formations référencées sont finançables.</span></li>
+</ol>
+<div style="padding:20px;background:var(--p-light);border-top:1px solid var(--hairline);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+  <span style="font-size:.95rem;font-weight:600">Vous avez d'autres questions ?</span>
+  <a class="cta" href="/faq" style="margin:0;padding:10px 24px;font-size:.9rem">Voir toutes les questions →</a>
+</div>
 </div>`;
 
   const websiteLd = {
@@ -842,33 +916,68 @@ Le traitement de vos données est décrit dans notre <a href="/politique-confide
 seoRouter.get("/faq", (req, res) => {
   const base = baseUrl(req);
   const canonical = `${base}/faq`;
-  const faqs = [
-    { q: "Comment utiliser mon CPF pour une formation beauté ?", a: "Connecte-toi sur <strong>moncompteformation.gouv.fr</strong> avec ton numéro de sécurité sociale. Recherche la formation qui t'intéresse, vérifie qu'elle est éligible au CPF et que l'organisme est certifié Qualiopi. Tu peux ensuite mobiliser tes droits directement depuis la plateforme. Si tu as un reste à charge, l'employeur, Pôle Emploi ou une aide régionale peuvent compléter." },
-    { q: "Combien ai-je sur mon CPF ?", a: "Depuis 2019, tu accumules <strong>500 € par an</strong> travaillé, plafonné à 5 000 € (800 € et 8 000 € pour les personnes peu qualifiées). Pour connaître ton solde exact, connecte-toi sur moncompteformation.gouv.fr ou appelle le 3699 (service gratuit)." },
-    { q: "Mon CPF est insuffisant pour couvrir la formation, que faire ?", a: "Depuis 2023, un reste à charge de 100 € minimum s'applique sauf si ton employeur prend en charge la formation. Pour couvrir ce qui reste, tu peux demander l'aide de ton OPCO, une aide de ta région, ou l'AIF de Pôle Emploi si tu es demandeur d'emploi. Ces aides sont cumulables avec le CPF." },
-    { q: "Qu'est-ce que la certification Qualiopi ?", a: "Qualiopi est le <strong>certificat qualité obligatoire</strong> pour tous les organismes qui souhaitent proposer des formations financées par des fonds publics ou mutualisés (dont le CPF). Sans ce label, une école ne peut pas accéder au financement CPF. Il garantit un processus de formation sérieux et évalué par un organisme indépendant." },
-    { q: "Quelle est la différence entre le CAP et le BP esthétique ?", a: "Le <strong>CAP esthétique</strong> est le diplôme d'entrée dans le métier. Il se prépare en 2 ans en formation initiale, ou en 1 an en accéléré pour adultes. Le <strong>BP (Brevet Professionnel)</strong> est un niveau supérieur, accessible après le CAP, qui ouvre les portes de l'encadrement et de la gestion d'un salon. Si tu pars de zéro, commence par le CAP." },
-    { q: "Peut-on faire une formation esthétique à tout âge ?", a: "Oui, il n'y a <strong>aucune limite d'âge</strong> pour se former aux métiers de l'esthétique. De nombreux adultes en reconversion réussissent leur CAP ou BP à 30, 40 ou même 50 ans. Le CPF est ouvert à tous les actifs, salariés comme demandeurs d'emploi, jusqu'à la retraite." },
-    { q: "Les formations à distance sont-elles reconnues ?", a: "Oui, à condition que l'organisme soit certifié <strong>Qualiopi</strong> et que la formation mène à un titre ou diplôme reconnu (RNCP, CAP, BP). Pour les métiers avec des gestes techniques (massage, coiffure), les formations hybrides (théorie à distance + pratique en présentiel) sont souvent la meilleure option." },
-    { q: "Quelle est la durée d'une formation CAP esthétique ?", a: "En formation <strong>initiale</strong> (lycée professionnel), le CAP se prépare en 2 ans. En formation <strong>continue pour adultes</strong>, les organismes proposent des parcours accélérés de 6 à 12 mois selon le rythme. En alternance, on reste sur 2 ans mais avec des périodes en entreprise." },
-    { q: "Qu'est-ce qu'un titre RNCP et pourquoi c'est important ?", a: "Le <strong>Répertoire National des Certifications Professionnelles (RNCP)</strong> recense les diplômes et titres professionnels reconnus par l'État. Une formation avec un titre RNCP est beaucoup plus valorisée par les employeurs et ouvre des droits supplémentaires (financement CPF plus large, reconnaissance salariale). Toujours vérifier le niveau RNCP avant de s'inscrire." },
-    { q: "Peut-on ouvrir un salon avec un CAP esthétique ?", a: "Techniquement oui, le CAP suffit pour exercer comme esthéticienne indépendante. Mais pour ouvrir un établissement et employer du personnel, tu auras besoin d'une <strong>expérience commerciale et managériale</strong> supplémentaire. Le BP esthétique ou une formation en gestion d'entreprise est fortement recommandée." },
-    { q: "Est-ce que les demandeurs d'emploi peuvent utiliser leur CPF ?", a: "Oui. En tant que demandeur d'emploi, tu accumules ton CPF à hauteur de <strong>500 € par an</strong> (même sans travailler). Pôle Emploi peut également financer une formation complémentaire via l'<strong>AIF (Aide Individuelle à la Formation)</strong> si la formation est validée dans ton projet professionnel." },
-    { q: "Comment combiner CPF et aide Pôle Emploi ?", a: "L'<strong>AIF</strong> de Pôle Emploi peut compléter ton CPF si le montant disponible ne suffit pas. Pour en bénéficier, contacte ton conseiller Pôle Emploi et fais valider ton projet de formation. Le dossier se monte conjointement entre ton CPF et la demande d'AIF, avec un accord de l'opérateur de formation." },
-    { q: "Quelle différence entre massage bien-être et massage médical ?", a: "Le <strong>massage bien-être</strong> est pratiqué en dehors du cadre médical : il vise la détente, le bien-être général, et s'exerce en spa, institut ou en libéral. Le <strong>massage médical ou kinésithérapique</strong> est réservé aux professionnels de santé (kiné, ostéo) et nécessite des études de santé longues et réglementées. Les deux sont des métiers distincts avec des formations très différentes." },
-    { q: "Les formations en alternance sont-elles finançables CPF ?", a: "L'alternance est financée différemment du CPF : c'est l'<strong>OPCO (opérateur de compétences)</strong> de la branche professionnelle qui finance la formation. Le CPF peut être utilisé en complément pour des certifications ou spécialisations supplémentaires. L'alternance est donc gratuite pour le salarié ou l'apprenti." },
-    { q: "Comment choisir entre plusieurs organismes de formation ?", a: "Vérifie d'abord la <strong>certification Qualiopi</strong> (obligatoire), puis le <strong>titre ou diplôme délivré</strong> (niveau RNCP). Compare ensuite les taux de réussite aux examens, les avis d'anciens élèves, et le suivi proposé. Le prix ne doit pas être le critère principal : une formation moins chère mais sans suivi de qualité peut te coûter plus cher en temps." },
-    { q: "Peut-on se spécialiser après un CAP esthétique ?", a: "Absolument. Après un CAP, tu peux suivre des <strong>formations courtes</strong> (soins du visage, extensions de cils, onglerie, epilation au fil…) financées en partie par le CPF ou en auto-financement. Ces spécialisations augmentent ta valeur sur le marché et peuvent déboucher sur des tarifs horaires plus élevés." },
-    { q: "Combien gagne une esthéticienne en France ?", a: "Une esthéticienne débutante gagne autour du <strong>SMIC</strong> (environ 1 400 € nets/mois). Avec l'expérience, le salaire évolue vers 1 600 à 2 000 € nets. En libéral avec une clientèle fidélisée, les revenus peuvent dépasser 2 500 € nets, selon la région et la spécialité." },
-    { q: "Quels sont les débouchés après une formation massage bien-être ?", a: "Tu peux exercer en <strong>spa, hôtel, thalasso, yacht, centre de bien-être, ou en libéral</strong>. La demande est forte dans les grandes villes et les zones touristiques. De nombreux praticiens créent leur propre activité à domicile ou en location de cabinet, avec des charges réduites pour démarrer." },
-    { q: "Comment vérifier qu'une formation est éligible au CPF ?", a: "Rends-toi directement sur <strong>moncompteformation.gouv.fr</strong> et tape le nom de la formation ou de l'organisme. Seules les formations référencées sur cette plateforme sont finançables par le CPF. Si tu ne trouves pas la formation via ta recherche, elle n'est pas éligible au CPF actuellement." },
-    { q: "Combien de temps faut-il pour trouver un emploi après une formation ?", a: "Cela dépend du métier, de la région et de ta démarche. En esthétique et coiffure, les offres d'emploi sont nombreuses (fort turnover dans le secteur). En massage bien-être, il faut souvent bâtir sa propre clientèle, ce qui prend 6 à 18 mois. Les formateurs sérieux incluent un module d'aide à la recherche d'emploi dans leur programme." },
+  const faqSections = [
+    {
+      titre: "💰 Financement CPF",
+      id: "cpf",
+      items: [
+        { id: 1, q: "Comment utiliser mon CPF pour une formation beauté ?", a: "Connectez-vous sur <strong>moncompteformation.gouv.fr</strong> avec votre numéro de sécurité sociale. Recherchez la formation qui vous intéresse, vérifiez qu'elle est éligible au CPF et que l'organisme est certifié Qualiopi. Vous pouvez ensuite mobiliser vos droits directement depuis la plateforme. Si vous avez un reste à charge, l'employeur, France Travail ou une aide régionale peuvent compléter." },
+        { id: 2, q: "Combien ai-je sur mon CPF ?", a: "Depuis 2019, vous cumulez <strong>500 € par an</strong> travaillé, plafonné à 5 000 € (800 € et 8 000 € pour les personnes peu qualifiées). Pour connaître votre solde exact, connectez-vous sur moncompteformation.gouv.fr ou appelez le 3699 (service gratuit)." },
+        { id: 3, q: "Mon CPF est insuffisant pour couvrir la formation, que faire ?", a: "Depuis 2023, un reste à charge de 100 € minimum s'applique sauf si votre employeur prend en charge la formation. Pour couvrir ce qui reste, vous pouvez demander l'aide de votre OPCO, une aide de votre région, ou l'AIF de France Travail si vous êtes demandeur d'emploi. Ces aides sont cumulables avec le CPF." },
+        { id: 4, q: "Comment vérifier qu'une formation est éligible au CPF ?", a: "Rendez-vous directement sur <strong>moncompteformation.gouv.fr</strong> et tapez le nom de la formation ou de l'organisme. Seules les formations référencées sur cette plateforme sont finançables par le CPF. Si vous ne trouvez pas la formation via la recherche, elle n'est pas éligible au CPF actuellement." },
+        { id: 5, q: "Est-ce que les demandeurs d'emploi peuvent utiliser leur CPF ?", a: "Oui. En tant que demandeur d'emploi, vous cumulez votre CPF à hauteur de <strong>500 € par an</strong>. France Travail peut également financer une formation complémentaire via l'<strong>AIF (Aide Individuelle à la Formation)</strong> si la formation est validée dans votre projet professionnel." },
+        { id: 6, q: "Comment combiner CPF et aide France Travail ?", a: "L'<strong>AIF</strong> de France Travail peut compléter votre CPF si le montant disponible ne suffit pas. Contactez votre conseiller France Travail et faites valider votre projet de formation. Le dossier se monte conjointement entre votre CPF et la demande d'AIF." },
+        { id: 7, q: "Les formations en alternance sont-elles finançables CPF ?", a: "L'alternance est financée différemment : c'est l'<strong>OPCO</strong> de la branche professionnelle qui finance la formation. Le CPF peut être utilisé en complément pour des certifications supplémentaires. L'alternance est donc gratuite pour l'apprenti ou le salarié en contrat de professionnalisation." },
+        { id: 8, q: "Peut-on financer une formation bien-être avec le CPF si on est fonctionnaire ?", a: "Oui, les fonctionnaires ont accès au CPF dans les mêmes conditions que les salariés du privé. Leur compte est crédité de 500 € par an (800 € pour les agents en catégorie C). La mobilisation se fait également via moncompteformation.gouv.fr." },
+      ],
+    },
+    {
+      titre: "🎓 Diplômes et certifications",
+      id: "diplomes",
+      items: [
+        { id: 9, q: "Qu'est-ce que la certification Qualiopi ?", a: "Qualiopi est le <strong>certificat qualité obligatoire</strong> pour tous les organismes qui souhaitent proposer des formations financées par des fonds publics ou mutualisés (dont le CPF). Sans ce label, une école ne peut pas accéder au financement CPF. Il garantit un processus de formation sérieux, évalué par un organisme indépendant." },
+        { id: 10, q: "Qu'est-ce qu'un titre RNCP et pourquoi c'est important ?", a: "Le <strong>Répertoire National des Certifications Professionnelles (RNCP)</strong> recense les diplômes et titres professionnels reconnus par l'État. Une formation avec un titre RNCP est beaucoup plus valorisée par les employeurs et ouvre des droits supplémentaires (financement CPF plus large, reconnaissance salariale). Toujours vérifier le niveau RNCP avant de s'inscrire." },
+        { id: 11, q: "Quelle est la différence entre le CAP et le BP esthétique ?", a: "Le <strong>CAP esthétique</strong> est le diplôme d'entrée dans le métier (2 ans en initial, 6 à 12 mois en accéléré adulte). Le <strong>BP (Brevet Professionnel)</strong> est un niveau supérieur, accessible après le CAP, qui ouvre les portes de l'encadrement et de la gestion d'un salon. Si vous partez de zéro, commencez par le CAP." },
+        { id: 12, q: "Quelle est la durée d'une formation CAP esthétique ?", a: "En formation <strong>initiale</strong> (lycée professionnel), le CAP se prépare en 2 ans. En formation <strong>continue pour adultes</strong>, les organismes proposent des parcours accélérés de 6 à 12 mois selon le rythme. En alternance, la durée est de 2 ans avec des périodes en entreprise." },
+        { id: 13, q: "Quelle différence entre un RS et un RNCP ?", a: "Le <strong>RNCP</strong> correspond aux diplômes et titres professionnels (CAP, BP, BTS, titres professionnels). Le <strong>Répertoire Spécifique (RS)</strong> recense des certifications de compétences complémentaires ou transversales. Les deux sont finançables via le CPF mais le RNCP est généralement plus valorisé à l'embauche." },
+        { id: 14, q: "Comment choisir entre plusieurs organismes de formation ?", a: "Vérifiez d'abord la <strong>certification Qualiopi</strong> (obligatoire), puis le <strong>titre ou diplôme délivré</strong> (niveau RNCP). Comparez ensuite les taux de réussite aux examens, les avis d'anciens élèves, le volume de pratique et le suivi proposé. Le prix ne doit pas être le critère principal." },
+        { id: 15, q: "Les formations à distance sont-elles reconnues ?", a: "Oui, à condition que l'organisme soit certifié <strong>Qualiopi</strong> et que la formation mène à un titre ou diplôme reconnu (RNCP, CAP, BP). Pour les métiers avec des gestes techniques (massage, coiffure), les formations hybrides (théorie à distance + pratique en présentiel) sont souvent la meilleure option." },
+      ],
+    },
+    {
+      titre: "💼 Métiers et débouchés",
+      id: "metiers",
+      items: [
+        { id: 16, q: "Peut-on faire une formation esthétique à tout âge ?", a: "Oui, il n'y a <strong>aucune limite d'âge</strong> pour se former aux métiers de l'esthétique. De nombreux adultes en reconversion réussissent leur CAP ou BP à 30, 40 ou même 50 ans. Le CPF est ouvert à tous les actifs, salariés comme demandeurs d'emploi, jusqu'à la retraite." },
+        { id: 17, q: "Combien gagne une esthéticienne en France ?", a: "Une esthéticienne débutante gagne autour du <strong>SMIC</strong> (environ 1 400 € nets/mois). Avec l'expérience, le salaire évolue vers 1 600 à 2 000 € nets. En libéral avec une clientèle fidélisée, les revenus peuvent dépasser 2 500 € nets, selon la région et la spécialité." },
+        { id: 18, q: "Quels sont les débouchés après une formation massage bien-être ?", a: "Vous pouvez exercer en <strong>spa, hôtel, thalasso, yacht, centre de bien-être, ou en libéral</strong>. La demande est forte dans les grandes villes et les zones touristiques. De nombreux praticiens créent leur propre activité à domicile ou en location de cabinet, avec des charges réduites pour démarrer." },
+        { id: 19, q: "Quelle différence entre massage bien-être et massage médical ?", a: "Le <strong>massage bien-être</strong> est pratiqué en dehors du cadre médical : il vise la détente et le bien-être général, et s'exerce en spa, institut ou en libéral. Le <strong>massage médical ou kinésithérapique</strong> est réservé aux professionnels de santé (kiné, ostéo) et nécessite des études longues et réglementées." },
+        { id: 20, q: "Peut-on ouvrir un salon avec un CAP esthétique ?", a: "Techniquement oui, le CAP suffit pour exercer comme esthéticienne indépendante. Mais pour ouvrir un établissement et employer du personnel, vous aurez besoin d'une <strong>expérience commerciale et managériale</strong> supplémentaire. Le BP esthétique ou une formation en gestion d'entreprise est fortement recommandée." },
+        { id: 21, q: "Peut-on se spécialiser après un CAP esthétique ?", a: "Absolument. Après un CAP, vous pouvez suivre des <strong>formations courtes</strong> (soins du visage avancés, extensions de cils, onglerie, microblading…) financées en partie par le CPF. Ces spécialisations augmentent votre valeur sur le marché et permettent d'augmenter vos tarifs." },
+        { id: 22, q: "Combien de temps faut-il pour trouver un emploi après la formation ?", a: "En esthétique et coiffure, les offres d'emploi sont nombreuses (fort turnover dans le secteur), généralement 1 à 3 mois. En massage bien-être, il faut souvent bâtir sa propre clientèle, ce qui prend 6 à 18 mois. Les formateurs sérieux incluent un module d'aide à l'insertion dans leur programme." },
+        { id: 23, q: "La réflexologie et la naturopathie sont-elles des métiers reconnus ?", a: "Ces pratiques sont reconnues comme activités de bien-être, non comme professions de santé. Elles s'exercent en libéral, en spa ou en entreprise (QVT). Des certifications RS existent et sont finançables CPF. Le secteur du bien-être holistique connaît une forte croissance depuis 2020." },
+      ],
+    },
+    {
+      titre: "📋 Pratique et logistique",
+      id: "pratique",
+      items: [
+        { id: 24, q: "Combien de temps dure une demande de financement CPF ?", a: "Une fois votre dossier soumis sur moncompteformation.gouv.fr, l'accord est généralement obtenu sous <strong>24 à 72 heures</strong> pour les formations éligibles. Prévoyez un délai de 10 jours ouvrés entre votre demande et le début de la formation (obligation légale de rétractation)." },
+        { id: 25, q: "Peut-on cumuler plusieurs formations avec le CPF ?", a: "Oui, tant que votre solde CPF le permet. Vous pouvez enchainer des formations, mais pas les suivre en parallèle via le CPF. Chaque formation doit être terminée (ou le CPF remboursé en cas d'abandon) avant d'en financer une nouvelle." },
+        { id: 26, q: "Que se passe-t-il si j'abandonne une formation financée par le CPF ?", a: "Si vous abandonnez sans motif valable, les heures utilisées restent débitées de votre compte. En cas de force majeure (maladie, accident), une prise en charge partielle ou un report peut être négocié avec l'organisme. Contactez-les rapidement." },
+        { id: 27, q: "Peut-on suivre une formation CPF pendant son congé maternité ?", a: "Oui, il n'existe pas d'interdiction légale. Le congé maternité est une période pendant laquelle vous continuez à accumuler vos droits CPF. La formation peut être suivie à distance pendant cette période, ou planifiée juste avant le retour en poste." },
+        { id: 28, q: "Mon employeur peut-il s'opposer à ma formation CPF ?", a: "Si la formation se déroule <strong>hors temps de travail</strong>, l'employeur n'a pas son mot à dire. Si elle empiète sur votre temps de travail, un accord préalable est nécessaire. Dans tous les cas, le CPF est un droit individuel que vous exercez librement hors temps de travail." },
+        { id: 29, q: "Peut-on utiliser le CPF depuis l'étranger ?", a: "Oui, si vous êtes salarié ou demandeur d'emploi en France et que vous disposez d'un compte CPF. La formation peut être suivie à distance. Pour les formations en présentiel à l'étranger, la prise en charge CPF est possible si la formation est référencée sur moncompteformation.gouv.fr." },
+      ],
+    },
   ];
+
+  const allFaqs = faqSections.flatMap((s) => s.items);
 
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((f) => ({
+    mainEntity: allFaqs.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]+>/g, "") },
@@ -877,12 +986,42 @@ seoRouter.get("/faq", (req, res) => {
 
   const body = `<h1>FAQ — tout savoir sur les formations beauté et bien-être CPF</h1>
 <p class="lead">Les réponses aux questions les plus fréquentes sur le financement CPF, les diplômes, les métiers et les formations dans le secteur beauté et bien-être.</p>
-${faqs.map((f, i) => `<div class="mesh" id="faq-${i + 1}">
-  <h2>${esc(f.q)}</h2>
-  <p>${f.a}</p>
+<style>
+.faq-section{margin-bottom:32px}
+.faq-section-title{font-size:1.15rem;font-weight:700;color:var(--p);margin:0 0 12px;padding:0}
+.faq-item{border:1px solid var(--hairline);border-radius:10px;margin-bottom:8px;overflow:hidden}
+.faq-btn{width:100%;background:none;border:none;padding:16px 20px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.97rem;font-weight:600;color:var(--heading);line-height:1.4}
+.faq-btn:hover{background:var(--p-light)}
+.faq-btn .faq-arrow{flex-shrink:0;transition:transform .2s;font-size:.8rem;color:var(--muted)}
+.faq-btn[aria-expanded="true"]{background:var(--p-light);color:var(--p)}
+.faq-btn[aria-expanded="true"] .faq-arrow{transform:rotate(180deg)}
+.faq-answer{display:none;padding:0 20px 16px;font-size:.93rem;line-height:1.7;color:var(--body)}
+.faq-answer.open{display:block}
+</style>
+<script>
+function toggleFaq(btn){
+  var expanded=btn.getAttribute('aria-expanded')==='true';
+  btn.setAttribute('aria-expanded',expanded?'false':'true');
+  btn.nextElementSibling.classList.toggle('open',!expanded);
+}
+// Auto-open from hash
+window.addEventListener('load',function(){
+  var h=location.hash;
+  if(h){var el=document.querySelector(h+' .faq-btn');if(el){el.setAttribute('aria-expanded','true');el.nextElementSibling.classList.add('open');el.scrollIntoView({behavior:'smooth',block:'center'});}}
+});
+</script>
+${faqSections.map((sec) => `
+<div class="faq-section">
+  <h2 class="faq-section-title">${sec.titre}</h2>
+  ${sec.items.map((f) => `<div class="faq-item" id="faq-${f.id}">
+  <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">
+    <span>${esc(f.q)}</span><span class="faq-arrow">▼</span>
+  </button>
+  <div class="faq-answer"><p>${f.a}</p></div>
+</div>`).join("")}
 </div>`).join("")}
 <div class="mesh" style="margin-top:40px">
-  <h2>Trouver ta formation</h2>
+  <h2>Trouver votre formation</h2>
   <div class="chips">
     <a class="chip" href="/formations/esthetique-soin-corporel">💆 Esthétique (CAP, BP)</a>
     <a class="chip" href="/formations/massage-bien-etre">🤲 Massage bien-être</a>
@@ -892,12 +1031,13 @@ ${faqs.map((f, i) => `<div class="mesh" id="faq-${i + 1}">
     <a class="chip" href="/financement-cpf">💰 Guide financement CPF</a>
     <a class="chip" href="/blog">📖 Blog &amp; conseils</a>
   </div>
-</div>`;
+</div>
+<a class="cta" href="/formations">Trouver ma formation CPF →</a>`;
 
   res.send(
     renderPage({
-      title: "FAQ formations beauté bien-être CPF – 20 réponses clés | Formation Santé Bien-être",
-      description: "Toutes les réponses sur le CPF beauté bien-être : financement, Qualiopi, CAP vs BP, alternance, débouchés, salaires. Guide complet 2026.",
+      title: "FAQ formations beauté bien-être CPF – 29 réponses clés | Formation Santé Bien-être",
+      description: "Toutes les réponses sur le CPF beauté bien-être : financement, Qualiopi, CAP vs BP, alternance, débouchés, salaires. 4 thèmes, 29 questions. Guide 2026.",
       canonical,
       jsonLd: [faqLd],
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "FAQ" }],
@@ -1094,15 +1234,55 @@ function ulBlock(title: string, items?: string[]): string {
 
 seoRouter.get("/metiers", (req, res) => {
   const base = baseUrl(req);
+
+  const METIER_CONFIG: { slug: string; label: string; emoji: string; color: string; bg: string; desc: string; href: string }[] = [
+    { slug: "coiffure", label: "Coiffure", emoji: "✂️", color: "#166534", bg: "#f0fdf4", desc: "Coupes, colorations, techniques professionnelles", href: "/metier/coiffure" },
+    { slug: "esthetique-soin-corporel", label: "Esthétique & soins", emoji: "🧖‍♀️", color: "#7e22ce", bg: "#fdf4ff", desc: "Soins du visage, épilation, modelage, bien-être", href: "/metier/esthetique-soin-corporel" },
+    { slug: "manucurie", label: "Manucurie & onglerie", emoji: "💅", color: "#c2410c", bg: "#fff7ed", desc: "Pose de gel, nail art, prothésie ongulaire", href: "/metier/manucurie" },
+    { slug: "maquillage", label: "Maquillage", emoji: "💄", color: "#be185d", bg: "#fdf2f8", desc: "Maquillage de scène, événementiel, beauté", href: "/metier/maquillage" },
+    { slug: "massage-bien-etre", label: "Massage & bien-être", emoji: "💆‍♀️", color: "#0369a1", bg: "#f0f9ff", desc: "Massage suédois, californien, ayurvédique...", href: "/metier/massage-bien-etre" },
+    { slug: "specialisation-coiffure", label: "Spécialisation coiffure", emoji: "🎨", color: "#92400e", bg: "#fefce8", desc: "Balayage, colorimétrie, extensions, permanente", href: "/metier/specialisation-coiffure" },
+    { slug: "spa-manager", label: "Spa manager", emoji: "🏪", color: "#0f766e", bg: "#f0fdfa", desc: "Gérer et diriger un spa ou un institut de beauté", href: "/#/recherche/spa%20manager" },
+    { slug: "naturopathie", label: "Naturopathie", emoji: "🌿", color: "#15803d", bg: "#f7fef2", desc: "Approches naturelles et holistiques du bien-être", href: "/#/recherche/naturopathie" },
+    { slug: "reflexologie", label: "Réflexologie", emoji: "👣", color: "#7c3aed", bg: "#f5f3ff", desc: "Réflexologie plantaire, palmaire, faciale", href: "/#/recherche/reflexologie" },
+    { slug: "aromatherapie", label: "Aromathérapie", emoji: "🌸", color: "#db2777", bg: "#fdf2f8", desc: "Huiles essentielles, phytothérapie, soins naturels", href: "/#/recherche/aromatherapie" },
+    { slug: "formation-en-entreprise", label: "Formation en salon", emoji: "🏢", color: "#1d4ed8", bg: "#eff6ff", desc: "Perfectionnement en entreprise via OPCO AKTO", href: "/#/recherche/salon" },
+    { slug: "maquillage-permanent", label: "Maquillage permanent", emoji: "✨", color: "#b45309", bg: "#fffbeb", desc: "Microblading, sourcils, tatouage cosmétique", href: "/#/recherche/maquillage%20permanent" },
+  ];
+
+  const metierGrid = METIER_CONFIG.map((m) => `
+<a href="${m.href}" class="metier-tile-big" style="background:${m.bg};">
+  <span class="mt-em-big">${m.emoji}</span>
+  <div class="mt-body">
+    <span class="mt-name-big" style="color:${m.color}">${esc(m.label)}</span>
+    <span class="mt-desc">${esc(m.desc)}</span>
+  </div>
+  <span class="mt-arrow" style="color:${m.color}">→</span>
+</a>`).join("");
+
   const body = `<h1>Les métiers de la beauté et du bien-être</h1>
-<p class="lead">Missions, formations, salaires et débouchés — tout pour choisir votre voie.</p>
-<div class="grid">${listMetiers()
-    .map((m) => `<div class="card"><a class="t" href="/metier/${m.slug}">${esc(m.metier)}</a></div>`)
-    .join("")}</div>`;
+<p class="lead">On te donne tout ce que tu dois savoir : les formations possibles, les salaires réels et les débouchés concrets.</p>
+<style>
+.metier-grid-big{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:24px}
+.metier-tile-big{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:14px;border:2px solid transparent;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .15s}
+.metier-tile-big:hover{border-color:rgba(22,163,74,.3);box-shadow:0 4px 20px rgba(0,0,0,.08);transform:translateY(-2px)}
+.mt-em-big{font-size:2.2rem;line-height:1;flex-shrink:0}
+.mt-body{flex:1;display:flex;flex-direction:column;gap:2px}
+.mt-name-big{font-size:1rem;font-weight:700;line-height:1.2}
+.mt-desc{font-size:.8rem;color:#64748b;line-height:1.3}
+.mt-arrow{font-size:1.3rem;font-weight:600;flex-shrink:0;transition:transform .2s}
+.metier-tile-big:hover .mt-arrow{transform:translateX(4px)}
+</style>
+<div class="metier-grid-big">${metierGrid}</div>
+<div class="card" style="margin-top:32px;text-align:center">
+  <p style="margin:0 0 12px;font-weight:600">Vous ne trouvez pas votre métier ?</p>
+  <a class="btn" href="/formations">Explorer toutes les formations →</a>
+</div>`;
+
   res.send(
     renderPage({
       title: "Métiers de la beauté et du bien-être | Formation Santé Bien-être",
-      description: "Découvrez les métiers de la beauté et du bien-être : missions, formations CPF, salaires et débouchés.",
+      description: "Découvrez les métiers de la beauté et du bien-être : missions, formations CPF, salaires et débouchés concrets.",
       canonical: `${base}/metiers`,
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers" }],
       body,

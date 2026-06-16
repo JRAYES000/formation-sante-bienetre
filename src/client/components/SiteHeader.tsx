@@ -13,18 +13,23 @@ export default function SiteHeader() {
   const { data: cats } = useQuery<Cat[]>({ queryKey: ["/api/public/categories"] });
 
   return (
-    <header className="bg-white border-b border-hairline sticky top-0 z-30">
+    <header className="sticky top-0 z-30" style={{ background: "var(--color-primary, #186749)", borderBottom: "1px solid rgba(0,0,0,.12)" }}>
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-primary text-lg shrink-0" data-testid="link-home">
-          <span className="text-2xl">🌿</span>
-          <span className="hidden sm:inline">Formation Santé Bien-être</span>
+        <Link href="/" className="shrink-0 flex items-center gap-2" data-testid="link-home">
+          <img
+            src="/images/logo-header.png"
+            alt="Formation Santé Bien-être"
+            className="h-9 w-auto"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; (e.target as HTMLImageElement).nextElementSibling?.removeAttribute("hidden"); }}
+          />
+          <span hidden className="text-white font-bold text-lg">🌿 Formation Santé Bien-être</span>
         </Link>
 
-        <nav className="flex items-center gap-4 sm:gap-5 text-sm text-gray-700">
+        <nav className="flex items-center gap-4 sm:gap-5 text-sm" style={{ color: "rgba(255,255,255,.92)" }}>
           <div className="relative">
             <button
               onClick={() => setOpen((o) => !o)}
-              className="hover:text-primary flex items-center gap-1"
+              className="hover:text-white flex items-center gap-1"
               data-testid="button-categories-menu"
             >
               Catégories <span className="text-xs">▾</span>
@@ -51,11 +56,10 @@ export default function SiteHeader() {
               </div>
             )}
           </div>
-          <a href="/metiers" className="hover:text-primary hidden sm:inline" data-testid="nav-metiers">Métiers</a>
-          <a href="/blog" className="hover:text-primary hidden sm:inline" data-testid="nav-blog">Blog</a>
-          <a href="/financement-cpf" className="hover:text-primary hidden md:inline" data-testid="nav-cpf">CPF</a>
+          <a href="/metiers" className="hover:text-white hidden sm:inline" data-testid="nav-metiers">Métiers</a>
+          <a href="/blog" className="hover:text-white hidden sm:inline" data-testid="nav-blog">Blog</a>
+          <a href="/financement-cpf" className="hover:text-white hidden md:inline" data-testid="nav-cpf">CPF</a>
           <Link href="/recherche" className="btn-primary !py-2 !px-4 text-sm" data-testid="nav-rechercher">Rechercher</Link>
-          <Link href="/admin" className="text-gray-400 hover:text-primary text-xs hidden sm:inline" data-testid="nav-admin" title="Espace administrateur">Admin</Link>
         </nav>
       </div>
     </header>
