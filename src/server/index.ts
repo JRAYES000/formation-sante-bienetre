@@ -19,6 +19,36 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const publicDir = resolve(__dirname, "../../dist/public");
 
+// En-têtes de sécurité HTTP (défense en profondeur — n'affecte ni le SEO ni le rendu).
+// CSP calibrée pour le site : <style>/JSON-LD inline du SSR, Google Fonts, /analytics.js et GA4 (après consentement).
+app.use((req, res, next) => {
+  res.set("X-Content-Type-Options", "nosniff");
+  res.set("X-Frame-Options", "SAMEORIGIN");
+  res.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  // HSTS uniquement sur connexion HTTPS (Railway termine le TLS → x-forwarded-proto). max-age 180 j, sans includeSubDomains (www non garanti en HTTPS).
+  const proto = (req.headers["x-forwarded-proto"] as string | undefined)?.split(",")[0].trim();
+  if (req.secure || proto === "https") {
+    res.set("Strict-Transport-Security", "max-age=15552000");
+  }
+  res.set(
+    "Content-Security-Policy",
+    [
+      "default-src 'self'",
+      "base-uri 'self'",
+      "object-src 'none'",
+      "frame-ancestors 'self'",
+      "form-action 'self'",
+      "img-src 'self' data: https:",
+      "font-src 'self' https://fonts.gstatic.com data:",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net",
+    ].join("; ")
+  );
+  next();
+});
+
 app.use(express.json());
 app.use(express.static(publicDir));
 
