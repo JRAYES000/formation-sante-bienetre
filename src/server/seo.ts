@@ -632,6 +632,56 @@ function cityRegion(slug: string): string {
 }
 
 // ---------- robots & sitemap ----------
+seoRouter.get("/llms.txt", (req, res) => {
+  const base = baseUrl(req);
+  const cats = [...catIndex().entries()]
+    .filter(([, c]) => c.n > 0)
+    .sort(([, a], [, b]) => b.n - a.n)
+    .slice(0, 10);
+  const stats = globalStats();
+
+  const txt = [
+    "# Formation Santé Bien-être",
+    "",
+    `> Comparateur de formations éligibles au CPF dans le secteur santé & bien-être`,
+    `> (esthétique, massage, coiffure, manucure, maquillage, bien-être).`,
+    `> ${stats.formations ?? "~2 086"} formations certifiées Qualiopi référencées par métier et par département.`,
+    `> Source officielle : catalogue Mon Compte Formation (EDOF / Caisse des Dépôts).`,
+    "",
+    "## Informations essentielles",
+    "",
+    `- Site : ${base}/formations`,
+    `- Sitemap XML : ${base}/sitemap.xml`,
+    `- Contact : equipe@formation-sante-bienetre.fr`,
+    "",
+    "## Formations par métier (pages principales)",
+    "",
+    ...cats.map(([slug, c]) => `- [${normCat(c.nom)} — ${c.n} formations](${base}/formations/${slug})`),
+    "",
+    "## Guides & ressources",
+    "",
+    `- [Comment financer sa formation avec le CPF ?](${base}/financement-cpf)`,
+    `- [FAQ formations CPF santé & bien-être](${base}/faq)`,
+    `- [Fiches métiers beauté & bien-être](${base}/metiers)`,
+    `- [Blog — conseils formation et financement](${base}/blog)`,
+    "",
+    "## Modèle économique",
+    "",
+    "- Agrégateur gratuit pour les apprenants",
+    "- Les demandes de contact sont routées vers des organismes de formation partenaires certifiés Qualiopi",
+    "- Aucune publicité, aucun biais commercial dans le classement des formations",
+    "",
+    "## Ce que ce site peut répondre",
+    "",
+    "- Quelles formations CPF sont disponibles en esthétique / massage / coiffure / manucure ?",
+    "- Comment utiliser son CPF pour se former dans le secteur beauté & bien-être ?",
+    "- Quels sont les organismes de formation Qualiopi près de chez moi ?",
+    "- Combien coûte une formation esthétique / massage CPF ?",
+  ].join("\n");
+
+  res.type("text/plain; charset=utf-8").send(txt);
+});
+
 seoRouter.get("/robots.txt", (req, res) => {
   const base = baseUrl(req);
   // Crawlers IA autorisés explicitement pour la visibilité GEO (Challenge #1 Action robots.txt)
