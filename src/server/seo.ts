@@ -66,7 +66,16 @@ function renderPage(o: PageOpts): string {
       url: `${siteBase}/formations`,
       logo: { "@type": "ImageObject", url: `${siteBase}/images/logo-header.png` },
       description: "Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Toutes nos formations sont proposées par des organismes certifiés Qualiopi.",
-      sameAs: [],
+      // TODO (Julien) : remplacer les placeholders ci-dessous par les vraies URLs des réseaux sociaux
+      // puis supprimer les lignes non utilisées.
+      sameAs: [
+        // "https://www.instagram.com/VOTRE_COMPTE_INSTAGRAM",
+        // "https://www.facebook.com/VOTRE_PAGE_FACEBOOK",
+        // "https://www.tiktok.com/@VOTRE_COMPTE_TIKTOK",
+        // "https://www.linkedin.com/company/VOTRE_PAGE_LINKEDIN",
+        // "https://www.youtube.com/@VOTRE_CHAINE_YOUTUBE",
+        // "https://www.pinterest.fr/VOTRE_COMPTE_PINTEREST",
+      ],
     },
     {
       "@context": "https://schema.org",
