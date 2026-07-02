@@ -495,7 +495,6 @@ function buildSidebar(o: SidebarOpts): string {
   <h3>Par métier</h3>
   <div class="sb-scroll">
     ${o.allCats
-      .filter((c) => c.slug !== "maquillage-spectacle")
       .map((c) => {
         const active = c.slug === o.currentCatSlug;
         return `<a class="sb-link${active ? " active" : ""}" href="/formations/${c.slug}">
@@ -1562,7 +1561,7 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     .filter(Boolean) as { code: string; nom: string; slug: string; n: number }[];
 
   const allCatsList = [...cats.entries()]
-    .filter(([s, c]) => c.n > 0 && !["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"].includes(s))
+    .filter(([s, c]) => c.n > 0)
     .map(([s, c]) => ({ slug: s, nom: c.nom, n: c.n }));
 
   const sidebar = buildSidebar({
@@ -1650,7 +1649,7 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
     .filter(Boolean) as { code: string; nom: string; slug: string; n: number }[];
 
   const allCatsList = [...cats.entries()]
-    .filter(([s, c]) => c.n > 0 && !["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"].includes(s))
+    .filter(([s, c]) => c.n > 0)
     .map(([s, c]) => ({ slug: s, nom: c.nom, n: c.n }));
 
   const sidebar = buildSidebar({
