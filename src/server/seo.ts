@@ -1502,9 +1502,9 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
   const dateDisplay = dateStr ? new Date(dateStr).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : null;
   const enrichedLd = {
     ...ld,
-    ...(a.publishedAt ? { datePublished: a.publishedAt } : {}),
+    datePublished: a.publishedAt ?? new Date().toISOString().split("T")[0],
     ...(a.updatedAt ? { dateModified: a.updatedAt } : {}),
-    ...(a.image ? { image: a.image } : {}),
+    image: a.image ?? DEFAULT_OG_IMAGE,
     author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
   };
   const body = `<h1>${esc(a.title)}</h1>
