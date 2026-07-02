@@ -166,7 +166,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .metier-tile .mt-cta{font-size:.76rem;color:var(--p);font-weight:700}
 
   /* Hero */
-  .hero{background:var(--p);color:#fff;padding:52px 0 56px}
+  .hero{background:var(--p);color:#fff;padding:52px 0 56px;min-height:260px;contain:layout}
   .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:0 0 10px;line-height:1.2;letter-spacing:-.5px}
   .hero .sub{font-size:1.05rem;opacity:.9;margin:0 0 28px;font-weight:400}
   .search-wrap{position:relative;max-width:560px}
@@ -263,7 +263,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   /* City cards */
   .city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
   @media(max-width:640px){.city-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
-  .city-card{border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;min-height:150px;padding:16px;position:relative;transition:transform .2s,box-shadow .2s;background-size:cover;background-position:center}
+  .city-card{border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;min-height:150px;aspect-ratio:4/3;padding:16px;position:relative;transition:transform .2s,box-shadow .2s;background-size:cover;background-position:center}
   .city-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.22)}
   .city-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,.05) 60%);border-radius:inherit}
   .city-card-em{font-size:2rem;position:absolute;top:14px;left:16px;z-index:1}
@@ -330,7 +330,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <body>
 <header><div class="wrap">
   <a href="/formations" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
-    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" style="height:36px;width:auto;display:block">
+    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" width="168" height="36" style="height:36px;width:auto;display:block">
   </a>
   <nav class="header-nav">
     <a href="/formations">Formations</a>
