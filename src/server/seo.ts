@@ -1407,11 +1407,29 @@ seoRouter.get("/metiers", (req, res) => {
   <a class="btn" href="/formations">Explorer toutes les formations →</a>
 </div>`;
 
+  const itemListLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Métiers de la beauté et du bien-être",
+    url: `${base}/metiers`,
+    description: "Découvrez les métiers de la beauté et du bien-être : formations CPF, salaires et débouchés.",
+    itemListElement: METIER_CONFIG
+      .filter((m) => m.href.startsWith("/metier/"))
+      .map((m, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: m.label,
+        url: `${base}${m.href}`,
+        description: m.desc,
+      })),
+  };
+
   res.send(
     renderPage({
       title: "Métiers de la beauté et du bien-être | Formation Santé Bien-être",
       description: "Découvrez les métiers de la beauté et du bien-être : missions, formations CPF, salaires et débouchés concrets.",
       canonical: `${base}/metiers`,
+      jsonLd: [itemListLd],
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers" }],
       body,
     })
