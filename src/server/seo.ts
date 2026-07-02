@@ -1606,7 +1606,7 @@ ${blogLinks}`;
 });
 
 // ---------- 404 SSR helper ----------
-function render404(req: Request): string {
+export function render404(req: Request): string {
   const base = baseUrl(req);
   return renderPage({
     title: "Page introuvable (404) | Formation Santé Bien-être",
