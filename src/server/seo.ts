@@ -710,6 +710,7 @@ seoRouter.get("/formations", (req, res) => {
   const allCats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0);
   const HIDDEN_CAT_SLUGS = ["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"];
   const cats = allCats.filter((c) => !HIDDEN_CAT_SLUGS.includes(c.slug));
+  const hiddenCats = allCats.filter((c) => HIDDEN_CAT_SLUGS.includes(c.slug));
   const canonical = `${baseUrl(req)}/formations`;
   const stats = globalStats();
   const allVilles = seoVilles();
@@ -836,6 +837,16 @@ ${listMetiers().map((m) => {
   <span class="mt-cta">Voir les formations →</span>
 </a>`;}).join("")}
 </div>
+
+${hiddenCats.length > 0 ? `
+<div class="section-label"><h2>🗂️ Spécialisations &amp; autres formations</h2><span class="section-label-line"></span></div>
+<nav class="metier-grid" aria-label="Autres formations disponibles">
+${hiddenCats.map((c) => `<a class="metier-tile" href="/formations/${c.slug}" style="background:#f8f9fa">
+  <span class="mt-em">${categoryEmoji(c.nom)}</span>
+  <span class="mt-name">${esc(normCat(c.nom))}</span>
+  <span class="mt-cta">${c.n} formation${c.n>1?"s":""} →</span>
+</a>`).join("")}
+</nav>` : ""}
 
 <div class="section-label"><h2>📖 Conseils &amp; guides</h2><span class="section-label-line"></span></div>
 <div class="grid">
