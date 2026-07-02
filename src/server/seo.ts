@@ -1505,7 +1505,11 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
     datePublished: a.publishedAt ?? new Date().toISOString().split("T")[0],
     ...(a.updatedAt ? { dateModified: a.updatedAt } : {}),
     image: a.image ?? DEFAULT_OG_IMAGE,
-    author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
+    author: {
+      "@type": "Person",
+      name: "L'équipe Formation Santé Bien-être",
+      url: `${base}/formations`,
+    },
   };
   const body = `<h1>${esc(a.title)}</h1>
 ${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px"><time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""}</p>` : ""}
