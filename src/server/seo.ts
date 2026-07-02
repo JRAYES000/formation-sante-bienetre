@@ -947,8 +947,8 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
 
   res.send(
     renderPage({
-      title: "Formation Santé Bien-être | Formations CPF Qualiopi",
-      description: "Comparez les formations en esthétique, massage bien-être, coiffure et soins, financées par le CPF, par métier et par département.",
+      title: "Formations CPF santé & bien-être — Comparez 2 000+ offres",
+      description: "Comparez 2 080 formations CPF en esthétique, massage bien-être, coiffure et soins. Organismes certifiés Qualiopi. Demande gratuite en 2 minutes.",
       canonical,
       jsonLd: [websiteLd],
       breadcrumb: [{ name: "Accueil", url: `${baseUrl(req)}/formations` }, { name: "Formations" }],
@@ -1653,7 +1653,7 @@ ${blogLinks}`;
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
   res.send(
     renderPage({
-      title: `${catDisplay} — Formation CPF Qualiopi`,
+      title: `${catDisplay} — ${r.total} formations CPF Qualiopi | FSB`,
       description: metaDesc,
       canonical,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
