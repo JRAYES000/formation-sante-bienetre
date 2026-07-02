@@ -116,7 +116,7 @@ ${ogImage !== DEFAULT_OG_IMAGE ? `<link rel="preload" as="image" href="${esc(ogI
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/analytics.js" defer></script>
 <style>
-  :root{--p:#186749;--p-dark:#145c3f;--p-active:#1b4332;--p-light:#e8f5ef;--ink:#1a1a1a;--body:#444;--muted:#777;--hairline:#e5e5e5;--surface:#f8f8f6;--radius:14px}
+  :root{--p:#186749;--p-dark:#145c3f;--p-active:#1b4332;--p-light:#e8f5ef;--ink:#1a1a1a;--body:#444;--muted:#666;--hairline:#e5e5e5;--surface:#f8f8f6;--radius:14px}
   *{box-sizing:border-box}
   body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:var(--ink)}
@@ -1397,7 +1397,7 @@ seoRouter.get("/metiers", (req, res) => {
 .mt-em-big{font-size:2.2rem;line-height:1;flex-shrink:0}
 .mt-body{flex:1;display:flex;flex-direction:column;gap:2px}
 .mt-name-big{font-size:1rem;font-weight:700;line-height:1.2}
-.mt-desc{font-size:.8rem;color:#64748b;line-height:1.3}
+.mt-desc{font-size:.8rem;color:#4b5563;line-height:1.3}
 .mt-arrow{font-size:1.3rem;font-weight:600;flex-shrink:0;transition:transform .2s}
 .metier-tile-big:hover .mt-arrow{transform:translateX(4px)}
 </style>
