@@ -1516,7 +1516,7 @@ ${gridHtml}
   };
   res.send(
     renderPage({
-      title: "Blog formations beauté & bien-être | Formation Santé Bien-être",
+      title: "Blog CPF — Guides & conseils beauté bien-être | FSB",
       description: "Conseils pratiques, guides financement CPF et fiches métiers pour se former en esthétique, massage, coiffure et bien-être.",
       canonical: `${base}/blog`,
       jsonLd: [blogLd],
