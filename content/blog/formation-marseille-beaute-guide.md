@@ -68,6 +68,9 @@ Oui. L'alternance (apprentissage ou contrat de professionnalisation) est possibl
 **Les formations de l'AFPA à Marseille couvrent-elles le secteur esthétique ?**
 L'AFPA propose des formations dans certains secteurs de la beauté. Renseignez-vous auprès de l'antenne AFPA de Marseille pour connaitre l'offre actuelle.
 
+**Quelles formations massage bien-être sont disponibles à Marseille ?**
+Marseille et les Bouches-du-Rhône disposent d'une offre solide en massage bien-être financée par le CPF. Spas, hôtels, thalassos et cabinets indépendants recrutent régulièrement dans la région. Retrouvez toutes les [formations massage bien-être à Marseille et dans les Bouches-du-Rhône](/formations/massage-bien-etre/bouches-du-rhone) disponibles dès maintenant.
+
 **Peut-on se former en esthétique à Marseille en étant demandeur d'emploi ?**
 Oui. France Travail Marseille dispose de dispositifs (AIF, formations collectives) pour financer les formations dans les secteurs en tension, dont la beauté-bien-être.
 

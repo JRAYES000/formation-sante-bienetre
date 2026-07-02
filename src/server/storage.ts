@@ -294,7 +294,7 @@ export function seoCombos(): { categorie: string; code: string; dept: string; n:
        JOIN formation_departements fd ON fd.numero_formation = f.numero_formation
        WHERE f.is_active = 1 AND fd.departement IS NOT NULL
        GROUP BY c.slug, fd.code_departement
-       HAVING n > 0`
+       HAVING n >= 3`
     )
     .all() as { categorie: string; code: string; dept: string; n: number }[];
 }

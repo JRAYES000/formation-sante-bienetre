@@ -66,7 +66,16 @@ function renderPage(o: PageOpts): string {
       url: `${siteBase}/formations`,
       logo: { "@type": "ImageObject", url: `${siteBase}/images/logo-header.png` },
       description: "Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Toutes nos formations sont proposées par des organismes certifiés Qualiopi.",
-      sameAs: [],
+      // TODO (Julien) : remplacer les placeholders ci-dessous par les vraies URLs des réseaux sociaux
+      // puis supprimer les lignes non utilisées.
+      sameAs: [
+        // "https://www.instagram.com/VOTRE_COMPTE_INSTAGRAM",
+        // "https://www.facebook.com/VOTRE_PAGE_FACEBOOK",
+        // "https://www.tiktok.com/@VOTRE_COMPTE_TIKTOK",
+        // "https://www.linkedin.com/company/VOTRE_PAGE_LINKEDIN",
+        // "https://www.youtube.com/@VOTRE_CHAINE_YOUTUBE",
+        // "https://www.pinterest.fr/VOTRE_COMPTE_PINTEREST",
+      ],
     },
     {
       "@context": "https://schema.org",
@@ -111,10 +120,12 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="image" href="/images/logo-header.png" fetchpriority="high">
+${ogImage !== DEFAULT_OG_IMAGE ? `<link rel="preload" as="image" href="${esc(ogImage)}" fetchpriority="high">` : ""}
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/analytics.js" defer></script>
 <style>
-  :root{--p:#186749;--p-dark:#145c3f;--p-active:#1b4332;--p-light:#e8f5ef;--ink:#1a1a1a;--body:#444;--muted:#777;--hairline:#e5e5e5;--surface:#f8f8f6;--radius:14px}
+  :root{--p:#186749;--p-dark:#145c3f;--p-active:#1b4332;--p-light:#e8f5ef;--ink:#1a1a1a;--body:#444;--muted:#666;--hairline:#e5e5e5;--surface:#f8f8f6;--radius:14px}
   *{box-sizing:border-box}
   body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:var(--ink)}
@@ -166,7 +177,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   .metier-tile .mt-cta{font-size:.76rem;color:var(--p);font-weight:700}
 
   /* Hero */
-  .hero{background:var(--p);color:#fff;padding:52px 0 56px}
+  .hero{background:var(--p);color:#fff;padding:52px 0 56px;min-height:260px;contain:layout}
   .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:0 0 10px;line-height:1.2;letter-spacing:-.5px}
   .hero .sub{font-size:1.05rem;opacity:.9;margin:0 0 28px;font-weight:400}
   .search-wrap{position:relative;max-width:560px}
@@ -263,7 +274,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   /* City cards */
   .city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
   @media(max-width:640px){.city-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
-  .city-card{border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;min-height:150px;padding:16px;position:relative;transition:transform .2s,box-shadow .2s;background-size:cover;background-position:center}
+  .city-card{border-radius:16px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;min-height:150px;aspect-ratio:4/3;padding:16px;position:relative;transition:transform .2s,box-shadow .2s;background-size:cover;background-position:center}
   .city-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.22)}
   .city-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,.05) 60%);border-radius:inherit}
   .city-card-em{font-size:2rem;position:absolute;top:14px;left:16px;z-index:1}
@@ -330,7 +341,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <body>
 <header><div class="wrap">
   <a href="/formations" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
-    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" style="height:36px;width:auto;display:block">
+    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" width="168" height="36" style="height:36px;width:auto;display:block">
   </a>
   <nav class="header-nav">
     <a href="/formations">Formations</a>
@@ -495,7 +506,6 @@ function buildSidebar(o: SidebarOpts): string {
   <h3>Par métier</h3>
   <div class="sb-scroll">
     ${o.allCats
-      .filter((c) => c.slug !== "maquillage-spectacle")
       .map((c) => {
         const active = c.slug === o.currentCatSlug;
         return `<a class="sb-link${active ? " active" : ""}" href="/formations/${c.slug}">
@@ -631,8 +641,79 @@ function cityRegion(slug: string): string {
 }
 
 // ---------- robots & sitemap ----------
+seoRouter.get("/llms.txt", (req, res) => {
+  const base = baseUrl(req);
+  const cats = [...catIndex().entries()]
+    .filter(([, c]) => c.n > 0)
+    .sort(([, a], [, b]) => b.n - a.n)
+    .slice(0, 10);
+  const stats = globalStats();
+
+  const txt = [
+    "# Formation Santé Bien-être",
+    "",
+    `> Comparateur de formations éligibles au CPF dans le secteur santé & bien-être`,
+    `> (esthétique, massage, coiffure, manucure, maquillage, bien-être).`,
+    `> ${stats.formations ?? "~2 086"} formations certifiées Qualiopi référencées par métier et par département.`,
+    `> Source officielle : catalogue Mon Compte Formation (EDOF / Caisse des Dépôts).`,
+    "",
+    "## Informations essentielles",
+    "",
+    `- Site : ${base}/formations`,
+    `- Sitemap XML : ${base}/sitemap.xml`,
+    `- Contact : equipe@formation-sante-bienetre.fr`,
+    "",
+    "## Formations par métier (pages principales)",
+    "",
+    ...cats.map(([slug, c]) => `- [${normCat(c.nom)} — ${c.n} formations](${base}/formations/${slug})`),
+    "",
+    "## Guides & ressources",
+    "",
+    `- [Comment financer sa formation avec le CPF ?](${base}/financement-cpf)`,
+    `- [FAQ formations CPF santé & bien-être](${base}/faq)`,
+    `- [Fiches métiers beauté & bien-être](${base}/metiers)`,
+    `- [Blog — conseils formation et financement](${base}/blog)`,
+    "",
+    "## Modèle économique",
+    "",
+    "- Agrégateur gratuit pour les apprenants",
+    "- Les demandes de contact sont routées vers des organismes de formation partenaires certifiés Qualiopi",
+    "- Aucune publicité, aucun biais commercial dans le classement des formations",
+    "",
+    "## Ce que ce site peut répondre",
+    "",
+    "- Quelles formations CPF sont disponibles en esthétique / massage / coiffure / manucure ?",
+    "- Comment utiliser son CPF pour se former dans le secteur beauté & bien-être ?",
+    "- Quels sont les organismes de formation Qualiopi près de chez moi ?",
+    "- Combien coûte une formation esthétique / massage CPF ?",
+  ].join("\n");
+
+  res.type("text/plain; charset=utf-8").send(txt);
+});
+
 seoRouter.get("/robots.txt", (req, res) => {
-  res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
+  const base = baseUrl(req);
+  // Crawlers IA autorisés explicitement pour la visibilité GEO (Challenge #1 Action robots.txt)
+  const txt = [
+    "User-agent: *",
+    "Allow: /",
+    "",
+    "# Crawlers IA — autorisés explicitement (GEO visibility)",
+    "User-agent: GPTBot",
+    "Allow: /",
+    "",
+    "User-agent: Claude-Web",
+    "Allow: /",
+    "",
+    "User-agent: PerplexityBot",
+    "Allow: /",
+    "",
+    "User-agent: Googlebot",
+    "Allow: /",
+    "",
+    `Sitemap: ${base}/sitemap.xml`,
+  ].join("\n");
+  res.type("text/plain").send(txt);
 });
 
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
@@ -689,6 +770,7 @@ seoRouter.get("/formations", (req, res) => {
   const allCats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0);
   const HIDDEN_CAT_SLUGS = ["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"];
   const cats = allCats.filter((c) => !HIDDEN_CAT_SLUGS.includes(c.slug));
+  const hiddenCats = allCats.filter((c) => HIDDEN_CAT_SLUGS.includes(c.slug));
   const canonical = `${baseUrl(req)}/formations`;
   const stats = globalStats();
   const allVilles = seoVilles();
@@ -816,6 +898,16 @@ ${listMetiers().map((m) => {
 </a>`;}).join("")}
 </div>
 
+${hiddenCats.length > 0 ? `
+<div class="section-label"><h2>🗂️ Spécialisations &amp; autres formations</h2><span class="section-label-line"></span></div>
+<nav class="metier-grid" aria-label="Autres formations disponibles">
+${hiddenCats.map((c) => `<a class="metier-tile" href="/formations/${c.slug}" style="background:#f8f9fa">
+  <span class="mt-em">${categoryEmoji(c.nom)}</span>
+  <span class="mt-name">${esc(normCat(c.nom))}</span>
+  <span class="mt-cta">${c.n} formation${c.n>1?"s":""} →</span>
+</a>`).join("")}
+</nav>` : ""}
+
 <div class="section-label"><h2>📖 Conseils &amp; guides</h2><span class="section-label-line"></span></div>
 <div class="grid">
 <div class="card"><div class="card-cat-line"><span class="em">💰</span><span class="badge">Financement</span></div><a class="t" href="/financement-cpf">Comment financer sa formation avec le CPF ?</a><p class="card-org">Guide complet — éligibilité, démarches, jusqu'à 100 % pris en charge</p><a class="card-cta" href="/financement-cpf">Lire le guide</a></div>
@@ -840,7 +932,7 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
   <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-3" style="color:var(--body);text-decoration:none">Mon CPF est insuffisant, que faire ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Votre OPCO, une aide régionale ou l'AIF de France Travail peuvent compléter votre CPF. Ces aides sont cumulables.</span></li>
   <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-16" style="color:var(--body);text-decoration:none">Combien gagne une esthéticienne en France ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Entre le SMIC (~1 400 € nets) en début de carrière et 2 500 € nets en libéral avec une clientèle fidélisée.</span></li>
   <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-7" style="color:var(--body);text-decoration:none">Les formations à distance sont-elles reconnues ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Oui si l'organisme est certifié Qualiopi et que la formation mène à un titre RNCP ou RS reconnu par l'État.</span></li>
-  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-17" style="color:var(--body);text-decoration:none">Quels débouchés après une formation massage bien-être ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Spa, hôtel, thalasso, libéral, yacht... La demande est forte dans les grandes villes et les zones touristiques.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-17" style="color:var(--body);text-decoration:none">Quels débouchés après une formation massage bien-être ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Spa, hôtel, thalasso, libéral, yacht... La demande est forte dans les grandes villes : <a href="/formations/massage-bien-etre/rhone" style="color:var(--p)">Lyon</a> et <a href="/formations/massage-bien-etre/bouches-du-rhone" style="color:var(--p)">Marseille</a> concentrent notamment une offre très dense.</span></li>
   <li style="padding:16px 20px 16px 4px"><strong><a href="/faq#faq-18" style="color:var(--body);text-decoration:none">Comment vérifier qu'une formation est éligible au CPF ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Rendez-vous sur moncompteformation.gouv.fr et tapez le nom de la formation. Seules les formations référencées sont finançables.</span></li>
 </ol>
 <div style="padding:20px;background:var(--p-light);border-top:1px solid var(--hairline);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
@@ -864,8 +956,8 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
 
   res.send(
     renderPage({
-      title: "Formations santé & bien-être éligibles CPF | Formation Santé Bien-être",
-      description: "Comparez les formations en esthétique, massage bien-être, coiffure et soins, financées par le CPF, par métier et par département.",
+      title: "Formations CPF santé & bien-être — Comparez 2 000+ offres",
+      description: "Comparez 2 080 formations CPF en esthétique, massage bien-être, coiffure et soins. Organismes certifiés Qualiopi. Demande gratuite en 2 minutes.",
       canonical,
       jsonLd: [websiteLd],
       breadcrumb: [{ name: "Accueil", url: `${baseUrl(req)}/formations` }, { name: "Formations" }],
@@ -1314,7 +1406,7 @@ seoRouter.get("/metiers", (req, res) => {
 .mt-em-big{font-size:2.2rem;line-height:1;flex-shrink:0}
 .mt-body{flex:1;display:flex;flex-direction:column;gap:2px}
 .mt-name-big{font-size:1rem;font-weight:700;line-height:1.2}
-.mt-desc{font-size:.8rem;color:#64748b;line-height:1.3}
+.mt-desc{font-size:.8rem;color:#4b5563;line-height:1.3}
 .mt-arrow{font-size:1.3rem;font-weight:600;flex-shrink:0;transition:transform .2s}
 .metier-tile-big:hover .mt-arrow{transform:translateX(4px)}
 </style>
@@ -1324,11 +1416,29 @@ seoRouter.get("/metiers", (req, res) => {
   <a class="btn" href="/formations">Explorer toutes les formations →</a>
 </div>`;
 
+  const itemListLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Métiers de la beauté et du bien-être",
+    url: `${base}/metiers`,
+    description: "Découvrez les métiers de la beauté et du bien-être : formations CPF, salaires et débouchés.",
+    itemListElement: METIER_CONFIG
+      .filter((m) => m.href.startsWith("/metier/"))
+      .map((m, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: m.label,
+        url: `${base}${m.href}`,
+        description: m.desc,
+      })),
+  };
+
   res.send(
     renderPage({
       title: "Métiers de la beauté et du bien-être | Formation Santé Bien-être",
       description: "Découvrez les métiers de la beauté et du bien-être : missions, formations CPF, salaires et débouchés concrets.",
       canonical: `${base}/metiers`,
+      jsonLd: [itemListLd],
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers" }],
       body,
     })
@@ -1433,7 +1543,7 @@ ${gridHtml}
   };
   res.send(
     renderPage({
-      title: "Blog formations beauté & bien-être | Formation Santé Bien-être",
+      title: "Blog CPF — Guides & conseils beauté bien-être | FSB",
       description: "Conseils pratiques, guides financement CPF et fiches métiers pour se former en esthétique, massage, coiffure et bien-être.",
       canonical: `${base}/blog`,
       jsonLd: [blogLd],
@@ -1471,10 +1581,14 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
   const dateDisplay = dateStr ? new Date(dateStr).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : null;
   const enrichedLd = {
     ...ld,
-    ...(a.publishedAt ? { datePublished: a.publishedAt } : {}),
+    datePublished: a.publishedAt ?? new Date().toISOString().split("T")[0],
     ...(a.updatedAt ? { dateModified: a.updatedAt } : {}),
-    ...(a.image ? { image: a.image } : {}),
-    author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
+    image: a.image ?? DEFAULT_OG_IMAGE,
+    author: {
+      "@type": "Person",
+      name: "L'équipe Formation Santé Bien-être",
+      url: `${base}/formations`,
+    },
   };
   const body = `<h1>${esc(a.title)}</h1>
 ${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px"><time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""}</p>` : ""}
@@ -1497,7 +1611,7 @@ ${relatedHtml}`;
 
   res.send(
     renderPage({
-      title: `${a.title} | Formation Santé Bien-être`,
+      title: a.title.length > 57 ? `${a.title.slice(0, 57).trimEnd()}…` : `${a.title} | FSB`,
       description: a.metaDescription,
       canonical,
       ogImage: a.image,
@@ -1530,7 +1644,7 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     .filter(Boolean) as { code: string; nom: string; slug: string; n: number }[];
 
   const allCatsList = [...cats.entries()]
-    .filter(([s, c]) => c.n > 0 && !["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"].includes(s))
+    .filter(([s, c]) => c.n > 0)
     .map(([s, c]) => ({ slug: s, nom: c.nom, n: c.n }));
 
   const sidebar = buildSidebar({
@@ -1550,16 +1664,36 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     <a class="chip" href="/faq">❓ FAQ formations</a>
     <a class="chip" href="/metiers">🎯 Fiches métiers</a>
   </div></div>`;
+  const topDepts = sidebarDepts.slice(0, 10);
+  const deptNav = topDepts.length > 0
+    ? `<nav class="chips" aria-label="Formations ${esc(catDisplay)} par département" style="margin:12px 0 20px">
+${topDepts.map((d) => `<a class="chip" href="/formations/${slug}/${d.slug}">📍 ${esc(d.nom)} (${d.n})</a>`).join("")}
+</nav>`
+    : "";
+  const cityLinks = slug === "massage-bien-etre"
+    ? `<div class="mesh" style="margin-top:24px">
+<h2>Formations massage bien-être à Lyon et Marseille</h2>
+<p style="margin:0 0 12px;font-size:.95rem;color:var(--muted)">Le Rhône (Lyon) et les Bouches-du-Rhône (Marseille) concentrent l'offre la plus dense en massage bien-être. Spas, hôtels, thalassos et cabinets indépendants recrutent activement dans ces deux métropoles.</p>
+<div class="chips">
+  <a class="chip" href="/formations/massage-bien-etre/rhone">📍 Formation massage Lyon — Rhône (69)</a>
+  <a class="chip" href="/formations/massage-bien-etre/bouches-du-rhone">📍 Formation massage Marseille — PACA (13)</a>
+  <a class="chip" href="/blog/formation-massage-lyon-auvergne-rhone-alpes">📖 Guide massage Lyon</a>
+  <a class="chip" href="/blog/devenir-praticien-massage-bien-etre">📖 Devenir praticien massage</a>
+</div>
+</div>`
+    : "";
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
-<h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
-<p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
+<h1>${esc(catDisplay)} — formations éligibles CPF</h1>
+<p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100\u00a0% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
+${deptNav}
+${cityLinks}
 ${withSidebar(sidebar, cards)}
 ${blogLinks}`;
 
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
   res.send(
     renderPage({
-      title: `Formations ${catDisplay} CPF – ${r.total} formations Qualiopi | Formation Santé Bien-être`,
+      title: `${catDisplay} — ${r.total} formations CPF Qualiopi | FSB`,
       description: metaDesc,
       canonical,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
@@ -1575,7 +1709,7 @@ ${blogLinks}`;
 });
 
 // ---------- 404 SSR helper ----------
-function render404(req: Request): string {
+export function render404(req: Request): string {
   const base = baseUrl(req);
   return renderPage({
     title: "Page introuvable (404) | Formation Santé Bien-être",
@@ -1618,7 +1752,7 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
     .filter(Boolean) as { code: string; nom: string; slug: string; n: number }[];
 
   const allCatsList = [...cats.entries()]
-    .filter(([s, c]) => c.n > 0 && !["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"].includes(s))
+    .filter(([s, c]) => c.n > 0)
     .map(([s, c]) => ({ slug: s, nom: c.nom, n: c.n }));
 
   const sidebar = buildSidebar({
@@ -1644,7 +1778,7 @@ ${withSidebar(sidebar, cards)}
 
   res.send(
     renderPage({
-      title: `Formation ${catDisplay2} ${dept.nom} – CPF | Formation Santé Bien-être`,
+      title: `Formation ${catDisplay2} ${dept.nom} — CPF`,
       description: `${r.total} formation${r.total > 1 ? "s" : ""} ${catDisplay2} dans le ${dept.nom} éligibles au CPF. Organismes certifiés Qualiopi, présentiel et distance. Demande gratuite.`,
       canonical,
       noindex: r.items.length < 3,

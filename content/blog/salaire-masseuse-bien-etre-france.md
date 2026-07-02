@@ -67,7 +67,7 @@ Pour tout savoir sur le titre RNCP, lisez notre article [RNCP massage bien-être
 
 ---
 
-Le massage bien-être est un métier où le revenu est intimement lié à la qualité de la formation, à la spécialisation et à la capacité à constituer une clientèle fidèle. Explorez les [formations massage bien-être certifiantes CPF](/formations/massage-bien-etre) dans votre région pour démarrer sur les meilleures bases.
+Le massage bien-être est un métier où le revenu est intimement lié à la qualité de la formation, à la spécialisation et à la capacité à constituer une clientèle fidèle. Explorez les [formations massage bien-être certifiantes CPF](/formations/massage-bien-etre) dans votre région : [Lyon — Rhône](/formations/massage-bien-etre/rhone), [Marseille — Bouches-du-Rhône](/formations/massage-bien-etre/bouches-du-rhone) et bien d'autres départements disponibles.
 
 ## FAQ - Salaire masseuse bien-être
 

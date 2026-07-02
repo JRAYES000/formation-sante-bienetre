@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { ensureSchema } from "../db/index.ts";
 import { seedPartenaires, countFormations } from "./storage.ts";
 import { publicRouter, adminRouter } from "./routes.ts";
-import { seoRouter } from "./seo.ts";
+import { seoRouter, render404 } from "./seo.ts";
 import { analyticsRouter } from "./analytics.ts";
 import { INDEXNOW_KEY } from "./indexnow.ts";
 import { ingestPole } from "../ingest/ingest.ts";
@@ -17,6 +17,7 @@ seedPartenaires();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
+app.disable("x-powered-by");
 const publicDir = resolve(__dirname, "../../dist/public");
 
 // En-têtes de sécurité HTTP (défense en profondeur — n'affecte ni le SEO ni le rendu).
@@ -65,8 +66,11 @@ app.use("/", analyticsRouter);
 // Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots
 app.use("/", seoRouter);
 
-// SPA fallback pour les routes client (hash routing)
-app.get("*", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
+// SPA : racine uniquement (hash routing — toute la navigation est après le #)
+app.get("/", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
+
+// Vrai 404 pour toute URL inconnue (supprime les soft 404 HTTP 200)
+app.use((req, res) => res.status(404).send(render404(req)));
 
 const port = Number(process.env.PORT ?? 3001);
 app.listen(port, () => {

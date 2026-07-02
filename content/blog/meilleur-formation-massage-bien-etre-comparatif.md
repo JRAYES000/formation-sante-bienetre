@@ -394,4 +394,4 @@ Pour démarrer, mieux vaut maîtriser une technique à fond. Une fois installé,
 
 ---
 
-Prêt(e) à vous lancer dans la formation en massage bien-être ? Explorez toutes les [formations disponibles](/formations) et trouvez le programme qui correspond à votre projet, votre budget et vos objectifs professionnels.
+Prêt(e) à vous lancer dans la formation en massage bien-être ? Explorez toutes les [formations massage bien-être disponibles](/formations/massage-bien-etre) et filtrez par ville : [formations à Lyon — Rhône](/formations/massage-bien-etre/rhone), [formations à Marseille — Bouches-du-Rhône](/formations/massage-bien-etre/bouches-du-rhone). Trouvez le programme qui correspond à votre projet, votre budget et vos objectifs professionnels.

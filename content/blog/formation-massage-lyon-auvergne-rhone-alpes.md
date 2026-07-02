@@ -207,4 +207,4 @@ Lyon et la région Auvergne-Rhône-Alpes offrent un des marchés les plus porteu
 
 La clé du succès est de bien choisir sa certification (éligible CPF, reconnue par les employeurs), de se former dans un organisme Qualiopi sérieux, et de construire progressivement son profil en combinant plusieurs techniques de massage et une solide culture du service client.
 
-[Explorez toutes les formations massage bien-être disponibles dans la région](https://formation-sante-bienetre.fr/formations) et [découvrez le métier de praticien massage en détail](https://formation-sante-bienetre.fr/metier/massage-bien-etre) pour confirmer votre projet professionnel à Lyon et en AuRA.
+[Explorez toutes les formations massage bien-être à Lyon et dans le Rhône](/formations/massage-bien-etre/rhone) et [découvrez le métier de praticien massage en détail](https://formation-sante-bienetre.fr/metier/massage-bien-etre) pour confirmer votre projet professionnel à Lyon et en AuRA.

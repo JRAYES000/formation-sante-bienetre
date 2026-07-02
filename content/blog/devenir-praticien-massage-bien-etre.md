@@ -120,4 +120,4 @@ Devenir praticien en massage bien-être est un projet professionnel accessible e
 
 La formation est l'investissement le plus structurant de ce parcours : elle conditionne votre légitimité, la qualité de votre pratique et votre capacité à rassurer vos clients. Heureusement, le CPF permet dans de nombreux cas de financer tout ou partie de cet investissement.
 
-Vous souhaitez comparer les formations en massage bien-être éligibles CPF disponibles en France ? Explorez notre comparatif de formations massage bien-être pour trouver l'organisme et la certification qui correspondent à votre projet.
+Vous souhaitez comparer les formations en massage bien-être éligibles CPF disponibles en France ? Explorez notre [comparatif de formations massage bien-être](/formations/massage-bien-etre) ou accédez directement aux offres par ville : [formations massage à Lyon](/formations/massage-bien-etre/rhone), [formations massage à Marseille](/formations/massage-bien-etre/bouches-du-rhone).
