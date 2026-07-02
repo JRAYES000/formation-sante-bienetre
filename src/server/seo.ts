@@ -1581,9 +1581,16 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     <a class="chip" href="/faq">❓ FAQ formations</a>
     <a class="chip" href="/metiers">🎯 Fiches métiers</a>
   </div></div>`;
+  const topDepts = sidebarDepts.slice(0, 10);
+  const deptNav = topDepts.length > 0
+    ? `<nav class="chips" aria-label="Formations ${esc(catDisplay)} par département" style="margin:12px 0 20px">
+${topDepts.map((d) => `<a class="chip" href="/formations/${slug}/${d.slug}">📍 ${esc(d.nom)} (${d.n})</a>`).join("")}
+</nav>`
+    : "";
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
 <h1>${esc(catDisplay)} — formations éligibles CPF</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
+${deptNav}
 ${withSidebar(sidebar, cards)}
 ${blogLinks}`;
 
