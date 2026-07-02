@@ -28,7 +28,7 @@ Pour vérifier : rendez-vous sur moncompteformation.gouv.fr, tapez "praticien ma
 
 Le cout d'une formation RNCP massage bien-être varie entre 2 500 et 5 500 euros selon la durée et la localisation. Avec un solde CPF entre 2 000 et 5 000 euros, la formation peut être totalement ou partiellement couverte. Pour le reste à charge, consultez notre article sur les [solutions pour couvrir le reste à charge CPF](/blog/reste-a-charge-cpf-beaute-solutions).
 
-Notre catalogue recense des formations massage bien-être CPF dans toute la France : [voir les formations massage bien-être disponibles](/formations/massage-bien-etre).
+Notre catalogue recense des formations massage bien-être CPF dans toute la France : [voir les formations massage bien-être disponibles](/formations/massage-bien-etre). Deux régions concentrent une offre particulièrement dense : [Rhône (Lyon)](/formations/massage-bien-etre/rhone) et [Bouches-du-Rhône (Marseille)](/formations/massage-bien-etre/bouches-du-rhone).
 
 ## Les critères concrets pour évaluer une formation
 
