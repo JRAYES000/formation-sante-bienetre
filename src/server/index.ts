@@ -17,6 +17,7 @@ seedPartenaires();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
+app.disable("x-powered-by");
 const publicDir = resolve(__dirname, "../../dist/public");
 
 // En-têtes de sécurité HTTP (défense en profondeur — n'affecte ni le SEO ni le rendu).
