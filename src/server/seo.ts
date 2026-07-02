@@ -923,7 +923,7 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
   <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-3" style="color:var(--body);text-decoration:none">Mon CPF est insuffisant, que faire ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Votre OPCO, une aide régionale ou l'AIF de France Travail peuvent compléter votre CPF. Ces aides sont cumulables.</span></li>
   <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-16" style="color:var(--body);text-decoration:none">Combien gagne une esthéticienne en France ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Entre le SMIC (~1 400 € nets) en début de carrière et 2 500 € nets en libéral avec une clientèle fidélisée.</span></li>
   <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-7" style="color:var(--body);text-decoration:none">Les formations à distance sont-elles reconnues ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Oui si l'organisme est certifié Qualiopi et que la formation mène à un titre RNCP ou RS reconnu par l'État.</span></li>
-  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-17" style="color:var(--body);text-decoration:none">Quels débouchés après une formation massage bien-être ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Spa, hôtel, thalasso, libéral, yacht... La demande est forte dans les grandes villes et les zones touristiques.</span></li>
+  <li style="padding:16px 20px 16px 4px;border-bottom:1px solid var(--hairline)"><strong><a href="/faq#faq-17" style="color:var(--body);text-decoration:none">Quels débouchés après une formation massage bien-être ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Spa, hôtel, thalasso, libéral, yacht... La demande est forte dans les grandes villes : <a href="/formations/massage-bien-etre/rhone" style="color:var(--p)">Lyon</a> et <a href="/formations/massage-bien-etre/bouches-du-rhone" style="color:var(--p)">Marseille</a> concentrent notamment une offre très dense.</span></li>
   <li style="padding:16px 20px 16px 4px"><strong><a href="/faq#faq-18" style="color:var(--body);text-decoration:none">Comment vérifier qu'une formation est éligible au CPF ?</a></strong><br><span style="color:var(--muted);font-size:.9rem">Rendez-vous sur moncompteformation.gouv.fr et tapez le nom de la formation. Seules les formations référencées sont finançables.</span></li>
 </ol>
 <div style="padding:20px;background:var(--p-light);border-top:1px solid var(--hairline);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
@@ -1643,10 +1643,23 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
 ${topDepts.map((d) => `<a class="chip" href="/formations/${slug}/${d.slug}">📍 ${esc(d.nom)} (${d.n})</a>`).join("")}
 </nav>`
     : "";
+  const cityLinks = slug === "massage-bien-etre"
+    ? `<div class="mesh" style="margin-top:24px">
+<h2>Formations massage bien-être à Lyon et Marseille</h2>
+<p style="margin:0 0 12px;font-size:.95rem;color:var(--muted)">Le Rhône (Lyon) et les Bouches-du-Rhône (Marseille) concentrent l'offre la plus dense en massage bien-être. Spas, hôtels, thalassos et cabinets indépendants recrutent activement dans ces deux métropoles.</p>
+<div class="chips">
+  <a class="chip" href="/formations/massage-bien-etre/rhone">📍 Formation massage Lyon — Rhône (69)</a>
+  <a class="chip" href="/formations/massage-bien-etre/bouches-du-rhone">📍 Formation massage Marseille — PACA (13)</a>
+  <a class="chip" href="/blog/formation-massage-lyon-auvergne-rhone-alpes">📖 Guide massage Lyon</a>
+  <a class="chip" href="/blog/devenir-praticien-massage-bien-etre">📖 Devenir praticien massage</a>
+</div>
+</div>`
+    : "";
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
 <h1>${esc(catDisplay)} — formations éligibles CPF</h1>
-<p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
+<p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100\u00a0% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
 ${deptNav}
+${cityLinks}
 ${withSidebar(sidebar, cards)}
 ${blogLinks}`;
 
