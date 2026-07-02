@@ -111,6 +111,8 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="image" href="/images/logo-header.png" fetchpriority="high">
+${ogImage !== DEFAULT_OG_IMAGE ? `<link rel="preload" as="image" href="${esc(ogImage)}" fetchpriority="high">` : ""}
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/analytics.js" defer></script>
 <style>
