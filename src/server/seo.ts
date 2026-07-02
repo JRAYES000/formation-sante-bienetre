@@ -632,7 +632,28 @@ function cityRegion(slug: string): string {
 
 // ---------- robots & sitemap ----------
 seoRouter.get("/robots.txt", (req, res) => {
-  res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
+  const base = baseUrl(req);
+  // Crawlers IA autorisés explicitement pour la visibilité GEO (Challenge #1 Action robots.txt)
+  const txt = [
+    "User-agent: *",
+    "Allow: /",
+    "",
+    "# Crawlers IA — autorisés explicitement (GEO visibility)",
+    "User-agent: GPTBot",
+    "Allow: /",
+    "",
+    "User-agent: Claude-Web",
+    "Allow: /",
+    "",
+    "User-agent: PerplexityBot",
+    "Allow: /",
+    "",
+    "User-agent: Googlebot",
+    "Allow: /",
+    "",
+    `Sitemap: ${base}/sitemap.xml`,
+  ].join("\n");
+  res.type("text/plain").send(txt);
 });
 
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
@@ -864,7 +885,7 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
 
   res.send(
     renderPage({
-      title: "Formations santé & bien-être éligibles CPF | Formation Santé Bien-être",
+      title: "Formation Santé Bien-être | Formations CPF Qualiopi",
       description: "Comparez les formations en esthétique, massage bien-être, coiffure et soins, financées par le CPF, par métier et par département.",
       canonical,
       jsonLd: [websiteLd],
@@ -1497,7 +1518,7 @@ ${relatedHtml}`;
 
   res.send(
     renderPage({
-      title: `${a.title} | Formation Santé Bien-être`,
+      title: a.title.length > 57 ? `${a.title.slice(0, 57).trimEnd()}…` : `${a.title} | FSB`,
       description: a.metaDescription,
       canonical,
       ogImage: a.image,
@@ -1551,7 +1572,7 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     <a class="chip" href="/metiers">🎯 Fiches métiers</a>
   </div></div>`;
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
-<h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
+<h1>${esc(catDisplay)} — formations éligibles CPF</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
 ${withSidebar(sidebar, cards)}
 ${blogLinks}`;
@@ -1559,7 +1580,7 @@ ${blogLinks}`;
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
   res.send(
     renderPage({
-      title: `Formations ${catDisplay} CPF – ${r.total} formations Qualiopi | Formation Santé Bien-être`,
+      title: `${catDisplay} — Formation CPF Qualiopi`,
       description: metaDesc,
       canonical,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
@@ -1644,7 +1665,7 @@ ${withSidebar(sidebar, cards)}
 
   res.send(
     renderPage({
-      title: `Formation ${catDisplay2} ${dept.nom} – CPF | Formation Santé Bien-être`,
+      title: `Formation ${catDisplay2} ${dept.nom} — CPF`,
       description: `${r.total} formation${r.total > 1 ? "s" : ""} ${catDisplay2} dans le ${dept.nom} éligibles au CPF. Organismes certifiés Qualiopi, présentiel et distance. Demande gratuite.`,
       canonical,
       noindex: r.items.length < 3,
