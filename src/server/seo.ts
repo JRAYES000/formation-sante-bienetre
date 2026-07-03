@@ -552,6 +552,22 @@ function withSidebar(sidebar: string, content: string): string {
 </div>${PRICE_FILTER_JS}`;
 }
 
+// Description Course generee depuis les donnees EDOF disponibles (pas de champ
+// description en base) - requise par Google pour le rich result Course.
+function courseDescription(f: any): string {
+  const parts: string[] = [];
+  if (f.intitule_certification && f.intitule_certification !== f.intitule) {
+    parts.push(`Prépare à la certification ${f.intitule_certification}`);
+  }
+  if (f.type_referentiel) parts.push(String(f.type_referentiel));
+  if (f.niveau) parts.push(`niveau ${f.niveau}`);
+  if (f.heures) parts.push(`${f.heures} heures de formation`);
+  if (f.organisme) parts.push(`dispensée par ${f.organisme}`);
+  parts.push(f.a_distance ? "formation à distance" : "formation en présentiel");
+  parts.push("éligible au CPF");
+  return parts.join(", ") + ".";
+}
+
 function courseListLd(items: any[], canonical: string): object {
   return {
     "@context": "https://schema.org",
@@ -562,6 +578,7 @@ function courseListLd(items: any[], canonical: string): object {
       item: {
         "@type": "Course",
         name: f.intitule,
+        description: courseDescription(f),
         url: `${canonical}`,
         inLanguage: "fr",
         ...(f.organisme ? { provider: { "@type": "Organization", name: f.organisme } } : {}),
@@ -942,7 +959,7 @@ seoRouter.get("/financement-cpf", (req, res) => {
         name: "Comment utiliser mon CPF pour une formation ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Connectez-vous sur moncompteformation.gouv.fr, recherchez votre formation, puis mobilisez vos droits. Un reste à charge peut être complété par Pôle emploi, votre employeur ou vos fonds propres.",
+          text: "Connectez-vous sur moncompteformation.gouv.fr, recherchez votre formation, puis mobilisez vos droits. Un reste à charge (150 € depuis avril 2026) peut être complété par France Travail, votre employeur ou vos fonds propres.",
         },
       },
     ],
@@ -957,7 +974,7 @@ seoRouter.get("/financement-cpf", (req, res) => {
 <div class="mesh"><h2>Comment ça marche, en 3 étapes</h2>
   <p>1. <strong>Vérifiez vos droits</strong> sur moncompteformation.gouv.fr.<br>
      2. <strong>Choisissez votre formation</strong> certifiante (RNCP ou RS) dispensée par un organisme Qualiopi.<br>
-     3. <strong>Mobilisez votre CPF</strong> ; un éventuel reste à charge peut être complété (Pôle emploi, employeur, fonds propres).</p>
+     3. <strong>Mobilisez votre CPF</strong> ; un éventuel reste à charge (150 € depuis avril 2026, sauf exonérations) peut être complété (France Travail, employeur, fonds propres).</p>
 </div>
 <div class="mesh"><h2>Explorer les formations finançables</h2><div class="chips">
 ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} (${c.n})</a>`).join("")}
@@ -1012,7 +1029,7 @@ seoRouter.get("/faq", (req, res) => {
       items: [
         { id: 1, q: "Comment utiliser mon CPF pour une formation beauté ?", a: "Connectez-vous sur <strong>moncompteformation.gouv.fr</strong> avec votre numéro de sécurité sociale. Recherchez la formation qui vous intéresse, vérifiez qu'elle est éligible au CPF et que l'organisme est certifié Qualiopi. Vous pouvez ensuite mobiliser vos droits directement depuis la plateforme. Si vous avez un reste à charge, l'employeur, France Travail ou une aide régionale peuvent compléter." },
         { id: 2, q: "Combien ai-je sur mon CPF ?", a: "Depuis 2019, vous cumulez <strong>500 € par an</strong> travaillé, plafonné à 5 000 € (800 € et 8 000 € pour les personnes peu qualifiées). Pour connaître votre solde exact, connectez-vous sur moncompteformation.gouv.fr ou appelez le 3699 (service gratuit)." },
-        { id: 3, q: "Mon CPF est insuffisant pour couvrir la formation, que faire ?", a: "Depuis 2023, un reste à charge de 100 € minimum s'applique sauf si votre employeur prend en charge la formation. Pour couvrir ce qui reste, vous pouvez demander l'aide de votre OPCO, une aide de votre région, ou l'AIF de France Travail si vous êtes demandeur d'emploi. Ces aides sont cumulables avec le CPF." },
+        { id: 3, q: "Mon CPF est insuffisant pour couvrir la formation, que faire ?", a: "Depuis le 6 avril 2026, une participation forfaitaire de 150 € minimum s'applique (100 € entre mai 2024 et avril 2026), sauf si votre employeur prend en charge la formation ou si vous êtes demandeur d'emploi. Pour couvrir ce qui reste, vous pouvez demander l'aide de votre OPCO, une aide de votre région, ou l'AIF de France Travail. Ces aides sont cumulables avec le CPF." },
         { id: 4, q: "Comment vérifier qu'une formation est éligible au CPF ?", a: "Rendez-vous directement sur <strong>moncompteformation.gouv.fr</strong> et tapez le nom de la formation ou de l'organisme. Seules les formations référencées sur cette plateforme sont finançables par le CPF. Si vous ne trouvez pas la formation via la recherche, elle n'est pas éligible au CPF actuellement." },
         { id: 5, q: "Est-ce que les demandeurs d'emploi peuvent utiliser leur CPF ?", a: "Oui. En tant que demandeur d'emploi, vous cumulez votre CPF à hauteur de <strong>500 € par an</strong>. France Travail peut également financer une formation complémentaire via l'<strong>AIF (Aide Individuelle à la Formation)</strong> si la formation est validée dans votre projet professionnel." },
         { id: 6, q: "Comment combiner CPF et aide France Travail ?", a: "L'<strong>AIF</strong> de France Travail peut compléter votre CPF si le montant disponible ne suffit pas. Contactez votre conseiller France Travail et faites valider votre projet de formation. Le dossier se monte conjointement entre votre CPF et la demande d'AIF." },
@@ -1053,7 +1070,7 @@ seoRouter.get("/faq", (req, res) => {
       items: [
         { id: 24, q: "Combien de temps dure une demande de financement CPF ?", a: "Une fois votre dossier soumis sur moncompteformation.gouv.fr, l'accord est généralement obtenu sous <strong>24 à 72 heures</strong> pour les formations éligibles. Prévoyez un délai réglementaire incompressible de 11 jours ouvrés entre la validation de votre demande et le début de la formation (délai de rétractation)." },
         { id: 25, q: "Peut-on cumuler plusieurs formations avec le CPF ?", a: "Oui, tant que votre solde CPF le permet. Vous pouvez enchainer des formations, mais pas les suivre en parallèle via le CPF. Chaque formation doit être terminée (ou le CPF remboursé en cas d'abandon) avant d'en financer une nouvelle." },
-        { id: 26, q: "Que se passe-t-il si j'abandonne une formation financée par le CPF ?", a: "Si vous abandonnez sans motif valable, les heures utilisées restent débitées de votre compte. En cas de force majeure (maladie, accident), une prise en charge partielle ou un report peut être négocié avec l'organisme. Contactez-les rapidement." },
+        { id: 26, q: "Que se passe-t-il si j'abandonne une formation financée par le CPF ?", a: "Si vous abandonnez sans motif valable, le montant en euros déjà mobilisé reste débité de votre compte (le CPF est crédité en euros, pas en heures, depuis 2019). En cas de force majeure (maladie, accident), une prise en charge partielle ou un report peut être négocié avec l'organisme. Contactez-les rapidement." },
         { id: 27, q: "Peut-on suivre une formation CPF pendant son congé maternité ?", a: "Oui, il n'existe pas d'interdiction légale. Le congé maternité est une période pendant laquelle vous continuez à accumuler vos droits CPF. La formation peut être suivie à distance pendant cette période, ou planifiée juste avant le retour en poste." },
         { id: 28, q: "Mon employeur peut-il s'opposer à ma formation CPF ?", a: "Si la formation se déroule <strong>hors temps de travail</strong>, l'employeur n'a pas son mot à dire. Si elle empiète sur votre temps de travail, un accord préalable est nécessaire. Dans tous les cas, le CPF est un droit individuel que vous exercez librement hors temps de travail." },
         { id: 29, q: "Peut-on utiliser le CPF depuis l'étranger ?", a: "Oui, si vous êtes salarié ou demandeur d'emploi en France et que vous disposez d'un compte CPF. La formation peut être suivie à distance. Pour les formations en présentiel à l'étranger, la prise en charge CPF est possible si la formation est référencée sur moncompteformation.gouv.fr." },
