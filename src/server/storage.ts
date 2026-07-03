@@ -92,6 +92,19 @@ export function searchFormations(p: SearchParams) {
       .get(params) as { n: number }
   ).n;
 
+  // Nombre de formations certifiees Qualiopi sur l'ensemble des resultats (pas seulement
+  // la page affichee) : utilise pour les compteurs "dont X certifiees Qualiopi" des hubs.
+  const qualiopiCount = (
+    sqlite
+      .prepare(
+        `SELECT count(*) n FROM formations f
+         JOIN organismes o ON o.siret = f.siret
+         LEFT JOIN categories c ON c.id = f.categorie_id
+         ${j} WHERE ${w} AND o.qualiopi = 1`
+      )
+      .get(params) as { n: number }
+  ).n;
+
   const items = sqlite
     .prepare(
       `SELECT f.numero_formation, f.intitule, f.intitule_certification, f.type_referentiel,
@@ -155,6 +168,7 @@ export function searchFormations(p: SearchParams) {
 
   return {
     total,
+    qualiopiCount,
     page,
     pageSize,
     pages: Math.ceil(total / pageSize),

@@ -1007,7 +1007,7 @@ seoRouter.get("/faq", (req, res) => {
       titre: "📋 Pratique et logistique",
       id: "pratique",
       items: [
-        { id: 24, q: "Combien de temps dure une demande de financement CPF ?", a: "Une fois votre dossier soumis sur moncompteformation.gouv.fr, l'accord est généralement obtenu sous <strong>24 à 72 heures</strong> pour les formations éligibles. Prévoyez un délai de 10 jours ouvrés entre votre demande et le début de la formation (obligation légale de rétractation)." },
+        { id: 24, q: "Combien de temps dure une demande de financement CPF ?", a: "Une fois votre dossier soumis sur moncompteformation.gouv.fr, l'accord est généralement obtenu sous <strong>24 à 72 heures</strong> pour les formations éligibles. Prévoyez un délai réglementaire incompressible de 11 jours ouvrés entre la validation de votre demande et le début de la formation (délai de rétractation)." },
         { id: 25, q: "Peut-on cumuler plusieurs formations avec le CPF ?", a: "Oui, tant que votre solde CPF le permet. Vous pouvez enchainer des formations, mais pas les suivre en parallèle via le CPF. Chaque formation doit être terminée (ou le CPF remboursé en cas d'abandon) avant d'en financer une nouvelle." },
         { id: 26, q: "Que se passe-t-il si j'abandonne une formation financée par le CPF ?", a: "Si vous abandonnez sans motif valable, les heures utilisées restent débitées de votre compte. En cas de force majeure (maladie, accident), une prise en charge partielle ou un report peut être négocié avec l'organisme. Contactez-les rapidement." },
         { id: 27, q: "Peut-on suivre une formation CPF pendant son congé maternité ?", a: "Oui, il n'existe pas d'interdiction légale. Le congé maternité est une période pendant laquelle vous continuez à accumuler vos droits CPF. La formation peut être suivie à distance pendant cette période, ou planifiée juste avant le retour en poste." },
@@ -1554,7 +1554,7 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
 
   const cards = formationCards(r.items);
   const catDisplay = normCat(cat.nom);
-  const qualiopi = r.items.filter((f: any) => f.organisme_qualiopi).length;
+  const qualiopi = r.qualiopiCount;
   const distance = r.items.filter((f: any) => f.a_distance).length;
   const blogLinks = `<div class="mesh"><h2>Nos guides sur les formations ${esc(catDisplay)}</h2><div class="chips">
     <a class="chip" href="/blog">📖 Tous nos articles</a>
@@ -1643,7 +1643,7 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
 
   const cards = formationCards(r.items);
   const catDisplay2 = normCat(cat.nom);
-  const qualiopi2 = r.items.filter((f: any) => f.organisme_qualiopi).length;
+  const qualiopi2 = r.qualiopiCount;
   const body = `<a class="back-btn" href="/formations/${slug}">← ${esc(catDisplay2)} — toute la France</a>
 <h1>Formation ${esc(catDisplay2)} ${esc(dept.nom)} – CPF</h1>
 <p class="lead">${r.total} formation${r.total > 1 ? "s" : ""} ${esc(catDisplay2)} dans le ${esc(dept.nom)}, éligibles au CPF${qualiopi2 > 0 ? ` dont ${qualiopi2} certifiées Qualiopi` : ""}. Comparez les organismes et demandez vos informations.</p>
