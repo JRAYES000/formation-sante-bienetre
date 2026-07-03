@@ -101,6 +101,8 @@ Cela dépend du solde disponible sur votre compte et du coût de la formation. L
 
 ---
 
+Pour approfondir, consultez notre [catalogue des formations maquillage](/formations/maquillage) éligibles au CPF, la [fiche métier maquilleur professionnel](/metier/maquillage) pour les débouchés et évolutions possibles, ainsi que notre [guide financement CPF](/financement-cpf).
+
 ## Conclusion : trouver la bonne formation maquillage professionnel
 
 Le métier de maquilleur(se) professionnel(le) offre de réelles perspectives pour qui bâtit sérieusement son parcours : choix de la bonne certification, travail du portfolio, développement du réseau. La clé est de choisir une formation reconnue — RNCP ou RS — dispensée par un organisme Qualiopi, pour garantir la qualité pédagogique et l'accès aux financements.

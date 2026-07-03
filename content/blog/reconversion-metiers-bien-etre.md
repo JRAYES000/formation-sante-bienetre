@@ -110,6 +110,8 @@ Ne négligez pas les étapes 5 et 6 : la qualité de la formation et la prépara
 
 ---
 
+Selon le métier visé, comparez les [formations esthétique](/formations/esthetique-soin-corporel), les [formations massage bien-être](/formations/massage-bien-etre), ou parcourez nos [fiches métiers](/metiers) pour affiner votre projet avant de mobiliser votre CPF.
+
 ## Conclusion : votre reconversion mérite une base solide
 
 Se reconvertir dans les métiers du bien-être est un projet enthousiasmant, mais il gagne à être construit avec méthode. Le choix de la formation est une décision structurante : une certification enregistrée, un organisme Qualiopi, un financement adapté à votre situation — ces éléments font toute la différence entre un projet fragile et un parcours solide.

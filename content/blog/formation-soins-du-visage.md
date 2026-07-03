@@ -122,6 +122,8 @@ Oui, depuis le 1er janvier 2022, la certification Qualiopi est obligatoire pour 
 
 ---
 
+Comparez les [formations esthétique et soins du corps](/formations/esthetique-soin-corporel) éligibles au CPF, consultez la [fiche métier esthéticienne](/metier/esthetique-soin-corporel) pour resituer cette spécialisation dans un parcours complet, et notre [guide financement CPF](/financement-cpf) pour connaître les conditions de prise en charge.
+
 ## Conclusion : comparez avant de vous engager
 
 La formation aux soins du visage est un investissement professionnel concret, avec des débouchés réels en France en 2026. Selon votre niveau de départ, vos objectifs (emploi salarié, activité indépendante, complément de compétences) et votre budget, la bonne formation ne sera pas la même.

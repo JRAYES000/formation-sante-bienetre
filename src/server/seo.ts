@@ -3,7 +3,7 @@
 import { Router, type Request } from "express";
 import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille } from "./storage.ts";
 import { slugify } from "./storage.ts";
-import { getMetier, listMetiers, getArticle, listArticles } from "./content.ts";
+import { getMetier, listMetiers, getArticle, listArticles, articleMetier, listArticlesByMetier } from "./content.ts";
 import { gaId } from "./analytics.ts";
 
 export const seoRouter = Router();
@@ -630,6 +630,49 @@ function cityRegion(slug: string): string {
   return "Autres";
 }
 
+// Departement (code INSEE) -> region (13 regions + Corse + Outre-Mer), pour le bloc
+// "departements voisins" des pages metier x departement (Pilier 4, regle R5).
+const DEPT_REGION_MAP: Record<string, string> = {
+  "01":"Auvergne-Rhone-Alpes","02":"Hauts-de-France","03":"Auvergne-Rhone-Alpes","04":"Provence-Alpes-Cote d'Azur","05":"Provence-Alpes-Cote d'Azur",
+  "06":"Provence-Alpes-Cote d'Azur","07":"Auvergne-Rhone-Alpes","08":"Grand Est","09":"Occitanie","10":"Grand Est",
+  "11":"Occitanie","12":"Occitanie","13":"Provence-Alpes-Cote d'Azur","14":"Normandie","15":"Auvergne-Rhone-Alpes",
+  "16":"Nouvelle-Aquitaine","17":"Nouvelle-Aquitaine","18":"Centre-Val de Loire","19":"Nouvelle-Aquitaine","2A":"Corse","2B":"Corse",
+  "21":"Bourgogne-Franche-Comte","22":"Bretagne","23":"Nouvelle-Aquitaine","24":"Nouvelle-Aquitaine","25":"Bourgogne-Franche-Comte",
+  "26":"Auvergne-Rhone-Alpes","27":"Normandie","28":"Centre-Val de Loire","29":"Bretagne","30":"Occitanie",
+  "31":"Occitanie","32":"Occitanie","33":"Nouvelle-Aquitaine","34":"Occitanie","35":"Bretagne",
+  "36":"Centre-Val de Loire","37":"Centre-Val de Loire","38":"Auvergne-Rhone-Alpes","39":"Bourgogne-Franche-Comte","40":"Nouvelle-Aquitaine",
+  "41":"Centre-Val de Loire","42":"Auvergne-Rhone-Alpes","43":"Auvergne-Rhone-Alpes","44":"Pays de la Loire","45":"Centre-Val de Loire",
+  "46":"Occitanie","47":"Nouvelle-Aquitaine","48":"Occitanie","49":"Pays de la Loire","50":"Normandie",
+  "51":"Grand Est","52":"Grand Est","53":"Pays de la Loire","54":"Grand Est","55":"Grand Est",
+  "56":"Bretagne","57":"Grand Est","58":"Bourgogne-Franche-Comte","59":"Hauts-de-France","60":"Hauts-de-France",
+  "61":"Normandie","62":"Hauts-de-France","63":"Auvergne-Rhone-Alpes","64":"Nouvelle-Aquitaine","65":"Occitanie",
+  "66":"Occitanie","67":"Grand Est","68":"Grand Est","69":"Auvergne-Rhone-Alpes","70":"Bourgogne-Franche-Comte",
+  "71":"Bourgogne-Franche-Comte","72":"Pays de la Loire","73":"Auvergne-Rhone-Alpes","74":"Auvergne-Rhone-Alpes","75":"Ile-de-France",
+  "76":"Normandie","77":"Ile-de-France","78":"Ile-de-France","79":"Nouvelle-Aquitaine","80":"Hauts-de-France",
+  "81":"Occitanie","82":"Occitanie","83":"Provence-Alpes-Cote d'Azur","84":"Provence-Alpes-Cote d'Azur","85":"Pays de la Loire",
+  "86":"Nouvelle-Aquitaine","87":"Nouvelle-Aquitaine","88":"Grand Est","89":"Bourgogne-Franche-Comte","90":"Bourgogne-Franche-Comte",
+  "91":"Ile-de-France","92":"Ile-de-France","93":"Ile-de-France","94":"Ile-de-France","95":"Ile-de-France",
+  "971":"Outre-Mer","972":"Outre-Mer","973":"Outre-Mer","974":"Outre-Mer","976":"Outre-Mer",
+};
+
+function deptRegion(code: string): string {
+  return DEPT_REGION_MAP[code] ?? "Autres";
+}
+
+// 6 premiers departements d'un metier, tries par nombre de formations (reutilise le
+// classement deja calcule pour la barre laterale). Utilise par R3/R6.
+function topDeptsForMetier(categorieSlug: string, limit = 6): { code: string; nom: string; slug: string; n: number }[] {
+  const dcode = deptByCode();
+  const r = searchFormations({ categorie: categorieSlug, pageSize: 1 });
+  return (r.facets.departements as any[])
+    .slice(0, limit)
+    .map((d) => {
+      const di = dcode.get(d.code);
+      return di ? { code: d.code, nom: d.nom, slug: di.slug, n: d.n } : null;
+    })
+    .filter(Boolean) as { code: string; nom: string; slug: string; n: number }[];
+}
+
 // ---------- robots & sitemap ----------
 seoRouter.get("/robots.txt", (req, res) => {
   res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
@@ -1213,7 +1256,8 @@ seoRouter.get("/ville/:slug", (req, res, next) => {
   const body = `<a class="back-btn" href="/villes">← Toutes les villes</a>
 <h1>Formations beauté &amp; bien-être à ${esc(nomV)}</h1>
 <p class="lead">${v.n} formations CPF dispensées par des organismes situés à ${esc(nomV)}.</p>
-${withSidebar(sidebar, formationCards(items))}`;
+${withSidebar(sidebar, formationCards(items))}
+${mesh ? `<div class="mesh"><h2>Formations par categorie a ${esc(nomV)}</h2><div class="chips">${mesh}</div></div>` : ""}`;
   res.send(
     renderPage({
       title: `Formations beauté & bien-être à ${nomV} – CPF | Formation Santé Bien-être`,
@@ -1348,6 +1392,16 @@ seoRouter.get("/metier/:slug", (req, res, next) => {
         mainEntity: m.faq.map((x) => ({ "@type": "Question", name: x.q, acceptedAnswer: { "@type": "Answer", text: x.a } })),
       }
     : null;
+  // Regle R6 (Pilier 4) : (a) "Nos articles sur ce metier" (4 plus recents) ;
+  // (b) chips vers les 6 premiers departements de la categorie.
+  const metierArticles = hasCat ? listArticlesByMetier(m.slug, 4) : [];
+  const metierArticlesHtml = metierArticles.length
+    ? `<div class="mesh"><h2>Nos articles sur ce metier</h2><div class="chips">${metierArticles.map((a) => `<a class="chip" href="/blog/${a.slug}">📖 ${esc(a.title)}</a>`).join("")}</div></div>`
+    : "";
+  const metierDepts = hasCat ? topDeptsForMetier(m.slug, 6) : [];
+  const metierDeptsHtml = metierDepts.length
+    ? `<div class="mesh"><h2>${esc(m.metier)} par departement</h2><div class="chips">${metierDepts.map((d) => `<a class="chip" href="/formations/${m.slug}/${d.slug}">📍 ${esc(d.nom)} (${d.n})</a>`).join("")}</div></div>`
+    : "";
   const body = `<h1>${esc(m.titre)}</h1>
 <p class="lead">${esc(m.intro ?? "")}</p>
 <a class="cta" href="${hasCat ? `/formations/${m.slug}` : "/#/recherche"}">Voir les formations ${esc(m.metier)}</a>
@@ -1358,6 +1412,8 @@ ${m.salaire ? `<div class="mesh"><h2>Salaire</h2><p>Débutant : <strong>${esc(m.
 ${ulBlock("Évolutions de carrière", m.evolution)}
 ${m.formationConseil ? `<div class="mesh"><h2>Quelle formation choisir ?</h2><p>${esc(m.formationConseil)}</p></div>` : ""}
 ${m.faq?.length ? `<div class="mesh"><h2>Questions fréquentes</h2>${m.faq.map((x) => `<p><strong>${esc(x.q)}</strong><br>${esc(x.a)}</p>`).join("")}</div>` : ""}
+${metierArticlesHtml}
+${metierDeptsHtml}
 <div class="mesh"><h2>Autres métiers</h2><div class="chips">${listMetiers()
     .filter((x) => x.slug !== m.slug)
     .map((x) => `<a class="chip" href="/metier/${x.slug}">${esc(x.metier)}</a>`)
@@ -1476,6 +1532,26 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
     ...(a.image ? { image: a.image } : {}),
     author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
   };
+  // Regle R3 (Pilier 4) : bloc "Explorer les formations" contextuel pour les articles
+  // rattaches a un metier (front-matter metier: ou dictionnaire de mots-cles sur le slug).
+  // Articles transverses : bloc generique inchange.
+  const artMetier = articleMetier(a);
+  const metierFiche = artMetier ? getMetier(artMetier) : null;
+  const exploreHtml = artMetier && metierFiche
+    ? `<div class="mesh"><h2>Explorer les formations ${esc(normCat(metierFiche.metier))}</h2><div class="chips">
+  <a class="chip" href="/formations/${artMetier}">📚 Toutes les formations ${esc(normCat(metierFiche.metier))}</a>
+  <a class="chip" href="/metier/${artMetier}">🎯 Fiche metier ${esc(metierFiche.metier)}</a>
+  ${topDeptsForMetier(artMetier, 6).map((d) => `<a class="chip" href="/formations/${artMetier}/${d.slug}">📍 ${esc(d.nom)}</a>`).join("")}
+  <a class="chip" href="/financement-cpf">💰 Financement CPF</a>
+</div></div>`
+    : `<div class="mesh"><h2>Explorer les formations</h2><div class="chips">
+  <a class="chip" href="/formations/esthetique-soin-corporel">💆 Esthetique</a>
+  <a class="chip" href="/formations/massage-bien-etre">🤝 Massage bien-etre</a>
+  <a class="chip" href="/formations/coiffure">Coiffure</a>
+  <a class="chip" href="/formations/manucurie">💅 Manucure</a>
+  <a class="chip" href="/formations/maquillage">💄 Maquillage</a>
+  <a class="chip" href="/faq">❓ FAQ formations CPF</a>
+</div></div>`;
   const body = `<h1>${esc(a.title)}</h1>
 ${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px"><time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""}</p>` : ""}
 <p class="lead" style="font-size:1rem;border-left:3px solid var(--p);padding-left:14px;color:var(--body)">${esc(a.metaDescription)}</p>
@@ -1485,14 +1561,7 @@ ${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18p
   <a class="cta" href="/formations">Voir toutes les formations CPF</a>
   <a class="cta" href="/financement-cpf" style="background:transparent;color:var(--p);border:2px solid var(--p);margin-left:10px">Guide financement</a>
 </div>
-<div class="mesh"><h2>Explorer les formations</h2><div class="chips">
-  <a class="chip" href="/formations/esthetique-soin-corporel">💆 Esthétique</a>
-  <a class="chip" href="/formations/massage-bien-etre">🤲 Massage bien-être</a>
-  <a class="chip" href="/formations/coiffure">✂️ Coiffure</a>
-  <a class="chip" href="/formations/manucurie">💅 Manucure</a>
-  <a class="chip" href="/formations/maquillage">💄 Maquillage</a>
-  <a class="chip" href="/faq">❓ FAQ formations CPF</a>
-</div></div>
+${exploreHtml}
 ${relatedHtml}`;
 
   res.send(
@@ -1544,15 +1613,28 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
   const catDisplay = normCat(cat.nom);
   const qualiopi = r.items.filter((f: any) => f.organisme_qualiopi).length;
   const distance = r.items.filter((f: any) => f.a_distance).length;
-  const blogLinks = `<div class="mesh"><h2>Nos guides sur les formations ${esc(catDisplay)}</h2><div class="chips">
+  // Regle R4 (Pilier 4) : (a) lien vers la fiche metier ; (b) le bloc "Nos guides"
+  // generique est remplace par les 4 articles les plus recents du metier.
+  const ficheMetier = getMetier(slug);
+  const decouvrirMetierHtml = ficheMetier
+    ? `<a class="cta" href="/metier/${slug}" style="margin:10px 0 4px;display:inline-block">🎯 Decouvrir le metier ${esc(ficheMetier.metier)}</a>`
+    : "";
+  const recentArticles = listArticlesByMetier(slug, 4);
+  const blogLinks = recentArticles.length
+    ? `<div class="mesh"><h2>Nos guides sur les formations ${esc(catDisplay)}</h2><div class="chips">
+    ${recentArticles.map((a) => `<a class="chip" href="/blog/${a.slug}">📖 ${esc(a.title)}</a>`).join("")}
+    <a class="chip" href="/financement-cpf">💰 Financement CPF</a>
+  </div></div>`
+    : `<div class="mesh"><h2>Nos guides sur les formations ${esc(catDisplay)}</h2><div class="chips">
     <a class="chip" href="/blog">📖 Tous nos articles</a>
     <a class="chip" href="/financement-cpf">💰 Financement CPF</a>
     <a class="chip" href="/faq">❓ FAQ formations</a>
-    <a class="chip" href="/metiers">🎯 Fiches métiers</a>
+    <a class="chip" href="/metiers">🎯 Fiches metiers</a>
   </div></div>`;
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
 <h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
+${decouvrirMetierHtml}
 ${withSidebar(sidebar, cards)}
 ${blogLinks}`;
 
@@ -1632,10 +1714,26 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
   const cards = formationCards(r.items);
   const catDisplay2 = normCat(cat.nom);
   const qualiopi2 = r.items.filter((f: any) => f.organisme_qualiopi).length;
+
+  // Regle R5 (Pilier 4) : bloc "departements voisins" (meme region, >= 3 formations,
+  // jamais de lien vers une page noindex) + lien vers la fiche metier.
+  const currentRegion = deptRegion(dept.code);
+  const voisins = sidebarDepts
+    .filter((d) => d.code !== dept.code && d.n >= 3 && deptRegion(d.code) === currentRegion)
+    .slice(0, 8);
+  const ficheMetierDept = getMetier(slug);
+  const voisinsHtml = voisins.length
+    ? `<div class="mesh"><h2>${esc(catDisplay2)} dans les departements voisins</h2><div class="chips">
+  ${voisins.map((d) => `<a class="chip" href="/formations/${esc(slug)}/${d.slug}">📍 ${esc(d.nom)} (${d.n})</a>`).join("")}
+  ${ficheMetierDept ? `<a class="chip" href="/metier/${esc(slug)}">🎯 Fiche metier ${esc(ficheMetierDept.metier)}</a>` : ""}
+</div></div>`
+    : "";
+
   const body = `<a class="back-btn" href="/formations/${slug}">← ${esc(catDisplay2)} — toute la France</a>
 <h1>Formation ${esc(catDisplay2)} ${esc(dept.nom)} – CPF</h1>
 <p class="lead">${r.total} formation${r.total > 1 ? "s" : ""} ${esc(catDisplay2)} dans le ${esc(dept.nom)}, éligibles au CPF${qualiopi2 > 0 ? ` dont ${qualiopi2} certifiées Qualiopi` : ""}. Comparez les organismes et demandez vos informations.</p>
 ${withSidebar(sidebar, cards)}
+${voisinsHtml}
 <div class="mesh"><h2>Formations ${esc(catDisplay2)} dans d'autres régions</h2><div class="chips">
   <a class="chip" href="/formations/${esc(slug)}">🗺️ Toute la France (${national.total})</a>
   <a class="chip" href="/blog">📖 Nos guides</a>

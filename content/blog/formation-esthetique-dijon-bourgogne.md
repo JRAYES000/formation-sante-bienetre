@@ -32,7 +32,7 @@ Au-delà de Dijon, la Bourgogne offre d'autres bassins d'emploi intéressants. C
 
 ### Le CAP Esthétique Cosmétique Parfumerie
 
-Le [CAP esthétique](https://formation-sante-bienetre.fr/metier/esthetique-soin-corporel) est le diplôme fondateur de la carrière en esthétique. À Dijon, il est proposé dans les lycées professionnels publics du département et dans plusieurs organismes de formation privés certifiés.
+Le [CAP esthétique](/metier/esthetique-soin-corporel) est le diplôme fondateur de la carrière en esthétique. À Dijon, il est proposé dans les lycées professionnels publics du département et dans plusieurs organismes de formation privés certifiés.
 
 **Ce que le CAP couvre :**
 - Soins du visage : nettoyage, hydratation, soins spécifiques, masques
@@ -45,19 +45,19 @@ Le [CAP esthétique](https://formation-sante-bienetre.fr/metier/esthetique-soin-
 
 **Durée et coût :**
 - Formation initiale (lycée pro) : 2 ans, gratuit sous statut scolaire
-- Formation adulte accélérée : 10 à 14 mois, entre 3 500 et 7 000 euros, finançable via [CPF](https://formation-sante-bienetre.fr/financement-cpf)
+- Formation adulte accélérée : 10 à 14 mois, entre 3 500 et 7 000 euros, finançable via [CPF](/financement-cpf)
 
-Pour comparer les niveaux de formation, consultez [notre article CAP 2026](https://formation-sante-bienetre.fr/blog/cap-esthetique-2026).
+Pour comparer les niveaux de formation, consultez [notre article CAP 2026](/blog/cap-esthetique-2026).
 
 ### Le Brevet Professionnel (BP) Esthétique
 
-Le [BP esthétique](https://formation-sante-bienetre.fr/blog/bp-cap-esthetique-lequel-choisir) (niveau bac) est le diplôme qui permet d'évoluer vers l'encadrement et la création d'entreprise. À Dijon et en Bourgogne, il est particulièrement pertinent pour viser les postes dans les établissements hôteliers de la Côte de Nuits et de la Côte de Beaune, qui recherchent des responsables de spa capables de gérer leur équipe et leur clientèle internationale.
+Le [BP esthétique](/blog/bp-cap-esthetique-lequel-choisir) (niveau bac) est le diplôme qui permet d'évoluer vers l'encadrement et la création d'entreprise. À Dijon et en Bourgogne, il est particulièrement pertinent pour viser les postes dans les établissements hôteliers de la Côte de Nuits et de la Côte de Beaune, qui recherchent des responsables de spa capables de gérer leur équipe et leur clientèle internationale.
 
 La formation au BP intègre des techniques approfondies de soins avec appareillage, de management, de commercialisation et de gestion de la relation client.
 
 ### Le BTS et les formations supérieures
 
-Le [BTS esthétique-cosmétique-parfumerie](https://formation-sante-bienetre.fr/blog/bts-esthetique-cosmetique-debouches) (bac+2) est accessible dans certains lycées publics et établissements privés de la région. Il prépare aux fonctions commerciales et techniques dans la distribution spécialisée et les instituts premium.
+Le [BTS esthétique-cosmétique-parfumerie](/blog/bts-esthetique-cosmetique-debouches) (bac+2) est accessible dans certains lycées publics et établissements privés de la région. Il prépare aux fonctions commerciales et techniques dans la distribution spécialisée et les instituts premium.
 
 ### Mentions complémentaires et certifications spécialisées
 
@@ -72,15 +72,15 @@ Des certifications complémentaires en bien-être (massage, réflexologie) peuve
 
 ### Pourquoi l'alternance est particulièrement adaptée à la Bourgogne
 
-L'[alternance en esthétique](https://formation-sante-bienetre.fr/blog/formation-esthetique-alternance-apprentissage) est une voie idéale en Bourgogne pour plusieurs raisons. Le nombre d'établissements susceptibles d'accueillir des apprentis est suffisant à Dijon et dans les villes moyennes de la région. La taille humaine de la région favorise des relations de proximité entre organismes de formation et employeurs.
+L'[alternance en esthétique](/blog/formation-esthetique-alternance-apprentissage) est une voie idéale en Bourgogne pour plusieurs raisons. Le nombre d'établissements susceptibles d'accueillir des apprentis est suffisant à Dijon et dans les villes moyennes de la région. La taille humaine de la région favorise des relations de proximité entre organismes de formation et employeurs.
 
 Le marché hôtelier et touristique de la Côte-d'Or génère une demande spécifique en alternants pour les postes en spa et en institut d'hôtel, ce qui est une opportunité rare qu'on ne retrouve pas dans les grandes métropoles.
 
 ### Contrat d'apprentissage vs contrat de professionnalisation
 
-Le [contrat d'apprentissage](https://formation-sante-bienetre.fr/blog/alternance-esthetique-salaire-contrat) est la formule standard pour les moins de 30 ans souhaitant préparer un CAP ou BP esthétique en alternance. L'employeur bénéficie d'aides à l'embauche, et l'apprenti est rémunéré selon un barème lié à son âge et à l'année du contrat.
+Le [contrat d'apprentissage](/blog/alternance-esthetique-salaire-contrat) est la formule standard pour les moins de 30 ans souhaitant préparer un CAP ou BP esthétique en alternance. L'employeur bénéficie d'aides à l'embauche, et l'apprenti est rémunéré selon un barème lié à son âge et à l'année du contrat.
 
-Le contrat de professionnalisation, géré par les [OPCO](https://formation-sante-bienetre.fr/blog/opco-formation-salon-coiffure-beaute), est adapté aux adultes en reconversion souhaitant reprendre une formation esthétique tout en étant rémunérés.
+Le contrat de professionnalisation, géré par les [OPCO](/blog/opco-formation-salon-coiffure-beaute), est adapté aux adultes en reconversion souhaitant reprendre une formation esthétique tout en étant rémunérés.
 
 ### Comment trouver un maître d'apprentissage à Dijon
 
@@ -94,25 +94,25 @@ Le contrat de professionnalisation, géré par les [OPCO](https://formation-sant
 
 ### Le CPF pour les formations esthétiques dijonnaises
 
-Le [Compte Personnel de Formation](https://formation-sante-bienetre.fr/financement-cpf) est l'outil de financement prioritaire pour les adultes souhaitant se former ou se reconvertir en esthétique à Dijon. Les formations éligibles doivent préparer à un diplôme RNCP ou à une certification RS.
+Le [Compte Personnel de Formation](/financement-cpf) est l'outil de financement prioritaire pour les adultes souhaitant se former ou se reconvertir en esthétique à Dijon. Les formations éligibles doivent préparer à un diplôme RNCP ou à une certification RS.
 
-Pour vérifier si votre formation est éligible et estimer votre reste à charge, consultez moncompteformation.gouv.fr et [notre guide sur le reste à charge CPF](https://formation-sante-bienetre.fr/blog/reste-a-charge-cpf-beaute-solutions).
+Pour vérifier si votre formation est éligible et estimer votre reste à charge, consultez moncompteformation.gouv.fr et [notre guide sur le reste à charge CPF](/blog/reste-a-charge-cpf-beaute-solutions).
 
 ### Les aides de la Région Bourgogne-Franche-Comté
 
 La Région BFC propose des formations qualifiantes gratuites pour les demandeurs d'emploi via son Programme Régional de Formation. Les formations aux métiers de la beauté et du bien-être y figurent régulièrement. Les bénéficiaires reçoivent également une rémunération de stagiaire pendant la formation.
 
-Renseignez-vous auprès des agences France Travail de Dijon et des villes bourguignonnes. Les [aides Pôle Emploi pour la formation beauté](https://formation-sante-bienetre.fr/blog/aide-pole-emploi-formation-beaute) sont également disponibles pour les demandeurs d'emploi de la région.
+Renseignez-vous auprès des agences France Travail de Dijon et des villes bourguignonnes. Les [aides Pôle Emploi pour la formation beauté](/blog/aide-pole-emploi-formation-beaute) sont également disponibles pour les demandeurs d'emploi de la région.
 
 ### Financement sans CPF : les autres options
 
-Si votre CPF est insuffisant ou inexistant, [plusieurs alternatives permettent de financer une formation esthétique à Dijon](https://formation-sante-bienetre.fr/blog/financer-formation-beaute-sans-cpf) : AIF France Travail, plan de développement des compétences de l'employeur, Projet de Transition Professionnelle, aides de la mission locale pour les moins de 26 ans.
+Si votre CPF est insuffisant ou inexistant, [plusieurs alternatives permettent de financer une formation esthétique à Dijon](/blog/financer-formation-beaute-sans-cpf) : AIF France Travail, plan de développement des compétences de l'employeur, Projet de Transition Professionnelle, aides de la mission locale pour les moins de 26 ans.
 
 ## Salaires et débouchés dans l'esthétique bourguignonne
 
 ### Rémunérations dans l'Hérault et en Côte-d'Or
 
-À Dijon, les salaires dans l'esthétique s'alignent sur les grilles conventionnelles nationales. La région bourguignonne n'est pas réputée pour des rémunérations supérieures à la moyenne, mais le coût de la vie y est inférieur aux grandes métropoles, ce qui améliore le pouvoir d'achat réel. Pour les chiffres détaillés, consultez notre article sur [les salaires des esthéticiennes en France](https://formation-sante-bienetre.fr/blog/combien-gagne-estheticienne-france-2026).
+À Dijon, les salaires dans l'esthétique s'alignent sur les grilles conventionnelles nationales. La région bourguignonne n'est pas réputée pour des rémunérations supérieures à la moyenne, mais le coût de la vie y est inférieur aux grandes métropoles, ce qui améliore le pouvoir d'achat réel. Pour les chiffres détaillés, consultez notre article sur [les salaires des esthéticiennes en France](/blog/combien-gagne-estheticienne-france-2026).
 
 **Indicatifs de rémunération à Dijon :**
 - Esthéticienne débutante (CAP) : 1 380 à 1 550 euros nets/mois
@@ -137,19 +137,19 @@ Si votre CPF est insuffisant ou inexistant, [plusieurs alternatives permettent d
 
 La Bourgogne offre de belles opportunités pour la création d'activité esthétique, notamment dans les niches liées au tourisme viticole. Un institut de beauté proposant des soins à base de produits locaux (vin de Bourgogne, marc de raisin, produits bio régionaux) peut trouver une clientèle touristique internationale sensible au terroir.
 
-[Notre guide sur l'ouverture d'un institut de beauté](https://formation-sante-bienetre.fr/blog/ouvrir-institut-beaute-formation) vous détaille les démarches et les conditions requises.
+[Notre guide sur l'ouverture d'un institut de beauté](/blog/ouvrir-institut-beaute-formation) vous détaille les démarches et les conditions requises.
 
 ## Reconversion professionnelle à Dijon
 
 ### Se reconvertir dans l'esthétique en Bourgogne
 
-La [reconversion professionnelle vers l'esthétique](https://formation-sante-bienetre.fr/blog/reconversion-estheticienne-30-40-50-ans) est tout à fait réalisable à Dijon. Les organismes de formation adulte proposent des CAP accélérés de 10 à 14 mois, et les financements CPF, Transition Pro et aides régionales permettent de couvrir une grande partie des coûts.
+La [reconversion professionnelle vers l'esthétique](/blog/reconversion-estheticienne-30-40-50-ans) est tout à fait réalisable à Dijon. Les organismes de formation adulte proposent des CAP accélérés de 10 à 14 mois, et les financements CPF, Transition Pro et aides régionales permettent de couvrir une grande partie des coûts.
 
 Le contexte bourguignon génère des profils de reconversion spécifiques : salariés de l'agro-alimentaire (secteur important à Dijon), fonctionnaires, travailleurs de l'industrie cherchant un métier à plus fort contact humain. L'esthétique répond à ce besoin.
 
 ### La voie du bien-être et du massage
 
-La [reconversion vers les métiers du bien-être](https://formation-sante-bienetre.fr/blog/reconversion-metiers-bien-etre) est une alternative ou un complément à l'esthétique. Des certifications en [massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf) ou en [réflexologie](https://formation-sante-bienetre.fr/blog/formation-reflexologie-cpf) sont finançables via le CPF et ouvrent des débouchés dans les spas des hôtels viticoles bourguignons.
+La [reconversion vers les métiers du bien-être](/blog/reconversion-metiers-bien-etre) est une alternative ou un complément à l'esthétique. Des certifications en [massage californien](/blog/formation-massage-californien-cpf) ou en [réflexologie](/blog/formation-reflexologie-cpf) sont finançables via le CPF et ouvrent des débouchés dans les spas des hôtels viticoles bourguignons.
 
 ## FAQ - Formation esthétique à Dijon et en Bourgogne
 
@@ -163,7 +163,7 @@ Oui, le CAP esthétique est le diplôme minimum requis pour exercer dans les spa
 En formation accélérée pour adultes à Dijon, le CAP esthétique dure généralement entre 10 et 14 mois selon l'organisme. Cela inclut les cours théoriques, les ateliers pratiques et plusieurs semaines de stage obligatoire en entreprise.
 
 **Comment financer une formation esthétique à Dijon sans être demandeur d'emploi ?**
-Si vous êtes salarié et non demandeur d'emploi, les options principales sont : le CPF (utilisable pendant ou hors temps de travail), le plan de développement des compétences de l'employeur (si la formation est liée au poste), le Projet de Transition Professionnelle (pour les formations longues en vue d'un changement de métier), ou le financement personnel. [Notre article sur le financement sans CPF](https://formation-sante-bienetre.fr/blog/financer-formation-beaute-sans-cpf) détaille toutes les options.
+Si vous êtes salarié et non demandeur d'emploi, les options principales sont : le CPF (utilisable pendant ou hors temps de travail), le plan de développement des compétences de l'employeur (si la formation est liée au poste), le Projet de Transition Professionnelle (pour les formations longues en vue d'un changement de métier), ou le financement personnel. [Notre article sur le financement sans CPF](/blog/financer-formation-beaute-sans-cpf) détaille toutes les options.
 
 **Y a-t-il des alternances esthétiques disponibles dans les hôtels viticoles de Beaune ?**
 Oui, certains hôtels de Beaune et des villages viticoles environnants accueillent des apprentis esthéticiennes dans leurs espaces bien-être. Ces positions sont convoitées car elles offrent une expérience dans un environnement haut de gamme avec une clientèle internationale. Contactez directement les établissements ou renseignez-vous auprès des CFA et de la Chambre des Métiers de Côte-d'Or.
@@ -181,10 +181,10 @@ Les perspectives d'évolution passent par le BP (accès à l'encadrement), les s
 Il n'existe pas de diplôme spécifique "mariage", mais le marché des prestations beauté pour mariages est actif à Dijon. Le maquillage de mariée, la manucurie pour les fêtes, les soins pré-mariage font partie des prestations courantes. Des formations courtes en maquillage de mariée ou en mise en beauté nuptiale existent et peuvent compléter un CAP esthétique de base.
 
 **Comment choisir entre un organisme public et privé pour une formation esthétique à Dijon ?**
-Les lycées professionnels publics offrent une formation gratuite de qualité pour les scolaires, mais sont moins flexibles pour les adultes. Les organismes privés certifiés Qualiopi sont plus adaptables aux adultes (horaires, rythme, accessibilité) mais payants. Pour les adultes en reconversion, les organismes privés finançables par le CPF sont souvent plus pertinents. [Notre guide de sélection d'organisme](https://formation-sante-bienetre.fr/blog/meilleur-organisme-formation-esthetique-criteres) vous aidera à décider.
+Les lycées professionnels publics offrent une formation gratuite de qualité pour les scolaires, mais sont moins flexibles pour les adultes. Les organismes privés certifiés Qualiopi sont plus adaptables aux adultes (horaires, rythme, accessibilité) mais payants. Pour les adultes en reconversion, les organismes privés finançables par le CPF sont souvent plus pertinents. [Notre guide de sélection d'organisme](/blog/meilleur-organisme-formation-esthetique-criteres) vous aidera à décider.
 
 **Le BP esthétique est-il nécessaire pour ouvrir un salon à Dijon ?**
-Le BP esthétique (ou une qualification équivalente) est normalement requis pour ouvrir un institut ou un salon de beauté au public. Des exceptions existent (diplômes connexes, expérience professionnelle attestée dans certains cas) mais le BP reste la voie la plus directe et la plus sécurisante juridiquement. [Notre guide sur l'ouverture d'un institut](https://formation-sante-bienetre.fr/blog/ouvrir-institut-beaute-formation) précise toutes les conditions.
+Le BP esthétique (ou une qualification équivalente) est normalement requis pour ouvrir un institut ou un salon de beauté au public. Des exceptions existent (diplômes connexes, expérience professionnelle attestée dans certains cas) mais le BP reste la voie la plus directe et la plus sécurisante juridiquement. [Notre guide sur l'ouverture d'un institut](/blog/ouvrir-institut-beaute-formation) précise toutes les conditions.
 
 **Y a-t-il des aides de la Région BFC pour une formation esthétique à Dijon ?**
 Oui. La Région Bourgogne-Franche-Comté finance des formations qualifiantes pour les demandeurs d'emploi via son Programme Régional de Formation. Les formations en esthétique y figurent régulièrement. Pour en bénéficier, rapprochez-vous de votre agence France Travail locale. Des aides complémentaires existent aussi pour les moins de 26 ans (missions locales) et pour les personnes en situation de handicap.
@@ -198,4 +198,4 @@ Dijon et la Bourgogne offrent un contexte unique pour une carrière esthétique 
 
 La clé est d'identifier votre projet professionnel (emploi en ville ou en hôtel viticole), de choisir le bon diplôme (CAP pour démarrer, BP pour encadrer), et d'optimiser votre financement en combinant CPF, aides régionales et dispositifs spécifiques.
 
-[Trouvez votre formation esthétique en Bourgogne](https://formation-sante-bienetre.fr/formations) et lancez-vous vers une carrière dans ce secteur porteur.
+[Trouvez votre formation esthétique en Bourgogne](/formations) et lancez-vous vers une carrière dans ce secteur porteur.

@@ -46,17 +46,17 @@ Cette distinction est fondamentale pour comprendre les formations disponibles et
 
 ### Les certifications éligibles au CPF
 
-Les formations en massage bien-être finançables via le [CPF](https://formation-sante-bienetre.fr/financement-cpf) doivent préparer à une certification inscrite au Répertoire National des Certifications Professionnelles (RNCP) ou au Répertoire Spécifique (RS).
+Les formations en massage bien-être finançables via le [CPF](/financement-cpf) doivent préparer à une certification inscrite au Répertoire National des Certifications Professionnelles (RNCP) ou au Répertoire Spécifique (RS).
 
 **Principales certifications éligibles au CPF en massage bien-être :**
 - Praticien en massage bien-être (niveau 4, RNCP)
 - Technicien(ne) en spa et modelages bien-être
 - Masseur bien-être
-- [Massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf) (certifications RS)
-- [Réflexologie plantaire et palmaire](https://formation-sante-bienetre.fr/blog/formation-reflexologie-cpf) (certifications RS)
+- [Massage californien](/blog/formation-massage-californien-cpf) (certifications RS)
+- [Réflexologie plantaire et palmaire](/blog/formation-reflexologie-cpf) (certifications RS)
 - Soins corps en spa (certifications RS de marques reconnues)
 
-À Lyon, plusieurs organismes de formation proposent ces certifications. Vérifiez systématiquement sur moncompteformation.gouv.fr l'éligibilité au CPF et la certification [Qualiopi](https://formation-sante-bienetre.fr/blog/qualiopi-formation-beaute-garantie) des organismes avant de vous inscrire.
+À Lyon, plusieurs organismes de formation proposent ces certifications. Vérifiez systématiquement sur moncompteformation.gouv.fr l'éligibilité au CPF et la certification [Qualiopi](/blog/qualiopi-formation-beaute-garantie) des organismes avant de vous inscrire.
 
 ### Les durées et coûts de formation
 
@@ -87,7 +87,7 @@ Lyon compte plusieurs dizaines de spas, instituts proposant des massages et cent
 
 Les praticiens en massage bien-être qualifiés trouvent généralement à s'employer dans un délai raisonnable à Lyon. Les profils polyvalents (plusieurs techniques de massage + accueil clientèle) sont les plus recherchés.
 
-Pour une vision complète des rémunérations dans le massage bien-être, consultez [notre article sur le salaire de masseuse bien-être en France](https://formation-sante-bienetre.fr/blog/salaire-masseuse-bien-etre-france).
+Pour une vision complète des rémunérations dans le massage bien-être, consultez [notre article sur le salaire de masseuse bien-être en France](/blog/salaire-masseuse-bien-etre-france).
 
 ### Les stations thermales d'Auvergne-Rhône-Alpes
 
@@ -104,7 +104,7 @@ En saison estivale, les mêmes stations proposent souvent des postes pour la ran
 ### Les opportunités hors de Lyon
 
 Outre Lyon, d'autres villes d'AuRA offrent des débouchés en massage bien-être :
-- [Grenoble](https://formation-sante-bienetre.fr/blog/formation-esthetique-grenoble) et l'agglomération iséroise
+- [Grenoble](/blog/formation-esthetique-grenoble) et l'agglomération iséroise
 - Annecy et Haute-Savoie (tourisme, thermes)
 - Saint-Étienne (bassin industriel en reconversion vers les services)
 - Chambéry et Savoie (thermalisme, tourisme alpin)
@@ -114,17 +114,17 @@ Outre Lyon, d'autres villes d'AuRA offrent des débouchés en massage bien-être
 
 ### Le CPF, outil principal
 
-Le [CPF (Compte Personnel de Formation)](https://formation-sante-bienetre.fr/financement-cpf) est l'outil de financement le plus utilisé pour les formations en massage bien-être. Les certifications RNCP et RS éligibles sont nombreuses. Le solde accumulé (500 euros/an, jusqu'à 5 000 euros maximum) peut suffire à financer des certifications courtes.
+Le [CPF (Compte Personnel de Formation)](/financement-cpf) est l'outil de financement le plus utilisé pour les formations en massage bien-être. Les certifications RNCP et RS éligibles sont nombreuses. Le solde accumulé (500 euros/an, jusqu'à 5 000 euros maximum) peut suffire à financer des certifications courtes.
 
-Pour les formations longues (praticien massage RNCP), un co-financement peut être nécessaire. [Notre guide sur le reste à charge CPF](https://formation-sante-bienetre.fr/blog/reste-a-charge-cpf-beaute-solutions) présente les options.
+Pour les formations longues (praticien massage RNCP), un co-financement peut être nécessaire. [Notre guide sur le reste à charge CPF](/blog/reste-a-charge-cpf-beaute-solutions) présente les options.
 
 ### Les aides pour les demandeurs d'emploi
 
-Les demandeurs d'emploi peuvent bénéficier des [aides France Travail](https://formation-sante-bienetre.fr/blog/aide-pole-emploi-formation-beaute) (AIF, AREF) pour financer une formation en massage bien-être. La Région AuRA propose également des formations qualifiantes gratuites dans son Programme Régional de Formation.
+Les demandeurs d'emploi peuvent bénéficier des [aides France Travail](/blog/aide-pole-emploi-formation-beaute) (AIF, AREF) pour financer une formation en massage bien-être. La Région AuRA propose également des formations qualifiantes gratuites dans son Programme Régional de Formation.
 
 ### Financement sans CPF
 
-Pour les personnes sans CPF ou avec un solde insuffisant, [des alternatives existent](https://formation-sante-bienetre.fr/blog/financer-formation-beaute-sans-cpf) : financement personnel échelonné, micro-crédit, aides des missions locales pour les moins de 26 ans, aides de l'AGEFIPH pour les personnes en situation de handicap.
+Pour les personnes sans CPF ou avec un solde insuffisant, [des alternatives existent](/blog/financer-formation-beaute-sans-cpf) : financement personnel échelonné, micro-crédit, aides des missions locales pour les moins de 26 ans, aides de l'AGEFIPH pour les personnes en situation de handicap.
 
 ## Créer son activité en massage bien-être à Lyon
 
@@ -132,7 +132,7 @@ Pour les personnes sans CPF ou avec un solde insuffisant, [des alternatives exis
 
 De nombreux praticiens en massage bien-être à Lyon exercent en indépendant, sous statut de micro-entrepreneur (auto-entrepreneur) ou de société. Cette forme d'activité permet de travailler à domicile (le sien ou celui du client), en cabinet loué à la vacation, ou dans des espaces de coworking dédiés au bien-être (studios yoga, espaces bien-être partagés).
 
-[Notre guide sur l'ouverture d'un cabinet ou d'un institut](https://formation-sante-bienetre.fr/blog/ouvrir-institut-beaute-formation) vous donne les bases réglementaires et pratiques de la création d'activité bien-être.
+[Notre guide sur l'ouverture d'un cabinet ou d'un institut](/blog/ouvrir-institut-beaute-formation) vous donne les bases réglementaires et pratiques de la création d'activité bien-être.
 
 ### La location de cabinet à Lyon
 
@@ -146,7 +146,7 @@ Lyon compte de nombreux espaces de bien-être proposant des locations de cabinet
 
 ### Un parcours de reconversion fréquent à Lyon
 
-Lyon attire régulièrement des personnes en [reconversion vers les métiers du bien-être](https://formation-sante-bienetre.fr/blog/reconversion-metiers-bien-etre). La métropole, avec ses nombreux secteurs économiques (finance, industrie, santé, numérique), génère des cadres et des salariés en quête d'un métier plus centré sur le contact humain et le bien-être.
+Lyon attire régulièrement des personnes en [reconversion vers les métiers du bien-être](/blog/reconversion-metiers-bien-etre). La métropole, avec ses nombreux secteurs économiques (finance, industrie, santé, numérique), génère des cadres et des salariés en quête d'un métier plus centré sur le contact humain et le bien-être.
 
 La formation en massage bien-être est particulièrement adaptée à la reconversion car elle est plus courte et moins coûteuse qu'une formation d'esthéticienne diplômée, tout en ouvrant des débouchés réels dans les spas lyonnais et les stations d'AuRA.
 
@@ -154,7 +154,7 @@ La formation en massage bien-être est particulièrement adaptée à la reconver
 
 La combinaison massage bien-être + esthétique est très valorisée sur le marché lyonnais. Une esthéticienne (CAP ou BP) ayant ajouté une certification en massage bien-être peut prétendre aux postes en spa qui requièrent les deux compétences. Inversement, une praticienne en massage peut compléter son profil par un CAP esthétique pour accéder aux instituts de beauté polyvalents.
 
-[Découvrir le métier d'esthéticienne](https://formation-sante-bienetre.fr/metier/esthetique-soin-corporel) peut vous aider à décider si cette combinaison correspond à votre projet.
+[Découvrir le métier d'esthéticienne](/metier/esthetique-soin-corporel) peut vous aider à décider si cette combinaison correspond à votre projet.
 
 ### La voie des métiers du bien-être en AuRA
 
@@ -169,13 +169,13 @@ Non, le métier de praticien en massage bien-être n'est pas réglementé par l'
 La kinésithérapie est une profession de santé réglementée, exercée uniquement par des masseurs-kinésithérapeutes diplômés d'État (après 4-5 ans d'études). Elle a une visée thérapeutique et peut traiter des pathologies. Le massage bien-être est pratiqué dans les spas, instituts et centres de relaxation, sans visée thérapeutique, avec des certifications bien-être (non médicales). La confusion entre les deux est à éviter.
 
 **Peut-on financer une formation massage bien-être à Lyon avec le CPF ?**
-Oui, si la formation vise une certification éligible (RNCP ou RS). Vérifiez sur moncompteformation.gouv.fr que la formation que vous visez est bien référencée. Toutes les formations massage ne sont pas finançables : les stages d'initiation non certifiants, par exemple, ne le sont pas. [Notre guide CPF](https://formation-sante-bienetre.fr/financement-cpf) vous explique comment vérifier l'éligibilité.
+Oui, si la formation vise une certification éligible (RNCP ou RS). Vérifiez sur moncompteformation.gouv.fr que la formation que vous visez est bien référencée. Toutes les formations massage ne sont pas finançables : les stages d'initiation non certifiants, par exemple, ne le sont pas. [Notre guide CPF](/financement-cpf) vous explique comment vérifier l'éligibilité.
 
 **Combien gagne-t-on en tant que praticien massage bien-être à Lyon ?**
-Les salaires varient selon le type d'employeur et le statut. En salarié dans un spa lyonnais, un praticien massage bien-être qualifié gagne entre 1 500 et 1 900 euros nets/mois. En indépendant, la rémunération dépend du remplissage du carnet de rendez-vous, du tarif pratiqué (en moyenne 60 à 90 euros l'heure à Lyon) et des charges. Un indépendant bien établi peut générer un revenu net entre 1 800 et 3 000 euros/mois. [Notre article sur le salaire de masseuse bien-être](https://formation-sante-bienetre.fr/blog/salaire-masseuse-bien-etre-france) détaille tous ces aspects.
+Les salaires varient selon le type d'employeur et le statut. En salarié dans un spa lyonnais, un praticien massage bien-être qualifié gagne entre 1 500 et 1 900 euros nets/mois. En indépendant, la rémunération dépend du remplissage du carnet de rendez-vous, du tarif pratiqué (en moyenne 60 à 90 euros l'heure à Lyon) et des charges. Un indépendant bien établi peut générer un revenu net entre 1 800 et 3 000 euros/mois. [Notre article sur le salaire de masseuse bien-être](/blog/salaire-masseuse-bien-etre-france) détaille tous ces aspects.
 
 **Peut-on travailler dans les stations thermales d'AuRA avec une certification massage bien-être ?**
-Oui, les praticiens en massage bien-être certifiés peuvent travailler dans les spas associés aux stations thermales (soins bien-être et relaxation). Les soins à visée médicale réservés aux professionnels de santé (hydrothérapie médicale, kinébalnéologie) ne sont pas accessibles sans diplôme de santé. La [réflexologie plantaire](https://formation-sante-bienetre.fr/blog/formation-reflexologie-cpf) et le [massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf) sont des techniques particulièrement appréciées en contexte thermal.
+Oui, les praticiens en massage bien-être certifiés peuvent travailler dans les spas associés aux stations thermales (soins bien-être et relaxation). Les soins à visée médicale réservés aux professionnels de santé (hydrothérapie médicale, kinébalnéologie) ne sont pas accessibles sans diplôme de santé. La [réflexologie plantaire](/blog/formation-reflexologie-cpf) et le [massage californien](/blog/formation-massage-californien-cpf) sont des techniques particulièrement appréciées en contexte thermal.
 
 **Quelle formation choisir pour travailler dans un spa alpin d'AuRA ?**
 Les spas des stations alpines d'AuRA recherchent des praticiens capables de réaliser des massages de détente et de récupération sportive (massage suédois, modelages corps, soins post-ski). Une certification RNCP de praticien massage bien-être, complétée par une spécialisation en massage sportif ou en soins corps, est le profil idéal. La maîtrise de l'anglais est un plus dans les stations accueillant une clientèle internationale.
@@ -193,7 +193,7 @@ La reconversion depuis des métiers intellectuels (tech, finance, juridique) ver
 Oui. De nombreux praticiens débutent leur activité de massage bien-être en parallèle d'un emploi à temps partiel. Le statut de micro-entrepreneur est adapté à cette situation. Lyon, avec son tissu économique dense, offre de nombreuses options d'emploi à temps partiel dans divers secteurs pour compléter un début d'activité bien-être.
 
 **Quelles sont les techniques de massage les plus demandées dans les spas lyonnais ?**
-Les techniques les plus courantes dans les spas lyonnais sont : le massage suédois (relaxation classique), le [massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf) (enveloppant et relaxant), le massage aux pierres chaudes (stones), les modelages corps (avec crèmes et huiles cosmétiques), le massage du dos et des épaules (court et accessible), et les soins visage. Les massages orientaux (thaï, shiatsu, ayurvédique) trouvent aussi une clientèle dans une ville ouverte à la diversité des cultures.
+Les techniques les plus courantes dans les spas lyonnais sont : le massage suédois (relaxation classique), le [massage californien](/blog/formation-massage-californien-cpf) (enveloppant et relaxant), le massage aux pierres chaudes (stones), les modelages corps (avec crèmes et huiles cosmétiques), le massage du dos et des épaules (court et accessible), et les soins visage. Les massages orientaux (thaï, shiatsu, ayurvédique) trouvent aussi une clientèle dans une ville ouverte à la diversité des cultures.
 
 **La formation massage bien-être à Lyon ouvre-t-elle des portes en dehors de la France ?**
 Les certifications françaises de massage bien-être ne sont pas nécessairement reconnues à l'international de façon automatique. Cependant, les compétences pratiques acquises (techniques de massage, accueil clientèle, utilisation des produits) sont transférables dans les pays où le massage bien-être est pratiqué. Pour une carrière à l'international, la maîtrise de l'anglais et d'autres langues est un atout majeur.
@@ -207,4 +207,4 @@ Lyon et la région Auvergne-Rhône-Alpes offrent un des marchés les plus porteu
 
 La clé du succès est de bien choisir sa certification (éligible CPF, reconnue par les employeurs), de se former dans un organisme Qualiopi sérieux, et de construire progressivement son profil en combinant plusieurs techniques de massage et une solide culture du service client.
 
-[Explorez toutes les formations massage bien-être disponibles dans la région](https://formation-sante-bienetre.fr/formations) et [découvrez le métier de praticien massage en détail](https://formation-sante-bienetre.fr/metier/massage-bien-etre) pour confirmer votre projet professionnel à Lyon et en AuRA.
+[Explorez toutes les formations massage bien-être disponibles dans la région](/formations) et [découvrez le métier de praticien massage en détail](/metier/massage-bien-etre) pour confirmer votre projet professionnel à Lyon et en AuRA.

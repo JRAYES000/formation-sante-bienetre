@@ -125,6 +125,8 @@ Il n'y a pas de limite d'âge légale pour passer le CAP coiffure ou accéder à
 
 ---
 
+Retrouvez l'ensemble des [formations coiffure](/formations/coiffure) ouvertes aux adultes en reconversion, la [fiche métier coiffeur ou coiffeuse](/metier/coiffure) pour les débouchés et évolutions de carrière, ainsi que notre [guide financement CPF](/financement-cpf).
+
 ## Conclusion : un projet réaliste, à construire pas à pas
 
 La reconversion dans la coiffure est un parcours accessible aux adultes en France, grâce aux dispositifs de formation accélérée, à l'alternance et à la VAE, et aux financements disponibles via le CPF et France Travail. Ce n'est pas un chemin sans effort — le diplôme est exigeant, le marché compétitif — mais c'est un projet que de nombreux adultes mènent à bien chaque année.

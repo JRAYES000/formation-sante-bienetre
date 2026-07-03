@@ -135,6 +135,8 @@ Voici une grille de lecture simple pour orienter votre décision :
 
 ---
 
+Pour comparer concrètement les organismes, consultez notre [catalogue des formations esthétique](/formations/esthetique-soin-corporel) éligibles au CPF, la [fiche métier esthéticienne](/metier/esthetique-soin-corporel) pour situer chaque diplôme dans un parcours de carrière, et notre [guide financement CPF](/financement-cpf) pour anticiper le reste à charge.
+
 ## Conclusion
 
 Choisir entre un CAP, un BP, un BTS ou un titre RNCP en esthétique n'est pas une décision anodine : ces diplômes ouvrent des portes différentes, s'adressent à des profils distincts et impliquent des investissements en temps et en argent variables.

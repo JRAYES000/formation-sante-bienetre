@@ -32,7 +32,7 @@ Au-delà de Tours, Orléans (115 000 habitants, agglomération de 290 000) est l
 
 ### Le CAP Esthétique Cosmétique Parfumerie
 
-Le [CAP esthétique](https://formation-sante-bienetre.fr/metier/esthetique-soin-corporel) est le diplôme fondateur pour entrer dans la profession. À Tours, il est proposé dans les lycées professionnels publics du département d'Indre-et-Loire et dans plusieurs organismes de formation privés certifiés.
+Le [CAP esthétique](/metier/esthetique-soin-corporel) est le diplôme fondateur pour entrer dans la profession. À Tours, il est proposé dans les lycées professionnels publics du département d'Indre-et-Loire et dans plusieurs organismes de formation privés certifiés.
 
 **Programme du CAP esthétique :**
 - Soins du visage : démaquillage, nettoyage, soins spécifiques, drainage lymphatique
@@ -45,26 +45,26 @@ Le [CAP esthétique](https://formation-sante-bienetre.fr/metier/esthetique-soin-
 
 **Durée et coût :**
 - Formation initiale : 2 ans, gratuit sous statut scolaire
-- Formation adulte accélérée : 10 à 14 mois, entre 3 500 et 7 000 euros, finançable via le [CPF](https://formation-sante-bienetre.fr/financement-cpf)
+- Formation adulte accélérée : 10 à 14 mois, entre 3 500 et 7 000 euros, finançable via le [CPF](/financement-cpf)
 
-Pour une présentation complète du diplôme, consultez [notre guide sur le CAP esthétique 2026](https://formation-sante-bienetre.fr/blog/cap-esthetique-2026).
+Pour une présentation complète du diplôme, consultez [notre guide sur le CAP esthétique 2026](/blog/cap-esthetique-2026).
 
 ### Le Brevet Professionnel (BP) Esthétique
 
-Le [BP esthétique](https://formation-sante-bienetre.fr/blog/bp-cap-esthetique-lequel-choisir) (niveau bac) est le diplôme de référence pour les postes d'encadrement et la création d'entreprise. Dans le contexte touristique du Val de Loire, le BP est particulièrement valorisé par les hôtels de charme et les châteaux-hôtels qui cherchent des responsables de spa capables de gérer une clientèle internationale exigeante.
+Le [BP esthétique](/blog/bp-cap-esthetique-lequel-choisir) (niveau bac) est le diplôme de référence pour les postes d'encadrement et la création d'entreprise. Dans le contexte touristique du Val de Loire, le BP est particulièrement valorisé par les hôtels de charme et les châteaux-hôtels qui cherchent des responsables de spa capables de gérer une clientèle internationale exigeante.
 
 Le BP inclut des modules de soins approfondis (soins visage avec appareillage, soins corps techniques, modelages spécifiques), de management de clientèle, de commercialisation des soins et de bases de gestion.
 
 ### Le BTS Esthétique-Cosmétique-Parfumerie
 
-Le [BTS esthétique](https://formation-sante-bienetre.fr/blog/bts-esthetique-cosmetique-debouches) (bac+2) est accessible dans la région. Il prépare aux fonctions de cadre commercial ou technique dans la distribution spécialisée, les laboratoires et les instituts premium. À Tours, la proximité de Paris (1h en TGV) ouvre des débouchés dans la capitale pour les titulaires du BTS.
+Le [BTS esthétique](/blog/bts-esthetique-cosmetique-debouches) (bac+2) est accessible dans la région. Il prépare aux fonctions de cadre commercial ou technique dans la distribution spécialisée, les laboratoires et les instituts premium. À Tours, la proximité de Paris (1h en TGV) ouvre des débouchés dans la capitale pour les titulaires du BTS.
 
 ### Mentions complémentaires et certifications spécialisées
 
 Les MC d'un an permettent de se spécialiser :
 - MC Esthétique et bien-être du visage
 - MC Styliste ongulaire
-- Certifications en massage bien-être, [massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf), [réflexologie](https://formation-sante-bienetre.fr/blog/formation-reflexologie-cpf)
+- Certifications en massage bien-être, [massage californien](/blog/formation-massage-californien-cpf), [réflexologie](/blog/formation-reflexologie-cpf)
 
 Ces spécialisations sont particulièrement utiles pour intégrer les spas des châteaux-hôtels du Val de Loire qui proposent des menus de soins complets.
 
@@ -72,13 +72,13 @@ Ces spécialisations sont particulièrement utiles pour intégrer les spas des c
 
 ### Un marché de l'alternance accessible
 
-L'[alternance en esthétique](https://formation-sante-bienetre.fr/blog/formation-esthetique-alternance-apprentissage) est une voie bien développée dans la région tourangelle. Le nombre d'instituts de beauté, de salons de manucurie et de spas à Tours et dans l'agglomération est suffisant pour offrir des opportunités d'apprentissage.
+L'[alternance en esthétique](/blog/formation-esthetique-alternance-apprentissage) est une voie bien développée dans la région tourangelle. Le nombre d'instituts de beauté, de salons de manucurie et de spas à Tours et dans l'agglomération est suffisant pour offrir des opportunités d'apprentissage.
 
 Les châteaux-hôtels et les établissements hôteliers de la vallée de la Loire constituent une opportunité supplémentaire unique : des apprentis peuvent trouver un maître d'apprentissage dans un spa hôtelier de prestige tout en se formant dans un CFA ou un lycée professionnel tourangeau.
 
 ### Conditions du contrat d'apprentissage dans la région
 
-Le [contrat d'apprentissage](https://formation-sante-bienetre.fr/blog/alternance-esthetique-salaire-contrat) offre une rémunération pendant la formation selon un barème progressif (27 % à 100 % du SMIC selon l'âge et l'année). L'employeur bénéficie d'aides à l'embauche, et la formation est financée par l'[OPCO](https://formation-sante-bienetre.fr/blog/opco-formation-salon-coiffure-beaute) de l'entreprise.
+Le [contrat d'apprentissage](/blog/alternance-esthetique-salaire-contrat) offre une rémunération pendant la formation selon un barème progressif (27 % à 100 % du SMIC selon l'âge et l'année). L'employeur bénéficie d'aides à l'embauche, et la formation est financée par l'[OPCO](/blog/opco-formation-salon-coiffure-beaute) de l'entreprise.
 
 Le contrat de professionnalisation est disponible pour les adultes en reconversion, sans limite d'âge dans la plupart des cas.
 
@@ -95,25 +95,25 @@ Le contrat de professionnalisation est disponible pour les adultes en reconversi
 
 ### Utiliser son CPF pour une formation esthétique à Tours
 
-Le [Compte Personnel de Formation](https://formation-sante-bienetre.fr/financement-cpf) est l'outil central pour les adultes souhaitant se former à l'esthétique à Tours. Les formations éligibles doivent viser un diplôme RNCP ou une certification RS.
+Le [Compte Personnel de Formation](/financement-cpf) est l'outil central pour les adultes souhaitant se former à l'esthétique à Tours. Les formations éligibles doivent viser un diplôme RNCP ou une certification RS.
 
-[Notre guide complet sur l'utilisation du CPF pour une formation beauté](https://formation-sante-bienetre.fr/blog/cpf-comment-utiliser-formation-beaute) vous explique toutes les étapes, de la vérification du solde à l'engagement de la formation.
+[Notre guide complet sur l'utilisation du CPF pour une formation beauté](/blog/cpf-comment-utiliser-formation-beaute) vous explique toutes les étapes, de la vérification du solde à l'engagement de la formation.
 
 ### Les aides de la Région Centre-Val de Loire
 
 La Région Centre-Val de Loire finance des formations qualifiantes pour les demandeurs d'emploi. Les formations aux métiers de la beauté y figurent régulièrement. Pour connaître les sessions disponibles, rapprochez-vous des agences France Travail à Tours, Orléans, Blois, Chartres.
 
-Les [aides France Travail pour la formation esthétique](https://formation-sante-bienetre.fr/blog/aide-pole-emploi-formation-beaute) peuvent compléter ou remplacer le CPF selon votre situation.
+Les [aides France Travail pour la formation esthétique](/blog/aide-pole-emploi-formation-beaute) peuvent compléter ou remplacer le CPF selon votre situation.
 
 ### Solutions pour un CPF insuffisant
 
-Si votre solde CPF ne couvre pas entièrement le coût de la formation, [plusieurs solutions de complément existent](https://formation-sante-bienetre.fr/blog/reste-a-charge-cpf-beaute-solutions). Et pour ceux qui ne disposent pas de CPF ou cherchent des alternatives, [notre guide sur le financement sans CPF](https://formation-sante-bienetre.fr/blog/financer-formation-beaute-sans-cpf) liste toutes les options.
+Si votre solde CPF ne couvre pas entièrement le coût de la formation, [plusieurs solutions de complément existent](/blog/reste-a-charge-cpf-beaute-solutions). Et pour ceux qui ne disposent pas de CPF ou cherchent des alternatives, [notre guide sur le financement sans CPF](/blog/financer-formation-beaute-sans-cpf) liste toutes les options.
 
 ## Salaires et débouchés dans le Val de Loire
 
 ### Rémunérations à Tours et dans la région
 
-À Tours et dans la région Centre-Val de Loire, les salaires dans l'esthétique correspondent aux grilles conventionnelles nationales, avec des variations selon les types d'établissements. Pour une comparaison nationale complète, consultez notre article sur [le salaire d'une esthéticienne en France](https://formation-sante-bienetre.fr/blog/combien-gagne-estheticienne-france-2026).
+À Tours et dans la région Centre-Val de Loire, les salaires dans l'esthétique correspondent aux grilles conventionnelles nationales, avec des variations selon les types d'établissements. Pour une comparaison nationale complète, consultez notre article sur [le salaire d'une esthéticienne en France](/blog/combien-gagne-estheticienne-france-2026).
 
 **Indicatifs de rémunération dans la région :**
 - Esthéticienne débutante (CAP) en institut de ville : 1 380 à 1 550 euros nets/mois
@@ -135,34 +135,34 @@ Les établissements touristiques premium du Val de Loire (châteaux-hôtels Rela
 **Dans les sites touristiques (Val de Loire, châteaux) :**
 - Praticienne en spa de château-hôtel ou hôtel de charme
 - Esthéticienne en établissement thermal ou bien-être
-- Masseuse bien-être ([voir les débouchés massage](https://formation-sante-bienetre.fr/blog/salaire-masseuse-bien-etre-france))
+- Masseuse bien-être ([voir les débouchés massage](/blog/salaire-masseuse-bien-etre-france))
 - Responsable de cabine de soins pour clientèle internationale
 
 ### Créer son activité dans le Val de Loire
 
 La création d'activité esthétique dans le Val de Loire est une option viable, notamment dans les zones touristiques où la demande saisonnière est forte. Un institut de beauté mobile (prestations à domicile) ou un cabinet de massage bien-être peuvent trouver leur marché dans des communes touristiques moins bien équipées en établissements permanents.
 
-[Notre guide sur l'ouverture d'un institut de beauté](https://formation-sante-bienetre.fr/blog/ouvrir-institut-beaute-formation) vous présente les démarches et les conditions requises.
+[Notre guide sur l'ouverture d'un institut de beauté](/blog/ouvrir-institut-beaute-formation) vous présente les démarches et les conditions requises.
 
 ## Reconversion esthétique dans le Val de Loire
 
 ### Se reconvertir dans la beauté à Tours
 
-La [reconversion professionnelle vers l'esthétique](https://formation-sante-bienetre.fr/blog/reconversion-estheticienne-30-40-50-ans) est tout à fait accessible à Tours. La ville propose des formations accélérées pour adultes de 10 à 14 mois menant au CAP esthétique. Ces formations sont souvent financées par le CPF ou la Transition Pro.
+La [reconversion professionnelle vers l'esthétique](/blog/reconversion-estheticienne-30-40-50-ans) est tout à fait accessible à Tours. La ville propose des formations accélérées pour adultes de 10 à 14 mois menant au CAP esthétique. Ces formations sont souvent financées par le CPF ou la Transition Pro.
 
 Le contexte régional (tourisme, services, administration, agriculture en dehors de Tours) génère des profils de reconversion variés. L'esthétique attire des personnes cherchant un métier à forte dimension relationnelle et créative.
 
 ### La voie du bien-être dans la région
 
-La [reconversion vers les métiers du bien-être](https://formation-sante-bienetre.fr/blog/reconversion-metiers-bien-etre) est aussi présente dans le Val de Loire. Des certifications en [massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf), [réflexologie](https://formation-sante-bienetre.fr/blog/formation-reflexologie-cpf) et massage bien-être trouvent des débouchés dans les spas des hôtels touristiques de la région.
+La [reconversion vers les métiers du bien-être](/blog/reconversion-metiers-bien-etre) est aussi présente dans le Val de Loire. Des certifications en [massage californien](/blog/formation-massage-californien-cpf), [réflexologie](/blog/formation-reflexologie-cpf) et massage bien-être trouvent des débouchés dans les spas des hôtels touristiques de la région.
 
-[Devenir praticien en massage bien-être](https://formation-sante-bienetre.fr/blog/devenir-praticien-massage-bien-etre) peut constituer une voie de reconversion moins longue et moins coûteuse qu'un CAP esthétique, selon le projet professionnel.
+[Devenir praticien en massage bien-être](/blog/devenir-praticien-massage-bien-etre) peut constituer une voie de reconversion moins longue et moins coûteuse qu'un CAP esthétique, selon le projet professionnel.
 
 ## Choisir son organisme de formation à Tours
 
 ### Les critères essentiels
 
-Avant de vous inscrire dans un organisme de formation esthétique à Tours, vérifiez les critères recommandés dans [notre guide de sélection](https://formation-sante-bienetre.fr/blog/meilleur-organisme-formation-esthetique-criteres) :
+Avant de vous inscrire dans un organisme de formation esthétique à Tours, vérifiez les critères recommandés dans [notre guide de sélection](/blog/meilleur-organisme-formation-esthetique-criteres) :
 
 1. Certification Qualiopi (obligatoire pour le CPF et les financements publics)
 2. Habilitation à délivrer le diplôme visé (CAP, BP)
@@ -171,7 +171,7 @@ Avant de vous inscrire dans un organisme de formation esthétique à Tours, vér
 5. Réseau de partenaires employeurs
 6. Accompagnement à l'insertion professionnelle
 
-Évitez les [erreurs classiques dans le choix d'une formation esthétique](https://formation-sante-bienetre.fr/blog/erreurs-choisir-formation-esthetique) en lisant notre guide avant de décider.
+Évitez les [erreurs classiques dans le choix d'une formation esthétique](/blog/erreurs-choisir-formation-esthetique) en lisant notre guide avant de décider.
 
 ## FAQ - Formation esthétique à Tours et dans le Val de Loire
 
@@ -185,7 +185,7 @@ Plusieurs établissements hôteliers de prestige autour des châteaux de la Loir
 En formation accélérée pour adultes à Tours, le CAP esthétique dure généralement entre 10 et 14 mois. Cette durée intègre les heures de cours théoriques (cosmétologie, biologie, droit), les ateliers pratiques (cabines professionnelles) et les périodes de stage obligatoires en entreprise (minimum 8 semaines selon les formations).
 
 **Comment financer une formation esthétique à Tours si je suis demandeur d'emploi ?**
-Les demandeurs d'emploi disposent de plusieurs options à Tours : le CPF (droits accumulés lors de la vie professionnelle), l'AIF (Aide Individuelle à la Formation) de France Travail, le Programme Régional de Formation de la Région Centre-Val de Loire (formations qualifiantes gratuites), et les aides à la mobilité pour les formations hors de Tours. [Notre article sur les aides Pôle Emploi pour la formation beauté](https://formation-sante-bienetre.fr/blog/aide-pole-emploi-formation-beaute) détaille toutes ces options.
+Les demandeurs d'emploi disposent de plusieurs options à Tours : le CPF (droits accumulés lors de la vie professionnelle), l'AIF (Aide Individuelle à la Formation) de France Travail, le Programme Régional de Formation de la Région Centre-Val de Loire (formations qualifiantes gratuites), et les aides à la mobilité pour les formations hors de Tours. [Notre article sur les aides Pôle Emploi pour la formation beauté](/blog/aide-pole-emploi-formation-beaute) détaille toutes ces options.
 
 **Le marché de l'esthétique est-il porteur à Tours en 2026 ?**
 Oui. Tours est une ville en légère croissance démographique, avec une population étudiante importante et une économie de services active. La présence du tourisme dans la région Val de Loire ajoute des débouchés spécifiques en spas touristiques et en hôtels de charme. Les taux d'emploi après un CAP esthétique sont conformes à la moyenne nationale (supérieurs à 70 % à 6 mois).
@@ -197,7 +197,7 @@ Oui. Orléans dispose de lycées professionnels et d'organismes de formation pri
 Oui, c'est possible. Un apprenti basé à Tours peut trouver un maître d'apprentissage dans un hôtel ou un spa situé à Amboise (25 km), Blois (55 km) ou dans d'autres communes de la vallée de la Loire. Les déplacements sont à prendre en compte, mais certains établissements proposent un hébergement ou une participation aux frais de transport.
 
 **Peut-on ouvrir un salon de beauté à Tours avec juste un CAP esthétique ?**
-Non, l'ouverture d'un salon ou d'un institut de beauté au public requiert généralement le BP esthétique (ou une qualification équivalente). Le CAP seul ne suffit pas légalement. Des exceptions existent dans des cas précis (expérience professionnelle attestée de plusieurs années, diplômes équivalents étrangers reconnus), mais le BP reste la voie la plus directe et juridiquement sécurisée. [Notre guide sur l'ouverture d'un institut](https://formation-sante-bienetre.fr/blog/ouvrir-institut-beaute-formation) détaille les conditions.
+Non, l'ouverture d'un salon ou d'un institut de beauté au public requiert généralement le BP esthétique (ou une qualification équivalente). Le CAP seul ne suffit pas légalement. Des exceptions existent dans des cas précis (expérience professionnelle attestée de plusieurs années, diplômes équivalents étrangers reconnus), mais le BP reste la voie la plus directe et juridiquement sécurisée. [Notre guide sur l'ouverture d'un institut](/blog/ouvrir-institut-beaute-formation) détaille les conditions.
 
 **Quels sont les avantages de faire une formation esthétique à Tours plutôt qu'à Paris ?**
 Tours offre plusieurs avantages par rapport à Paris : des coûts de vie et de formation inférieurs, un marché local plus accessible pour les stages et l'alternance, et une qualité de vie souvent perçue comme meilleure. La liaison TGV Tours-Paris en 1 heure permet aussi de travailler à Paris depuis Tours si nécessaire. L'offre de formation à Tours est moins pléthorique qu'à Paris, mais suffisamment diversifiée pour couvrir les besoins.
@@ -217,4 +217,4 @@ Tours et la région Centre-Val de Loire offrent un contexte de formation et d'em
 
 Choisissez votre diplôme selon votre projet : le CAP pour entrer dans le métier, le BP pour évoluer vers l'encadrement ou les établissements de prestige. Pensez dès la formation aux langues étrangères (anglais surtout) qui seront un atout différenciant dans les établissements touristiques de la région.
 
-[Explorez toutes les formations esthétique disponibles dans le Val de Loire](https://formation-sante-bienetre.fr/formations) et commencez votre parcours vers une carrière dans la beauté au pays des châteaux.
+[Explorez toutes les formations esthétique disponibles dans le Val de Loire](/formations) et commencez votre parcours vers une carrière dans la beauté au pays des châteaux.

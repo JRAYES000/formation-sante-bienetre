@@ -132,6 +132,8 @@ Privilégiez les organismes certifiés **Qualiopi** proposant une certification 
 **Le spa praticien peut-il pratiquer des massages thérapeutiques ?**
 Non. En France, les massages à visée thérapeutique ou de rééducation sont strictement réservés aux professionnels de santé (kinésithérapeutes, médecins). Le spa praticien intervient exclusivement dans le champ du bien-être et de la détente, sans diagnostic ni promesse d'effet médical.
 
+Vous pouvez comparer dès maintenant les [formations menant au métier de spa praticien](/formations/massage-bien-etre), consulter la [fiche métier correspondante](/metier/massage-bien-etre) pour les missions et débouchés détaillés, ou explorer notre [guide financement CPF](/financement-cpf) si vous hésitez sur la prise en charge.
+
 ## Conclusion
 
 Devenir spa praticien est un parcours accessible et porteur, à condition de choisir une **formation certifiante sérieuse** (RS, organisme Qualiopi), de respecter le cadre non médical et de se préparer aux spécificités du secteur (horaires décalés, exigences physiques, protocoles stricts). Le CPF constitue un levier concret pour financer sa formation, particulièrement pour les personnes en reconversion.
