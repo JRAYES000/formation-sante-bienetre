@@ -70,7 +70,7 @@ Pour tout comprendre sur l'utilisation du CPF dans le secteur beauté, lisez not
 
 ### Le reste à charge CPF en 2026
 
-Depuis mai 2024, un reste à charge de 100 euros est appliqué sur les formations CPF pour les salariés du secteur privé. Ce montant est supprimé si l'employeur co-finance la formation ou si vous êtes demandeur d'emploi. Pour connaître les solutions pour éviter ce reste à charge, consultez notre article [reste à charge CPF beauté : solutions](/blog/reste-a-charge-cpf-beaute-solutions).
+Depuis avril 2026, une participation forfaitaire de 150 euros est appliquée sur les formations CPF pour les salariés du secteur privé (100 euros entre mai 2024 et avril 2026). Ce montant est supprimé si l'employeur co-finance la formation ou si vous êtes demandeur d'emploi. Pour connaître les solutions pour éviter ce reste à charge, consultez notre article [reste à charge CPF beauté : solutions](/blog/reste-a-charge-cpf-beaute-solutions).
 
 ### L'OPCO et la prise en charge employeur
 

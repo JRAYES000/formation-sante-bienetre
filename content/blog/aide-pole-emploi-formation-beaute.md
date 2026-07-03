@@ -5,7 +5,7 @@ metaDescription: "AIF, financement direct, CPF et France Travail : comment finan
 excerpt: "Vous etes inscrit à France Travail et vous voulez vous former en esthétique ou massage bien-être ? Plusieurs dispositifs peuvent couvrir tout ou partie du cout. Voici comment les activer concrètement."
 image: https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
-updatedAt: 2026-06-15
+updatedAt: 2026-07-03
 ---
 
 France Travail (ex Pôle Emploi) dispose de plusieurs outils pour financer une formation dans la beauté et le bien-être. En tant que demandeur d'emploi, vous avez accès à des dispositifs que les salariés n'ont pas. Voici tous les détails pour comprendre lesquels s'appliquent à votre situation et comment les activer.
@@ -37,7 +37,7 @@ Ces formations sont achetées par lots régionaux par France Travail pour répon
 
 Contrairement à une idée reçue, les demandeurs d'emploi continuent d'accumuler des droits CPF, même sans travailler. L'alimentation est de 500 euros par an pour les demandeurs d'emploi, dans la limite du plafond global (5 000 euros).
 
-Avantage supplémentaire pour les demandeurs d'emploi : **ils sont exonérés du reste à charge de 100 euros** qui s'applique aux salariés depuis 2023. Vous pouvez donc mobiliser votre CPF sans aucun reste à charge personnel.
+Avantage supplémentaire pour les demandeurs d'emploi : **ils sont exonérés de la participation forfaitaire de 150 euros** qui s'applique aux salariés depuis le 6 avril 2026 (100 euros auparavant, entre mai 2024 et avril 2026). Vous pouvez donc mobiliser votre CPF sans aucun reste à charge personnel.
 
 Pour combiner CPF et AIF, consultez notre guide complet sur le [financement CPF des formations beauté](/financement-cpf).
 
@@ -76,7 +76,7 @@ France Travail est un allié précieux pour financer votre reconversion dans la 
 ## FAQ - France Travail et formation beauté
 
 **Peut-on utiliser son CPF tout en étant demandeur d'emploi ?**
-Oui. Le CPF est personnel et peut être mobilisé quel que soit le statut (salarié, demandeur d'emploi, indépendant). Les demandeurs d'emploi sont de plus exonérés du reste à charge de 100 euros.
+Oui. Le CPF est personnel et peut être mobilisé quel que soit le statut (salarié, demandeur d'emploi, indépendant). Les demandeurs d'emploi sont de plus exonérés de la participation forfaitaire de 150 euros.
 
 **France Travail peut-il refuser de financer une formation beauté ?**
 Oui. L'AIF et les financements directs sont accordés au cas par cas. Si votre conseiller estime que la formation ne correspond pas à votre projet professionnel ou aux besoins du marché local, il peut refuser. Vous pouvez alors faire une demande auprès d'un autre dispositif (CPF seul, Conseil Régional) ou argumenter pour revoir la décision.

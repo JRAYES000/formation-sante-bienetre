@@ -79,7 +79,7 @@ Le Compte Personnel de Formation (CPF) permet de financer tout ou partie d'une f
 2. Recherchez la formation ou la certification visée.
 3. Vérifiez que l'organisme est certifié **Qualiopi** — c'est une condition obligatoire depuis 2022 pour tout organisme financé par des fonds publics ou mutualisés.
 
-Depuis la réforme de 2023, un reste à charge de 100 € s'applique sauf si votre employeur abonde le CPF ou si vous êtes demandeur d'emploi pris en charge par France Travail.
+Depuis avril 2026, une participation forfaitaire de 150 € s'applique (100 € entre mai 2024 et avril 2026), sauf si votre employeur abonde le CPF ou si vous êtes demandeur d'emploi pris en charge par France Travail.
 
 Les formations maquillage éligibles CPF les plus courantes incluent des préparations au CAP Esthétique, des titres RNCP de technicien en maquillage et certaines certifications RS en dermopigmentation.
 

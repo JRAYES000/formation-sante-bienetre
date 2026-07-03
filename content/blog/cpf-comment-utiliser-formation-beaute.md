@@ -5,7 +5,7 @@ metaDescription: "Comment utiliser votre CPF pour une formation beauté en 2026 
 excerpt: "Le CPF peut financer votre formation en esthétique, massage, coiffure ou manucure. Voici le guide pas à pas pour l'utiliser correctement en 2026, éviter les arnaques et maximiser vos droits."
 image: https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
-updatedAt: 2026-06-15
+updatedAt: 2026-07-03
 ---
 
 Votre CPF peut financer une formation en esthétique, massage bien-être, coiffure ou manucure. Pour que cela fonctionne, il faut connaitre les règles exactes, les étapes concrètes et les erreurs à éviter. Ce guide vous explique tout, de la vérification de votre solde jusqu'à la signature de votre inscription.
@@ -20,7 +20,7 @@ En 2026, les règles d'alimentation sont les suivantes :
 - **Salarié(e) peu qualifié(e) (sans diplôme de niveau 3 minimum)** : 800 euros par an, plafonné à 8 000 euros.
 - **Demandeur(euse) d'emploi** : alimentation continue, meme sans travailler (500 euros par an, plafonné à 5 000 euros).
 
-Depuis mai 2023, un reste à charge de 100 euros minimum s'applique pour les salariés qui mobilisent leur CPF sans accord de leur employeur. Les demandeurs d'emploi et les salariés dont l'employeur co-finance la formation sont exonérés de ce reste à charge.
+Depuis le 6 avril 2026, une participation forfaitaire de 150 euros minimum s'applique pour les salariés qui mobilisent leur CPF sans accord de leur employeur (100 euros entre mai 2024 et avril 2026)r. Les demandeurs d'emploi et les salariés dont l'employeur co-finance la formation sont exonérés de ce reste à charge.
 
 ## Les formations beauté finançables avec le CPF
 
