@@ -1476,6 +1476,18 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
     ...(a.image ? { image: a.image } : {}),
     author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
   };
+  const articleJsonLd: object[] = [enrichedLd];
+  if (a.faq && a.faq.length) {
+    articleJsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: a.faq.map((x) => ({
+        "@type": "Question",
+        name: x.q,
+        acceptedAnswer: { "@type": "Answer", text: x.a },
+      })),
+    });
+  }
   const body = `<h1>${esc(a.title)}</h1>
 ${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px"><time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""}</p>` : ""}
 <p class="lead" style="font-size:1rem;border-left:3px solid var(--p);padding-left:14px;color:var(--body)">${esc(a.metaDescription)}</p>
@@ -1503,7 +1515,7 @@ ${relatedHtml}`;
       ogImage: a.image,
       publishedAt: a.publishedAt,
       updatedAt: a.updatedAt,
-      jsonLd: [enrichedLd],
+      jsonLd: articleJsonLd,
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog", url: `${base}/blog` }, { name: a.title }],
       body,
     })

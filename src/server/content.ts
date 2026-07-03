@@ -55,6 +55,75 @@ export interface Article {
   publishedAt?: string;
   updatedAt?: string;
   html?: string;
+  faq?: { q: string; a: string }[];
+}
+
+// Extrait la section FAQ / Questions frequentes d'un article Markdown et la
+// transforme en paires { q, a } exploitables pour un schema FAQPage.
+// Supporte deux formats rencontres dans les 203 articles du blog :
+//   - question en gras sur sa propre ligne (**Question ?**)
+//   - question en sous-titre H3, numerote ou non (### 1. Question ?)
+function stripMdInline(s: string): string {
+  return s
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\*(.+?)\*/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function extractFaqFromMarkdown(raw: string): { q: string; a: string }[] {
+  const lines = raw.split(/\r?\n/);
+  let start = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^##\s+(FAQ|Questions?\s+fr[éeE]quentes?)\b/i.test(lines[i].trim())) {
+      start = i + 1;
+      break;
+    }
+  }
+  if (start === -1) return [];
+  let end = lines.length;
+  for (let i = start; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^##\s+/.test(t) && !/^###/.test(t)) {
+      end = i;
+      break;
+    }
+  }
+  const section = lines.slice(start, end);
+
+  const faq: { q: string; a: string }[] = [];
+  let curQ: string | null = null;
+  let curA: string[] = [];
+  const flush = () => {
+    if (curQ) {
+      const a = stripMdInline(curA.join(" ")).trim();
+      const q = stripMdInline(curQ).trim();
+      if (a && q) faq.push({ q, a });
+    }
+    curQ = null;
+    curA = [];
+  };
+  for (const rawLine of section) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    const h3 = line.match(/^###\s*(?:\d+[.)]\s*)?(.+)$/);
+    const boldOnly = line.match(/^\*\*(.+?)\*\*\s*$/);
+    if (h3) {
+      flush();
+      curQ = h3[1];
+      continue;
+    }
+    if (boldOnly) {
+      flush();
+      curQ = boldOnly[1];
+      continue;
+    }
+    if (curQ) curA.push(line);
+  }
+  flush();
+  return faq;
 }
 
 // Parse minimal d'un front-matter YAML simple (clé: "valeur").
@@ -75,6 +144,7 @@ export function getArticle(slug: string): Article | null {
   const { meta, body } = parseFrontmatter(readFileSync(f, "utf8"));
   // Fallback : date de modification du fichier si pas de date dans le front-matter
   const fileMtime = statSync(f).mtime.toISOString().split("T")[0];
+  const faq = extractFaqFromMarkdown(body);
   return {
     slug: meta.slug || slug,
     title: meta.title || slug,
@@ -84,6 +154,7 @@ export function getArticle(slug: string): Article | null {
     publishedAt: meta.publishedAt || fileMtime,
     updatedAt: meta.updatedAt || undefined,
     html: (marked.parse(body, { async: false }) as string).replace(/^<h1[^>]*>[\s\S]*?<\/h1>\s*/i, ""),
+    faq: faq.length ? faq : undefined,
   };
 }
 
