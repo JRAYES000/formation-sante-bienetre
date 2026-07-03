@@ -1,11 +1,12 @@
 ---
 slug: formation-responsable-spa-manager
 title: "Formation spa manager en 2026 : certifications, débouchés en hôtellerie de luxe et CPF"
+seoTitle: "Formation spa manager en 2026"
 metaDescription: "Devenez spa manager en 2026 : certifications disponibles, salaires en hôtellerie 4 et 5 étoiles, croisières et thalasso, et comment financer votre formation via CPF."
 excerpt: "Le spa manager est le professionnel qui pilote un espace de soins dans un hôtel, un resort ou un centre de thalassothérapie. Un métier en pleine croissance en 2026, avec des formations certifiantes accessibles via CPF."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation spa manager en 2026 : certifications, débouchés en hôtellerie de luxe et CPF
 
 Le spa manager est un métier à forte valeur ajoutée dans l'hôtellerie haut de gamme. Il dirige un espace bien-être, manage une équipe de praticiens, gère les plannings, les stocks, les budgets et la qualité des soins. En 2026, la demande explose dans les hôtels 4 et 5 étoiles, les croisières de luxe et les centres de thalassothérapie. Des formations spécifiques existent, plusieurs sont finançables via CPF, et les salaires sont bien au-dessus de la moyenne du secteur beauté. Voici tout ce qu'il faut savoir.

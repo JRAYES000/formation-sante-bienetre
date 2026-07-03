@@ -1,13 +1,13 @@
 ---
 slug: reconversion-coiffure-temoignages
 title: "Ils ont tout quitté pour la coiffure : 3 reconversions inspirantes"
+seoTitle: "Ils ont tout quitté pour la coiffure"
 metaDescription: "3 témoignages de reconversions réussies dans la coiffure après 30 ans. CAP coiffure adulte, financement CPF, réalités du terrain. Parcours inspirants."
 excerpt: "Comptable, ingénieur, assistante de direction... Certains ont tout quitté pour devenir coiffeur. Voici trois parcours qui montrent que la reconversion est possible à tout âge."
 image: https://images.unsplash.com/photo-1582095133179-bfd08e2fb6b8?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Se reconvertir dans la coiffure après 30, 40 ou même 50 ans est possible. Pas facile, pas sans sacrifices, mais possible. Ces trois profils ont vécu la transition de l'intérieur. Leurs parcours permettent de comprendre ce que ca implique vraiment : les démarches, les doutes, les surprises, et ce qu'ils feraient différemment s'ils recommençaient.
 
 ## Profil 1 : Marie, 38 ans, ancienne comptable

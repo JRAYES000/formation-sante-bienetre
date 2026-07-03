@@ -1,13 +1,13 @@
 ---
 slug: formation-bordeaux-esthetique
 title: "Formation esthétique à Bordeaux : ce que les écoles ne te disent pas"
+seoTitle: "Formation esthétique à Bordeaux"
 metaDescription: "Formations esthétique CPF à Bordeaux : organismes certifiés Qualiopi, marché local, salaires en Nouvelle-Aquitaine. Guide honnête 2026."
 excerpt: "Bordeaux attire de plus en plus de professionnels de la beauté. Voici ce que tu dois vraiment savoir avant de choisir ta formation esthétique dans cette ville."
 image: https://images.pexels.com/photos/34575336/pexels-photo-34575336.jpeg?auto=compress&cs=tinysrgb&w=800
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Bordeaux est devenue en 10 ans l'une des villes françaises les plus attractives pour les professionnels de la beauté. La ville s'est enrichie, sa population a rajeuni, et la demande en soins esthétiques et bien-être a suivi. Pour les candidats à une reconversion dans ce secteur, Bordeaux offre un marché porteur et une offre de formation sérieuse, à condition de savoir où chercher.
 
 ## Pourquoi Bordeaux est un bon marché pour la beauté

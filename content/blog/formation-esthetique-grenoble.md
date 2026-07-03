@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-grenoble
 title: "Formation esthétique à Grenoble et en Isère en 2026 : guide complet"
+seoTitle: "Formation esthétique à Grenoble et en Isère en 2026"
 metaDescription: "Guide complet des formations esthétique à Grenoble et en Isère : CAP, BP, BTS, alternance, CPF. Marché local, spas de montagne, débouchés et financements en Auvergne-Rhône-Alpes."
 excerpt: "Grenoble, capitale des Alpes, offre un marché esthétique atypique entre ville universitaire et destination montagnarde. Découvrez les formations disponibles, l'alternance et les débouchés en Isère en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Grenoble et en Isère en 2026 : guide complet
 
 Vous envisagez une formation esthétique à Grenoble ? La réponse directe : le marché isérois est porteur et la diversité des débouchés est une vraie force de la région. Grenoble, quatrième ville universitaire de France avec plus de 60 000 étudiants et une forte présence de l'industrie technologique, génère une demande soutenue en soins esthétiques dans un contexte économique plus aisé que la moyenne nationale. Mais c'est surtout l'articulation unique entre ville et montagne qui distingue Grenoble : les stations alpines de l'Isère et des départements voisins (Chartreuse, Vercors, Belledonne, Taillefer, Chamrousse) emploient des esthéticiennes toute l'année et surtout en saison hivernale et estivale. Ce guide complet vous détaille les formations disponibles, les modes de financement et les perspectives professionnelles concrètes.

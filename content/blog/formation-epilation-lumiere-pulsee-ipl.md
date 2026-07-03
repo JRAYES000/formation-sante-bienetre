@@ -1,11 +1,12 @@
 ---
 slug: formation-epilation-lumiere-pulsee-ipl
 title: "Formation épilation lumière pulsée IPL en 2026 : réglementation, certifications et débouchés"
+seoTitle: "Formation épilation lumière pulsée IPL en 2026"
 metaDescription: "Formation IPL lumière pulsée esthétique 2026 : distinction laser médical vs IPL, phototypes Fitzpatrick, certifications, assurance spécifique et débouchés professionnels."
 excerpt: "Formez-vous à l'épilation lumière pulsée IPL en 2026 : réglementation, phototypes de Fitzpatrick, contre-indications, certifications éligibles CPF et débouchés en institut."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation épilation lumière pulsée IPL en 2026 : réglementation, certifications et débouchés
 
 L'épilation à la lumière pulsée (IPL) est l'une des techniques d'épilation permanente accessible aux esthéticien(ne)s professionnels, à la différence du laser médical réservé aux médecins. Oui, des formations en IPL esthétique sont disponibles et finançables par le CPF en 2026. Comprendre la distinction entre laser médical et IPL esthétique est le premier point de toute formation sérieuse : cette frontière légale détermine ce que vous pouvez légalement proposer dans votre institut. Ce guide vous présente la technologie, la réglementation, les phototypes de Fitzpatrick, les certifications et les débouchés de cette spécialité très demandée.

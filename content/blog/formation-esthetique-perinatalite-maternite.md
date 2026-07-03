@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-perinatalite-maternite
 title: "Formation esthétique périnatale en 2026 : soins adaptés à la grossesse et au post-partum"
+seoTitle: "Formation esthétique périnatale en 2026"
 metaDescription: "Guide complet sur la formation esthétique grossesse maternité en 2026 : soins adaptés, contre-indications par trimestre, certifications, débouchés maternités et spas."
 excerpt: "Les soins esthétiques adaptés à la grossesse et au post-partum constituent un marché en croissance. Voici comment se former, quelles certifications obtenir et où exercer en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique périnatale en 2026 : soins adaptés à la grossesse et au post-partum
 
 Les femmes enceintes et les jeunes mamans représentent une clientèle fidèle, souvent négligée par les instituts de beauté traditionnels. Les soins esthétiques adaptés à la grossesse (massage prénatal, soins visage doux, réflexologie adaptée) et au post-partum (récupération abdominale, soins cicatrice de césarienne, massage bébé) forment une spécialité en plein développement. Des certifications spécifiques permettent d'exercer en maternité, en spa familial ou en libéral. Ce guide vous donne toutes les clés en 2026.

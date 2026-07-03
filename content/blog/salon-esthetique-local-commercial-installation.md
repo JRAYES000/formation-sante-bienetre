@@ -1,11 +1,12 @@
 ---
 slug: salon-esthetique-local-commercial-installation
 title: "Ouvrir un cabinet ou salon esthétique : local commercial, normes et installation en 2026"
+seoTitle: "Ouvrir un cabinet ou salon esthétique"
 metaDescription: "Ouvrir un cabinet esthétique en 2026 : choisir le bon local, normes ERP, accessibilité PMR, surface minimale, matériel indispensable et budget de démarrage. Guide complet pour esthéticiennes indépendantes."
 excerpt: "Ouvrir un salon esthétique avec un local commercial demande de respecter des normes précises (ERP, PMR, hygiène) et un budget de démarrage conséquent. Ce guide détaille tout pour bien s'installer en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Ouvrir un cabinet ou salon esthétique : local commercial, normes et installation en 2026
 
 Ouvrir un cabinet ou salon esthétique avec un local implique de respecter des normes strictes en matière d'hygiène, d'accessibilité et de sécurité. Le choix du type de local (commercial, salle louée à l'heure, cabinet partagé, domicile) détermine votre budget de démarrage et vos obligations réglementaires. Ce guide vous aide à faire les bons choix avant de vous engager.

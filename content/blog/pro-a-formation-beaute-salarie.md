@@ -1,11 +1,12 @@
 ---
 slug: pro-a-formation-beaute-salarie
 title: "Dispositif Pro-A pour les salariés du secteur beauté en 2026 : reconversion et montée en compétences"
+seoTitle: "Dispositif Pro-A pour les salariés du secteur beauté en 2026"
 metaDescription: "Pro-A formation beauté salarié en 2026 : conditions CDI infra-bac, accords de branche coiffure et esthétique, financement OPCO AKTO, formations éligibles et démarches. Guide complet."
 excerpt: "La Pro-A (Promotion ou Reconversion par l'Alternance) permet aux salariés en CDI avec un niveau infra-bac de se former en alternance tout en restant rémunérés. Un dispositif clé pour les salariés de la beauté."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Dispositif Pro-A pour les salariés du secteur beauté en 2026 : reconversion et montée en compétences
 
 La Pro-A (Promotion ou Reconversion par l'Alternance) est un dispositif qui permet aux salariés en CDI d'accéder à une formation qualifiante en alternance, sans perdre leur emploi ni leur rémunération. Dans le secteur beauté (coiffure, esthétique, parfumerie), la Pro-A est accessible grâce aux accords de branche signés et financée par l'OPCO AKTO. Dès le premier paragraphe : si vous êtes salarié d'un salon de coiffure ou d'esthétique en CDI, avec un niveau de diplôme inférieur au baccalauréat, la Pro-A peut financer votre montée en compétences ou votre reconversion vers un diplôme supérieur.

@@ -1,11 +1,12 @@
 ---
 slug: formation-chromotherapie-couleur-bien-etre
 title: "Formation chromothérapie et couleur en bien-être en 2026 : certifications et applications"
+seoTitle: "Formation chromothérapie et couleur en bien-être en 2026"
 metaDescription: "Formation chromothérapie bien-être en 2026 : couleurs et lumière en spa, applications pratiques, certifications disponibles, cadre légal et distinction avec la luminothérapie médicale."
 excerpt: "La chromothérapie utilise les couleurs et la lumière pour favoriser la détente et le bien-être. Découvrez les formations disponibles en 2026, les certifications, le cadre légal et les applications en spa ou cabinet bien-être."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation chromothérapie et couleur en bien-être en 2026 : certifications et applications
 
 La chromothérapie - utilisation des couleurs et de la lumière dans une démarche de bien-être - est une pratique qui suscite un intérêt croissant dans les spas, les cabinets de bien-être et les espaces de relaxation. En 2026, elle s'intègre dans de nombreuses offres holistiques, des douches sensorielles des spas de luxe aux cabines de relaxation. Mais qu'est-ce que la chromothérapie exactement ? Quelles formations existent ? Quel est son cadre légal ? Et comment la distinguer de la luminothérapie médicale ? Voici un guide complet.

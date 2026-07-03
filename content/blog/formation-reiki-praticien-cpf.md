@@ -1,11 +1,12 @@
 ---
 slug: formation-reiki-praticien-cpf
 title: "Formation Reiki praticien CPF en 2026 : niveaux, certifications et cadre légal en France"
+seoTitle: "Formation Reiki praticien CPF en 2026"
 metaDescription: "Formation Reiki CPF en 2026 : les 3 niveaux Reiki, certifications disponibles, cadre légal en France, débouchés cabinet et entreprise, précautions de communication."
 excerpt: "Le Reiki est une technique de bien-être basée sur le toucher énergétique japonais. Découvrez les niveaux de formation, les certifications éligibles au CPF, le cadre légal en France et les débouchés professionnels en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation Reiki praticien CPF en 2026 : niveaux, certifications et cadre légal en France
 
 Le Reiki est une technique de bien-être d'origine japonaise qui repose sur le toucher énergétique. En France, des certifications professionnelles existent pour les praticiens souhaitant exercer dans un cadre légal clair. Le CPF peut financer certaines de ces formations si elles sont adossées à une certification inscrite à France Compétences. Ce guide présente les niveaux Reiki, le cadre légal français, les certifications disponibles et les débouchés professionnels concrets en 2026.

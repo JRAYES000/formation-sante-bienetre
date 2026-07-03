@@ -1,11 +1,12 @@
 ---
 slug: reconversion-professeur-enseignant-beaute
 title: "Reconversion d'enseignant ou professeur vers la beauté et le bien-être en 2026"
+seoTitle: "Reconversion d'enseignant ou professeur vers la beauté et le"
 metaDescription: "Enseignant ou professeur en reconversion vers la beauté ? Découvrez comment valoriser vos compétences pédagogiques, financer votre formation et réussir votre transition vers l'esthétique, le massage ou la sophrologie."
 excerpt: "De la salle de classe au salon de beauté ou au cabinet de sophrologie : la reconversion des enseignants vers les métiers de la beauté et du bien-être est plus fréquente qu'on ne le croit. Voici comment la réussir en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Reconversion d'enseignant ou professeur vers la beauté et le bien-être en 2026
 
 Vous êtes enseignant, professeur des écoles ou formateur, et vous envisagez une reconversion vers la beauté, l'esthétique ou le bien-être ? Bonne nouvelle : vos compétences sont directement transférables. La pédagogie, la patience, l'écoute et le contact humain sont exactement ce que l'on attend d'une esthéticienne, d'une masseuse ou d'une sophrologue de qualité. En 2026, plusieurs dispositifs de financement spécifiques permettent aux enseignants de financer une formation sans débourser un euro de leur poche.

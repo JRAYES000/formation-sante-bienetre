@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-reconversion-rapide
 title: "Reconversion rapide en esthétique en 2026 : CAP accéléré, formations intensives et débouchés"
+seoTitle: "Reconversion rapide en esthétique en 2026"
 metaDescription: "Reconversion rapide en esthétique en 2026 : CAP candidat libre en 1 an, formations intensives courtes, financement France Travail et CPF, erreurs à éviter et profils types de reconversion réussie."
 excerpt: "Se reconvertir rapidement en esthétique est possible grâce au CAP candidat libre ou aux formations intensives. Voici un guide réaliste des délais, des coûts et des débouchés selon votre profil."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Reconversion rapide en esthétique en 2026 : CAP accéléré, formations intensives et débouchés
 
 Oui, une reconversion en esthétique peut se faire en moins de 12 mois. Le CAP Esthétique Cosmétique Parfumerie peut être préparé en candidat libre en une année scolaire, sans passer par une formation initiale longue. Des formations intensives courtes permettent aussi d'acquérir des compétences spécifiques rapidement. Ce guide vous donne les clés concrètes pour planifier votre reconversion en esthétique : délais réalistes, coûts, financements disponibles et erreurs à éviter.

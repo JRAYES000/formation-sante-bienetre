@@ -1,11 +1,12 @@
 ---
 slug: formation-naturopathie-cpf
 title: "Formation naturopathie CPF en 2026 : RNCP, durée, prix et débouchés réels"
+seoTitle: "Formation naturopathie CPF en 2026"
 metaDescription: "Formation naturopathie finançable CPF en 2026 : certifications RNCP disponibles, durée 1 à 3 ans, prix, revenus réels et différence avec diét et nutritionniste."
 excerpt: "Guide complet sur la formation naturopathie CPF 2026 : certifications RNCP, durée, coût, débouchés réels et différence avec la diététique et la nutrition."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation naturopathie CPF en 2026 : RNCP, durée, prix et débouchés réels
 
 La formation en naturopathie est partiellement finançable par le CPF en 2026, à condition qu'elle soit adossée à une certification RNCP ou RS enregistrée à France Compétences. Des parcours de 1 à 3 ans (400 à 1 500 heures) permettent de se former aux piliers de la naturopathie - alimentation, phytothérapie, hygiène de vie, techniques corporelles - et d'exercer en consultation libérale. Important à savoir : la naturopathie n'est pas une profession réglementée en France, il n'existe pas de titre protégé, et les revenus en début d'activité sont modestes.

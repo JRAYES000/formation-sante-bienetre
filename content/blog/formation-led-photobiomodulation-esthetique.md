@@ -1,11 +1,12 @@
 ---
 slug: formation-led-photobiomodulation-esthetique
 title: "Formation LED et photobiomodulation en esthétique en 2026 : anti-âge, acné et certifications"
+seoTitle: "Formation LED et photobiomodulation en esthétique en 2026"
 metaDescription: "Formation LED photobiomodulation esthétique 2026 : longueurs d'onde rouge, bleue, infrarouge, protocoles anti-âge et acné, certifications disponibles, financement CPF."
 excerpt: "Maîtrisez la thérapie LED et la photobiomodulation en esthétique en 2026 : longueurs d'onde, indications, certifications, financement CPF et intégration dans vos soins visage."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation LED et photobiomodulation en esthétique en 2026 : anti-âge, acné et certifications
 
 La thérapie LED (Light Emitting Diode) et la photobiomodulation sont parmi les technologies esthétiques les plus accessibles et les plus sûres disponibles en 2026. Oui, des formations en thérapie LED sont disponibles et finançables par le CPF, avec des programmes courts adaptés aux professionnels déjà en activité. La LED n'est pas un laser, ne chauffe pas les tissus et ne comporte pas de risques de brûlures : c'est la technologie esthétique instrumentale la plus facile à intégrer dans une pratique existante. Ce guide vous présente les longueurs d'onde et leurs effets, les protocoles de soins, les certifications disponibles et les débouchés professionnels.

@@ -1,11 +1,12 @@
 ---
 slug: formation-prothese-capillaire-perruques
 title: "Formation prothésiste capillaire et perruques en 2026 : cancer, alopécie et certifications"
+seoTitle: "Formation prothésiste capillaire et perruques en 2026"
 metaDescription: "Formation prothésiste capillaire 2026 : perruques médicales, cancer du sein, alopécie. Prise en charge Sécurité sociale jusqu'à 250 euros/an, certifications RNCP, débouchés."
 excerpt: "Devenez prothésiste capillaire en 2026 : formation perruques médicales, prise en charge Sécu, certifications disponibles, conventions hôpitaux et débouchés en forte croissance."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation prothésiste capillaire et perruques en 2026 : cancer, alopécie et certification
 
 La prothèse capillaire est un secteur en forte croissance, porté par l'augmentation des patients sous chimiothérapie, des personnes souffrant d'alopécie androgénétique sévère et d'une demande croissante pour des solutions esthétiques de qualité. Oui, des formations certifiantes en prothèse capillaire sont disponibles et finançables par le CPF en 2026. La prise en charge par la Sécurité sociale atteint jusqu'à 250 euros par an pour les prothèses capillaires médicales, un argument commercial fort pour les professionnels du secteur. Ce guide vous explique le marché, les formations, les certifications et les débouchés de cette spécialité humaniste et techniquement exigeante.

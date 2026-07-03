@@ -1,11 +1,13 @@
 ---
 slug: dossier-cpf-refuse-que-faire
 title: "Mon dossier CPF a été refusé : que faire ? Guide complet des recours 2026"
-metaDescription: "Dossier CPF refusé ? Découvrez les raisons les plus fréquentes, comment contester, les délais à respecter et les alternatives pour financer votre formation."
+seoTitle: "Dossier CPF refusé : causes et solutions concrètes"
+metaDescription: "Dossier CPF refusé ? Les motifs les plus fréquents et les solutions concrètes : recours, correction du dossier, financements alternatifs."
 excerpt: "Un refus CPF n'est pas une fin de parcours. Ce guide pratique détaille les raisons courantes, les recours possibles et toutes les alternatives pour financer votre formation malgré tout."
-image: /images/conseil-1.webp
+image: https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80&fit=crop
+publishedAt: "2026-06-16"
+updatedAt: "2026-07-03"
 ---
-
 ## Un refus CPF : ce n'est pas une fatalité
 
 Vous avez trouvé votre formation, vérifié son éligibilité CPF, rempli votre dossier sur Mon Compte Formation... et vous recevez un message de refus. C'est décourageant, mais ce n'est pas une fatalité. Dans la grande majorité des cas, un refus CPF est dû à un problème technique, un dossier incomplet ou une erreur corrigeable. Et même si le refus est définitif pour cette formation ou ce format, il existe des alternatives sérieuses.
@@ -50,7 +52,7 @@ Depuis 2022, tout organisme de formation qui souhaite bénéficier de fonds publ
 
 Comment vérifier : la certification Qualiopi d'un organisme est vérifiable sur le [site officiel des organismes de formation](https://www.data.gouv.fr/fr/datasets/certifications-qualiopi-1/).
 
-Solution : choisir un autre organisme certifié Qualiopi qui propose la même formation ou équivalent.
+Solution : choisir un autre organisme labellisé Qualiopi qui propose la même formation ou équivalent.
 
 ### Raison 3 : Votre solde CPF est insuffisant
 

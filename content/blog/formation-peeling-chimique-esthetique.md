@@ -1,11 +1,12 @@
 ---
 slug: formation-peeling-chimique-esthetique
 title: "Formation peeling chimique en esthétique 2026 : AHA, BHA, règles légales et certifications"
+seoTitle: "Formation peeling chimique en esthétique 2026"
 metaDescription: "Guide complet sur la formation peeling chimique en esthétique 2026 : peelings superficiels autorisés vs profonds réservés aux médecins, AHA/BHA/PHI, certifications disponibles et précautions."
 excerpt: "Les peelings chimiques en esthétique sont encadrés par une réglementation stricte en France. Découvrez quels peelings sont autorisés aux esthéticiennes (AHA, BHA, PHI à faibles concentrations), les certifications disponibles et les précautions indispensables."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation peeling chimique en esthétique 2026 : AHA, BHA, règles légales et certifications
 
 En 2026, les peelings chimiques en esthétique sont soumis à un cadre légal strict en France. Les esthéticiennes peuvent utiliser des peelings superficiels à base d'AHA, BHA et PHI à faibles concentrations, conformément à la réglementation cosmétique européenne. Les peelings moyens et profonds (acide trichloracétique, phénol) sont exclusivement réservés aux médecins. Comprendre cette frontière légale est la première chose à faire avant de se former aux peelings chimiques.

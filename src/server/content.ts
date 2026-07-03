@@ -49,6 +49,8 @@ export function listMetiers(): { slug: string; metier: string }[] {
 export interface Article {
   slug: string;
   title: string;
+  /** Balise <title> courte (≤ 65 car) ; le H1 reste `title`. Optionnel. */
+  seoTitle?: string;
   metaDescription: string;
   excerpt: string;
   image?: string;
@@ -78,6 +80,7 @@ export function getArticle(slug: string): Article | null {
   return {
     slug: meta.slug || slug,
     title: meta.title || slug,
+    seoTitle: meta.seoTitle || undefined,
     metaDescription: meta.metaDescription || "",
     excerpt: meta.excerpt || "",
     image: meta.image || undefined,
@@ -93,7 +96,7 @@ export function listArticles(): Article[] {
     .filter((f) => f.endsWith(".md"))
     .map((f) => {
       const a = getArticle(f.replace(/\.md$/, ""));
-      return a ? { slug: a.slug, title: a.title, metaDescription: a.metaDescription, excerpt: a.excerpt, image: a.image, publishedAt: a.publishedAt, updatedAt: a.updatedAt } : null;
+      return a ? { slug: a.slug, title: a.title, seoTitle: a.seoTitle, metaDescription: a.metaDescription, excerpt: a.excerpt, image: a.image, publishedAt: a.publishedAt, updatedAt: a.updatedAt } : null;
     })
     .filter(Boolean) as Article[];
 }

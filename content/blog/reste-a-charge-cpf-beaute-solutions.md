@@ -1,13 +1,13 @@
 ---
 slug: reste-a-charge-cpf-beaute-solutions
 title: "Reste à charge CPF formation beauté : toutes les solutions en 2026"
+seoTitle: "Reste à charge CPF formation beauté"
 metaDescription: "CPF insuffisant pour votre formation beauté ? Voici toutes les solutions pour couvrir le reste à charge : OPCO, Conseil Régional, France Travail, abondement employeur."
 excerpt: "Depuis 2023, un reste à charge de 100 euros minimum s'applique au CPF. Mais il existe plusieurs façons de le couvrir, voire de financer l'intégralité de votre formation beauté sans débourser un euro."
 image: https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Depuis la réforme du CPF de mai 2023, un reste à charge de 100 euros minimum s'applique à toute utilisation du Compte Personnel de Formation par un salarié agissant sans accord de son employeur. Et même sans cette réforme, le solde CPF ne couvre pas toujours intégralement le coût d'une formation beauté qui peut atteindre 5 000 à 8 000 euros. Voici toutes les solutions concrètes pour couvrir ce reste à charge, avec les conditions d'éligibilité et les démarches à effectuer.
 
 ## Comprendre le reste à charge en 2026

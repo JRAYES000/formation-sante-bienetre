@@ -1,11 +1,12 @@
 ---
 slug: formation-maquillage-mariage-cpf
 title: "Formation maquillage mariage CPF en 2026 : devenir maquilleuse spécialisée mariage"
+seoTitle: "Formation maquillage mariage CPF en 2026"
 metaDescription: "Formation maquillage mariage CPF : longue tenue, essais, coordination coiffeur, tarification freelance. Certifications éligibles CPF en 2026. Guide complet."
 excerpt: "Devenir maquilleuse spécialisée mariage : techniques longue tenue, essais, coordination coiffeur et photographe. Formations CPF disponibles et tarifs freelance en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation maquillage mariage CPF en 2026 : devenir maquilleuse spécialisée mariage
 
 Devenir maquilleuse spécialisée mariage implique de maîtriser des techniques spécifiques : maquillage longue tenue (8 à 14 heures), photogénie sous éclairage naturel et flash, gestion des essais et coordination avec le coiffeur. Des formations certifiantes éligibles au CPF existent en 2026 pour accéder à cette spécialité. Ce guide vous présente les techniques, les certifications disponibles et les réalités du marché freelance mariage.

@@ -1,11 +1,12 @@
 ---
 slug: formation-kinesiologie-bien-etre-cpf
 title: "Formation kinésiologie bien-être CPF en 2026 : muscle test, certifications et débouchés"
+seoTitle: "Formation kinésiologie bien-être CPF en 2026"
 metaDescription: "Formation kinésiologie bien-être CPF en 2026 : différence avec kinésithérapie, muscle test Touch for Health, certifications disponibles, financement CPF et débouchés en cabinet bien-être."
 excerpt: "Guide complet sur la formation kinésiologie bien-être CPF : distinction kinésithérapie vs kinésiologie, muscle test, certifications Touch for Health, financement CPF et débouchés professionnels en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation kinésiologie bien-être CPF en 2026 : muscle test, certifications et débouchés
 
 La formation en kinésiologie bien-être est accessible via le CPF en 2026, dans le cadre de certifications spécifiques. Cette approche, qui utilise le "muscle test" comme outil de dialogue avec le corps, est à distinguer absolument de la kinésithérapie, profession de santé réglementée qui nécessite 5 ans d'études. La kinésiologie bien-être (ou kinésiologie holistique) est une pratique non médicale, accessible aux praticiens non soignants, qui s'inscrit dans le champ du bien-être et de l'accompagnement personnel. Voici le guide complet pour comprendre, se former et exercer en 2026.

@@ -1,11 +1,12 @@
 ---
 slug: formation-cryotherapie-esthetique-cpf
 title: "Formation cryothérapie esthétique en 2026 : cryolipolyse, certifications et CPF"
+seoTitle: "Formation cryothérapie esthétique en 2026"
 metaDescription: "Formation cryothérapie esthétique 2026 : cryolipolyse, cryothérapie visage et corps, réglementation, CPF éligible, tarifs et débouchés. Tout ce qu'il faut savoir."
 excerpt: "La cryothérapie esthétique explose dans les instituts en 2026. Découvrez les formations disponibles, la réglementation, le financement CPF et les débouchés de cette technique innovante."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 ## La cryothérapie esthétique : une technique en plein essor
 
 Le froid au service de la beauté : ce n'est plus une promesse futuriste mais une réalité dans de nombreux instituts français en 2026. La cryothérapie esthétique regroupe plusieurs techniques utilisant des températures très basses pour agir sur le corps et le visage - cryolipolyse pour cibler les graisses, cryothérapie locale pour les soins du visage, cryothérapie corps entier pour la récupération et le bien-être.

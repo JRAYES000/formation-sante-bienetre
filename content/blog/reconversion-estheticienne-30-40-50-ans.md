@@ -1,13 +1,13 @@
 ---
 slug: reconversion-estheticienne-30-40-50-ans
 title: "Se reconvertir en esthéticienne à 30, 40 ou 50 ans : guide complet"
-metaDescription: "Reconversion en esthéticienne à 30, 40 ou 50 ans : formations, financement CPF, débouchés réels et conseils concrets. Tout ce qu'il faut savoir avant de se lancer."
+seoTitle: "Reconversion esthéticienne à 30, 40 ou 50 ans : le guide"
+metaDescription: "Devenir esthéticienne en reconversion à 30, 40 ou 50 ans : formations adaptées aux adultes, financement CPF, étapes concrètes et témoignages."
 excerpt: "Se reconvertir dans l'esthétique après 30 ans, c'est tout à fait possible. Chaque décennie a ses atouts, ses obstacles et ses solutions de financement. Voici un regard honnête et concret sur ce que ca implique vraiment."
 image: https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
-updatedAt: 2026-06-15
+updatedAt: "2026-07-03"
 ---
-
 Chaque semaine, des centaines de femmes et d'hommes de 30, 40 ou 50 ans entament une reconversion vers les métiers de l'esthétique. Certains fuient une carrière épuisante ou sans sens. D'autres ont toujours eu cette vocation, mise en veille au fil des priorités. D'autres encore cherchent un métier qu'on peut exercer à son propre compte, avec une vraie liberté. Ce que tous ces profils ont en commun : l'âge n'est pas l'obstacle qu'on imagine.
 
 Ce guide vous donne les réponses concrètes selon votre décennie de vie, avec les dispositifs de financement, les formations adaptées et les stratégies qui marchent vraiment.

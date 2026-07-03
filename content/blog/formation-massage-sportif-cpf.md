@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-sportif-cpf
 title: "Formation massage sportif CPF en 2026 : récupération, prévention et débouchés"
+seoTitle: "Formation massage sportif CPF en 2026"
 metaDescription: "Formation massage sportif CPF en 2026 : certifications disponibles, techniques de récupération et d'échauffement, différence avec la kinésithérapie, débouchés clubs sportifs et libéral."
 excerpt: "Le massage sportif est une niche portée par l'essor du sport santé et des centres de récupération. Découvrez les formations certifiantes éligibles au CPF, les techniques enseignées et les débouchés concrets en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage sportif CPF en 2026 : récupération, prévention et débouchés
 
 Le massage sportif est une technique de bien-être distinct de la kinésithérapie : il n'est pas un acte médical et ne vise pas à traiter des pathologies. Il intervient en amont (préparation musculaire) et en aval (récupération) de l'effort physique pour optimiser la performance et réduire le risque de blessure. Des certifications professionnelles éligibles au CPF existent en 2026 pour les praticiens en [massage bien-être](/metier/massage-bien-etre) qui souhaitent se spécialiser sur ce créneau porteur. Ce guide fait le point sur les techniques, les formations et les débouchés.

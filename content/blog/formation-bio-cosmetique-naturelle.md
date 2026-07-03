@@ -1,11 +1,12 @@
 ---
 slug: formation-bio-cosmetique-naturelle
 title: "Formation cosmétique naturelle et bio CPF en 2026 : créer ses soins, vendre et se certifier"
+seoTitle: "Formation cosmétique naturelle et bio CPF en 2026"
 metaDescription: "Formations en cosmétique naturelle et bio finançables CPF en 2026 : formulation de soins, certification COSMOS, règlementation REACH, débouchés créatrice de cosmétiques."
 excerpt: "Créer ses propres cosmétiques naturels est un métier en plein essor en 2026. Des formations certifiantes existent, certaines finançables CPF, pour apprendre la formulation, la réglementation et la vente de cosmétiques bio."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation cosmétique naturelle et bio CPF en 2026 : créer ses soins, vendre et se certifier
 
 La cosmétique naturelle et bio est l'un des secteurs les plus dynamiques de l'industrie beauté en 2026. Le marché français des cosmétiques naturels a dépassé 2,5 milliards d'euros et croît de 10% par an. Des formations spécialisées permettent d'apprendre la formulation, de comprendre la réglementation et de commercialiser ses créations. Plusieurs sont finançables via CPF. Voici le guide complet pour se former et se lancer dans la cosmétique naturelle professionnelle.

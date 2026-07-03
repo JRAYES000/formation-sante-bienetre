@@ -1,11 +1,12 @@
 ---
 slug: renouveler-solde-cpf-vide
 title: "Mon CPF est vide : comment financer sa formation beauté en 2026 sans solde CPF"
+seoTitle: "Mon CPF est vide : comment financer sa formation beauté en"
 metaDescription: "Votre CPF est épuisé et vous voulez vous former dans la beauté ? Découvrez toutes les alternatives en 2026 : AIF France Travail, OPCO, PRO-A, plan de formation employeur et co-investissement."
 excerpt: "CPF vide ne veut pas dire formation impossible. En 2026, de nombreux dispositifs prennent le relais pour financer votre formation beauté ou bien-être sans attendre que votre solde se reconstitue."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Mon CPF est vide : comment financer sa formation beauté en 2026 sans solde CPF
 
 Votre CPF est à zéro et vous souhaitez vous former dans le secteur de la beauté ou du bien-être ? Bonne nouvelle : il existe en 2026 au moins six alternatives concrètes pour financer votre projet sans toucher à votre solde CPF. L'AIF de France Travail, les OPCO, la PRO-A, le plan de formation de votre employeur et le co-investissement peuvent prendre le relais, souvent avec des montants bien supérieurs au plafond CPF standard. Voici tout ce que vous devez savoir.

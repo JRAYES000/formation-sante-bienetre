@@ -1,11 +1,12 @@
 ---
 slug: formation-nutrition-beaute-holistique
 title: "Formation nutrition et beauté holistique en 2026 : micronutrition, peau et CPF"
+seoTitle: "Formation nutrition et beauté holistique en 2026"
 metaDescription: "Guide complet sur la formation nutrition beauté holistique en 2026 : micronutrition, peau, cheveux, certifications, distinctions avec la diététique médicale et CPF."
 excerpt: "La micronutrition appliquée à la beauté (peau, cheveux, ongles) s'apprend via des certifications bien-être accessibles CPF. Voici ce qu'il faut savoir en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation nutrition et beauté holistique en 2026 : micronutrition, peau et CPF
 
 La peau, les cheveux et les ongles reflètent directement la qualité de notre alimentation. Les carences en zinc fragilisent les ongles, la carence en oméga-3 assèche la peau, le manque de fer accélère la chute des cheveux. En 2026, des formations en micronutrition appliquée à la beauté permettent d'acquérir ces compétences et de les proposer en cabinet, en spa ou en institut. Ce guide vous explique ce que couvrent ces formations, comment les distinguer de la diététique médicale réglementée, et comment les financer via le CPF.

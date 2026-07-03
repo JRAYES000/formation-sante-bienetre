@@ -4,8 +4,8 @@ title: "Formation esthétique à Clermont-Ferrand et en Auvergne en 2026"
 metaDescription: "Guide complet des formations esthétique à Clermont-Ferrand et en Auvergne : CAP, BP, alternance, CPF. Thermes de Vichy, marché local, débouchés et financements en 2026."
 excerpt: "Clermont-Ferrand et l'Auvergne offrent un marché esthétique enrichi par la tradition thermale de Vichy et Chamalières. Guide complet des formations CPF, alternances et débouchés dans la région en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Clermont-Ferrand et en Auvergne en 2026
 
 Vous souhaitez vous former à l'esthétique à Clermont-Ferrand ? La capitale auvergnate est une ville moins connue des circuits de la beauté que Lyon ou Paris, mais elle offre un marché local actif et surtout une particularité régionale précieuse : la proximité de Vichy, station thermale de renommée internationale, et de Chamalières, commune thermale limitrophe de Clermont. Ces ressources thermales constituent un débouché professionnel original pour les esthéticiennes qualifiées d'Auvergne. Ce guide vous présente les formations disponibles, les voies d'alternance, les financements CPF et les perspectives d'emploi concrètes dans la région en 2026.

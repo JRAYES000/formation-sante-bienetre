@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-caen-normandie
 title: "Formation esthétique à Caen et en Normandie en 2026 : CAP, BP et alternance"
+seoTitle: "Formation esthétique à Caen et en Normandie en 2026"
 metaDescription: "Guide complet des formations esthétique à Caen et en Normandie : CAP, BP, alternance, CPF. Thalasso normande, marché de l'emploi régional, financements et débouchés en 2026."
 excerpt: "Caen et la Normandie offrent un marché esthétique solide, enrichi par la thalassothérapie normande et le tourisme régional. Découvrez toutes les formations disponibles, les alternances et les financements CPF en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Caen et en Normandie en 2026 : CAP, BP et alternance
 
 Vous envisagez une formation esthétique à Caen ou en Normandie ? La région normande offre un marché de l'esthétique actif et stable, porté à la fois par une population urbaine fidèle dans les villes principales (Caen, Rouen, Le Havre) et par un tourisme côtier qui génère une demande spécifique en soins bien-être sur le littoral. La Normandie est notamment reconnue pour sa tradition de thalassothérapie et de soins marins, ce qui constitue un débouché professionnel original pour les esthéticiennes qualifiées. Ce guide vous présente les diplômes disponibles, les conditions d'alternance, les financements accessibles et les perspectives concrètes sur le marché normand en 2026.

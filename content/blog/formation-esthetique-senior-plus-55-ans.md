@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-senior-plus-55-ans
 title: "Se former en esthétique après 55 ans en 2026 : possibilités, financement et réalités"
+seoTitle: "Se former en esthétique après 55 ans en 2026"
 metaDescription: "Vous avez plus de 55 ans et voulez vous former en esthétique ? Retraite progressive, AIF majorée France Travail, formations adaptées, activité à temps partiel : le guide complet pour les seniors en 2026."
 excerpt: "A 55, 60 ou même 65 ans, se former en esthétique ou en bien-être est parfaitement réalisable. Les financements sont souvent plus généreux pour les seniors, et les débouchés nombreux. Voici les possibilités concrètes en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Se former en esthétique après 55 ans en 2026 : possibilités, financement et réalités
 
 Vous avez plus de 55 ans et envisagez une formation en esthétique ou bien-être ? Bonne nouvelle : les dispositifs de financement sont souvent plus favorables pour les seniors, les formations peuvent être adaptées à vos capacités physiques, et de nombreux débouchés permettent d'exercer à temps partiel ou à son propre rythme. En 2026, se reconvertir dans la beauté après 55 ans n'est pas un rêve mais un projet concret, à condition de bien le préparer.

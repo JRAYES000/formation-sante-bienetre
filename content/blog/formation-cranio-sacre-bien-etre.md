@@ -1,11 +1,12 @@
 ---
 slug: formation-cranio-sacre-bien-etre
 title: "Formation cranio-sacré bien-être en 2026 : approche douce, certifications et cadre légal"
+seoTitle: "Formation cranio-sacré bien-être en 2026"
 metaDescription: "Formation cranio-sacré bien-être en 2026 : différence avec l'ostéopathie crânienne, approche douce du rythme cranio-sacré, certifications disponibles, CPF et cadre légal."
 excerpt: "Guide complet sur la formation cranio-sacré bien-être : distinction avec la thérapie ostéopathique, approche douce légère, certifications disponibles, financement CPF et cadre légal en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation cranio-sacré bien-être en 2026 : approche douce, certifications et cadre légal
 
 La formation au cranio-sacré bien-être est accessible en 2026, via des certifications en pratiques de bien-être. Cette approche douce et légère, qui travaille par des contacts manuels très subtils sur le crâne, la colonne et le sacrum, attire de nombreuses personnes en quête d'une pratique de soin holistique. Mais un point essentiel doit être clarifié d'emblée : il existe une distinction fondamentale entre le cranio-sacré bien-être (pratiqué par des praticiens non médicaux) et la thérapie cranio-sacrée ostéopathique (pratiquée par des ostéopathes ou kinésithérapeutes dans un cadre médical). Cette distinction est la boussole de tout enseignement sérieux dans ce domaine.

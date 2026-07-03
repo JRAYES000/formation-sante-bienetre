@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-personne-handicapee
 title: "Formation esthétique et bien-être pour les personnes en situation de handicap en 2026"
+seoTitle: "Formation esthétique et bien-être pour les personnes en"
 metaDescription: "Vous êtes en situation de handicap et voulez vous former en esthétique ? Aménagements RQTH, aide Agefiph jusqu'à 3 000 euros, MDPH, métiers accessibles : le guide complet 2026."
 excerpt: "Le handicap n'est pas un obstacle à la formation en esthétique ou en bien-être. Avec la RQTH, l'aide de l'Agefiph et les aménagements prévus par la loi, des parcours adaptés existent pour accéder à ces métiers en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique et bien-être pour les personnes en situation de handicap en 2026
 
 Les personnes en situation de handicap peuvent accéder aux formations en esthétique et bien-être. Des dispositifs spécifiques existent : aménagements de la formation via la RQTH, aide financière de l'Agefiph pouvant atteindre 3 000 euros, accompagnement MDPH, et des métiers spécifiques accessibles selon la nature du handicap. Ce guide vous présente toutes les options disponibles en 2026.

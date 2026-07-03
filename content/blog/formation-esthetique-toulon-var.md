@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-toulon-var
 title: "Formation esthétique à Toulon et dans le Var en 2026 : guide CPF, alternance et débouchés"
+seoTitle: "Formation esthétique à Toulon et dans le Var en 2026"
 metaDescription: "Guide complet des formations esthétique à Toulon et dans le Var en 2026 : CAP, BP, alternance, CPF, spas du littoral provençal et clientèle marine nationale. Distinct de Nice."
 excerpt: "Toulon et le Var offrent un marché de la beauté spécifique : clientèle marine nationale, spas côtiers, tourisme estival intense et proximité de la Côte d'Azur est. Découvrez les formations esthétique disponibles et les financements CPF en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Toulon et dans le Var en 2026 : guide CPF, alternance et débouchés
 
 Vous cherchez une formation en esthétique à Toulon ou dans le Var en 2026 ? La préfecture du Var est une ville aux caractéristiques uniques : présence de la base navale nationale (la plus grande de France), littoral méditerranéen très fréquenté (Saint-Tropez, Sainte-Maxime, Bandol, Sanary), et proximité de la Côte d'Azur est. Ce contexte génère un marché de la beauté avec des spécificités propres. Les formations esthétique y sont accessibles en alternance, en reconversion adulte, avec des financements [CPF](/financement-cpf) disponibles. Voici le guide complet.

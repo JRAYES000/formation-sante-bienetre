@@ -1,13 +1,13 @@
 ---
 slug: bts-esthetique-cosmetique-debouches
 title: "BTS Esthétique-Cosmétique Parfumerie : formation, débouchés et financement 2026"
+seoTitle: "BTS Esthétique-Cosmétique Parfumerie"
 metaDescription: "BTS Esthétique-Cosmétique 2026 : contenu, différences avec le CAP et le BP, financement CPF et vrais débouchés. Tout savoir avant de s'inscrire."
 excerpt: "Le BTS Esthétique-Cosmétique Parfumerie est le diplôme bac+2 du secteur. Voici ce qu'on y apprend vraiment, les débouchés réels et comment le financer en reconversion adulte."
 image: https://images.unsplash.com/photo-1487412947147-5cebf100d293?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Le BTS Esthétique-Cosmétique Parfumerie est le diplôme de niveau 5 (bac+2) du secteur beauté. Il ouvre des portes que le CAP et le BP ne permettent pas : management de centre de beauté, marketing cosmétique, formation professionnelle, représentation commerciale en cosmétologie. Voici ce que cette formation implique concrètement.
 
 ## Qu'est-ce que le BTS Esthétique-Cosmétique Parfumerie

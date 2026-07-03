@@ -1,11 +1,12 @@
 ---
 slug: formation-zero-dechet-salon-beaute
 title: "Formation zéro déchet pour salon de coiffure et esthétique en 2026"
+seoTitle: "Formation zéro déchet pour salon de coiffure et esthétique en"
 metaDescription: "Formation zéro déchet salon de beauté en 2026 : solutions concrètes pour réduire les déchets chimiques, plastiques et textiles, certifications RSE disponibles et économies réalisées."
 excerpt: "Un salon de coiffure ou d'esthétique produit entre 150 et 400 kg de déchets par an. Découvrez les formations zéro déchet disponibles, les solutions concrètes et les économies à la clé."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation zéro déchet pour salon de coiffure et esthétique en 2026
 
 Un salon de coiffure produit en moyenne entre 150 et 400 kg de déchets par an selon sa taille. Un institut de beauté génère quant à lui entre 100 et 250 kg. Ces déchets incluent des produits chimiques, des plastiques, des textiles et des consommables qui, mal gérés, ont un impact environnemental significatif. Se former à la démarche zéro déchet en salon, c'est à la fois réduire cet impact et réaliser des économies concrètes - tout en répondant à une attente grandissante des clients. Voici comment procéder.

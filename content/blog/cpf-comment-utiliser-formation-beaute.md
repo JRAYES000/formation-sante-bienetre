@@ -1,13 +1,13 @@
 ---
 slug: cpf-comment-utiliser-formation-beaute
 title: "CPF et formation beauté : comment l'utiliser en 2026 (guide pas à pas)"
+seoTitle: "CPF et formation beauté"
 metaDescription: "Comment utiliser votre CPF pour une formation beauté en 2026 : étapes concrètes, solde, reste à charge, formations éligibles. Guide complet et pratique."
 excerpt: "Le CPF peut financer votre formation en esthétique, massage, coiffure ou manucure. Voici le guide pas à pas pour l'utiliser correctement en 2026, éviter les arnaques et maximiser vos droits."
 image: https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Votre CPF peut financer une formation en esthétique, massage bien-être, coiffure ou manucure. Pour que cela fonctionne, il faut connaitre les règles exactes, les étapes concrètes et les erreurs à éviter. Ce guide vous explique tout, de la vérification de votre solde jusqu'à la signature de votre inscription.
 
 ## Qu'est-ce que le CPF exactement

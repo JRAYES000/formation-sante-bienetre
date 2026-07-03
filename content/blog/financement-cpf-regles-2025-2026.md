@@ -1,11 +1,12 @@
 ---
 slug: financement-cpf-regles-2025-2026
 title: "Nouvelles règles CPF en 2025-2026 : reste à charge, monétisation et ce qui change"
+seoTitle: "Nouvelles règles CPF en 2025-2026"
 metaDescription: "Règles CPF 2025-2026 : reste à charge de 100 euros, exceptions, impact sur les formations beauté, optimisation du dossier, alternatives si refus CPF. Tout ce qui a changé pour financer votre formation."
 excerpt: "Depuis mai 2024, les règles du CPF ont changé avec l'instauration d'un reste à charge de 100 euros. Ce guide détaille les nouvelles règles 2025-2026, les exceptions et comment optimiser votre financement formation beauté."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Nouvelles règles CPF en 2025-2026 : reste à charge, monétisation et ce qui change
 
 Depuis le 2 mai 2024, utiliser son CPF coûte 100 euros de reste à charge minimum. C'est la principale nouveauté qui a bouleversé les habitudes des candidats à la formation beauté et bien-être. Mais ce reste à charge a des exceptions importantes, et le dispositif CPF reste l'un des meilleurs outils de financement disponibles. Ce guide vous explique exactement ce qui a changé et comment adapter votre stratégie de financement.

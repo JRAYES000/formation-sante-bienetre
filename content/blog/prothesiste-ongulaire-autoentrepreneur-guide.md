@@ -1,11 +1,12 @@
 ---
 slug: prothesiste-ongulaire-autoentrepreneur-guide
 title: "Prothésiste ongulaire auto-entrepreneur en 2026 : le guide complet pour se lancer"
+seoTitle: "Prothésiste ongulaire auto-entrepreneur en 2026"
 metaDescription: "Devenir prothésiste ongulaire auto-entrepreneur en 2026 : création micro-entreprise, matériel, tarifs, trouver ses clientes, Instagram, assurance. Guide actionnable."
 excerpt: "Création de la micro-entreprise, matériel de démarrage, tarifs à pratiquer, premières clientes : tout ce qu'il faut savoir pour se lancer comme prothésiste ongulaire indépendante en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 ## Se lancer comme prothésiste ongulaire indépendante en 2026 : par où commencer ?
 
 Le statut d'auto-entrepreneur est le point de départ idéal pour la grande majorité des prothésistes ongulaires qui souhaitent travailler à leur compte. Simple à créer, peu coûteux, sans capital obligatoire, il permet de tester son activité sans prendre de risques financiers importants.

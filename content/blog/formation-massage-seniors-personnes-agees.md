@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-seniors-personnes-agees
 title: "Formation massage pour seniors et personnes âgées en 2026 : bien-être et douceur"
+seoTitle: "Formation massage pour seniors et personnes âgées en 2026"
 metaDescription: "Formation massage seniors en 2026 : marché EHPAD et domicile en croissance, adaptations techniques, certifications disponibles et débouchés résidences seniors, SSIAD et libéral."
 excerpt: "Le massage pour seniors est un marché en forte croissance porté par le vieillissement de la population. Formations certifiantes disponibles en 2026 pour intervenir en EHPAD, résidences seniors, SSIAD et en libéral avec les adaptations techniques indispensables."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage pour seniors et personnes âgées en 2026 : bien-être et douceur
 
 Le massage pour seniors est une spécialisation en forte croissance : la France compte 1,5 million de personnes en EHPAD et plus de 4 millions de seniors à domicile nécessitant un soutien. Des certifications professionnelles permettent aux praticiens en [massage bien-être](/metier/massage-bien-etre) de se former aux adaptations techniques indispensables pour intervenir en toute sécurité auprès de ce public. Ce guide présente les formations disponibles, les techniques à maîtriser et les débouchés concrets en 2026.

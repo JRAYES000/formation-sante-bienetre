@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-montpellier
 title: "Formation esthétique à Montpellier en 2026 : CAP, BP, CPF et alternance en Hérault"
+seoTitle: "Formation esthétique à Montpellier en 2026"
 metaDescription: "Tout savoir sur les formations esthétique à Montpellier : CAP, BP, BTS, alternance, financement CPF. Guide complet pour se former en Hérault et trouver un emploi dans la beauté."
 excerpt: "Montpellier concentre un marché de la beauté dynamique porté par son statut de ville universitaire et son tourisme méditerranéen. Découvrez toutes les voies pour vous former à l'esthétique en Hérault en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Montpellier en 2026 : CAP, BP, CPF et alternance en Hérault
 
 Vous souhaitez vous former à l'esthétique à Montpellier ? La réponse courte : oui, c'est possible et le marché local est porteur. Montpellier, troisième ville universitaire de France avec plus de 75 000 étudiants, génère une demande soutenue en instituts de beauté, spas et salons de manucurie. L'Hérault compte également des stations balnéaires proches - La Grande-Motte, Cap d'Agde, Palavas-les-Flots - qui emploient des esthéticiennes saisonnières et permanentes dans leurs complexes hôteliers et thalasso. Ce guide vous détaille les diplômes disponibles, les voies de financement CPF et les débouchés concrets dans la région occitane.

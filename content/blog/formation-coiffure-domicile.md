@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-domicile
 title: "Devenir coiffeur à domicile en 2026 : formation, réglementation et comment se lancer"
+seoTitle: "Devenir coiffeur à domicile en 2026"
 metaDescription: "Tout savoir pour devenir coiffeur à domicile en 2026 : diplôme obligatoire, matériel mobile, tarification, assurance, statut auto-entrepreneur et clientèle seniors."
 excerpt: "La coiffure à domicile est un marché en croissance, notamment grâce au vieillissement de la population. Voici comment vous lancer légalement et rentablement en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Devenir coiffeur à domicile en 2026 : formation, réglementation et comment se lancer
 
 La coiffure à domicile est-elle accessible sans diplôme ? Non - la loi française impose un diplôme reconnu pour exercer la coiffure à titre onéreux, y compris à domicile. Cependant, une fois la certification obtenue, la coiffure à domicile offre une vraie liberté entrepreneuriale, des revenus attractifs et une clientèle fidèle. Voici le guide complet pour vous lancer en 2026.

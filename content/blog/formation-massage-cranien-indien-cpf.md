@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-cranien-indien-cpf
 title: "Formation massage crânien indien CPF en 2026 : technique Champissage, certifications et débouchés"
+seoTitle: "Formation massage crânien indien CPF en 2026"
 metaDescription: "Formation massage crânien indien CPF en 2026 : Champissage, Indian Head Massage, technique sur chaise, certifications disponibles, débouchés entreprise et cabinet libéral."
 excerpt: "Le massage crânien indien (Champissage ou Indian Head Massage) est une technique pratiquée debout ou assis, sans déshabillage, idéale pour les interventions en entreprise et en bien-être rapide. Découvrez les certifications éligibles au CPF et les débouchés en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage crânien indien CPF en 2026 : technique Champissage, certifications et débouchés
 
 Le massage crânien indien (Champissage ou Indian Head Massage) est une technique pratiquée assis sur une chaise ordinaire, sans déshabillage, qui travaille la tête, la nuque, les épaules et le haut du dos. En 10 à 20 minutes, il apporte une relaxation profonde et soulage les tensions cervicales. C'est la technique idéale pour les interventions en entreprise, dans les salons de coiffure, les foires et les spas. Des certifications éligibles au CPF existent en 2026 pour les professionnels du [massage bien-être](/metier/massage-bien-etre) et de l'[esthétique](/metier/esthetique-soin-corporel) qui souhaitent ajouter cette corde à leur arc.

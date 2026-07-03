@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-mariage-chignon
 title: "Formation coiffure mariage et chignons en 2026 : certifications, techniques et débouchés"
+seoTitle: "Formation coiffure mariage et chignons en 2026"
 metaDescription: "Formation coiffure mariage et chignons : techniques, certifications post CAP/BP, débouchés freelance et tarification. Guide complet 2026."
 excerpt: "Spécialiste coiffure mariage : chignons de mariée, tresses, coiffures cérémonie. Quelles formations après le CAP ou BP ? Débouchés et tarifs freelance en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation coiffure mariage et chignons en 2026 : certifications, techniques et débouchés
 
 La coiffure mariage est une spécialité à part entière qui se distingue des techniques de salon quotidiennes. Pour devenir coiffeur(se) spécialisé(e) mariage, des formations de perfectionnement existent après le CAP ou le BP Coiffure. En 2026, ce créneau offre des débouchés en freelance avec des revenus intéressants les weekends, en complément d'une activité en salon. Ce guide vous détaille les techniques, les formations disponibles et les réalités du marché.

@@ -1,11 +1,12 @@
 ---
 slug: formation-marketing-digital-beaute
 title: "Formation marketing digital pour esthéticienne et coiffeuse en 2026 : SEO, Google My Business et CPF"
+seoTitle: "Formation marketing digital pour esthéticienne et coiffeuse"
 metaDescription: "Guide complet des formations marketing digital pour esthéticiennes et coiffeuses en 2026 : Google My Business, SEO local, Meta Ads, email marketing et financement CPF."
 excerpt: "Le marketing digital est devenu indispensable pour remplir son agenda en salon de beauté. Google My Business, référencement local, publicité Facebook et email marketing : découvrez les formations disponibles et les financements CPF accessibles."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation marketing digital pour esthéticienne et coiffeuse en 2026 : SEO, Google My Business et CPF
 
 Le marketing digital est aujourd'hui le levier le plus efficace pour développer un salon de beauté ou un institut d'esthétique. Une fiche Google My Business bien optimisée peut générer 20 à 50 nouveaux appels par mois. Un site web correctement référencé peut remplir un agenda sans avoir à payer de publicité. Des formations certifiantes, finançables par le [CPF](/financement-cpf), permettent d'acquérir ces compétences en quelques semaines ou mois. Voici tout ce qu'il faut savoir pour choisir la bonne formation et obtenir un retour sur investissement concret.

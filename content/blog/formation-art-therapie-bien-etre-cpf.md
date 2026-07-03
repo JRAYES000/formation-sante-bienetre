@@ -1,11 +1,13 @@
 ---
 slug: formation-art-therapie-bien-etre-cpf
 title: "Formation art-thérapie bien-être CPF en 2026 : certifications, cadre légal et débouchés"
-metaDescription: "Formation art-thérapie bien-être CPF en 2026 : peinture, collage, argile comme médiations artistiques, certifications disponibles, cadre légal, débouchés en EHPAD, centres de soins et cabinet."
+seoTitle: "Formation art-thérapie CPF : certifications et débouchés"
+metaDescription: "Formations art-thérapie finançables avec le CPF : certifications reconnues, cadre légal, durée et débouchés réels. Le guide 2026 pour bien choisir."
 excerpt: "L'art-thérapie à médiation artistique dans le cadre du bien-être utilise la peinture, le dessin, le collage ou l'argile pour favoriser l'expression et la détente. Découvrez les formations disponibles, le CPF, le cadre légal et les débouchés en 2026."
-image: /images/conseil-3.webp
+image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80&fit=crop"
+publishedAt: "2026-06-16"
+updatedAt: "2026-07-03"
 ---
-
 # Formation art-thérapie bien-être CPF en 2026 : certifications, cadre légal et débouchés
 
 L'art-thérapie bien-être utilise les médiations artistiques - peinture, dessin, collage, modelage, photographie - pour favoriser l'expression, la détente et le mieux-être. Sans prétendre à des effets psychothérapeutiques, elle offre un espace de création et de découverte de soi accessible à tous, même sans compétences artistiques. En 2026, des formations CPF permettent d'acquérir ces compétences et d'exercer dans des contextes variés : EHPAD, centres de soins, associations, cabinet bien-être. Voici le guide complet.

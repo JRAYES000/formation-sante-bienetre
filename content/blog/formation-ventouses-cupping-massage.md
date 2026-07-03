@@ -1,11 +1,12 @@
 ---
 slug: formation-ventouses-cupping-massage
 title: "Formation ventouses et cupping massage en 2026 : techniques, certifications et débouchés bien-être"
+seoTitle: "Formation ventouses et cupping massage en 2026"
 metaDescription: "Formation ventouses cupping massage en 2026 : silicone vs verre, bien-être vs médical, certifications disponibles, cadre légal et débouchés en spa et cabinet."
 excerpt: "Guide complet pour se former aux ventouses et au cupping massage : types de ventouses, distinction bien-être et médical, certifications disponibles, financement CPF et débouchés en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation ventouses et cupping massage en 2026 : techniques, certifications et débouchés bien-être
 
 La formation aux ventouses et au cupping massage est accessible en France en 2026 via des certifications en massage bien-être. Cette technique millénaire, popularisée mondialement lors des Jeux olympiques de Rio 2016 lorsque des athlètes comme Michael Phelps apparurent avec leurs marques circulaires caractéristiques, connaît un regain d'intérêt dans les spas, les instituts et les cabinets de bien-être. Mais attention : il existe une distinction fondamentale entre le cupping bien-être, accessible aux praticiens non médicaux, et le cupping médical ou thérapeutique, réservé aux professionnels de santé. Cette distinction est le point central de tout enseignement sérieux.

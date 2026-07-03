@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-thai-cpf
 title: "Formation massage thaïlandais CPF en 2026 : techniques, certification et débouchés"
+seoTitle: "Formation massage thaïlandais CPF en 2026"
 metaDescription: "Formation massage thaïlandais finançable CPF en 2026 : massage au sol vs table, étirements, certifications en France, différences avec formations en Thaïlande."
 excerpt: "Guide complet sur la formation massage thaïlandais CPF en 2026 : techniques au sol, étirements passifs, certifications disponibles en France et débouchés professionnels."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage thaïlandais CPF en 2026 : techniques, certification et débouchés
 
 La formation massage thaïlandais est finançable par le CPF en 2026 via des certifications enregistrées au Répertoire Spécifique (RS). Des cursus de 5 à 15 jours permettent d'acquérir les fondamentaux de cette discipline millénaire et d'exercer en spa, en centre de bien-être ou en libéral. Les tarifs de formation varient de 800 à 2 800 euros, entièrement couverts par le CPF selon vos droits disponibles. La demande pour le massage thaïlandais est forte en France, notamment dans les spas urbains et hôteliers.

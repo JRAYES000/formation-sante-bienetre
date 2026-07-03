@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-paris
 title: "Formation coiffure à Paris en 2026 : CAP, BP, alternance et CPF en Île-de-France"
+seoTitle: "Formation coiffure à Paris en 2026"
 metaDescription: "Guide complet des formations coiffure à Paris en 2026 : CAP, BP, alternance, financement CPF et salaires en Île-de-France. Tout ce qu'il faut savoir pour se lancer."
 excerpt: "Paris concentre la plus forte densité de salons de coiffure et de centres de formation en France. Découvrez les formations disponibles, les financements CPF et les particularités du marché parisien en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation coiffure à Paris en 2026 : CAP, BP, alternance et CPF en Île-de-France
 
 Vous voulez vous former à la coiffure à Paris ? La capitale est la ville la plus dense en salons et en organismes de formation de toute la France. Marché très concurrentiel, salaires plus élevés qu'en province, alternance dans des établissements parfois prestigieux : Paris offre des opportunités uniques pour les futurs coiffeurs et coiffeuses. Ce guide complet vous présente toutes les formations disponibles en 2026, les financements CPF et les spécificités du marché francilien.

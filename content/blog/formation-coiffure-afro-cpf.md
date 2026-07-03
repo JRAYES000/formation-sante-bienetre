@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-afro-cpf
 title: "Formation coiffure afro et tresses CPF en 2026 : certifications, prix et débouchés"
+seoTitle: "Formation coiffure afro et tresses CPF en 2026"
 metaDescription: "Formation coiffure afro CPF 2026 : tresses, vanilles, locks, twists. Certifications disponibles, éligibilité CPF, prix et débouchés dans un marché en forte croissance."
 excerpt: "Le marché de la coiffure afro est en pleine expansion en France. Découvrez les formations disponibles, les certifications éligibles CPF et les débouchés concrets en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation coiffure afro et tresses CPF en 2026 : certifications, prix et débouchés
 
 La coiffure afro est l'un des segments les plus dynamiques du secteur capillaire en France. En 2026, le marché de la coiffure afro et des tresses représente un chiffre d'affaires estimé à plus de 800 millions d'euros par an, avec une croissance annuelle de 8 à 12 %. Des formations certifiées et éligibles au CPF existent pour se professionnaliser dans ce domaine. Voici tout ce qu'il faut savoir sur les certifications, les prix et les débouchés.

@@ -1,11 +1,12 @@
 ---
 slug: ouvrir-spa-formation-guide
 title: "Ouvrir un spa en France en 2026 : formations, réglementation et financement"
+seoTitle: "Ouvrir un spa en France en 2026"
 metaDescription: "Guide complet pour ouvrir un spa en France en 2026 : formations obligatoires, réglementation, business plan, coût d'ouverture et aides disponibles. Tout ce qu'il faut savoir."
 excerpt: "Ouvrir un spa est un projet ambitieux qui nécessite les bonnes formations, une réglementation bien maîtrisée et un plan de financement solide. Ce guide vous accompagne étape par étape."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 ## Ouvrir un spa en 2026 : un marché porteur mais encadré
 
 Le secteur du spa en France affiche une santé remarquable. Avec plus de 3 500 spas référencés en France en 2025 (hôtels, urbains, day spas, spas intégrés), et une croissance soutenue de 8 à 12% par an depuis 2020, l'envie d'ouvrir son propre espace de bien-être n'a jamais été aussi forte.

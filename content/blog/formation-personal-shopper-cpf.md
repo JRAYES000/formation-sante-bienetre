@@ -1,11 +1,12 @@
 ---
 slug: formation-personal-shopper-cpf
 title: "Formation personal shopper CPF en 2026 : accompagnement style, certifications et débouchés"
+seoTitle: "Formation personal shopper CPF en 2026"
 metaDescription: "Formation personal shopper CPF 2026 : différence avec conseillère en image, capsule wardrobe, clientèle luxe, certifications disponibles et débouchés freelance."
 excerpt: "Personal shopper vs conseillère en image : deux métiers complémentaires. Certifications CPF, capsule wardrobe, clientèle luxe ou budget, revenus freelance et grands magasins en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation personal shopper CPF en 2026 : accompagnement style, certifications et débouchés
 
 Le personal shopper accompagne ses clients dans leurs achats vestimentaires pour construire une garde-robe cohérente avec leur personnalité, leur morphologie et leur budget. Ce métier se distingue du conseil en image par son dimension opérationnelle - on ne conseille pas, on achète ensemble. Des formations certifiantes éligibles au CPF permettent d'accéder à cette profession en 2026. Ce guide vous présente les compétences requises, les certifications disponibles et les réalités du marché.

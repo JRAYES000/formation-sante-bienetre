@@ -1,11 +1,12 @@
 ---
 slug: formation-meditation-mindfulness-cpf
 title: "Formation méditation et pleine conscience CPF en 2026 : MBSR, instructeur mindfulness et débouchés"
+seoTitle: "Formation méditation et pleine conscience CPF en 2026"
 metaDescription: "Formation méditation pleine conscience CPF en 2026 : protocole MBSR, certification instructeur mindfulness, financement CPF, débouchés entreprise et revenus réalistes. Guide complet."
 excerpt: "Le CPF peut financer certaines certifications de méditant ou d'instructeur mindfulness inscrites au RS. Le protocole MBSR reste la référence internationale pour former des instructeurs crédibles."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation méditation et pleine conscience CPF en 2026 : MBSR, instructeur mindfulness et débouchés
 
 Oui, il est possible de financer une formation en méditation et pleine conscience via le CPF, à condition de viser une certification inscrite au Répertoire Spécifique (RS). La méditation n'est pas une profession réglementée, mais certains programmes comme le MBSR (Mindfulness-Based Stress Reduction) sont des standards internationaux reconnus dans le milieu de la santé mentale et du bien-être en entreprise. Ce guide détaille les formations disponibles, les certifications, le financement et les débouchés réels en 2026.

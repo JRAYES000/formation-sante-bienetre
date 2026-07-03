@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-metz-lorraine
 title: "Formation esthétique à Metz, Nancy et en Lorraine en 2026 : CAP, BP et alternance"
+seoTitle: "Formation esthétique à Metz, Nancy et en Lorraine en 2026"
 metaDescription: "Guide complet des formations esthétique à Metz, Nancy et en Lorraine en 2026 : CAP, BP, alternance, CPF et débouchés sur le marché lorrain de la beauté."
 excerpt: "La double métropole Metz-Nancy offre un marché de l'esthétique solide avec des formations CAP, BP et BTS disponibles en alternance ou en reconversion. Découvrez les débouchés et les financements CPF accessibles en Lorraine."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Metz, Nancy et en Lorraine en 2026 : CAP, BP et alternance
 
 Vous cherchez une formation en esthétique à Metz, Nancy ou en Lorraine en 2026 ? La région Grand Est, et plus particulièrement le bassin lorrain, dispose d'une offre de formation bien structurée en esthétique et soins beauté. Les diplômes sont accessibles en alternance (apprentissage, professionnalisation) ou en reconversion adulte, avec des financements [CPF](/financement-cpf) disponibles. La double dynamique des métropoles de Metz et Nancy, combinée à une industrie cosmétique régionale active, génère des débouchés réels pour les diplômés.

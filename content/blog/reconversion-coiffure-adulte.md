@@ -1,10 +1,13 @@
 ---
 title: "Reconversion coiffure adulte : formations, financement et débouchés en 2026"
+seoTitle: "Reconversion coiffure adulte : CAP accéléré et CPF"
 slug: "reconversion-coiffure-adulte"
-metaDescription: "Reconversion dans la coiffure à l'âge adulte : CAP coiffure en 1 an, alternance, VAE, financement CPF et France Travail. Guide complet pour réussir votre projet en 2026."
+metaDescription: "Se reconvertir dans la coiffure à l'âge adulte : CAP accéléré, coût réel, financement CPF ou France Travail et débouchés. Guide 2026."
 excerpt: "Se reconvertir dans la coiffure à l'âge adulte est un projet accessible, à condition de choisir la bonne formule de formation et les bons dispositifs de financement. Voici un guide concret pour construire votre parcours sereinement."
+publishedAt: "2026-06-05"
+updatedAt: "2026-07-03"
+image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&fit=crop"
 ---
-
 ## La coiffure, un métier toujours attractif pour les adultes en reconversion
 
 Chaque année, de nombreux adultes décident de quitter leur secteur d'activité pour se reconvertir dans la coiffure. L'attrait est réel : un métier manuel, créatif, en contact direct avec la clientèle, et dont les compétences restent utiles aussi bien en salon qu'en indépendant ou à domicile.
@@ -129,6 +132,6 @@ Il n'y a pas de limite d'âge légale pour passer le CAP coiffure ou accéder à
 
 La reconversion dans la coiffure est un parcours accessible aux adultes en France, grâce aux dispositifs de formation accélérée, à l'alternance et à la VAE, et aux financements disponibles via le CPF et France Travail. Ce n'est pas un chemin sans effort — le diplôme est exigeant, le marché compétitif — mais c'est un projet que de nombreux adultes mènent à bien chaque année.
 
-La clé : s'orienter vers un organisme certifié Qualiopi, construire son plan de financement en amont, et tester le métier avant de s'engager.
+La clé : s'orienter vers un centre de formation certifié Qualiopi, construire son plan de financement en amont, et tester le métier avant de s'engager.
 
 Pour explorer les formations coiffure et bien-être disponibles et comparables sur notre comparateur, consultez notre sélection de **formations coiffure éligibles CPF** — avec les critères essentiels (certification, durée, modalités, financement) pour choisir en connaissance de cause.

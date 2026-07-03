@@ -4,8 +4,8 @@ title: "Formation esthétique à Nice et en PACA en 2026 : guide complet"
 metaDescription: "Guide complet des formations esthétique à Nice et en région PACA en 2026 : CAP, BP, CPF, débouchés en hôtellerie de luxe et spas de la Côte d'Azur."
 excerpt: "Nice et la Côte d'Azur offrent un marché esthétique unique en France, porté par le tourisme haut de gamme et les spas d'hôtels de luxe. Découvrez toutes les formations et débouchés disponibles en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Nice et en PACA en 2026 : guide complet
 
 Vous souhaitez vous former à l'esthétique à Nice ou sur la Côte d'Azur ? La région PACA (Provence-Alpes-Côte d'Azur) offre un marché de la beauté et du bien-être parmi les plus attractifs de France. Portée par un tourisme haut de gamme international, une clientèle aisée et un réseau de spas et d'hôtels de luxe, Nice et ses environs proposent des débouchés uniques pour les professionnelles de l'esthétique. Ce guide complet vous présente les formations disponibles en 2026, les financements CPF et les spécificités du marché beauté azuréen.

@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-medicale-avancee
 title: "Formation esthétique médicale en 2026 : botox, acide hyaluronique, mésothérapie - qui peut faire quoi ?"
+seoTitle: "Formation esthétique médicale en 2026"
 metaDescription: "Formation esthétique médicale 2026 : botox, acide hyaluronique, peelings, mésothérapie. Cadre légal, certifications, qui peut pratiquer quoi en France."
 excerpt: "Botox, acide hyaluronique, mésothérapie : en France, ces actes sont strictement encadrés. Découvrez le cadre légal, les formations autorisées et les débouchés réels."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 ## Esthétique médicale en 2026 : un secteur en plein essor mais très réglementé
 
 L'esthétique médicale et paramédicale connaît une croissance spectaculaire en France. Injections de botox, comblements à l'acide hyaluronique, peelings chimiques, mésothérapie, laser médical : ces techniques autrefois réservées à une clientèle aisée se sont démocratisées. En 2026, le marché français de la médecine esthétique représente plus de 1,5 milliard d'euros, avec une progression annuelle de 8 à 12 %.

@@ -1,11 +1,12 @@
 ---
 slug: formation-vente-cosmetique-professionnel
 title: "Formation vente de cosmétiques en institut en 2026 : techniques, certifications et résultats"
+seoTitle: "Formation vente de cosmétiques en institut en 2026"
 metaDescription: "Maîtrisez la vente de cosmétiques en institut en 2026 : techniques de vente en cabine, certifications disponibles, CPF, et chiffres d'affaires réels. Guide complet."
 excerpt: "La vente de produits cosmétiques représente en moyenne 20 à 30 % du chiffre d'affaires d'un institut performant. Des formations certifiantes permettent d'acquérir les techniques de vente en cabine et d'augmenter significativement ses revenus."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation vente de cosmétiques en institut en 2026 : techniques, certifications et résultats
 
 La vente de cosmétiques en cabine est le levier de rentabilité le plus sous-exploité dans les instituts de beauté. Un institut qui vend bien ses produits génère en moyenne 20 à 30 % de chiffre d'affaires supplémentaire par rapport à un institut qui ne fait que des prestations. Des formations certifiantes, parfois finançables par le [CPF](/financement-cpf), vous permettent d'acquérir les techniques de vente adaptées au contexte d'un salon de beauté. Voici ce qu'il faut savoir pour se former et passer à l'action.

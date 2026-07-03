@@ -1,11 +1,12 @@
 ---
 slug: formation-piercing-professionnel
 title: "Formation piercing professionnel en 2026 : hygiène, réglementation et certifications"
+seoTitle: "Formation piercing professionnel en 2026"
 metaDescription: "Guide complet sur la formation piercing professionnel en 2026 : obligations légales, formation hygiène, zones autorisées, certifications, CPF et débouchés."
 excerpt: "Avant de pratiquer le piercing professionnel en France, une formation hygiène de 21 heures et une déclaration préfectorale sont obligatoires. Voici tout ce qu'il faut savoir."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation piercing professionnel en 2026 : hygiène, réglementation et certifications
 
 Le piercing professionnel est encadré par la même réglementation que le tatouage depuis 2008. Avant votre premier client, vous devez avoir suivi une **formation hygiène et salubrité de 21 heures minimum** et déclaré votre activité en préfecture. Certaines zones du corps restent réservées aux professionnels de santé, et le matériel de stérilisation est soumis à des normes strictes. Ce guide complet fait le point sur tout ce qu'il faut savoir en 2026 pour exercer le piercing légalement et en toute sécurité.

@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-lissage-bouclage
 title: "Formation lissage et bouclage professionnel en 2026 : kératine, permanente et certifications"
+seoTitle: "Formation lissage et bouclage professionnel en 2026"
 metaDescription: "Formation lissage kératine, permanente et bouclage professionnel en 2026. Réglementation formaldéhyde, certifications disponibles, financement CPF et OPCO."
 excerpt: "Lissage kératine, lissage japonais, permanente ondulante, bouclage professionnel : techniques, réglementations et formations disponibles en 2026. Financement CPF et OPCO détaillé."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation lissage et bouclage professionnel en 2026 : kératine, permanente et certifications
 
 Le lissage kératine, le lissage japonais, la permanente ondulante et le bouclage professionnel sont des techniques dont la maîtrise requiert une formation spécifique au-delà du CAP ou du BP Coiffure. En 2026, des réglementations encadrent certains produits utilisés, notamment les produits à base de formaldéhyde. Ce guide détaille les techniques, les obligations légales et les formations disponibles pour exercer ces prestations de manière professionnelle et sécurisée.

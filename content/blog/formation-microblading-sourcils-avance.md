@@ -1,11 +1,12 @@
 ---
 slug: formation-microblading-sourcils-avance
 title: "Formation microblading sourcils avancé 2026 : nano-brow, correction et perfectionnement professionnel"
+seoTitle: "Formation microblading sourcils avancé 2026"
 metaDescription: "Formation microblading avancé 2026 : nano-brow, powder brows, combination brows, correction de sourcils virant (orange, bleu, gris), asymétries, sélectionner un bon formateur avancé."
 excerpt: "Pour les praticiens déjà formés au microblading, les formations avancées couvrent le nano-brow, les powder brows, la combination technique et surtout la correction des sourcils problématiques. Guide complet pour choisir sa montée en compétences en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation microblading sourcils avancé 2026 : nano-brow, correction et perfectionnement professionnel
 
 Le microblading avancé s'adresse exclusivement aux praticiens déjà formés aux bases. Si vous avez validé votre formation initiale et accumulé une centaine de cas pratiques, la montée en compétences vers le nano-brow, les powder brows, les combination brows et la correction des sourcils problématiques peut transformer votre pratique et augmenter significativement votre valeur sur le marché. Ce guide présente les techniques avancées, les critères pour choisir un bon formateur et les certifications complémentaires disponibles en 2026.

@@ -1,11 +1,12 @@
 ---
 slug: formation-aromatherapie-cpf
 title: "Formation aromathérapie CPF en 2026 : huiles essentielles, certifications et débouchés"
+seoTitle: "Formation aromathérapie CPF en 2026"
 metaDescription: "Formation aromathérapie finançable CPF en 2026 : huiles essentielles, hydrolats, certifications RS disponibles, applications en spa et esthétique, précautions légales."
 excerpt: "Guide complet sur la formation aromathérapie CPF 2026 : huiles essentielles, hydrolats, certifications disponibles, applications pratiques en spa et précautions légales."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation aromathérapie CPF en 2026 : huiles essentielles, certifications et débouchés
 
 La formation aromathérapie est finançable par le CPF en 2026 via des certifications enregistrées au Répertoire Spécifique (RS) de France Compétences. Des cursus de 3 à 15 jours (20 à 100 heures) permettent d'acquérir les bases de l'utilisation des huiles essentielles dans un cadre bien-être et de les intégrer à une pratique professionnelle en spa, en esthétique ou en libéral. Les prix varient de 400 à 2 500 euros selon la durée et la certification.

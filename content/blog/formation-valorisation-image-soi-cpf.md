@@ -1,13 +1,13 @@
 ---
 slug: formation-valorisation-image-soi-cpf
 title: "Formation image de soi et relooking : une reconversion qui a du sens"
+seoTitle: "Formation image de soi et relooking"
 metaDescription: "Formation conseil en image et relooking CPF : métier, certifications disponibles, débouchés en coaching ou indépendant. Guide complet 2026."
 excerpt: "Conseiller en image, relookeur, personal stylist... Ces métiers attirent de plus en plus de profils en reconversion. Voici ce qu'implique vraiment cette formation et ce qu'elle permet."
 image: https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Le conseil en image et la valorisation de soi attirent de nombreux profils en reconversion, souvent des personnes qui ont travaillé dans la mode, la communication, les RH ou l'enseignement. Ce métier existe et il est possible d'en vivre, mais la réalité du marché est plus nuancée que ce que les brochures de formation donnent à voir. Ce guide vous donne une vision honnête.
 
 ## Ce que recouvre vraiment le conseil en image

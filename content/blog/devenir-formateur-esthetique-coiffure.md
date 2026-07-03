@@ -1,11 +1,12 @@
 ---
 slug: devenir-formateur-esthetique-coiffure
 title: "Devenir formateur en esthétique ou coiffure en 2026 : parcours, certifications et revenus"
+seoTitle: "Devenir formateur en esthétique ou coiffure en 2026"
 metaDescription: "Comment devenir formateur en esthétique ou coiffure ? Titre RNCP, expérience requise, CPF pédagogie, revenus formateur indépendant vs salarié. Guide complet 2026."
 excerpt: "Vous êtes professionnel de la beauté et souhaitez transmettre votre savoir-faire ? Voici comment devenir formateur en esthétique ou coiffure : parcours, certifications et revenus réalistes."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Devenir formateur en esthétique ou coiffure en 2026 : parcours, certifications et revenus
 
 Devenir formateur en esthétique ou coiffure est accessible dès 3 ans d'expérience terrain. Le titre RNCP Formateur Professionnel d'Adultes (anciennement CAFFA/CEFFA) constitue la certification de référence, mais d'autres voies existent. En 2026, la demande de formateurs qualifiés dans les CFA et organismes privés beauté reste soutenue, portée par la progression des financements CPF et la croissance des formations certifiantes.

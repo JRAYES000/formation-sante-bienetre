@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-medicale-assistant
 title: "Formation assistante en esthétique médicale en 2026 : laser médical, épilation et soins cliniques"
+seoTitle: "Formation assistante en esthétique médicale en 2026"
 metaDescription: "Formation assistante esthétique médicale 2026 : rôle en cabinet médical, laser sous supervision, épilation laser, soins cliniques. Formations disponibles et débouchés."
 excerpt: "Assistante en esthétique médicale : un rôle à ne pas confondre avec les actes médicaux réservés aux médecins. Formation, missions en cabinet dermato ou chirurgie, débouchés 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation assistante en esthétique médicale en 2026 : laser médical, épilation et soins cliniques
 
 L'esthétique médicale recouvre des actes réservés aux médecins (injections, laser médical de haute intensité). Mais un rôle d'assistante qualifiée en cabinet dermatologique ou chirurgical existe et recrute. Préparation des patients, assistance aux soins, utilisation de certains équipements sous supervision médicale : ce guide clarifie les périmètres, les formations accessibles et les débouchés réels pour travailler dans un environnement médical sans être médecin.
