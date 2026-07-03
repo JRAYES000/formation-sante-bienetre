@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const CONTENT_DIR = resolve(__dirname, "../../content");
 const METIERS_DIR = join(CONTENT_DIR, "metiers");
 const BLOG_DIR = join(CONTENT_DIR, "blog");
+const CATEGORY_FAQ_DIR = join(CONTENT_DIR, "categories", "faq");
 
 export interface Metier {
   slug: string;
@@ -44,6 +45,19 @@ export function listMetiers(): { slug: string; metier: string }[] {
       return m ? { slug: m.slug, metier: m.metier } : null;
     })
     .filter(Boolean) as { slug: string; metier: string }[];
+}
+
+// FAQ des hubs categorie (/formations/:categorie) - Pilier 5.C.2.
+// Fichiers content/categories/faq/<slug-categorie>.json, tableau [{ q, a }].
+export function getCategoryFaq(slug: string): { q: string; a: string }[] {
+  const f = join(CATEGORY_FAQ_DIR, `${slug}.json`);
+  if (!existsSync(f)) return [];
+  try {
+    const data = JSON.parse(readFileSync(f, "utf8"));
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
 }
 
 export interface Article {

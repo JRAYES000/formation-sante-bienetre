@@ -3,7 +3,7 @@
 import { Router, type Request } from "express";
 import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille } from "./storage.ts";
 import { slugify } from "./storage.ts";
-import { getMetier, listMetiers, getArticle, listArticles } from "./content.ts";
+import { getMetier, listMetiers, getArticle, listArticles, getCategoryFaq } from "./content.ts";
 import { gaId } from "./analytics.ts";
 
 export const seoRouter = Router();
@@ -577,6 +577,50 @@ function courseListLd(items: any[], canonical: string): object {
       },
     })),
     url: canonical,
+  };
+}
+
+// Bloc FAQ accordeon reutilisable (hubs categorie) - Pilier 5.C.2.
+// Meme comportement visuel que la page /faq (accordeon, toggleFaq()).
+function faqAccordionHtml(title: string, items: { q: string; a: string }[], idPrefix: string): string {
+  if (!items.length) return "";
+  return `<div class="mesh" style="margin-top:32px">
+  <h2>${esc(title)}</h2>
+  <style>
+  .faq-item{border:1px solid var(--hairline);border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff}
+  .faq-btn{width:100%;background:none;border:none;padding:16px 20px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.97rem;font-weight:600;color:var(--heading);line-height:1.4}
+  .faq-btn:hover{background:var(--p-light)}
+  .faq-btn .faq-arrow{flex-shrink:0;transition:transform .2s;font-size:.8rem;color:var(--muted)}
+  .faq-btn[aria-expanded="true"]{background:var(--p-light);color:var(--p)}
+  .faq-btn[aria-expanded="true"] .faq-arrow{transform:rotate(180deg)}
+  .faq-answer{display:none;padding:0 20px 16px;font-size:.93rem;line-height:1.7;color:var(--body)}
+  .faq-answer.open{display:block}
+  </style>
+  <script>
+  function toggleFaq(btn){
+    var expanded=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',expanded?'false':'true');
+    btn.nextElementSibling.classList.toggle('open',!expanded);
+  }
+  </script>
+  ${items.map((f, i) => `<div class="faq-item" id="${idPrefix}-${i}">
+  <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">
+    <span>${esc(f.q)}</span><span class="faq-arrow">▼</span>
+  </button>
+  <div class="faq-answer"><p>${esc(f.a)}</p></div>
+</div>`).join("")}
+</div>`;
+}
+
+function faqPageLd(items: { q: string; a: string }[]): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((x) => ({
+      "@type": "Question",
+      name: x.q,
+      acceptedAnswer: { "@type": "Answer", text: x.a },
+    })),
   };
 }
 
@@ -1562,10 +1606,13 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     <a class="chip" href="/faq">❓ FAQ formations</a>
     <a class="chip" href="/metiers">🎯 Fiches métiers</a>
   </div></div>`;
+  const catFaq = getCategoryFaq(slug);
+  const faqHtml = faqAccordionHtml(`Questions fréquentes — formations ${catDisplay}`, catFaq, `faq-${slug}`);
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
 <h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
 ${withSidebar(sidebar, cards)}
+${faqHtml}
 ${blogLinks}`;
 
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
@@ -1575,7 +1622,7 @@ ${blogLinks}`;
       description: metaDesc,
       canonical,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
-      jsonLd: [courseListLd(r.items, canonical)],
+      jsonLd: catFaq.length ? [courseListLd(r.items, canonical), faqPageLd(catFaq)] : [courseListLd(r.items, canonical)],
       breadcrumb: [
         { name: "Accueil", url: `${base}/formations` },
         { name: "Formations", url: `${base}/formations` },
