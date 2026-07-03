@@ -162,11 +162,11 @@ Il est tout à fait possible et légal de cumuler un financement régional avec 
 **Exemple de montage financier :**
 - Formation CAP esthétique : 6 000 euros
 - Aide régionale PRF : 4 000 euros (prise en charge de la majorité des frais)
-- CPF : 1 900 euros
-- Reste à charge CPF : 100 euros
+- CPF : 1 850 euros
+- Participation forfaitaire CPF : 150 euros
 - Total : 6 000 euros couverts
 
-Dans ce cas, vous ne payez que les 100 euros de reste à charge CPF.
+Dans ce cas, vous ne payez que les 150 euros de participation forfaitaire CPF.
 
 ### L'ordre des financements
 

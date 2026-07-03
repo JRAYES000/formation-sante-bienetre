@@ -85,7 +85,7 @@ Chaque salarié accumule des droits en euros tout au long de sa carrière (500 �
 4. Vérifiez que l'organisme est bien certifié Qualiopi.
 5. Engagez la démarche de financement directement via la plateforme.
 
-**À noter :** depuis mai 2023, une participation forfaitaire de 100 € est demandée aux actifs (sauf exceptions : demandeurs d'emploi, abondements employeur, etc.).
+**À noter :** depuis avril 2026, une participation forfaitaire de 150 € est demandée aux actifs (100 € entre mai 2024 et avril 2026) (sauf exceptions : demandeurs d'emploi, abondements employeur, etc.).
 
 D'autres financements peuvent compléter ou remplacer le CPF selon votre situation :
 - **France Travail (ex-Pôle emploi)** pour les demandeurs d'emploi

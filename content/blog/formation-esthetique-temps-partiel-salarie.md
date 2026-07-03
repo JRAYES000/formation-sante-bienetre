@@ -37,7 +37,7 @@ C'est la solution la plus autonome pour un salarié à temps partiel qui souhait
 - Choisir une formation éligible au CPF (inscrite sur Mon Compte Formation)
 - La formation se déroule hors temps de travail
 
-**Attention :** depuis mai 2024, un reste à charge de 100 euros a été instauré pour les formations CPF, sauf exceptions (demandeurs d'emploi, salariés dont l'employeur finance le reste à charge, formations qualifiantes dans certains cas). Lisez notre article sur le [reste à charge CPF beauté et les solutions](/blog/reste-a-charge-cpf-beaute-solutions) pour savoir si vous êtes concerné.
+**Attention :** depuis avril 2026, une participation forfaitaire de 150 euros s'applique aux formations CPF (100 euros entre mai 2024 et avril 2026), sauf exceptions (demandeurs d'emploi, salariés dont l'employeur finance le reste à charge, formations qualifiantes dans certains cas). Lisez notre article sur le [reste à charge CPF beauté et les solutions](/blog/reste-a-charge-cpf-beaute-solutions) pour savoir si vous êtes concerné.
 
 ### Les formations esthétique finançables par CPF
 

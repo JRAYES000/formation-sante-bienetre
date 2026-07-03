@@ -3,7 +3,7 @@
 import { Router, type Request } from "express";
 import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille } from "./storage.ts";
 import { slugify } from "./storage.ts";
-import { getMetier, listMetiers, getArticle, listArticles, articleMetier, listArticlesByMetier } from "./content.ts";
+import { getMetier, listMetiers, getArticle, listArticles, articleMetier, listArticlesByMetier, getCategoryFaq } from "./content.ts";
 import { gaId } from "./analytics.ts";
 
 export const seoRouter = Router();
@@ -552,6 +552,22 @@ function withSidebar(sidebar: string, content: string): string {
 </div>${PRICE_FILTER_JS}`;
 }
 
+// Description Course generee depuis les donnees EDOF disponibles (pas de champ
+// description en base) - requise par Google pour le rich result Course.
+function courseDescription(f: any): string {
+  const parts: string[] = [];
+  if (f.intitule_certification && f.intitule_certification !== f.intitule) {
+    parts.push(`Prépare à la certification ${f.intitule_certification}`);
+  }
+  if (f.type_referentiel) parts.push(String(f.type_referentiel));
+  if (f.niveau) parts.push(`niveau ${f.niveau}`);
+  if (f.heures) parts.push(`${f.heures} heures de formation`);
+  if (f.organisme) parts.push(`dispensée par ${f.organisme}`);
+  parts.push(f.a_distance ? "formation à distance" : "formation en présentiel");
+  parts.push("éligible au CPF");
+  return parts.join(", ") + ".";
+}
+
 function courseListLd(items: any[], canonical: string): object {
   return {
     "@context": "https://schema.org",
@@ -562,6 +578,7 @@ function courseListLd(items: any[], canonical: string): object {
       item: {
         "@type": "Course",
         name: f.intitule,
+        description: courseDescription(f),
         url: `${canonical}`,
         inLanguage: "fr",
         ...(f.organisme ? { provider: { "@type": "Organization", name: f.organisme } } : {}),
@@ -577,6 +594,50 @@ function courseListLd(items: any[], canonical: string): object {
       },
     })),
     url: canonical,
+  };
+}
+
+// Bloc FAQ accordeon reutilisable (hubs categorie) - Pilier 5.C.2.
+// Meme comportement visuel que la page /faq (accordeon, toggleFaq()).
+function faqAccordionHtml(title: string, items: { q: string; a: string }[], idPrefix: string): string {
+  if (!items.length) return "";
+  return `<div class="mesh" style="margin-top:32px">
+  <h2>${esc(title)}</h2>
+  <style>
+  .faq-item{border:1px solid var(--hairline);border-radius:10px;margin-bottom:8px;overflow:hidden;background:#fff}
+  .faq-btn{width:100%;background:none;border:none;padding:16px 20px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.97rem;font-weight:600;color:var(--heading);line-height:1.4}
+  .faq-btn:hover{background:var(--p-light)}
+  .faq-btn .faq-arrow{flex-shrink:0;transition:transform .2s;font-size:.8rem;color:var(--muted)}
+  .faq-btn[aria-expanded="true"]{background:var(--p-light);color:var(--p)}
+  .faq-btn[aria-expanded="true"] .faq-arrow{transform:rotate(180deg)}
+  .faq-answer{display:none;padding:0 20px 16px;font-size:.93rem;line-height:1.7;color:var(--body)}
+  .faq-answer.open{display:block}
+  </style>
+  <script>
+  function toggleFaq(btn){
+    var expanded=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',expanded?'false':'true');
+    btn.nextElementSibling.classList.toggle('open',!expanded);
+  }
+  </script>
+  ${items.map((f, i) => `<div class="faq-item" id="${idPrefix}-${i}">
+  <button class="faq-btn" aria-expanded="false" onclick="toggleFaq(this)">
+    <span>${esc(f.q)}</span><span class="faq-arrow">▼</span>
+  </button>
+  <div class="faq-answer"><p>${esc(f.a)}</p></div>
+</div>`).join("")}
+</div>`;
+}
+
+function faqPageLd(items: { q: string; a: string }[]): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((x) => ({
+      "@type": "Question",
+      name: x.q,
+      acceptedAnswer: { "@type": "Answer", text: x.a },
+    })),
   };
 }
 
@@ -675,7 +736,84 @@ function topDeptsForMetier(categorieSlug: string, limit = 6): { code: string; no
 
 // ---------- robots & sitemap ----------
 seoRouter.get("/robots.txt", (req, res) => {
-  res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
+  const base = baseUrl(req);
+  // Directives explicites par bot IA (Pilier 5.C.4) : aucune n'a d'effet sur
+  // l'acces reel (tout etait deja ouvert via "User-agent: * / Allow: /"),
+  // mais elles documentent une politique consciente plutot qu'un simple
+  // silence. Bots de recherche/reponse IA (AI Overviews, ChatGPT Search,
+  // Perplexity, Copilot) explicitement autorises ci-dessous. CCBot (entrainement
+  // Common Crawl) n'est pas bloque non plus : a rediscuter si l'equipe souhaite
+  // separer "citation" et "entrainement" (cf. Pilier 5.A, section 2.1).
+  res.type("text/plain").send(`User-agent: *
+Allow: /
+
+# Crawlers IA de recherche / reponse (AI Overviews, ChatGPT Search, Perplexity, Copilot)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: ${base}/sitemap.xml
+`);
+});
+
+// llms.txt (Pilier 5.C.4) : optionnel, priorite basse (cf. Pilier 5.A section 3 -
+// aucun moteur IA majeur ne le consomme a ce jour), mais cout quasi nul et remplace
+// le soft-404 actuel (le serveur renvoyait la page d'accueil HTML faute de route dediee).
+seoRouter.get("/llms.txt", (req, res) => {
+  const base = baseUrl(req);
+  const cats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0);
+  const metiers = listMetiers();
+  const lines = [
+    "# Formation Santé Bien-être",
+    "",
+    "> Comparateur de formations éligibles au CPF (Compte Personnel de Formation) dans le secteur santé, esthétique et bien-être en France : esthétique, coiffure, manucure, maquillage, massage bien-être. Catalogue issu de Mon Compte Formation (EDOF, Caisse des Dépôts), organismes certifiés Qualiopi uniquement.",
+    "",
+    "## Formations par métier",
+    "",
+    ...cats.map((c) => `- [Formations ${c.nom}](${base}/formations/${c.slug}) : ${c.n} formations éligibles CPF`),
+    "",
+    "## Fiches métier",
+    "",
+    ...metiers.map((m) => `- [${m.metier}](${base}/metier/${m.slug})`),
+    "",
+    "## Financement et informations pratiques",
+    "",
+    `- [Financer sa formation avec le CPF](${base}/financement-cpf)`,
+    `- [Questions fréquentes (FAQ)](${base}/faq)`,
+    `- [Blog et guides](${base}/blog)`,
+    "",
+    "## Optional",
+    "",
+    `- [Toutes les formations](${base}/formations)`,
+    `- [Catalogue par ville](${base}/villes)`,
+  ];
+  res.type("text/plain").send(lines.join("\n") + "\n");
 });
 
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
@@ -941,7 +1079,7 @@ seoRouter.get("/financement-cpf", (req, res) => {
         name: "Comment utiliser mon CPF pour une formation ?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Connectez-vous sur moncompteformation.gouv.fr, recherchez votre formation, puis mobilisez vos droits. Un reste à charge peut être complété par Pôle emploi, votre employeur ou vos fonds propres.",
+          text: "Connectez-vous sur moncompteformation.gouv.fr, recherchez votre formation, puis mobilisez vos droits. Un reste à charge (150 € depuis avril 2026) peut être complété par France Travail, votre employeur ou vos fonds propres.",
         },
       },
     ],
@@ -956,7 +1094,7 @@ seoRouter.get("/financement-cpf", (req, res) => {
 <div class="mesh"><h2>Comment ça marche, en 3 étapes</h2>
   <p>1. <strong>Vérifiez vos droits</strong> sur moncompteformation.gouv.fr.<br>
      2. <strong>Choisissez votre formation</strong> certifiante (RNCP ou RS) dispensée par un organisme Qualiopi.<br>
-     3. <strong>Mobilisez votre CPF</strong> ; un éventuel reste à charge peut être complété (Pôle emploi, employeur, fonds propres).</p>
+     3. <strong>Mobilisez votre CPF</strong> ; un éventuel reste à charge (150 € depuis avril 2026, sauf exonérations) peut être complété (France Travail, employeur, fonds propres).</p>
 </div>
 <div class="mesh"><h2>Explorer les formations finançables</h2><div class="chips">
 ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} (${c.n})</a>`).join("")}
@@ -1011,7 +1149,7 @@ seoRouter.get("/faq", (req, res) => {
       items: [
         { id: 1, q: "Comment utiliser mon CPF pour une formation beauté ?", a: "Connectez-vous sur <strong>moncompteformation.gouv.fr</strong> avec votre numéro de sécurité sociale. Recherchez la formation qui vous intéresse, vérifiez qu'elle est éligible au CPF et que l'organisme est certifié Qualiopi. Vous pouvez ensuite mobiliser vos droits directement depuis la plateforme. Si vous avez un reste à charge, l'employeur, France Travail ou une aide régionale peuvent compléter." },
         { id: 2, q: "Combien ai-je sur mon CPF ?", a: "Depuis 2019, vous cumulez <strong>500 € par an</strong> travaillé, plafonné à 5 000 € (800 € et 8 000 € pour les personnes peu qualifiées). Pour connaître votre solde exact, connectez-vous sur moncompteformation.gouv.fr ou appelez le 3699 (service gratuit)." },
-        { id: 3, q: "Mon CPF est insuffisant pour couvrir la formation, que faire ?", a: "Depuis 2023, un reste à charge de 100 € minimum s'applique sauf si votre employeur prend en charge la formation. Pour couvrir ce qui reste, vous pouvez demander l'aide de votre OPCO, une aide de votre région, ou l'AIF de France Travail si vous êtes demandeur d'emploi. Ces aides sont cumulables avec le CPF." },
+        { id: 3, q: "Mon CPF est insuffisant pour couvrir la formation, que faire ?", a: "Depuis le 6 avril 2026, une participation forfaitaire de 150 € minimum s'applique (100 € entre mai 2024 et avril 2026), sauf si votre employeur prend en charge la formation ou si vous êtes demandeur d'emploi. Pour couvrir ce qui reste, vous pouvez demander l'aide de votre OPCO, une aide de votre région, ou l'AIF de France Travail. Ces aides sont cumulables avec le CPF." },
         { id: 4, q: "Comment vérifier qu'une formation est éligible au CPF ?", a: "Rendez-vous directement sur <strong>moncompteformation.gouv.fr</strong> et tapez le nom de la formation ou de l'organisme. Seules les formations référencées sur cette plateforme sont finançables par le CPF. Si vous ne trouvez pas la formation via la recherche, elle n'est pas éligible au CPF actuellement." },
         { id: 5, q: "Est-ce que les demandeurs d'emploi peuvent utiliser leur CPF ?", a: "Oui. En tant que demandeur d'emploi, vous cumulez votre CPF à hauteur de <strong>500 € par an</strong>. France Travail peut également financer une formation complémentaire via l'<strong>AIF (Aide Individuelle à la Formation)</strong> si la formation est validée dans votre projet professionnel." },
         { id: 6, q: "Comment combiner CPF et aide France Travail ?", a: "L'<strong>AIF</strong> de France Travail peut compléter votre CPF si le montant disponible ne suffit pas. Contactez votre conseiller France Travail et faites valider votre projet de formation. Le dossier se monte conjointement entre votre CPF et la demande d'AIF." },
@@ -1050,9 +1188,9 @@ seoRouter.get("/faq", (req, res) => {
       titre: "📋 Pratique et logistique",
       id: "pratique",
       items: [
-        { id: 24, q: "Combien de temps dure une demande de financement CPF ?", a: "Une fois votre dossier soumis sur moncompteformation.gouv.fr, l'accord est généralement obtenu sous <strong>24 à 72 heures</strong> pour les formations éligibles. Prévoyez un délai de 10 jours ouvrés entre votre demande et le début de la formation (obligation légale de rétractation)." },
+        { id: 24, q: "Combien de temps dure une demande de financement CPF ?", a: "Une fois votre dossier soumis sur moncompteformation.gouv.fr, l'accord est généralement obtenu sous <strong>24 à 72 heures</strong> pour les formations éligibles. Prévoyez un délai réglementaire incompressible de 11 jours ouvrés entre la validation de votre demande et le début de la formation (délai de rétractation)." },
         { id: 25, q: "Peut-on cumuler plusieurs formations avec le CPF ?", a: "Oui, tant que votre solde CPF le permet. Vous pouvez enchainer des formations, mais pas les suivre en parallèle via le CPF. Chaque formation doit être terminée (ou le CPF remboursé en cas d'abandon) avant d'en financer une nouvelle." },
-        { id: 26, q: "Que se passe-t-il si j'abandonne une formation financée par le CPF ?", a: "Si vous abandonnez sans motif valable, les heures utilisées restent débitées de votre compte. En cas de force majeure (maladie, accident), une prise en charge partielle ou un report peut être négocié avec l'organisme. Contactez-les rapidement." },
+        { id: 26, q: "Que se passe-t-il si j'abandonne une formation financée par le CPF ?", a: "Si vous abandonnez sans motif valable, le montant en euros déjà mobilisé reste débité de votre compte (le CPF est crédité en euros, pas en heures, depuis 2019). En cas de force majeure (maladie, accident), une prise en charge partielle ou un report peut être négocié avec l'organisme. Contactez-les rapidement." },
         { id: 27, q: "Peut-on suivre une formation CPF pendant son congé maternité ?", a: "Oui, il n'existe pas d'interdiction légale. Le congé maternité est une période pendant laquelle vous continuez à accumuler vos droits CPF. La formation peut être suivie à distance pendant cette période, ou planifiée juste avant le retour en poste." },
         { id: 28, q: "Mon employeur peut-il s'opposer à ma formation CPF ?", a: "Si la formation se déroule <strong>hors temps de travail</strong>, l'employeur n'a pas son mot à dire. Si elle empiète sur votre temps de travail, un accord préalable est nécessaire. Dans tous les cas, le CPF est un droit individuel que vous exercez librement hors temps de travail." },
         { id: 29, q: "Peut-on utiliser le CPF depuis l'étranger ?", a: "Oui, si vous êtes salarié ou demandeur d'emploi en France et que vous disposez d'un compte CPF. La formation peut être suivie à distance. Pour les formations en présentiel à l'étranger, la prise en charge CPF est possible si la formation est référencée sur moncompteformation.gouv.fr." },
@@ -1552,6 +1690,18 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
   <a class="chip" href="/formations/maquillage">💄 Maquillage</a>
   <a class="chip" href="/faq">❓ FAQ formations CPF</a>
 </div></div>`;
+  const articleJsonLd: object[] = [enrichedLd];
+  if (a.faq && a.faq.length) {
+    articleJsonLd.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: a.faq.map((x) => ({
+        "@type": "Question",
+        name: x.q,
+        acceptedAnswer: { "@type": "Answer", text: x.a },
+      })),
+    });
+  }
   const body = `<h1>${esc(a.title)}</h1>
 ${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px"><time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""}</p>` : ""}
 <p class="lead" style="font-size:1rem;border-left:3px solid var(--p);padding-left:14px;color:var(--body)">${esc(a.metaDescription)}</p>
@@ -1572,7 +1722,7 @@ ${relatedHtml}`;
       ogImage: a.image,
       publishedAt: a.publishedAt,
       updatedAt: a.updatedAt,
-      jsonLd: [enrichedLd],
+      jsonLd: articleJsonLd,
       breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog", url: `${base}/blog` }, { name: a.title }],
       body,
     })
@@ -1611,7 +1761,7 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
 
   const cards = formationCards(r.items);
   const catDisplay = normCat(cat.nom);
-  const qualiopi = r.items.filter((f: any) => f.organisme_qualiopi).length;
+  const qualiopi = r.qualiopiCount;
   const distance = r.items.filter((f: any) => f.a_distance).length;
   // Regle R4 (Pilier 4) : (a) lien vers la fiche metier ; (b) le bloc "Nos guides"
   // generique est remplace par les 4 articles les plus recents du metier.
@@ -1631,11 +1781,14 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     <a class="chip" href="/faq">❓ FAQ formations</a>
     <a class="chip" href="/metiers">🎯 Fiches metiers</a>
   </div></div>`;
+  const catFaq = getCategoryFaq(slug);
+  const faqHtml = faqAccordionHtml(`Questions fréquentes — formations ${catDisplay}`, catFaq, `faq-${slug}`);
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
 <h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
 ${decouvrirMetierHtml}
 ${withSidebar(sidebar, cards)}
+${faqHtml}
 ${blogLinks}`;
 
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
@@ -1645,7 +1798,7 @@ ${blogLinks}`;
       description: metaDesc,
       canonical,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
-      jsonLd: [courseListLd(r.items, canonical)],
+      jsonLd: catFaq.length ? [courseListLd(r.items, canonical), faqPageLd(catFaq)] : [courseListLd(r.items, canonical)],
       breadcrumb: [
         { name: "Accueil", url: `${base}/formations` },
         { name: "Formations", url: `${base}/formations` },
@@ -1713,7 +1866,7 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
 
   const cards = formationCards(r.items);
   const catDisplay2 = normCat(cat.nom);
-  const qualiopi2 = r.items.filter((f: any) => f.organisme_qualiopi).length;
+  const qualiopi2 = r.qualiopiCount;
 
   // Regle R5 (Pilier 4) : bloc "departements voisins" (meme region, >= 3 formations,
   // jamais de lien vers une page noindex) + lien vers la fiche metier.

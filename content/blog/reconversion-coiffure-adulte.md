@@ -68,7 +68,7 @@ Pour utiliser vos droits CPF :
 3. Vérifiez le coût de la formation et vos droits disponibles (crédit en euros)
 4. Si le coût dépasse vos droits, un reste à charge peut s'appliquer — certains organismes proposent des abondements ou financements complémentaires
 
-**À noter** : depuis mai 2023, un reste à charge de 100 € s'applique aux formations CPF sauf si un cofinancement (employeur, Opco, France Travail) est activé.
+**À noter** : depuis avril 2026, une participation forfaitaire de 150 € s'applique aux formations CPF (100 € entre mai 2024 et avril 2026), sauf si un cofinancement (employeur, Opco, France Travail) est activé.
 
 ### France Travail (ex-Pôle Emploi)
 
