@@ -1,11 +1,12 @@
 ---
 slug: formation-soin-cuir-chevelu-trichologie
 title: "Formation soin du cuir chevelu et trichologie en 2026 : chute de cheveux, pellicules et certifications"
+seoTitle: "Formation soin du cuir chevelu et trichologie en 2026"
 metaDescription: "Formation trichologie 2026 : soins du cuir chevelu, chute de cheveux, pellicules. Certifications disponibles, financement CPF, débouchés en salon et cabinet."
 excerpt: "Découvrez la formation en trichologie et soins du cuir chevelu en 2026 : types de chute de cheveux, techniques de soin, certifications disponibles et financement CPF."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation soin du cuir chevelu et trichologie en 2026 : chute de cheveux, pellicules et certifications
 
 La trichologie esthétique - à ne pas confondre avec la trichologie médicale réservée aux dermatologues - est une spécialité en plein essor permettant aux professionnels de la coiffure et de l'esthétique d'offrir des soins ciblés du cuir chevelu. Oui, des formations en trichologie esthétique sont accessibles et finançables par le CPF en 2026, pour des coiffeurs ou esthéticiennes souhaitant élargir leurs compétences. Ce guide vous explique les différents types de troubles capillaires, les soins spécifiques applicables, les certifications disponibles et les débouchés professionnels dans ce domaine spécialisé.

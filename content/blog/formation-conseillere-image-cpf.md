@@ -1,11 +1,12 @@
 ---
 slug: formation-conseillere-image-cpf
 title: "Formation conseillère en image CPF en 2026 : morphologie, colorimétrie et débouchés"
+seoTitle: "Formation conseillère en image CPF en 2026"
 metaDescription: "Formation conseillère en image CPF 2026 : morphologie, colorimétrie, garde-robe. Certifications RNCP, différence avec stylisme, débouchés et revenus cabinet conseil."
 excerpt: "Devenir conseillère en image : morphologie, colorimétrie, style personnel. Certifications RNCP disponibles, différence avec le stylisme, débouchés et revenus réalistes en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation conseillère en image CPF en 2026 : morphologie, colorimétrie et débouchés
 
 Devenir conseillère en image consiste à accompagner des personnes ou des professionnels dans l'harmonie entre leur apparence physique, leurs couleurs naturelles et leur garde-robe. Des certifications RNCP permettent d'accéder à ce métier avec un financement CPF en 2026. Ce guide distingue le conseil en image du stylisme, présente les formations disponibles et les débouchés réels - cabinet privé, entreprise, mode ou reconversion.

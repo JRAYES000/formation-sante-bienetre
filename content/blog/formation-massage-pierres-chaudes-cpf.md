@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-pierres-chaudes-cpf
 title: "Formation massage aux pierres chaudes CPF en 2026 : basalte, protocoles et certifications"
+seoTitle: "Formation massage aux pierres chaudes CPF en 2026"
 metaDescription: "Formation massage aux pierres chaudes CPF en 2026 : pierres de basalte, températures, protocoles dos/ventre/visage, certifications reconnues et débouchés spas et thalasso."
 excerpt: "Tout savoir sur la formation massage aux pierres chaudes finançable CPF : basalte volcanique, protocoles professionnels, certifications disponibles et débouchés en spa et thalassothérapie."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage aux pierres chaudes CPF en 2026 : basalte, protocoles et certifications
 
 La formation massage aux pierres chaudes est accessible via le CPF en 2026, à condition de choisir une certification éligible. Ce soin de bien-être utilise des pierres de basalte volcanique chauffées entre 50 et 55 degrés Celsius, placées sur des zones précises du corps pour diffuser une chaleur profonde et apaisante. Les débouchés sont nombreux : spas, instituts, thalassothérapies, et exercice en libéral. Le coût d'une séance professionnelle varie entre 90 et 150 euros, ce qui en fait une prestation à forte valeur ajoutée pour tout praticien bien-être.

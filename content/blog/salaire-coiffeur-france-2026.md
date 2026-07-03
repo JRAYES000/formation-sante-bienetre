@@ -1,11 +1,12 @@
 ---
 slug: salaire-coiffeur-france-2026
 title: "Salaire coiffeur en France en 2026 : grille, primes, pourboires et évolution de carrière"
+seoTitle: "Salaire coiffeur en France en 2026"
 metaDescription: "Salaire coiffeur France 2026 : grille convention collective, différences Paris/province, pourboires, primes, coiffeur salarié vs indépendant. Toutes les données."
 excerpt: "Combien gagne un coiffeur en France en 2026 ? De 1 767 euros brut en début de carrière à plus de 3 500 euros pour un gérant, voici la réalité des salaires avec chiffres à l'appui."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Salaire coiffeur en France en 2026 : grille, primes, pourboires et évolution de carrière
 
 Le salaire d'un coiffeur en France en 2026 dépend de plusieurs facteurs : le niveau de diplôme, l'expérience, la localisation géographique, le type de salon et le statut (salarié ou indépendant). Un coiffeur débutant avec le CAP perçoit environ 1 767 euros brut par mois selon la convention collective. Un gérant de salon expérimenté peut atteindre 3 000 à 4 000 euros brut, voire davantage. Voici toutes les données chiffrées pour comprendre la réalité des rémunérations dans ce secteur.

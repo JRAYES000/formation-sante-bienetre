@@ -1,13 +1,13 @@
 ---
 slug: formation-esthetique-alternance-apprentissage
 title: "CAP Esthétique en alternance : le meilleur choix pour débuter en 2026 ?"
+seoTitle: "CAP Esthétique en alternance"
 metaDescription: "CAP Esthétique en alternance 2026 : avantages, rémunération, comment trouver un employeur, financement. Tout ce qu'il faut savoir avant de se lancer."
 excerpt: "L'alternance pour préparer un CAP Esthétique permet d'être rémunéré tout en se formant, sans payer les frais de formation. Voici comment ca fonctionne, les avantages réels et les obstacles à anticiper."
 image: https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 L'alternance pour le CAP Esthétique est souvent présentée comme la voie idéale : formation gratuite, rémunération pendant 2 ans, expérience professionnelle dès le départ. En réalité, c'est une excellente option pour certains profils, moins adaptée pour d'autres. Voici tout ce qu'il faut savoir avant de choisir cette voie.
 
 ## Qu'est-ce que l'alternance en esthétique

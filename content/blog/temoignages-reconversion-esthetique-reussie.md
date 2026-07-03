@@ -1,11 +1,12 @@
 ---
 slug: temoignages-reconversion-esthetique-reussie
 title: "Témoignages de reconversion réussie en esthétique et bien-être : 10 parcours inspirants"
+seoTitle: "Témoignages de reconversion réussie en esthétique et bien-être"
 metaDescription: "10 témoignages de reconversions réussies en esthétique et bien-être : ex-comptable masseuse, ex-commerciale esthéticienne, enseignante naturopathe... Parcours, financement, premiers pas et résultats concrets."
 excerpt: "Ils ont quitté la comptabilité, le commerce, l'enseignement ou l'informatique pour se lancer dans l'esthétique, le massage ou la naturopathie. Voici 10 parcours de reconversion réussie, avec les formations suivies, les financements utilisés et les résultats obtenus."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Témoignages de reconversion réussie en esthétique et bien-être : 10 parcours inspirants
 
 Peut-on vraiment quitter un emploi stable pour devenir esthéticienne, masseuse ou sophrologue ? La réponse est oui, à condition d'être bien informé et de choisir la bonne formation. Ces 10 témoignages de reconversion - des profils variés, des âges différents, des situations diverses - montrent que c'est possible à tout moment de sa vie professionnelle. Chaque parcours détaille la formation suivie, le financement obtenu et les premiers résultats concrets.

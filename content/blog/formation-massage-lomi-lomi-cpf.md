@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-lomi-lomi-cpf
 title: "Formation massage lomi lomi CPF en 2026 : technique hawaïenne, certifications et débouchés"
+seoTitle: "Formation massage lomi lomi CPF en 2026"
 metaDescription: "Formation massage lomi lomi CPF en 2026 : origine hawaïenne, technique avant-bras, certifications disponibles, financement CPF et débouchés en spa et bien-être."
 excerpt: "Guide complet sur la formation massage lomi lomi : technique hawaïenne traditionnelle, certifications reconnues, financement CPF et débouchés professionnels en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage lomi lomi CPF en 2026 : technique hawaïenne, certifications et débouchés
 
 La formation au massage lomi lomi est finançable via le CPF en 2026, dans le cadre de certifications plus larges en massage bien-être. Ce soin d'origine hawaïenne se distingue par ses mouvements amples, fluides et ondulatoires exécutés principalement avec les avant-bras. Une séance professionnelle se facture entre 80 et 130 euros, ce qui en fait une prestation attractive pour les praticiens en bien-être. Voici tout ce qu'il faut savoir pour se former, se certifier et exercer en France.

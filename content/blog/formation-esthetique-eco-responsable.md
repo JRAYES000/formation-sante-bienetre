@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-eco-responsable
 title: "Formation esthétique éco-responsable en 2026 : cosmétique durable, zéro déchet et certifications"
+seoTitle: "Formation esthétique éco-responsable en 2026"
 metaDescription: "Formation esthétique éco-responsable en 2026 : cosmétique bio, éco-labels Cosmos et Ecocert, réduction des déchets en salon, certifications disponibles et financement CPF."
 excerpt: "Le marché de la beauté durable a progressé de 25 % en quatre ans. Découvrez les formations esthétique éco-responsable disponibles en 2026, les certifications reconnues et comment financer votre parcours via le CPF."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique éco-responsable en 2026 : cosmétique durable, zéro déchet et certifications
 
 Le marché de la cosmétique durable et de l'esthétique éco-responsable a progressé de plus de 25 % en France en quatre ans. En 2026, les consommateurs sont de plus en plus attentifs à la composition des produits utilisés sur leur peau, aux emballages et aux pratiques des instituts qu'ils fréquentent. Se former à l'esthétique éco-responsable, c'est à la fois répondre à cette demande croissante et construire un avantage concurrentiel réel. Voici le guide complet pour comprendre ces formations, leurs certifications et leurs débouchés.

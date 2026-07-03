@@ -1,11 +1,12 @@
 ---
 slug: formation-tui-na-massage-chinois
 title: "Formation tui na massage traditionnel chinois CPF en 2026 : techniques, certifications et débouchés"
+seoTitle: "Formation tui na massage traditionnel chinois CPF en 2026"
 metaDescription: "Formation tui na massage chinois en 2026 : techniques, points d'acupression, certifications disponibles, financement CPF et débouchés en cabinet bien-être ou spa."
 excerpt: "Le tui na est une technique de massage issue de la médecine traditionnelle chinoise. Découvrez les formations disponibles en 2026, les certifications reconnues, le financement CPF et les débouchés en bien-être."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation tui na massage traditionnel chinois CPF en 2026 : techniques, certifications et débouchés
 
 Le tui na est une discipline de massage issue de la médecine traditionnelle chinoise (MTC), littéralement traduit par "pousser et saisir". En 2026, les formations au tui na bien-être connaissent un engouement croissant en France, portées par l'intérêt grandissant pour les approches holistiques. Une formation bien choisie, financée via le CPF, permet d'intégrer ces techniques dans un cabinet de bien-être, un spa ou une activité indépendante. Voici tout ce qu'il faut savoir pour se lancer.

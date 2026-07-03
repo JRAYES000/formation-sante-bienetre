@@ -1,11 +1,12 @@
 ---
 slug: formation-onglerie-debutant-complet
 title: "Formation onglerie débutante complète en 2026 : gel, acrylique, nail art et certifications"
+seoTitle: "Formation onglerie débutante complète en 2026"
 metaDescription: "Guide complet de la formation onglerie débutant en 2026 : gel UV vs acrylique, pose d'ongles naturels, nail art, certifications RNCP/RS, CPF, matériel et débouchés salon."
 excerpt: "Démarrer de zéro dans l'onglerie en 2026 : gel UV ou acrylique, certifications RNCP et RS éligibles CPF, investissement matériel, débouchés salon ou domicile. Tout ce qu'il faut savoir."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation onglerie débutante complète en 2026 : gel, acrylique, nail art et certifications
 
 L'onglerie est l'une des spécialités beauté les plus accessibles pour démarrer de zéro. En 2026, plusieurs certifications RNCP et RS éligibles CPF permettent d'acquérir les bases complètes (gel UV, acrylique, nail art, pose sur ongles naturels) et de s'installer rapidement en salon ou à domicile. Ce guide vous explique tout : les techniques, les certifications, le matériel nécessaire et les débouchés concrets.

@@ -1,13 +1,13 @@
 ---
 slug: aide-pole-emploi-formation-beaute
 title: "Financer sa formation beauté avec France Travail : guide pratique 2026"
+seoTitle: "Financer sa formation beauté avec France Travail"
 metaDescription: "AIF, financement direct, CPF et France Travail : comment financer une formation esthétique ou massage quand on est demandeur d'emploi. Guide complet 2026."
 excerpt: "Vous etes inscrit à France Travail et vous voulez vous former en esthétique ou massage bien-être ? Plusieurs dispositifs peuvent couvrir tout ou partie du cout. Voici comment les activer concrètement."
 image: https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 France Travail (ex Pôle Emploi) dispose de plusieurs outils pour financer une formation dans la beauté et le bien-être. En tant que demandeur d'emploi, vous avez accès à des dispositifs que les salariés n'ont pas. Voici tous les détails pour comprendre lesquels s'appliquent à votre situation et comment les activer.
 
 ## L'AIF (Aide Individuelle à la Formation)

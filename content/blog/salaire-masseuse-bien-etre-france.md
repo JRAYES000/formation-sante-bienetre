@@ -1,13 +1,13 @@
 ---
 slug: salaire-masseuse-bien-etre-france
 title: "Salaire d'une masseuse bien-être en France : chiffres réels 2026"
-metaDescription: "Salaire masseuse bien-être France 2026 : combien gagne vraiment un praticien massage ? Chiffres par statut, région et niveau d'expérience. Guide complet."
+seoTitle: "Salaire d'une masseuse bien-être en France (2026)"
+metaDescription: "Combien gagne une masseuse bien-être ? Salaires selon le statut (salariée, indépendante), écarts par région et leviers pour mieux vivre du métier."
 excerpt: "Combien gagne vraiment une masseuse bien-être en France ? En salariat, en spa hôtelier, en libéral ou à domicile, les revenus varient énormément. Voici les chiffres réels et les leviers pour les augmenter."
-image: https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80&fit=crop
+image: https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
-updatedAt: 2026-06-15
+updatedAt: "2026-07-03"
 ---
-
 Un(e) praticien(ne) en massage bien-être gagne entre 1 400 et 3 500 euros nets par mois selon le statut, la région et l'expérience. En salariat dans un spa, les salaires de départ avoisinent le SMIC. En libéral avec une clientèle fidèle, les revenus peuvent dépasser 3 000 euros nets. Voici les données concrètes pour vous projeter honnêtement.
 
 ## Le salaire en début de carrière (statut salarié)

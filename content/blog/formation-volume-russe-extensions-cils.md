@@ -1,11 +1,12 @@
 ---
 slug: formation-volume-russe-extensions-cils
 title: "Formation volume russe extensions de cils en 2026 : technique 2D-10D, certifications et débouchés"
+seoTitle: "Formation volume russe extensions de cils en 2026"
 metaDescription: "Formation volume russe cils 2026 : technique 2D à 10D, différences avec classique, certifications disponibles, CPF, tarification et débouchés professionnels."
 excerpt: "Maîtrisez le volume russe en extensions de cils en 2026 : de la technique 2D au mega volume 10D+, certifications, financement CPF et débouchés en institut ou à domicile."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation volume russe extensions de cils en 2026 : technique 2D-10D, certifications et débouchés
 
 Le volume russe est la technique d'extension de cils la plus avancée et la plus demandée sur le marché en 2026. Oui, il est possible de se former au volume russe et au mega volume avec le CPF, à condition de choisir un organisme certifié Qualiopi. La différence avec la technique classique (1:1) est fondamentale : au lieu d'appliquer une extension par cil naturel, le volume russe consiste à créer des bouquets de 2 à 10 extensions et plus, posées sur un seul cil. Ce guide complet vous explique toutes les techniques, les certifications disponibles, les tarifs pratiqués et les débouchés professionnels.

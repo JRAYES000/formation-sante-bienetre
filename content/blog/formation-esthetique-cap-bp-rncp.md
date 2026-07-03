@@ -3,8 +3,8 @@ title: "Formation esthétique : CAP, BP ou titre RNCP — comment choisir ?"
 slug: "formation-esthetique-cap-bp-rncp"
 metaDescription: "CAP, BP, BTS ou titre RNCP en esthétique : comparatif complet des diplômes, durées, financement CPF et conseils pour choisir selon votre projet professionnel."
 excerpt: "Vous souhaitez vous lancer dans une carrière en esthétique mais vous ne savez pas quel diplôme viser ? Voici un guide clair pour comparer CAP, BP, BTS et titres RNCP selon votre situation."
+publishedAt: "2026-06-05"
 ---
-
 Se former aux métiers de l'esthétique en France suppose de s'orienter parmi plusieurs diplômes et certifications de niveaux différents. CAP, BP, BTS, titre professionnel RNCP… chaque parcours répond à un profil, un objectif et un calendrier distincts. Ce guide vous aide à y voir clair avant de vous engager.
 
 ---

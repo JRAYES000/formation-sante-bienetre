@@ -50,7 +50,8 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-app.use(express.static(publicDir));
+// index:false — la racine "/" est une page SSR (seo.ts), pas le shell SPA.
+app.use(express.static(publicDir, { index: false }));
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
@@ -62,11 +63,13 @@ app.use("/api/admin", adminRouter);
 // Script de mesure d'audience (GA4, chargé après consentement). Inerte si GA4_MEASUREMENT_ID absent.
 app.use("/", analyticsRouter);
 
-// Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots
-app.use("/", seoRouter);
+// SPA (hash routing) servie sous /app — ex : /app#/recherche, /app#/formation/:id.
+// Les anciennes URLs /#/... sont redirigées côté client par la home SSR.
+app.get(["/app", "/app/*"], (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
 
-// SPA fallback pour les routes client (hash routing)
-app.get("*", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
+// Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots.
+// Se termine par un catch-all 404 SSR : plus aucun soft-404 (200 + shell vide).
+app.use("/", seoRouter);
 
 const port = Number(process.env.PORT ?? 3001);
 app.listen(port, () => {

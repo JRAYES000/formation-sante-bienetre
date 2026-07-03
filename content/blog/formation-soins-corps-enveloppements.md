@@ -1,11 +1,12 @@
 ---
 slug: formation-soins-corps-enveloppements
 title: "Formation soins du corps et enveloppements en esthétique : CPF, techniques et débouchés"
+seoTitle: "Formation soins du corps et enveloppements en esthétique"
 metaDescription: "Guide complet sur la formation soins du corps et enveloppements en esthétique 2026 : gommages, enveloppements algues et argile, modelages corps, soins spa, financement CPF et débouchés."
 excerpt: "Découvrez la formation aux soins du corps et enveloppements en esthétique : techniques (gommages, enveloppements algues, argile, soins minceur), financement CPF, certifications BP esthétique et débouchés en institut et spa."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation soins du corps et enveloppements en esthétique : CPF, techniques et débouchés
 
 Les soins du corps et les enveloppements constituent l'une des catégories les plus riches et les plus variées de la pratique esthétique. Ils sont au coeur du référentiel du BP Esthétique Cosmétique Parfumerie et des certifications RS en soins corporels, toutes éligibles au CPF. Ces techniques - gommages, enveloppements aux algues, à l'argile, modelages corps, soins signature spa - permettent de proposer des prestations premium à forte valeur ajoutée, aussi bien en institut qu'en spa ou en thalassothérapie.

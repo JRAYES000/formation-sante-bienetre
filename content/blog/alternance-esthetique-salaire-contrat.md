@@ -1,11 +1,12 @@
 ---
 slug: alternance-esthetique-salaire-contrat
 title: "Alternance esthétique 2026 : salaire, contrat, débouchés et comment trouver un employeur"
+seoTitle: "Alternance esthétique 2026"
 metaDescription: "Tout savoir sur l'alternance en esthétique en 2026 : salaire par âge, contrat d'apprentissage vs pro, trouver un salon, et les formations CAP BP BTS disponibles."
 excerpt: "L'alternance est la voie royale pour devenir esthéticienne sans payer sa formation. Voici les salaires réels, comment trouver un employeur et ce que vous apprendrez vraiment."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Alternance esthétique 2026 : salaire, contrat, débouchés et comment trouver un employeur
 
 Vous souhaitez devenir esthéticienne sans payer votre formation de votre poche et en gagnant un salaire dès le départ ? L'alternance est la solution. En France, les formations esthétique (CAP, BP, BTS) sont accessibles par contrat d'apprentissage ou de professionnalisation. Ce guide complet vous donne les chiffres réels : salaires par âge, durée des contrats, droits, aides pour les employeurs et méthodes pour trouver votre salon d'accueil.

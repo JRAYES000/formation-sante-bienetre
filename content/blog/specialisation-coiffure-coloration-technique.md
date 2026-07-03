@@ -1,13 +1,13 @@
 ---
 slug: specialisation-coiffure-coloration-technique
 title: "Spécialisations coiffure : coloration, kératine, extensions — formations CPF"
+seoTitle: "Spécialisations coiffure"
 metaDescription: "Formations spécialisées coiffure financées CPF : coloration avancée, kératine, extensions, balayage. Pour coiffeurs déjà en activité. Guide 2026."
 excerpt: "Tu es déjà coiffeur et tu veux te démarquer ? Les formations courtes spécialisées peuvent booster tes revenus et fidéliser ta clientèle. Voici les plus recherchées."
 image: https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 La spécialisation est le principal levier d'augmentation des revenus dans la coiffure. Un coiffeur polyvalent et un coiffeur expert en coloration technique ne travaillent pas dans les mêmes salons et ne facturent pas les mêmes prix. Ce guide vous présente les spécialisations les plus porteuses et comment les financer.
 
 ## Pourquoi se spécialiser en coiffure

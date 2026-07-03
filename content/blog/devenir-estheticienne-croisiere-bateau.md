@@ -1,11 +1,12 @@
 ---
 slug: devenir-estheticienne-croisiere-bateau
 title: "Travailler comme esthéticienne ou praticienne sur un bateau de croisière en 2026"
+seoTitle: "Travailler comme esthéticienne ou praticienne sur un bateau"
 metaDescription: "Comment devenir esthéticienne sur un bateau de croisière en 2026 : diplômes requis, recrutement Steiner et Ocean Spa, salaires, conditions de vie à bord, candidature."
 excerpt: "Travailler comme esthéticienne sur un bateau de croisière est un métier à part : diplômes exigés, langues requises, contrats de 6 à 9 mois, logement et nourriture inclus. Guide complet pour candidater en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Travailler comme esthéticienne ou praticienne sur un bateau de croisière en 2026
 
 Travailler comme esthéticienne sur un bateau de croisière, c'est possible et accessible avec le bon diplôme en 2026. Les compagnies de croisière (MSC, Costa, Royal Caribbean, Norwegian, Carnival...) emploient des centaines de praticiens dans leurs spas à bord. Le recrutement passe essentiellement par des prestataires spécialisés comme Steiner Leisure ou Ocean Spa. Le logement et la nourriture sont inclus, ce qui permet d'économiser significativement. Voici tout ce qu'il faut savoir pour préparer votre candidature.

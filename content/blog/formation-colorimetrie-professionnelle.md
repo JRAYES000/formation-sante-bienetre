@@ -1,11 +1,12 @@
 ---
 slug: formation-colorimetrie-professionnelle
 title: "Formation colorimétrie professionnelle 2026 : maîtriser la couleur en coiffure et esthétique"
+seoTitle: "Formation colorimétrie professionnelle 2026"
 metaDescription: "Guide complet sur la formation colorimétrie professionnelle 2026 : cercle chromatique appliqué, sous-tons de peau, techniques balayage et ombré, certifications disponibles et financement CPF."
 excerpt: "La colorimétrie professionnelle est une compétence clé pour les coiffeurs et les maquilleurs. Découvrez le cercle chromatique appliqué, l'analyse des sous-tons de peau, les techniques de coloration tendance et les formations certifiantes finançables par le CPF en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation colorimétrie professionnelle 2026 : maîtriser la couleur en coiffure et esthétique
 
 La colorimétrie professionnelle est la science et l'art de choisir et d'appliquer les couleurs en harmonie avec les caractéristiques de chaque client. En 2026, c'est une compétence indispensable aussi bien pour les coiffeurs que pour les maquilleurs et les esthéticiennes. La formation colorimétrie est finançable par le CPF dans le cadre du CAP, du BP coiffure ou de certifications RS spécialisées. Ce guide vous présente les bases théoriques, les techniques pratiques et les voies de formation disponibles.

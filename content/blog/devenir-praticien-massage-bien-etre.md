@@ -1,10 +1,11 @@
 ---
 title: "Devenir praticien en massage bien-être : formation, certification et salaire"
+seoTitle: "Devenir praticien en massage bien-être"
 slug: "devenir-praticien-massage-bien-etre"
 metaDescription: "Tout savoir pour devenir praticien en massage bien-être en France : formation, certifications RS, financement CPF, statuts et perspectives de revenus."
 excerpt: "Le massage bien-être séduit de plus en plus de personnes en reconversion professionnelle. Découvrez les étapes concrètes pour exercer ce métier en toute légalité en France."
+publishedAt: "2026-06-05"
 ---
-
 # Devenir praticien en massage bien-être : formation, certification et salaire
 
 Le massage bien-être connaît un essor remarquable en France, porté par une demande croissante de pratiques de relaxation et de gestion du stress. Si vous envisagez de vous reconvertir dans ce domaine, il est essentiel de bien comprendre le cadre légal, les formations disponibles et les réalités du métier avant de vous lancer.

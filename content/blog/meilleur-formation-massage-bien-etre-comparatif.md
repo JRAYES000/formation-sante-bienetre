@@ -1,11 +1,12 @@
 ---
 slug: meilleur-formation-massage-bien-etre-comparatif
 title: "Meilleure formation massage bien-être en 2026 : comparatif complet des techniques et programmes"
+seoTitle: "Meilleure formation massage bien-être en 2026"
 metaDescription: "Quelle formation massage bien-être choisir en 2026 ? Comparatif californien, shiatsu, ayurvédique, thai, lomi-lomi, pierres chaudes. Prix, certifications, débouchés."
 excerpt: "Californien, shiatsu, ayurvédique, thai, lomi-lomi, pierres chaudes : quel massage apprendre et quelle formation choisir en 2026 ? Le comparatif complet pour décider selon votre profil."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 ## Quelle formation massage choisir en 2026 ? Le guide pour ne pas se tromper
 
 Le marché de la formation en massage bien-être explose. En France, plus de 300 organismes proposent des formations en massage, du week-end de découverte au cursus diplômant de 2 ans. Face à cette offre pléthorique, comment choisir la bonne technique, le bon organisme et le bon format pour votre projet professionnel ?

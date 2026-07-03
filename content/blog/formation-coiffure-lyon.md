@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-lyon
 title: "Formation coiffure à Lyon en 2026 : CAP, BP, alternance et CPF en Auvergne-Rhône-Alpes"
+seoTitle: "Formation coiffure à Lyon en 2026"
 metaDescription: "Guide complet des formations coiffure à Lyon en 2026 : CAP, BP, alternance, financement CPF et débouchés dans la métropole lyonnaise et en Auvergne-Rhône-Alpes."
 excerpt: "Lyon, deuxième ville économique de France, offre un marché de la coiffure solide et un réseau de formations de qualité. Découvrez toutes les options disponibles en 2026, les financements CPF et les salaires dans la région."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation coiffure à Lyon en 2026 : CAP, BP, alternance et CPF en Auvergne-Rhône-Alpes
 
 Vous souhaitez vous former à la coiffure à Lyon ? La capitale des Gaules est la deuxième ville économique de France, avec une métropole de plus de 2 millions d'habitants. Son marché de la coiffure est solide, diversifié et offre de nombreuses opportunités aux professionnels formés. CAP, BP, alternance, CPF : ce guide complet vous présente tout ce qu'il faut savoir pour lancer votre carrière en coiffure à Lyon et en Auvergne-Rhône-Alpes en 2026.

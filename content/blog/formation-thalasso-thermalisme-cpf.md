@@ -1,13 +1,13 @@
 ---
 slug: formation-thalasso-thermalisme-cpf
 title: "Formation thalasso et thermalisme : un secteur qui recrute en 2026"
+seoTitle: "Formation thalasso et thermalisme"
 metaDescription: "Formation thalasso et thermalisme CPF : métiers accessibles, établissements qui recrutent, régions à privilégier. Le secteur est en pleine croissance en 2026."
 excerpt: "La thalassothérapie et le thermalisme recrutent activement en 2026, et les formations CPF pour y accéder sont souvent méconnues. Pourtant, c'est l'un des secteurs bien-être qui offre les meilleures conditions de travail et les débouchés les plus stables."
 image: https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 La thalassothérapie et le thermalisme sont deux des rares secteurs du bien-être qui offrent de la stabilité, des horaires prévisibles et des conditions de travail encadrées. Ces établissements recrutent régulièrement des professionnels qualifiés et les candidatures sérieuses sont rares. C'est un secteur à connaitre pour tous ceux qui se reconvertissent dans le bien-être.
 
 ## Thalasso vs thermalisme : deux secteurs proches mais distincts

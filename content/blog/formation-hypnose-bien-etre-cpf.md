@@ -1,11 +1,12 @@
 ---
 slug: formation-hypnose-bien-etre-cpf
 title: "Formation hypnose CPF en 2026 : hypnose ericksonienne, certifications et cadre légal"
+seoTitle: "Formation hypnose CPF en 2026"
 metaDescription: "Formation hypnose bien-être finançable CPF en 2026 : hypnose ericksonienne, certifications disponibles, cadre légal strict en France et débouchés cabinet privé."
 excerpt: "Tout savoir sur la formation hypnose CPF 2026 : hypnose ericksonienne vs spectacle, certifications, cadre légal en France, débouchés et revenus réels."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation hypnose CPF en 2026 : hypnose ericksonienne, certifications et cadre légal
 
 La formation hypnose bien-être est partiellement finançable par le CPF en 2026 via des certifications RS. Des cursus de 6 à 21 jours permettent d'acquérir les bases de l'hypnose ericksonienne dans un cadre bien-être strict. Avant de vous lancer, un point fondamental : l'hypnose "thérapeutique" ou psychothérapeutique est réservée aux professionnels de santé en France. Un praticien bien-être peut pratiquer l'hypnose de relaxation et d'accompagnement, mais jamais pour traiter des pathologies. Cette nuance est cruciale pour exercer dans la légalité.

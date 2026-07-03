@@ -1,11 +1,12 @@
 ---
 slug: formation-pilates-enseignant-cpf
 title: "Formation enseignant pilates CPF en 2026 : mat, reformer, certifications et débouchés"
+seoTitle: "Formation enseignant pilates CPF en 2026"
 metaDescription: "Formation enseignant pilates CPF en 2026 : pilates mat vs reformer, certifications BASI Stott Body Control vs françaises BPJEPS CQP, financement CPF et débouchés studio cours particuliers."
 excerpt: "Guide complet sur la formation enseignant pilates en 2026 : mat et reformer, comparatif des certifications internationales et françaises, financement CPF et débouchés professionnels réalistes."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation enseignant pilates CPF en 2026 : mat, reformer, certifications et débouchés
 
 La formation enseignant pilates est finançable via le CPF en 2026, sous certaines conditions liées au type de certification choisie. Le pilates connaît une croissance soutenue en France, portée par la demande pour des activités corps-esprit douces mais efficaces. Mais avant de s'engager dans une formation, il est essentiel de comprendre les différences entre pilates mat et reformer, entre certifications internationales et françaises, et entre les débouchés selon le positionnement choisi. Voici le guide complet pour choisir sa voie en 2026.

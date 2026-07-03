@@ -1,11 +1,12 @@
 ---
 slug: formation-cosmetique-naturelle-atelier-diy
 title: "Formation cosmétique naturelle et ateliers DIY en 2026 : créer et animer ses ateliers"
+seoTitle: "Formation cosmétique naturelle et ateliers DIY en 2026"
 metaDescription: "Formation cosmétique naturelle et ateliers DIY en 2026 : différence formulation pro et atelier, réglementation, animer des ateliers beauté naturelle, certifications et modèle économique."
 excerpt: "Animer des ateliers cosmétique DIY est une activité en plein essor. Découvrez la réglementation, les formations disponibles, les certifications et le modèle économique pour lancer vos ateliers beauté naturelle."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation cosmétique naturelle et ateliers DIY en 2026 : créer et animer ses ateliers
 
 Animer des ateliers de cosmétique naturelle DIY (Do It Yourself) est une activité qui attire de plus en plus de professionnels du bien-être et de la beauté. Ces ateliers permettent de transmettre un savoir-faire, de créer du lien avec une communauté et de générer des revenus complémentaires. En 2026, la demande est forte : des cours de créations de baumes à lèvres aux ateliers de sérums maison, les Français sont de plus en plus nombreux à vouloir fabriquer leurs propres cosmétiques. Mais avant de se lancer, la distinction entre formulation professionnelle et animation DIY est fondamentale, et la réglementation doit être maîtrisée.

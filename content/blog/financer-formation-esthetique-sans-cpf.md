@@ -1,13 +1,13 @@
 ---
 slug: financer-formation-esthetique-sans-cpf
 title: "Financer une formation esthétique sans CPF : toutes les solutions 2026"
+seoTitle: "Financer une formation esthétique sans CPF"
 metaDescription: "Comment financer une formation esthétique sans CPF en 2026 : alternance, aides régionales, France Travail, OPCO, prêt personnel, paiement en plusieurs fois. Guide complet."
 excerpt: "Votre CPF est vide, insuffisant ou vous ne voulez pas l'utiliser ? Il existe plusieurs solutions pour financer votre formation esthétique sans toucher à votre CPF. Voici toutes les options concrètes."
 image: https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Vous souhaitez vous former en esthétique mais votre CPF est insuffisant ou vous préférez le conserver pour plus tard. Bonne nouvelle : il existe plusieurs solutions alternatives pour financer votre formation, certaines pouvant couvrir l'intégralité du cout.
 
 ## L'alternance : formation gratuite et rémunérée

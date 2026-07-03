@@ -1,11 +1,12 @@
 ---
 slug: formation-bols-tibetains-sonotherapie
 title: "Formation bols tibétains et sonothérapie CPF en 2026 : certifications, pratique et débouchés"
+seoTitle: "Formation bols tibétains et sonothérapie CPF en 2026"
 metaDescription: "Formation bols tibétains sonothérapie CPF en 2026 : bols en métal vs cristal, bain sonore, certifications disponibles, financement CPF et débouchés en cabinet, spa et retraites."
 excerpt: "Guide complet sur la formation bols tibétains et sonothérapie : types de bols, bain sonore, certifications CPF disponibles, cadre légal non médical et débouchés professionnels en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation bols tibétains et sonothérapie CPF en 2026 : certifications, pratique et débouchés
 
 La formation aux bols tibétains et à la sonothérapie est accessible via le CPF en 2026, dans le cadre de certifications en pratiques de bien-être. Cette approche par les vibrations sonores, qui connaît un succès croissant dans les spas, les retraites de bien-être et les cabinets, attire de nombreuses personnes en reconversion ou souhaitant enrichir leur offre de soins. Les bains sonores collectifs et les séances individuelles répondent à une demande réelle et diversifiée. Voici le guide complet pour se former et exercer professionnellement en 2026.

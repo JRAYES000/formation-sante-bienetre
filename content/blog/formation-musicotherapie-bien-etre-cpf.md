@@ -4,8 +4,8 @@ title: "Formation musicothérapie et sound healing bien-être CPF en 2026"
 metaDescription: "Formation musicothérapie et sound healing bien-être CPF en 2026 : bains sonores, chant des bols, musicothérapie active et réceptive, certifications disponibles et débouchés professionnels."
 excerpt: "La musicothérapie bien-être et le sound healing (bains sonores, chant des bols) connaissent un essor majeur. Découvrez les formations disponibles en 2026, les certifications, le CPF et les débouchés en ateliers et cabinet."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation musicothérapie et sound healing bien-être CPF en 2026
 
 La musicothérapie bien-être et le sound healing (guérison par le son) sont parmi les pratiques à la plus forte croissance dans le secteur du bien-être en 2026. Les bains sonores, les séances de chant des bols tibétains, les concerts de gongs et les ateliers de voix sont de plus en plus recherchés. Bien formé à ces pratiques, un praticien peut proposer des expériences uniques, dans un cadre légal et éthique clair, distinct de la musicothérapie clinique réservée aux professionnels de santé. Voici le guide complet.

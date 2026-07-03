@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-angers-maine-et-loire
 title: "Formation esthétique à Angers et dans le Maine-et-Loire en 2026 : guide complet"
+seoTitle: "Formation esthétique à Angers et dans le Maine-et-Loire en 2026"
 metaDescription: "Guide complet des formations esthétique à Angers et dans le Maine-et-Loire en 2026 : CAP, BP, BTS, alternance, CPF et débouchés sur le marché angevin de la beauté."
 excerpt: "Angers, ville universitaire du Grand Ouest à 1h30 de Paris en TGV, offre un marché de la beauté en plein essor. Découvrez les formations esthétique disponibles, les financements CPF et les débouchés en Maine-et-Loire."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Angers et dans le Maine-et-Loire en 2026 : guide complet
 
 Vous cherchez une formation en esthétique à Angers ou dans le Maine-et-Loire en 2026 ? La ville d'Angers est l'une des métropoles du Grand Ouest les plus dynamiques, avec une population étudiante importante, une croissance démographique soutenue et un accès facile à Paris (1h30 en TGV). Les formations esthétique y sont disponibles en alternance, en reconversion adulte ou via des cursus scolaires classiques, avec des financements [CPF](/financement-cpf) accessibles. Voici le guide complet pour faire le bon choix.

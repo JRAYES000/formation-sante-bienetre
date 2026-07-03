@@ -1,11 +1,12 @@
 ---
 slug: formation-amma-assis-entreprise
 title: "Formation amma assis en entreprise en 2026 : massage sur chaise, certification et débouchés QVT"
+seoTitle: "Formation amma assis en entreprise en 2026"
 metaDescription: "Formation amma assis en entreprise en 2026 : massage assis sur chaise ergonomique, origines japonaises, certifications disponibles, financement CPF et débouchés en QVT et événementiel."
 excerpt: "Guide complet sur la formation amma assis : massage habillé sur chaise ergonomique, origines japonaises, certifications CPF disponibles, débouchés en entreprise QVT et événementiel en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation amma assis en entreprise en 2026 : massage sur chaise, certification et débouchés QVT
 
 La formation amma assis est finançable via le CPF en 2026 dans le cadre de certifications en massage bien-être. Ce massage japonais pratiqué habillé sur une chaise ergonomique spécifique est devenu un outil incontournable de la Qualité de Vie au Travail (QVT) en entreprise. Des séances de 15 à 30 minutes suffisent pour obtenir des effets notables sur la tension et la fatigue des salariés. En dehors de l'entreprise, l'amma assis se déploie dans les salons de coiffure, les événements professionnels, les aéroports et les centres commerciaux. Voici le guide complet pour se former et exercer en 2026.

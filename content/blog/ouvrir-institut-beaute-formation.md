@@ -1,13 +1,13 @@
 ---
 slug: ouvrir-institut-beaute-formation
 title: "Ouvrir un institut de beauté : formation, diplômes et démarches en 2026"
+seoTitle: "Ouvrir un institut de beauté"
 metaDescription: "Ouvrir un institut de beauté en 2026 : quel diplôme est obligatoire, les démarches concrètes, le financement CPF et les erreurs à éviter. Guide complet."
 excerpt: "Ouvrir son propre institut de beauté est un projet réalisable avec la bonne formation et une bonne préparation. Voici les diplômes requis, les démarches administratives et les clés du succès."
 image: https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Ouvrir un institut de beauté est l'objectif de nombreuses esthéticiennes qui veulent travailler à leur propre compte. C'est un projet réalisable, mais il faut connaitre les prérequis légaux, les démarches administratives et les clés financières. Ce guide vous donne toutes les informations concrètes pour bien démarrer.
 
 ## Le diplôme obligatoire pour ouvrir un institut

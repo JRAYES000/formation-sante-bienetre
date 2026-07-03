@@ -1,11 +1,12 @@
 ---
 slug: vae-esthetique-coiffure-beaute
 title: "VAE en esthétique et coiffure en 2026 : valider ses acquis sans repasser les examens"
+seoTitle: "VAE en esthétique et coiffure en 2026"
 metaDescription: "VAE en esthétique et coiffure en 2026 : conditions, dossier de preuves, jury, taux de réussite, financement via CPF. Guide complet pour valider le CAP, BP ou BTS sans repasser les examens."
 excerpt: "La VAE permet d'obtenir le CAP, BP ou BTS esthétique ou coiffure grâce à son expérience professionnelle, sans repasser les épreuves classiques. Voici comment ça fonctionne concrètement en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # VAE en esthétique et coiffure en 2026 : valider ses acquis sans repasser les examens
 
 La Validation des Acquis de l'Expérience (VAE) est une voie officielle qui permet d'obtenir un diplôme reconnu par l'État grâce à son expérience professionnelle, sans repasser les examens classiques. En esthétique et en coiffure, cette voie concerne des milliers de professionnels chaque année : aides-esthéticiennes non diplômées, assistantes coiffeuses sans CAP, auto-entrepreneurs du secteur beauté qui exercent depuis des années mais n'ont pas de diplôme officiel. Ce guide détaille le processus complet de la VAE dans le secteur beauté en 2026.

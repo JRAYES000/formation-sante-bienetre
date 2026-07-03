@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-lille
 title: "Formation esthétique à Lille en 2026 : CAP, BP et reconversion dans les Hauts-de-France"
+seoTitle: "Formation esthétique à Lille en 2026"
 metaDescription: "Guide complet pour se former à l'esthétique à Lille en 2026 : CAP, BP, CPF, alternance et reconversion adulte dans les Hauts-de-France. Débouchés et salaires locaux."
 excerpt: "Lille et la métropole des Hauts-de-France offrent de nombreuses opportunités pour se former à l'esthétique. Découvrez les formations disponibles, les financements CPF et le marché de l'emploi beauté dans le Nord."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Lille en 2026 : CAP, BP et reconversion dans les Hauts-de-France
 
 Vous souhaitez vous former à l'esthétique à Lille ou dans la métropole lilloise ? La capitale des Hauts-de-France propose un marché de l'emploi beauté solide, un réseau de centres de formation actif et des dispositifs de financement adaptés aux adultes en reconversion. CAP esthétique, BP, alternance ou reconversion adulte : ce guide complet vous présente toutes les options disponibles en 2026, les salaires locaux et les débouchés dans le Nord.

@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-kobido-cpf
 title: "Formation massage kobido CPF en 2026 : lifting japonais naturel, techniques et débouchés"
+seoTitle: "Formation massage kobido CPF en 2026"
 metaDescription: "Formation massage kobido CPF en 2026 : art japonais des 48 manoeuvres, lifting naturel du visage, certifications disponibles et débouchés en instituts haut de gamme et spas."
 excerpt: "Tout savoir sur la formation kobido : art japonais du lifting naturel, 48 manoeuvres codifiées, certifications CPF disponibles, tarification et débouchés en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage kobido CPF en 2026 : lifting japonais naturel, techniques et débouchés
 
 La formation au massage kobido est finançable via le CPF en 2026 dans le cadre de certifications en soins esthétiques ou massage bien-être incluant les techniques du visage. Ce massage japonais vieux de plus de 500 ans repose sur 48 manoeuvres codifiées qui stimulent les muscles et les tissus du visage pour produire un effet lifting naturel visible. Une séance se facture entre 70 et 120 euros, positionnant cette pratique dans le segment premium des soins du visage. Voici le guide complet pour se former, se certifier et exercer en France.

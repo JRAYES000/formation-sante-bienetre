@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-temps-partiel-salarie
 title: "Se former en esthétique en étant salarié à temps partiel en 2026 : CPF, horaires et astuces"
+seoTitle: "Se former en esthétique en étant salarié à temps partiel en 2026"
 metaDescription: "Formation esthétique salarié temps partiel 2026 : CPF hors temps de travail, plan de formation, CPF de transition, formations du soir et week-end, à distance, congé de formation. Guide pratique."
 excerpt: "Vous êtes salarié à temps partiel et vous souhaitez vous former en esthétique ? CPF hors temps de travail, plan de formation employeur, formations du soir et par correspondance : toutes les solutions en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Se former en esthétique en étant salarié à temps partiel en 2026 : CPF, horaires et astuces
 
 Se former en esthétique quand on est salarié à temps partiel, c'est possible en 2026 - et souvent plus accessible qu'on ne le croit. Selon votre situation, vous pouvez utiliser votre CPF en dehors de vos heures de travail, demander à votre employeur de financer votre formation, ou mobiliser un dispositif de transition professionnelle. Ce guide détaille toutes les options et leurs conditions concrètes.

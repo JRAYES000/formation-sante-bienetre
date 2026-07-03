@@ -1,13 +1,13 @@
 ---
 slug: qualiopi-formation-beaute-garantie
 title: "Qualiopi : ce que ce label garantit vraiment pour votre formation beauté"
+seoTitle: "Qualiopi : ce que ce label garantit vraiment pour votre"
 metaDescription: "Qualiopi formation beauté : ce que ce label certifie réellement, comment le vérifier et pourquoi il est indispensable pour votre CPF. Guide complet 2026."
 excerpt: "Qualiopi est affiché partout par les organismes de formation. Mais que garantit vraiment ce label ? Et comment vérifier qu'un centre est bien certifié avant de signer ? Voici les réponses concrètes."
 image: https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Qualiopi est la certification qualité obligatoire pour tous les organismes de formation qui souhaitent proposer des formations financées par des fonds publics ou mutualisés, dont le CPF. Sans ce label, un centre de formation beauté ne peut tout simplement pas accéder aux financements publics. Voici ce que Qualiopi garantit réellement, et surtout ce qu'il ne garantit pas.
 
 ## Qu'est-ce que Qualiopi exactement

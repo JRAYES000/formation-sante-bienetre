@@ -1,11 +1,13 @@
 ---
 slug: prime-aide-embauche-apprenti-beaute
 title: "Prime à l'embauche d'un apprenti en beauté en 2026 : montants, conditions et démarches"
-metaDescription: "Prime embauche apprenti beauté 2026 : montants des aides, conditions TPE/PME, démarches OPCO AKTO, cumul avec d'autres aides. Tout ce que l'employeur doit savoir pour recruter en alternance."
+seoTitle: "Prime d'embauche d'un apprenti beauté : le point 2026"
+metaDescription: "Aides à l'embauche d'un apprenti en coiffure ou esthétique : montants, conditions, cumul possible et démarches pas à pas pour votre salon."
 excerpt: "En 2026, les employeurs du secteur beauté peuvent bénéficier d'aides financières à l'embauche d'un apprenti. Montants, conditions d'éligibilité et démarches pratiques : guide complet pour les salons et instituts."
-image: /images/conseil-2.webp
+image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&fit=crop"
+publishedAt: "2026-06-16"
+updatedAt: "2026-07-03"
 ---
-
 # Prime à l'embauche d'un apprenti en beauté en 2026 : montants, conditions et démarches
 
 En 2026, recruter un apprenti en esthétique ou en coiffure permet à l'employeur de bénéficier d'aides financières qui réduisent considérablement le coût de l'alternance. Ces aides se composent principalement de l'aide unique à l'apprentissage (AUA), qui vise les PME de moins de 250 salariés préparant un apprenti à un diplôme de niveau 3 à 5, et des prises en charge des coûts de formation par l'OPCO AKTO. Ce guide détaille tout ce qu'un patron de salon ou d'institut doit savoir pour en bénéficier.

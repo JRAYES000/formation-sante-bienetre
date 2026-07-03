@@ -1,11 +1,12 @@
 ---
 slug: devenir-estheticienne-independante
 title: "Devenir esthéticienne indépendante en 2026 : statuts, démarches, revenus et formation"
+seoTitle: "Devenir esthéticienne indépendante en 2026"
 metaDescription: "Tout savoir pour devenir esthéticienne indépendante en 2026 : quel statut choisir, quel diplôme est requis, comment fixer ses prix, trouver ses premiers clients et financer sa formation via CPF."
 excerpt: "Devenir esthéticienne indépendante est un projet concret et accessible en 2026. Micro-entreprise, EURL, portage salarial, à domicile ou en location de salle : voici le guide complet pour vous lancer sans faire d'erreur."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Devenir esthéticienne indépendante en 2026 : statuts, démarches, revenus et formation
 
 Devenir esthéticienne indépendante est accessible en 2026 à condition d'avoir le bon diplôme et de choisir le bon statut juridique. La micro-entreprise est la voie la plus rapide pour se lancer, mais l'EURL ou le portage salarial peuvent être plus adaptés selon votre projet. Voici un guide complet et factuel pour vous lancer en indépendante dans l'esthétique, que vous souhaitiez travailler à domicile, en location de salle ou dans votre propre local.

@@ -1,11 +1,12 @@
 ---
 slug: formation-photographie-beaute-reseaux-sociaux
 title: "Formation photographie beauté pour les réseaux sociaux en 2026 : lumière, composition et outils"
+seoTitle: "Formation photographie beauté pour les réseaux sociaux en 2026"
 metaDescription: "Apprenez à photographier vos réalisations beauté pour les réseaux sociaux en 2026 : lumière annulaire, angles, retouche mobile, cohérence de feed Instagram. Formations et CPF."
 excerpt: "Photographier ses réalisations coiffure, ongles et maquillage avec un simple smartphone peut transformer votre présence sur Instagram et TikTok. Découvrez les formations disponibles, les outils essentiels et les techniques qui font la différence."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation photographie beauté pour les réseaux sociaux en 2026 : lumière, composition et outils
 
 Photographier ses réalisations beauté avec un smartphone et obtenir des images professionnelles qui attirent des clients sur Instagram et TikTok, c'est possible avec la bonne méthode. Les esthéticiennes et coiffeuses qui investissent dans leur compétence photographique constatent en moyenne une augmentation de 40 à 60 % de leur engagement sur les réseaux sociaux en quelques semaines. Des formations courtes, parfois finançables par le [CPF](/financement-cpf), permettent d'acquérir ces techniques rapidement. Voici le guide complet.

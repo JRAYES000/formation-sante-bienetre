@@ -1,11 +1,12 @@
 ---
 slug: formation-feng-shui-espace-bien-etre
 title: "Formation feng shui pour l'aménagement d'un espace bien-être en 2026"
+seoTitle: "Formation feng shui pour l'aménagement d'un espace bien-être"
 metaDescription: "Formation feng shui espace bien-être en 2026 : principes d'aménagement d'un institut ou spa, certifications disponibles, financement CPF et valeur ajoutée pour votre cabinet."
 excerpt: "Le feng shui appliqué à un cabinet bien-être, un spa ou un institut améliore l'attractivité de l'espace et le confort des clients. Découvrez les formations, certifications et applications pratiques en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation feng shui pour l'aménagement d'un espace bien-être en 2026
 
 Le feng shui est l'art traditionnel chinois d'harmoniser les espaces pour favoriser la circulation de l'énergie positive (qi). Appliqué à un cabinet de bien-être, un spa ou un institut de beauté, il permet d'optimiser l'attractivité de l'espace, le confort des clients et la productivité de l'équipe. En 2026, des formations spécialisées permettent aux professionnels du bien-être et de la beauté d'acquérir ces compétences. Voici un guide complet pour comprendre les applications du feng shui dans un espace bien-être et les formations disponibles.

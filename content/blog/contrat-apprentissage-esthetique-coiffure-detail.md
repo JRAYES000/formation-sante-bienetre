@@ -1,11 +1,13 @@
 ---
 slug: contrat-apprentissage-esthetique-coiffure-detail
 title: "Contrat d'apprentissage en esthétique et coiffure 2026 : tout comprendre avant de signer"
-metaDescription: "Contrat d'apprentissage esthétique et coiffure 2026 : différences avec le contrat de professionnalisation, droits de l'apprenti, rôle du maître d'apprentissage, rupture et médiation. Guide complet."
+seoTitle: "Contrat d'apprentissage esthétique & coiffure : le guide"
+metaDescription: "Contrat d'apprentissage en esthétique ou coiffure : rémunération, durée, droits et obligations, rupture — tout vérifier avant de signer."
 excerpt: "Avant de signer un contrat d'apprentissage en esthétique ou coiffure, il faut connaître vos droits, vos obligations et les recours disponibles. Ce guide détaille tout ce que vous devez savoir en 2026."
-image: /images/conseil-1.webp
+image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80&fit=crop"
+publishedAt: "2026-06-16"
+updatedAt: "2026-07-03"
 ---
-
 # Contrat d'apprentissage en esthétique et coiffure 2026 : tout comprendre avant de signer
 
 Le contrat d'apprentissage est un contrat de travail classique signé entre vous, l'apprenti, et un employeur du secteur beauté. Vous avez des droits identiques à ceux d'un salarié ordinaire (congés payés, couverture sociale, protection contre le licenciement abusif) en plus des spécificités liées à votre formation en CFA. Ce guide vous explique en détail comment fonctionne ce dispositif, ce qui le distingue du contrat de professionnalisation, et quelles démarches entreprendre si quelque chose se passe mal.

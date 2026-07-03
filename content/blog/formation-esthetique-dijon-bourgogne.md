@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-dijon-bourgogne
 title: "Formation esthétique à Dijon et en Bourgogne en 2026 : guide CPF et alternance"
+seoTitle: "Formation esthétique à Dijon et en Bourgogne en 2026"
 metaDescription: "Tout sur les formations esthétique à Dijon et en Bourgogne-Franche-Comté : CAP, BP, BTS, alternance, financement CPF. Marché local, tourisme viticole, débouchés professionnels en 2026."
 excerpt: "Dijon et la Bourgogne offrent un marché esthétique enrichi par le tourisme viticole et gastronomique. Guide complet des formations, alternances et financements CPF disponibles en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique à Dijon et en Bourgogne en 2026 : guide CPF et alternance
 
 Vous cherchez une formation esthétique à Dijon ? Le marché bourguignon offre des perspectives intéressantes, notamment grâce à l'ancrage touristique unique de la région. Dijon, capitale régionale de Bourgogne-Franche-Comté avec 160 000 habitants (et 250 000 dans l'agglomération), est une ville à taille humaine qui offre un tissu économique équilibré entre services, industrie agro-alimentaire (moutarde, pain d'épices, crème de cassis) et administration. Mais c'est surtout le tourisme viticole - la Côte de Nuits, la Côte de Beaune, les Hospices de Beaune, les Grands Crus de Bourgogne classés Patrimoine Mondial de l'UNESCO - qui enrichit le marché local de la beauté en générant des établissements hôteliers haut de gamme dotés de spas et d'instituts. Ce guide vous présente les formations disponibles, les voies d'alternance et les financements accessibles en 2026.

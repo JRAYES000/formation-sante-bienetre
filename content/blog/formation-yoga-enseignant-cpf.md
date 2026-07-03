@@ -1,11 +1,12 @@
 ---
 slug: formation-yoga-enseignant-cpf
 title: "Formation professeur de yoga CPF en 2026 : 200h RYT, certifications reconnues et débouchés"
+seoTitle: "Formation professeur de yoga CPF en 2026"
 metaDescription: "Formation professeur de yoga CPF en 2026 : Yoga Alliance 200h RYT vs certifications françaises BEES/CQP, financement CPF possible, débouchés studios et entreprises, revenus réalistes."
 excerpt: "Le CPF peut financer une formation de professeur de yoga, mais uniquement via des certifications françaises inscrites au RNCP ou RS. Voici comment naviguer entre Yoga Alliance et certifications reconnues en France."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation professeur de yoga CPF en 2026 : 200h RYT, certifications reconnues et débouchés
 
 Oui, le CPF peut financer une formation de professeur de yoga, mais sous des conditions précises. La certification Yoga Alliance 200h RYT, très connue dans le monde du yoga, n'est pas directement éligible au CPF car elle ne figure pas au RNCP ni au RS français. En revanche, des diplômes nationaux comme le BEES ou le CQP Animation sportive mention yoga permettent un financement public. Ce guide compare toutes les options disponibles en 2026 et détaille les débouchés réels du métier d'enseignant en yoga.

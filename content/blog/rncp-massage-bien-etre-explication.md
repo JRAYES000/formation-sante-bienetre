@@ -1,13 +1,13 @@
 ---
 slug: rncp-massage-bien-etre-explication
 title: "Titre RNCP massage bien-être : à quoi ça sert et pourquoi c'est important"
+seoTitle: "Titre RNCP massage bien-être"
 metaDescription: "Titre RNCP massage bien-être : signification, différence avec les formations non certifiantes, financement CPF et débouchés. Guide complet 2026."
 excerpt: "Le titre RNCP praticien en massage bien-être est la certification de référence pour exercer légalement le massage non thérapeutique en France. Voici ce qu'il certifie et pourquoi il change tout pour votre carrière."
 image: https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Le titre RNCP "Praticien(ne) en massage bien-être" est la certification la plus reconnue pour exercer le massage non thérapeutique en France. C'est elle qui permet d'accéder aux financements CPF, de justifier ses compétences auprès des employeurs (spas, hôtels, thalassos) et d'exercer en toute légalité. Voici ce qu'elle certifie vraiment et pourquoi elle fait toute la différence.
 
 ## Qu'est-ce que le RNCP

@@ -1,11 +1,12 @@
 ---
 slug: formation-coaching-bien-etre-cpf
 title: "Formation coaching bien-être CPF en 2026 : certifications, cadre légal et débouchés"
+seoTitle: "Formation coaching bien-être CPF en 2026"
 metaDescription: "Formation coaching bien-être CPF en 2026 : certifications RNCP et RS disponibles, différence avec psychologue et coach de vie, CPF possible, débouchés cabinet et entreprise, revenus réalistes."
 excerpt: "Le coaching bien-être est non thérapeutique et distinct de la psychologie. Des certifications RNCP et RS permettent un financement CPF. Voici le guide complet des formations disponibles, du cadre légal et des débouchés réels en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation coaching bien-être CPF en 2026 : certifications, cadre légal et débouchés
 
 Le coaching bien-être est finançable via le CPF si la certification choisie est inscrite au RNCP ou au RS. C'est une pratique non thérapeutique qui accompagne des personnes dans l'amélioration de leur qualité de vie, la gestion du stress, l'adoption d'habitudes saines ou l'atteinte d'objectifs personnels. Il ne faut pas le confondre avec la psychothérapie (pratique médicale réglementée) ni avec le coaching de vie au sens large. Ce guide détaille les certifications disponibles, le cadre légal à respecter, les débouchés réels et les revenus attendus en 2026.

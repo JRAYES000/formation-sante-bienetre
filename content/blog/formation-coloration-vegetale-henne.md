@@ -1,11 +1,12 @@
 ---
 slug: formation-coloration-vegetale-henne
 title: "Formation coloration végétale et henné professionnel en 2026 : techniques et certifications"
+seoTitle: "Formation coloration végétale et henné professionnel en 2026"
 metaDescription: "Formation coloration végétale et henné professionnel 2026 : henné vrai vs noir, indigo, cassia, certifications disponibles. Tendances bio et clientèle sensible."
 excerpt: "Apprenez les techniques de coloration végétale et henné professionnel en 2026 : distinctions essentielles, certifications disponibles, financement CPF et débouchés en salon bio."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation coloration végétale et henné professionnel en 2026 : techniques et certifications
 
 La coloration végétale est une alternative naturelle aux teintures chimiques, en forte croissance en France. Oui, il est possible de se former à ces techniques avec le CPF en 2026, à condition de choisir un organisme certifié Qualiopi. La distinction entre henné vrai (lawsonia inermis, inoffensif) et henné noir (avec PPD, dangereux voire interdit pour une utilisation cosmétique) est le premier point critique que toute formation sérieuse doit enseigner. Ce guide complet vous présente les matières colorantes végétales, les techniques professionnelles, les certifications disponibles et les débouchés dans un marché bio en pleine expansion.

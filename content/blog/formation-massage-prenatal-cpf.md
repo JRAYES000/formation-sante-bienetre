@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-prenatal-cpf
 title: "Formation massage prénatal CPF en 2026 : accompagner les femmes enceintes"
+seoTitle: "Formation massage prénatal CPF en 2026"
 metaDescription: "Formation massage prénatal CPF en 2026 : certifications disponibles, techniques adaptées à la grossesse, contre-indications, débouchés maternités, spas et libéral."
 excerpt: "Le massage prénatal est une spécialisation exigeante qui demande une connaissance approfondie de la physiologie de la grossesse. Découvrez les formations certifiantes éligibles au CPF en 2026 et les débouchés dans les maternités, spas et en libéral."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage prénatal CPF en 2026 : accompagner les femmes enceintes
 
 Le massage prénatal est une spécialisation qui s'adresse aux professionnels du bien-être souhaitant accompagner les femmes enceintes par le toucher tout au long de la grossesse. Des certifications professionnelles éligibles au CPF existent en 2026, permettant aux praticiens en [massage bien-être](/metier/massage-bien-etre) et aux esthéticiennes de se différencier sur un marché en croissance. Ce guide présente les techniques, les contre-indications incontournables, les formations disponibles et les débouchés concrets.

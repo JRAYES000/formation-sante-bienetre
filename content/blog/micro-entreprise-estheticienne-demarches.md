@@ -1,11 +1,12 @@
 ---
 slug: micro-entreprise-estheticienne-demarches
 title: "Créer une micro-entreprise en esthétique en 2026 : étapes, charges et pièges à éviter"
+seoTitle: "Créer une micro-entreprise en esthétique en 2026"
 metaDescription: "Micro-entreprise esthéticienne 2026 : création sur INPI.fr, code APE 9602B, charges sociales BNC 22 %, TVA, déclarations, cumul avec emploi salarié. Guide complet avec pièges à éviter."
 excerpt: "Créer une micro-entreprise en esthétique est accessible, mais il y a des règles spécifiques à connaître : code APE, régime fiscal, charges sociales, seuils de TVA. Ce guide détaille tout pour bien démarrer en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Créer une micro-entreprise en esthétique en 2026 : étapes, charges et pièges à éviter
 
 Créer une micro-entreprise en esthétique est possible en quelques clics sur le site de l'INPI. En 2026, la démarche de création prend moins de 30 minutes en ligne. Mais avant de vous lancer, vous devez connaître les spécificités du secteur : code APE, régime BNC ou BIC selon vos activités, taux de charges sociales, seuils de TVA, obligations réglementaires. Ce guide vous évite les erreurs les plus courantes.

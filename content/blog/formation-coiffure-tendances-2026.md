@@ -1,11 +1,12 @@
 ---
 slug: formation-coiffure-tendances-2026
 title: "Formation aux nouvelles tendances coiffure en 2026 : balayage, couleur et techniques modernes"
+seoTitle: "Formation aux nouvelles tendances coiffure en 2026"
 metaDescription: "Formation tendances coiffure 2026 : balayage, babylights, ombré hair, kératine, permanente moderne. CPF et OPCO pour se former aux nouvelles techniques."
 excerpt: "Balayage, babylights, ombré hair, lissage kératine, permanente contemporaine : les techniques coiffure évoluent vite. Quelles formations pour rester à la pointe en 2026 ?"
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation aux nouvelles tendances coiffure en 2026 : balayage, couleur et techniques modernes
 
 Les tendances coiffure évoluent vite et les techniques de 2015 ne répondent plus aux attentes des clients de 2026. Balayage, babylights, ombré hair, couleur en secteurs, kératine, lissage japonais, bouclage contemporain : les coiffeurs qui ne se forment pas régulièrement voient leur clientèle partir vers des concurrents plus à jour. Ce guide présente les techniques incontournables et les formations disponibles pour se mettre à niveau, avec financement CPF ou OPCO.

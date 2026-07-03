@@ -1,11 +1,12 @@
 ---
 slug: formation-gua-sha-professionnel
 title: "Formation gua sha professionnel en 2026 : technique, certifications et intégration en spa"
+seoTitle: "Formation gua sha professionnel en 2026"
 metaDescription: "Formation gua sha professionnel en 2026 : origine médecine chinoise, pierre de jade, quartz ou acier, visage et corps, certifications disponibles et intégration en soin spa."
 excerpt: "Guide complet pour la formation gua sha professionnel : technique traditionnelle chinoise, pierres utilisées, distinction bien-être et médical, certifications disponibles et débouchés en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation gua sha professionnel en 2026 : technique, certifications et intégration en spa
 
 La formation au gua sha professionnel est accessible en France en 2026, dans le cadre de certifications en soin esthétique ou en bien-être. Cette technique traditionnelle chinoise, qui consiste à faire glisser un outil plat sur la peau pour stimuler la circulation et le drainage, connaît un succès fulgurant dans les spas, les instituts de beauté et les cabinets de bien-être. Comme pour toute pratique issue de la médecine traditionnelle, une distinction importante s'impose entre le gua sha bien-être (accessible aux praticiens non médicaux) et le gua sha médical (réservé aux professionnels de santé).

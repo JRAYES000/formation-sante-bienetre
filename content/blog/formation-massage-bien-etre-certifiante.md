@@ -1,13 +1,13 @@
 ---
 slug: formation-massage-bien-etre-certifiante
 title: "Formation massage bien-être certifiante : comment choisir la bonne en 2026"
+seoTitle: "Formation massage bien-être certifiante"
 metaDescription: "Formation massage bien-être certifiante RNCP : comment distinguer les vraies certifications des stages sans valeur ? Critères concrets, financement CPF et débouchés."
 excerpt: "Toutes les formations massage bien-être ne se valent pas. Entre les cursus RNCP sérieux et les stages de 5 jours sans reconnaissance professionnelle, le tri est essentiel. Voici comment choisir une formation certifiante qui ouvre vraiment des portes."
 image: https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
 updatedAt: 2026-06-15
 ---
-
 Le marché des formations au massage bien-être est l'un des plus denses et des plus confus du secteur beauté-bien-être. Des stages "certifiants" de 5 jours à 800 euros côtoient des cursus RNCP de 600 heures en centre agréé. L'écart de valeur professionnelle entre les deux est considérable. Ce guide vous aide à faire le bon choix.
 
 ## La distinction fondamentale : RNCP ou non-certifiant

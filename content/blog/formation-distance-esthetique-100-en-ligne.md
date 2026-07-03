@@ -1,11 +1,12 @@
 ---
 slug: formation-distance-esthetique-100-en-ligne
 title: "Formation esthétique 100 % en ligne en 2026 : ce qui est possible et ce qui ne l'est pas"
+seoTitle: "Formation esthétique 100 % en ligne en 2026"
 metaDescription: "Formation esthétique en ligne 2026 : ce qui peut se faire à distance (théorie, anatomie, réglementation), pourquoi la pratique est impossible 100 % en ligne, formats hybrides, organismes sérieux et arnaques."
 excerpt: "La formation esthétique entièrement en ligne est-elle possible en 2026 ? La théorie oui, la pratique non. Ce guide explique les limites du 100 % en ligne, les formats hybrides recommandés et comment identifier les organismes sérieux."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation esthétique 100 % en ligne en 2026 : ce qui est possible et ce qui ne l'est pas
 
 La formation esthétique 100 % en ligne est partiellement possible en 2026 : la théorie (anatomie, cosmétologie, réglementation, vente) se maîtrise très bien à distance. En revanche, les gestes techniques - massage, soins du visage, épilation, onglerie - ne peuvent pas être validés sans pratique physique encadrée. Ce guide démonte les promesses excessives et vous aide à choisir un format hybride solide.

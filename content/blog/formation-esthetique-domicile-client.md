@@ -1,11 +1,12 @@
 ---
 slug: formation-esthetique-domicile-client
 title: "Devenir esthéticienne à domicile en 2026 : formation, réglementation et lancer son activité"
+seoTitle: "Devenir esthéticienne à domicile en 2026"
 metaDescription: "Exercer comme esthéticienne à domicile des clients en 2026 : diplôme requis, matériel portable, tarification, clientèle et limites légales. Le guide complet pour vous lancer."
 excerpt: "L'esthétique à domicile des clients est une activité en plein développement. Seniors, personnes à mobilité réduite, clients qui privilégient le confort : la clientèle est réelle. Voici tout ce qu'il faut savoir pour démarrer légalement et durablement en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Devenir esthéticienne à domicile en 2026 : formation, réglementation et lancer son activité
 
 Exercer comme esthéticienne à domicile des clients est une activité en plein développement, portée par le vieillissement de la population, le développement des services à la personne et le goût croissant pour le confort et la personnalisation. En 2026, une esthéticienne à domicile peut pratiquer une activité viable avec un investissement initial limité, à condition d'avoir les diplômes requis, le matériel adapté et une organisation rigoureuse. Ce guide vous explique tout.

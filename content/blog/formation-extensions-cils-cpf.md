@@ -1,11 +1,12 @@
 ---
 slug: formation-extensions-cils-cpf
 title: "Formation extensions de cils CPF en 2026 : certification, durée, prix et débouchés"
+seoTitle: "Formation extensions de cils CPF en 2026"
 metaDescription: "Guide complet sur la formation extensions de cils financée par le CPF en 2026 : certifications RS/RNCP, techniques volume russe, durée, prix et débouchés professionnels."
 excerpt: "La formation extensions de cils est finançable CPF si elle débouche sur une certification RS ou RNCP. Découvrez les techniques (classique, volume russe, mega volume), les certifications disponibles, les prix et les débouchés en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation extensions de cils CPF en 2026 : certification, durée, prix et débouchés
 
 La formation extensions de cils est finançable par le CPF en 2026, à condition de choisir une certification enregistrée au Répertoire Spécifique (RS) ou au Répertoire National des Certifications Professionnelles (RNCP). Le marché des extensions de cils connaît une croissance exceptionnelle en France, avec une demande qui a triplé en cinq ans. C'est l'une des prestations beauté les plus rentables par heure travaillée, ce qui en fait une spécialisation particulièrement attractive pour les esthéticiennes comme pour les personnes en reconversion.

@@ -1,11 +1,12 @@
 ---
 slug: formation-radiofrequence-esthetique
 title: "Formation radiofréquence esthétique en 2026 : fermeté, amincissement et certifications"
+seoTitle: "Formation radiofréquence esthétique en 2026"
 metaDescription: "Formation radiofréquence esthétique 2026 : lifting visage, remodelage corporel, cadre légal, certifications disponibles, CPF et assurance obligatoire."
 excerpt: "Maîtrisez la radiofréquence esthétique en 2026 : lifting visage, remodelage corporel, réglementation des appareils, certifications, financement CPF et assurance professionnelle."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation radiofréquence esthétique en 2026 : fermeté, amincissement et certifications
 
 La radiofréquence esthétique est l'une des technologies d'esthétique instrumentale les plus efficaces pour traiter le relâchement cutané et affiner la silhouette. Oui, des formations certifiantes en radiofréquence esthétique sont disponibles et finançables par le CPF en 2026. Le cadre légal est cependant crucial à comprendre : certains appareils à radiofréquence sont classés comme dispositifs médicaux (classe IIa) et requièrent une formation spécifique et des conditions d'utilisation précises, tandis que d'autres sont classés comme appareils esthétiques, accessibles aux esthéticiens(nes) sans prescription médicale. Ce guide vous présente la technologie, le cadre légal, les formations disponibles et les débouchés dans ce marché en pleine expansion.

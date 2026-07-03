@@ -1,11 +1,12 @@
 ---
 slug: reconversion-cadre-entreprise-beaute
 title: "Reconversion de cadre d'entreprise vers la beauté et le bien-être en 2026"
+seoTitle: "Reconversion de cadre d'entreprise vers la beauté et le"
 metaDescription: "Cadre en burn-out ou en quête de sens ? Découvrez comment réussir votre reconversion vers la beauté et le bien-être : financement CPF de transition, projets concrets (spa, naturopathie, coaching) et étapes clés."
 excerpt: "De nombreux cadres quittent chaque année le monde de l'entreprise pour se lancer dans la beauté ou le bien-être. Leurs compétences managériales sont un atout réel pour ouvrir un spa, devenir naturopathe ou formateur. Voici le guide complet 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Reconversion de cadre d'entreprise vers la beauté et le bien-être en 2026
 
 Cadre supérieur en quête de sens, vous envisagez une reconversion vers la beauté ou le bien-être ? Cette transition est plus fréquente qu'on ne l'imagine. En 2026, les dispositifs de financement comme le CPF de transition et les aides OPCO permettent aux cadres de financer une formation longue tout en maintenant une partie de leur salaire. Vos compétences managériales - gestion d'équipe, sens commercial, rigueur financière - sont exactement ce qu'il faut pour ouvrir un spa ou gérer un centre de bien-être performant.

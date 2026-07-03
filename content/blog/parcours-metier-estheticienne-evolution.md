@@ -1,11 +1,12 @@
 ---
 slug: parcours-metier-estheticienne-evolution
 title: "Parcours métier d'une esthéticienne en 2026 : de débutante à patronne en 10 ans"
+seoTitle: "Parcours métier d'une esthéticienne en 2026"
 metaDescription: "Quel est le parcours type d'une esthéticienne en France ? CAP, BP, premier poste, chef de cabine, responsable d'équipe, gérante ou indépendante : salaires et formations complémentaires à chaque étape."
 excerpt: "Quelles sont les étapes d'une carrière d'esthéticienne en France ? De l'apprentissage au CAP jusqu'à l'ouverture de son propre institut, voici le parcours type avec les salaires, les formations complémentaires et les délais réalistes en 2026."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Parcours métier d'une esthéticienne en 2026 : de débutante à patronne en 10 ans
 
 Une esthéticienne débutante peut devenir gérante d'un institut prospère en 10 ans. Ce n'est pas un rêve : c'est un parcours documenté que beaucoup ont réalisé avant vous. De l'apprentissage au CAP jusqu'à l'ouverture de son propre espace, voici les étapes, les salaires réels, les formations complémentaires utiles et les délais à anticiper pour chaque niveau de la carrière.

@@ -1,11 +1,12 @@
 ---
 slug: formation-dermaplaning-esthetique
 title: "Formation dermaplaning en esthétique en 2026 : exfoliation au bistouri, certifications et résultats"
+seoTitle: "Formation dermaplaning en esthétique en 2026"
 metaDescription: "Formation dermaplaning esthétique 2026 : technique bistouri, poils vellus, éclat de peau, contre-indications, certifications disponibles, financement CPF et tarification."
 excerpt: "Découvrez le dermaplaning en esthétique en 2026 : technique d'exfoliation au bistouri, élimination du duvet, résultats éclat et pénétration des soins, certifications CPF."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation dermaplaning en esthétique en 2026 : exfoliation au bistouri, certifications et résultats
 
 Le dermaplaning est une technique d'exfoliation utilisant un scalpel à usage unique pour retirer simultanément les cellules mortes de surface et les poils vellus (duvet) du visage. Oui, des formations certifiantes en dermaplaning sont disponibles et finançables par le CPF en 2026. C'est une technique non invasive, sans produit chimique, sans chaleur, qui donne des résultats immédiats spectaculaires : éclat, texture lissée, et meilleure pénétration des soins. Ce guide complet vous présente la technique, les résultats attendus, les contre-indications, les certifications et les débouchés professionnels.

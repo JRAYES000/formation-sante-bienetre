@@ -1,11 +1,12 @@
 ---
 slug: formation-nail-design-gel-avance
 title: "Formation nail design et pose de gel avancée en 2026 : nail art, extensions et certifications"
+seoTitle: "Formation nail design et pose de gel avancée en 2026"
 metaDescription: "Formation nail design et gel avancé en 2026 : extension gel vs acrylique, nail art 3D, certifications RS, CPF, tarification prothésiste ongulaire spécialisée."
 excerpt: "Extension gel, nail art dégradé, stamping, 3D et piercing ongle : les techniques avancées de nail design qui font la différence. Certifications RS, CPF et revenus en 2026."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation nail design et pose de gel avancée en 2026 : nail art, extensions et certifications
 
 Le nail art avancé et la pose de gel technique vont bien au-delà du vernis semi-permanent. En 2026, les prothésistes ongulaires spécialisées proposent des extensions sculptées, des nail art 3D, des effets miroir et des designs personnalisés qui justifient des tarifs bien supérieurs au salon classique. Des certifications RS éligibles au CPF permettent de valider ces compétences. Ce guide présente les techniques, les certifications et les revenus réalistes.

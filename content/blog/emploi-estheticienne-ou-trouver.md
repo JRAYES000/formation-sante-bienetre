@@ -1,11 +1,12 @@
 ---
 slug: emploi-estheticienne-ou-trouver
 title: "Trouver un emploi d'esthéticienne en 2026 : jobboards, réseaux et stratégies qui fonctionnent"
+seoTitle: "Trouver un emploi d'esthéticienne en 2026"
 metaDescription: "Trouver un emploi esthéticienne 2026 : CV et lettre de motivation efficaces, plateformes de recrutement beauté, candidature spontanée, LinkedIn pour les postes spa et luxe, intérim esthétique et erreurs à éviter."
 excerpt: "Trouver un emploi d'esthéticienne en 2026 demande une stratégie multicanale. Ce guide détaille les plateformes, les techniques de candidature et les erreurs à éviter pour décrocher rapidement votre premier ou votre prochain poste."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Trouver un emploi d'esthéticienne en 2026 : jobboards, réseaux et stratégies qui fonctionnent
 
 Pour trouver un emploi d'esthéticienne en 2026, la candidature spontanée reste la méthode numéro 1 dans le secteur, mais les jobboards, les agences spécialisées et LinkedIn jouent un rôle croissant selon le type de poste visé. Ce guide vous donne toutes les clés pour une recherche d'emploi efficace, de la rédaction de votre CV jusqu'aux stratégies de réseautage.

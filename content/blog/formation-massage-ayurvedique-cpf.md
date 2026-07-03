@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-ayurvedique-cpf
 title: "Formation massage ayurvédique CPF en 2026 : abhyanga, certifications et débouchés"
+seoTitle: "Formation massage ayurvédique CPF en 2026"
 metaDescription: "Formation massage ayurvédique finançable CPF en 2026 : abhyanga, shirodhara, doshas, certifications RS, durée, prix et débouchés réels en France."
 excerpt: "Tout ce qu'il faut savoir sur la formation massage ayurvédique CPF en 2026 : techniques (abhyanga, shirodhara), doshas, certifications disponibles, tarifs et débouchés concrets."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage ayurvédique CPF en 2026 : abhyanga, certifications et débouchés
 
 La formation massage ayurvédique est finançable par le CPF en 2026 via des certifications enregistrées au Répertoire Spécifique (RS). Des organismes proposent des parcours de 5 à 21 jours permettant d'acquérir les techniques fondamentales - abhyanga, shirodhara, padabhyanga - et d'exercer en spa, en centre de bien-être ou en libéral. Le coût d'une formation certifiante varie entre 900 et 3 500 euros selon la durée, entièrement pris en charge par votre compte CPF si vous disposez de droits suffisants.

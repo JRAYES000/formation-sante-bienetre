@@ -1,11 +1,12 @@
 ---
 slug: formation-beaute-region-subventions-2026
 title: "Subventions régionales formation beauté 2026 : montants, conditions et demandes"
+seoTitle: "Subventions régionales formation beauté 2026"
 metaDescription: "Subventions régionales pour financer sa formation beauté en 2026 : quelles régions aident, montants, conditions d'éligibilité et comment faire sa demande. Guide complet."
 excerpt: "Quand le CPF ne suffit pas, les subventions régionales prennent le relais. Découvrez par région les aides disponibles pour financer votre formation coiffure, esthétique ou bien-être en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 ## Pourquoi les subventions régionales sont essentielles en 2026
 
 Le Compte Personnel de Formation (CPF) reste la première porte d'entrée pour financer une formation beauté : coiffure, esthétique, massage, soins corporels. Mais depuis la réforme du CPF avec la participation financière du salarié mise en place en 2023 (contribution de 100 euros sauf exceptions), et avec des plafonds qui restent limités (500 euros/an, plafonné à 5 000 euros), de nombreux candidats se retrouvent avec un solde insuffisant face à des formations coûtant 3 000 à 10 000 euros.

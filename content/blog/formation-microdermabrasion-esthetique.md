@@ -1,11 +1,12 @@
 ---
 slug: formation-microdermabrasion-esthetique
 title: "Formation microdermabrasion en esthétique en 2026 : technique, certifications et débouchés"
+seoTitle: "Formation microdermabrasion en esthétique en 2026"
 metaDescription: "Formation microdermabrasion esthétique 2026 : cristaux vs diamant, indications, contre-indications, certifications disponibles, financement CPF et tarification."
 excerpt: "Maîtrisez la microdermabrasion en esthétique en 2026 : techniques cristaux et diamant, indications, contre-indications, certifications CPF et débouchés professionnels."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation microdermabrasion en esthétique en 2026 : technique, certifications et débouchés
 
 La microdermabrasion est l'une des techniques d'exfoliation mécanique les plus efficaces et les plus demandées en institut d'esthétique. Oui, des formations certifiantes en microdermabrasion sont disponibles et finançables par le CPF en 2026. À distinguer de la dermabrasion médicale (réservée aux médecins), la microdermabrasion esthétique traite les couches superficielles de la peau pour améliorer le teint, réduire les pores dilatés et atténuer les rides légères. Ce guide vous présente les deux principales techniques (à cristaux et au diamant), les indications, les certifications et les débouchés professionnels.

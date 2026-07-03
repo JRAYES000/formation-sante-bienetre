@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-shiatsu-cpf
 title: "Formation shiatsu CPF en 2026 : méridiens, certifications et comment se lancer"
+seoTitle: "Formation shiatsu CPF en 2026"
 metaDescription: "Formation shiatsu finançable CPF en 2026 : méridiens, tsubos, certifications disponibles en France, cadre légal et débouchés réels. Guide complet."
 excerpt: "Tout savoir sur la formation shiatsu CPF en 2026 : méridiens, tsubos, certifications disponibles, cadre légal en France et débouchés professionnels concrets."
 image: /images/conseil-2.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation shiatsu CPF en 2026 : méridiens, certifications et comment se lancer
 
 La formation shiatsu est finançable par le CPF en 2026 dès lors qu'elle est adossée à une certification enregistrée au Répertoire Spécifique (RS) de France Compétences. Des parcours de 100 à 400 heures permettent d'acquérir les fondamentaux de cette discipline japonaise et d'exercer en cabinet privé, en spa ou en entreprise dans le cadre du bien-être. Prix indicatifs : de 1 200 à 5 000 euros selon la durée et l'organisme.

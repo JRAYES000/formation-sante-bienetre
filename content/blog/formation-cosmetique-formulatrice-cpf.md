@@ -1,11 +1,12 @@
 ---
 slug: formation-cosmetique-formulatrice-cpf
 title: "Formation formulatrice cosmétique CPF en 2026 : créer et vendre ses soins naturels"
+seoTitle: "Formation formulatrice cosmétique CPF en 2026"
 metaDescription: "Tout savoir sur la formation formulatrice cosmétique CPF en 2026 : formulation crèmes, réglementation REACH et CPNP, certifications, débouchés et création de marque."
 excerpt: "Créer ses propres crèmes, sérums et baumes et les commercialiser légalement : voici comment la formation formulatrice cosmétique CPF vous y prépare en 2026."
 image: /images/conseil-3.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation formulatrice cosmétique CPF en 2026 : créer et vendre ses soins naturels
 
 Formuler sa propre crème hydratante, créer un sérum à la rose de Damas, composer un baume à lèvres 100 % naturel et les vendre légalement : c'est possible avec une formation de formulatrice cosmétique. En 2026, des certifications éligibles CPF permettent d'apprendre la formulation, de maîtriser la réglementation (REACH, CPNP, dossier cosmétique) et de se lancer en tant que créatrice de soins naturels ou de fournisseur pour des spas. Ce guide vous donne toutes les clés.

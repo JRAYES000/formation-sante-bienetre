@@ -1,11 +1,13 @@
 ---
 slug: formation-massage-bebe-cpf
 title: "Formation massage bébé CPF en 2026 : apprendre à masser son bébé ou devenir praticien"
-metaDescription: "Formation massage bébé CPF en 2026 : découvrez les ateliers pour parents et les certifications professionnelles, bienfaits, contre-indications et débouchés en PMI, crèches et spas."
+seoTitle: "Formation massage bébé CPF : programmes et débouchés"
+metaDescription: "Formation massage bébé éligible CPF : programmes certifiants, durée, prix et débouchés en périnatalité. Comparez avant de vous inscrire."
 excerpt: "Deux publics, une même passion : le massage bébé réunit les parents qui souhaitent créer du lien par le toucher et les professionnels qui veulent intégrer cette technique à leur pratique. Tour d'horizon des formations disponibles en 2026."
-image: /images/conseil-1.webp
+image: https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80&fit=crop
+publishedAt: "2026-06-16"
+updatedAt: "2026-07-03"
 ---
-
 # Formation massage bébé CPF en 2026 : apprendre à masser son bébé ou devenir praticien
 
 Le massage bébé s'adresse à deux publics très différents. Les parents qui souhaitent apprendre à masser leur nourrisson pour renforcer le lien d'attachement et soulager les coliques n'ont pas besoin de certification professionnelle : des ateliers accessibles, souvent proposés par des PMI ou des associations, suffisent. En revanche, les professionnels du bien-être, de la petite enfance ou du paramédical qui veulent intégrer le massage bébé à leur offre doivent se tourner vers des formations certifiantes, dont certaines sont éligibles au [Compte Personnel de Formation](/financement-cpf). Ce guide fait le point sur les deux voies.

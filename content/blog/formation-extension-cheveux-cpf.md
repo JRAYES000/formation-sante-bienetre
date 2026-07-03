@@ -1,11 +1,12 @@
 ---
 slug: formation-extension-cheveux-cpf
 title: "Formation extension de cheveux CPF en 2026 : kératine, clip, nanoringues et certifications"
+seoTitle: "Formation extension de cheveux CPF en 2026"
 metaDescription: "Formation extension de cheveux CPF 2026 : kératine à chaud, clip, nanoringues, tissage. Certifications, tarifs (200-600 euros), débouchés salon ou domicile."
 excerpt: "Découvrez comment vous former aux extensions de cheveux avec le CPF en 2026 : techniques kératine, clip, nanoringues, certifications reconnues et débouchés professionnels."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation extension de cheveux CPF en 2026 : kératine, clip, nanoringues et certifications
 
 Oui, il est possible de financer une formation extension de cheveux avec le CPF en 2026, à condition de choisir un organisme certifié Qualiopi et une formation débouchant sur une certification reconnue. Les tarifs de formation varient entre 400 et 1 500 euros selon la technique et la durée, tandis que la pose en salon est facturée entre 200 et 600 euros selon le volume et la méthode choisie. Ce guide complet vous explique les différentes techniques, les certifications disponibles, les débouchés professionnels et comment accéder à ces formations.

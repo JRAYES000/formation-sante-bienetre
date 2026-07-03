@@ -39,6 +39,21 @@ const CAT_OG_IMAGES: Record<string, string> = {
 };
 const DEFAULT_OG_IMAGE = "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1200&q=80&fit=crop";
 
+// Articles « striking distance » (impressions GSC, positions 6-16) mis en avant
+// sur la home et en tête du blog pour leur pousser du jus interne.
+const FEATURED_SLUGS = [
+  "formation-art-therapie-bien-etre-cpf",
+  "combien-coute-formation-coiffure-cap",
+  "salaire-masseuse-bien-etre-france",
+  "metiers-bien-etre-qui-recrutent-2026",
+  "prime-aide-embauche-apprenti-beaute",
+  "contrat-apprentissage-esthetique-coiffure-detail",
+  "reconversion-estheticienne-30-40-50-ans",
+  "reconversion-coiffure-adulte",
+  "dossier-cpf-refuse-que-faire",
+  "formation-massage-bebe-cpf",
+];
+
 interface PageOpts {
   title: string;
   description: string;
@@ -51,6 +66,7 @@ interface PageOpts {
   publishedAt?: string;
   updatedAt?: string;
   noindex?: boolean;
+  extraHead?: string;
 }
 
 function renderPage(o: PageOpts): string {
@@ -113,6 +129,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/analytics.js" defer></script>
+${o.extraHead ?? ""}
 <style>
   :root{--p:#186749;--p-dark:#145c3f;--p-active:#1b4332;--p-light:#e8f5ef;--ink:#1a1a1a;--body:#444;--muted:#777;--hairline:#e5e5e5;--surface:#f8f8f6;--radius:14px}
   *{box-sizing:border-box}
@@ -329,7 +346,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 </head>
 <body>
 <header><div class="wrap">
-  <a href="/formations" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
+  <a href="/" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
     <img src="/images/logo-header.png" alt="Formation Santé Bien-être" style="height:36px;width:auto;display:block">
   </a>
   <nav class="header-nav">
@@ -442,11 +459,11 @@ function formationCards(items: any[]): string {
     .map(
       (f, i) => `<div class="card" data-price="${f.prix_min ?? 0}">
 <div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}${urgencyBadge(i, items.length)}</div>
-<a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}" style="font-size:1.02rem">${esc(f.intitule)}</a>
+<a class="t" href="/app#/formation/${encodeURIComponent(f.numero_formation)}" style="font-size:1.02rem">${esc(f.intitule)}</a>
 <span class="card-org" style="font-weight:600;color:var(--body)">${esc(f.organisme ?? "")}</span>
 <span class="card-info">${f.a_distance ? "🌐 À distance possible" : "📍 Présentiel"}${f.type_referentiel ? " &middot; " + esc(f.type_referentiel) : ""} &middot; ✅ CPF${f.organisme_qualiopi ? " &middot; <strong>Qualiopi</strong>" : ""}</span>
 <span class="card-price">${eur(f.prix_min)}</span>
-<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
+<a class="card-cta" href="/app#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
 </div>`
     )
     .join("")}</div>`;
@@ -632,7 +649,7 @@ function cityRegion(slug: string): string {
 
 // ---------- robots & sitemap ----------
 seoRouter.get("/robots.txt", (req, res) => {
-  res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
+  res.type("text/plain").send(`User-agent: *\nAllow: /\nDisallow: /app\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
 });
 
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
@@ -640,7 +657,7 @@ seoRouter.get("/robots.txt", (req, res) => {
 export function allIndexableUrls(base: string): string[] {
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
-  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`];
+  const urls: string[] = [`${base}/`, `${base}/formations`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`];
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
   for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
   for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
@@ -655,7 +672,8 @@ export function allIndexableUrls(base: string): string[] {
 }
 
 function sitemapPriority(url: string): string {
-  if (/\/formations$/.test(url)) return "1.0";
+  if (/\/$/.test(url)) return "1.0";
+  if (/\/formations$/.test(url)) return "0.95";
   if (/\/formations\/[^/]+$/.test(url)) return "0.9";
   if (/\/metier\//.test(url)) return "0.8";
   if (/\/blog$/.test(url) || /\/financement-cpf$/.test(url) || /\/faq$/.test(url)) return "0.8";
@@ -665,6 +683,7 @@ function sitemapPriority(url: string): string {
 }
 
 function sitemapChangefreq(url: string): string {
+  if (/\/$/.test(url)) return "daily";
   if (/\/formations/.test(url) || /\/ville/.test(url)) return "weekly";
   if (/\/blog\//.test(url) || /\/metier\//.test(url)) return "monthly";
   return "weekly";
@@ -682,6 +701,124 @@ seoRouter.get("/sitemap.xml", (req, res) => {
     urls.map((u) => `  <url><loc>${esc(u)}</loc><lastmod>${articleDates.get(u) ?? today}</lastmod><changefreq>${sitemapChangefreq(u)}</changefreq><priority>${sitemapPriority(u)}</priority></url>`).join("\n") +
     `\n</urlset>\n`;
   res.type("application/xml").send(xml);
+});
+
+// ---------- home page ----------
+seoRouter.get("/", (req, res) => {
+  const base = baseUrl(req);
+  const canonical = `${base}/`;
+  const stats = globalStats();
+  const allArticles = listArticles();
+  // Articles mis en avant = striking distance GSC (jus interne depuis la page la plus forte)
+  const articles = FEATURED_SLUGS.map((s) => allArticles.find((a) => a.slug === s))
+    .filter(Boolean)
+    .slice(0, 3) as ReturnType<typeof listArticles>;
+  const HOME_EMOJI: Record<string, string> = {
+    "esthetique-soin-corporel": "🧖‍♀️", "coiffure": "✂️", "manucurie": "💅",
+    "massage-bien-etre": "🤲", "maquillage": "💄",
+  };
+  const topCats = (listCategories() as { slug: string; nom: string; n: number }[])
+    .filter((c) => HOME_EMOJI[c.slug] && c.n > 0)
+    .sort((a, b) => b.n - a.n)
+    .map((c) => ({ label: `${HOME_EMOJI[c.slug]} ${normCat(c.nom)}`, href: `/formations/${c.slug}`, n: c.n }));
+
+  const hero = `<h1 style="color:#fff">Trouvez votre prochaine formation santé et bien-être</h1>
+<p class="sub">Comparez gratuitement plus de ${stats.formations} formations CPF en esthétique, massage, coiffure et bien-être. Financez jusqu'à 100 % avec vos droits de formation.</p>
+<nav class="cat-nav" aria-label="Catégories principales">
+${topCats.map((c) => `<a href="${c.href}">${esc(c.label)}</a>`).join("")}
+</nav>
+<a class="cta" href="/formations" style="margin-top:20px;display:inline-block">Explorer ${stats.formations} formations →</a>`;
+
+  const body = `
+<div class="stats-band">
+  <div class="stat-item">
+    <div class="n">${stats.formations}</div>
+    <div class="l">Formations éligibles CPF</div>
+  </div>
+  <div class="stat-item">
+    <div class="n">${stats.organismes}</div>
+    <div class="l">Organismes certifiés Qualiopi</div>
+  </div>
+  <div class="stat-item">
+    <div class="n">50+</div>
+    <div class="l">Villes dans toute la France</div>
+  </div>
+</div>
+
+<div class="mesh">
+  <h2 style="margin-top:0">Pourquoi nous choisir ?</h2>
+  <ul>
+    <li><strong>Comparaison complète :</strong> Tous les programmes avec tarifs, durées, modalités (présentiel, distance, alternance).</li>
+    <li><strong>Financements décortiqués :</strong> CPF, OPCO, France Travail, aides régionales — nous expliquons tous les parcours et les pièges à éviter.</li>
+    <li><strong>Qualité garantie :</strong> 100 % des formations sont certifiées Qualiopi, gage de qualité pédagogique et de sérieux de l'organisme.</li>
+    <li><strong>Contenu métier :</strong> Fiches métier, salaires à jour, débouchés, témoignages de reconversion — tout pour décider en confiance.</li>
+  </ul>
+</div>
+
+<div class="section-label"><h2>Nos articles les plus lus</h2><span class="section-label-line"></span></div>
+<div class="grid">
+${articles.map((a) => `<a class="blog-card" href="/blog/${a.slug}" style="text-decoration:none">
+  <div class="blog-card-body">
+    <h3 class="blog-card-title">${esc(a.title)}</h3>
+    <p class="blog-card-excerpt">${esc(a.excerpt)}</p>
+    <span class="blog-read-more">Lire l'article →</span>
+  </div>
+</a>`).join("")}
+<div class="card" style="border:2px dashed var(--hairline);background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:220px">
+  <span style="font-size:2.2rem">📖</span>
+  <a class="t" href="/blog" style="font-size:1.05rem">Tous nos guides</a>
+  <p class="card-org">Reconversion, financement, salaires, débouchés…</p>
+  <a class="card-cta" href="/blog">Voir les ${allArticles.length} articles →</a>
+</div>
+</div>
+
+<div class="section-label" style="margin-top:48px"><h2>Besoin d'aide pour débuter ?</h2><span class="section-label-line"></span></div>
+<div class="mesh" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:100%">
+  <div style="background:var(--p-light);border-radius:14px;padding:24px;border-left:4px solid var(--p)">
+    <h3 style="margin-top:0">📘 Comment utiliser le CPF ?</h3>
+    <p style="margin:0 0 16px;color:var(--body)">Solde, éligibilité, démarches, financements complémentaires — tous les secrets pour maximiser vos droits.</p>
+    <a class="cta" href="/financement-cpf" style="margin:0;font-size:.95rem">Lire le guide complet</a>
+  </div>
+  <div style="background:var(--p-light);border-radius:14px;padding:24px;border-left:4px solid var(--p)">
+    <h3 style="margin-top:0">🎯 Découvrir les métiers</h3>
+    <p style="margin:0 0 16px;color:var(--body)">Missions, formations requises, salaires, débouchés — trouvez votre futur métier dans le bien-être.</p>
+    <a class="cta" href="/metiers" style="margin:0;font-size:.95rem">Parcourir les fiches métier</a>
+  </div>
+</div>`;
+
+  const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Formation Santé Bien-être",
+    url: canonical,
+    description: "Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Trouvez et comparez les meilleures formations certifiées Qualiopi.",
+    publisher: {
+      "@type": "Organization",
+      name: "Formation Santé Bien-être",
+      logo: { "@type": "ImageObject", url: `${base}/images/logo-header.png` },
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${base}/formations?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const description = `Comparez ${stats.formations} formations CPF en esthétique, massage, coiffure et bien-être. Organismes Qualiopi, guides financement, salaires et reconversion.`;
+  res.send(
+    renderPage({
+      title: `Formation bien-être CPF : comparez ${stats.formations} formations`,
+      description,
+      canonical,
+      jsonLd: [websiteLd],
+      breadcrumb: [{ name: "Accueil" }],
+      hero,
+      body,
+      // Compat : les anciennes URLs SPA « /#/recherche » etc. résolvent sur « / » —
+      // on renvoie ces visiteurs vers la SPA déplacée sous /app, avant le rendu.
+      extraHead: `<script>if(location.hash.slice(0,2)==='#/')location.replace('/app'+location.hash);</script>`,
+    })
+  );
 });
 
 // ---------- hub ----------
@@ -758,7 +895,7 @@ ${heroChips.map((c) => `<a href="${c.href}">${esc(c.label)}</a>`).join("")}
   function renderCats(list){sd.innerHTML=list.map(function(c){return'<a class="sd-item" href="/formations/'+c.slug+'" role="option"><span class="em">'+c.emoji+'</span><span class="sdn">'+c.nom+'</span><span class="sdc">'+c.n+' formations</span></a>';}).join('');}
   inp.addEventListener('focus',function(){renderCats(cats);sd.classList.add('open');});
   inp.addEventListener('input',function(){var q=inp.value.toLowerCase().trim();renderCats(q?cats.filter(function(c){return c.nom.toLowerCase().includes(q);}):cats);sd.classList.add('open');});
-  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=inp.value.trim();window.location.href=q?'/#/recherche/'+encodeURIComponent(q):'/#/recherche';}});
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=inp.value.trim();window.location.href=q?'/app#/recherche/'+encodeURIComponent(q):'/app#/recherche';}});
   document.getElementById('search-submit-btn').addEventListener('click',function(){renderCats(cats);sd.classList.add('open');inp.focus();});
   // City search
   var cinp=document.getElementById('city-q'),csd=document.getElementById('csd');
@@ -796,11 +933,11 @@ function filterReg(btn,reg){
 <div class="grid">
 ${popularFormations.map((f: any, i: number) => `<div class="card pop-card" data-price="${f.prix_min ?? 0}">
 <div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}${urgencyBadge(i, popularFormations.length)}</div>
-<a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
+<a class="t" href="/app#/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
 <span class="card-org">${esc(f.organisme ?? "")}</span>
 <span class="card-info">${f.a_distance ? "🌐 À distance" : "📍 Présentiel"} &middot; ✅ CPF${f.organisme_qualiopi ? " &middot; <strong>Qualiopi</strong>" : ""}</span>
 <span class="card-price">${eur(f.prix_min)}</span>
-<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
+<a class="card-cta" href="/app#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
 </div>`).join("")}
 </div>
 
@@ -1287,12 +1424,12 @@ seoRouter.get("/metiers", (req, res) => {
     { slug: "maquillage", label: "Maquillage", emoji: "💄", color: "#be185d", bg: "#fdf2f8", desc: "Maquillage de scène, événementiel, beauté", href: "/metier/maquillage" },
     { slug: "massage-bien-etre", label: "Massage & bien-être", emoji: "💆‍♀️", color: "#0369a1", bg: "#f0f9ff", desc: "Massage suédois, californien, ayurvédique...", href: "/metier/massage-bien-etre" },
     { slug: "specialisation-coiffure", label: "Spécialisation coiffure", emoji: "🎨", color: "#92400e", bg: "#fefce8", desc: "Balayage, colorimétrie, extensions, permanente", href: "/metier/specialisation-coiffure" },
-    { slug: "spa-manager", label: "Spa manager", emoji: "🏪", color: "#0f766e", bg: "#f0fdfa", desc: "Gérer et diriger un spa ou un institut de beauté", href: "/#/recherche/spa%20manager" },
-    { slug: "naturopathie", label: "Naturopathie", emoji: "🌿", color: "#15803d", bg: "#f7fef2", desc: "Approches naturelles et holistiques du bien-être", href: "/#/recherche/naturopathie" },
-    { slug: "reflexologie", label: "Réflexologie", emoji: "👣", color: "#7c3aed", bg: "#f5f3ff", desc: "Réflexologie plantaire, palmaire, faciale", href: "/#/recherche/reflexologie" },
-    { slug: "aromatherapie", label: "Aromathérapie", emoji: "🌸", color: "#db2777", bg: "#fdf2f8", desc: "Huiles essentielles, phytothérapie, soins naturels", href: "/#/recherche/aromatherapie" },
-    { slug: "formation-en-entreprise", label: "Formation en salon", emoji: "🏢", color: "#1d4ed8", bg: "#eff6ff", desc: "Perfectionnement en entreprise via OPCO AKTO", href: "/#/recherche/salon" },
-    { slug: "maquillage-permanent", label: "Maquillage permanent", emoji: "✨", color: "#b45309", bg: "#fffbeb", desc: "Microblading, sourcils, tatouage cosmétique", href: "/#/recherche/maquillage%20permanent" },
+    { slug: "spa-manager", label: "Spa manager", emoji: "🏪", color: "#0f766e", bg: "#f0fdfa", desc: "Gérer et diriger un spa ou un institut de beauté", href: "/app#/recherche/spa%20manager" },
+    { slug: "naturopathie", label: "Naturopathie", emoji: "🌿", color: "#15803d", bg: "#f7fef2", desc: "Approches naturelles et holistiques du bien-être", href: "/app#/recherche/naturopathie" },
+    { slug: "reflexologie", label: "Réflexologie", emoji: "👣", color: "#7c3aed", bg: "#f5f3ff", desc: "Réflexologie plantaire, palmaire, faciale", href: "/app#/recherche/reflexologie" },
+    { slug: "aromatherapie", label: "Aromathérapie", emoji: "🌸", color: "#db2777", bg: "#fdf2f8", desc: "Huiles essentielles, phytothérapie, soins naturels", href: "/app#/recherche/aromatherapie" },
+    { slug: "formation-en-entreprise", label: "Formation en salon", emoji: "🏢", color: "#1d4ed8", bg: "#eff6ff", desc: "Perfectionnement en entreprise via OPCO AKTO", href: "/app#/recherche/salon" },
+    { slug: "maquillage-permanent", label: "Maquillage permanent", emoji: "✨", color: "#b45309", bg: "#fffbeb", desc: "Microblading, sourcils, tatouage cosmétique", href: "/app#/recherche/maquillage%20permanent" },
   ];
 
   const metierGrid = METIER_CONFIG.map((m) => `
@@ -1350,7 +1487,7 @@ seoRouter.get("/metier/:slug", (req, res, next) => {
     : null;
   const body = `<h1>${esc(m.titre)}</h1>
 <p class="lead">${esc(m.intro ?? "")}</p>
-<a class="cta" href="${hasCat ? `/formations/${m.slug}` : "/#/recherche"}">Voir les formations ${esc(m.metier)}</a>
+<a class="cta" href="${hasCat ? `/formations/${m.slug}` : "/app#/recherche"}">Voir les formations ${esc(m.metier)}</a>
 ${ulBlock("Missions", m.missions)}
 ${ulBlock("Compétences", m.competences)}
 ${ulBlock("Débouchés", m.debouches)}
@@ -1377,7 +1514,12 @@ ${m.faq?.length ? `<div class="mesh"><h2>Questions fréquentes</h2>${m.faq.map((
 // ---------- blog ----------
 seoRouter.get("/blog", (req, res) => {
   const base = baseUrl(req);
-  const arts = listArticles();
+  const all = listArticles();
+  // Striking distance d'abord (jus interne vers les pages proches de la page 1), puis le reste
+  const arts = [
+    ...FEATURED_SLUGS.map((s) => all.find((a) => a.slug === s)).filter(Boolean),
+    ...all.filter((a) => !FEATURED_SLUGS.includes(a.slug)),
+  ] as ReturnType<typeof listArticles>;
   // Article mis en avant (premier) + grille des autres
   const [featured, ...rest] = arts;
   const featuredHtml = featured ? `
@@ -1497,7 +1639,7 @@ ${relatedHtml}`;
 
   res.send(
     renderPage({
-      title: `${a.title} | Formation Santé Bien-être`,
+      title: a.seoTitle || `${a.title} | Formation Santé Bien-être`,
       description: a.metaDescription,
       canonical,
       ogImage: a.image,
@@ -1669,3 +1811,7 @@ seoRouter.get("/metier/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/blog/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/ville/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/ville/:a/:b", (req, res) => res.status(404).send(render404(req)));
+
+// Catch-all final : la SPA vit désormais sous /app (servie avant ce routeur),
+// donc toute autre URL inconnue (ex : /foobar) reçoit un vrai 404 SSR.
+seoRouter.get("*", (req, res) => res.status(404).send(render404(req)));

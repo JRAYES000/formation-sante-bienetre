@@ -1,11 +1,12 @@
 ---
 slug: formation-massage-lyon-auvergne-rhone-alpes
 title: "Formation massage bien-être à Lyon et en Auvergne-Rhône-Alpes en 2026"
+seoTitle: "Formation massage bien-être à Lyon et en Auvergne-Rhône-Alpes"
 metaDescription: "Guide complet des formations massage bien-être à Lyon et en AuRA : certifications CPF, praticien bien-être, débouchés, salaires, thermes des Alpes et spas lyonnais en 2026."
 excerpt: "Lyon, deuxième pôle économique français, concentre une offre de formation massage bien-être riche et des débouchés variés entre spas urbains et thermes alpins. Guide complet 2026 pour se former en AuRA."
 image: /images/conseil-1.webp
+publishedAt: "2026-06-16"
 ---
-
 # Formation massage bien-être à Lyon et en Auvergne-Rhône-Alpes en 2026
 
 Vous souhaitez vous former au massage bien-être à Lyon ? La capitale des Gaules est l'un des meilleurs endroits de France pour embrasser cette carrière. Deuxième pôle économique français, Lyon concentre une clientèle dense et aisée, un réseau de spas urbains parmi les plus développés hors Paris, et une proximité avec les thermes et stations alpines d'Auvergne-Rhône-Alpes qui multiplient les débouchés professionnels. Ce guide complet vous présente les certifications disponibles, les voies de financement CPF, les modalités d'accès à la profession et les perspectives de carrière concrètes dans la région en 2026.
