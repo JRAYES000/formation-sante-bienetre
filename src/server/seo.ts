@@ -693,7 +693,84 @@ function cityRegion(slug: string): string {
 
 // ---------- robots & sitemap ----------
 seoRouter.get("/robots.txt", (req, res) => {
-  res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${baseUrl(req)}/sitemap.xml\n`);
+  const base = baseUrl(req);
+  // Directives explicites par bot IA (Pilier 5.C.4) : aucune n'a d'effet sur
+  // l'acces reel (tout etait deja ouvert via "User-agent: * / Allow: /"),
+  // mais elles documentent une politique consciente plutot qu'un simple
+  // silence. Bots de recherche/reponse IA (AI Overviews, ChatGPT Search,
+  // Perplexity, Copilot) explicitement autorises ci-dessous. CCBot (entrainement
+  // Common Crawl) n'est pas bloque non plus : a rediscuter si l'equipe souhaite
+  // separer "citation" et "entrainement" (cf. Pilier 5.A, section 2.1).
+  res.type("text/plain").send(`User-agent: *
+Allow: /
+
+# Crawlers IA de recherche / reponse (AI Overviews, ChatGPT Search, Perplexity, Copilot)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: ${base}/sitemap.xml
+`);
+});
+
+// llms.txt (Pilier 5.C.4) : optionnel, priorite basse (cf. Pilier 5.A section 3 -
+// aucun moteur IA majeur ne le consomme a ce jour), mais cout quasi nul et remplace
+// le soft-404 actuel (le serveur renvoyait la page d'accueil HTML faute de route dediee).
+seoRouter.get("/llms.txt", (req, res) => {
+  const base = baseUrl(req);
+  const cats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0);
+  const metiers = listMetiers();
+  const lines = [
+    "# Formation Santé Bien-être",
+    "",
+    "> Comparateur de formations éligibles au CPF (Compte Personnel de Formation) dans le secteur santé, esthétique et bien-être en France : esthétique, coiffure, manucure, maquillage, massage bien-être. Catalogue issu de Mon Compte Formation (EDOF, Caisse des Dépôts), organismes certifiés Qualiopi uniquement.",
+    "",
+    "## Formations par métier",
+    "",
+    ...cats.map((c) => `- [Formations ${c.nom}](${base}/formations/${c.slug}) : ${c.n} formations éligibles CPF`),
+    "",
+    "## Fiches métier",
+    "",
+    ...metiers.map((m) => `- [${m.metier}](${base}/metier/${m.slug})`),
+    "",
+    "## Financement et informations pratiques",
+    "",
+    `- [Financer sa formation avec le CPF](${base}/financement-cpf)`,
+    `- [Questions fréquentes (FAQ)](${base}/faq)`,
+    `- [Blog et guides](${base}/blog)`,
+    "",
+    "## Optional",
+    "",
+    `- [Toutes les formations](${base}/formations)`,
+    `- [Catalogue par ville](${base}/villes)`,
+  ];
+  res.type("text/plain").send(lines.join("\n") + "\n");
 });
 
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
