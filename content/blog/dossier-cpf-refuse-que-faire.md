@@ -256,7 +256,7 @@ Contactez immédiatement votre conseiller France Travail. Il peut financer votre
 **Existe-t-il des alternatives au CPF pour financer une formation beauté ?**
 Oui : les aides régionales (chèques formation), les financements OPCO (si salarié), la Pro-A (alternance), le CPF de transition professionnelle, les fonds France Travail. Notre guide complet : [financer sa formation beauté sans CPF](/blog/financer-formation-beaute-sans-cpf).
 
-**Le reste à charge de 100 € est-il remboursable en cas de refus ?**
+**La participation forfaitaire de 150 € est-elle remboursable en cas de refus ?**
 Si votre dossier est refusé après versement du reste à charge, vous êtes remboursé. En pratique, le reste à charge n'est prélevé qu'une fois la formation confirmée et démarrée.
 
 **Un organisme qui m'a démarché par téléphone peut-il quand même recevoir mon CPF ?**

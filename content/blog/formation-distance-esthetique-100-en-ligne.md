@@ -161,7 +161,7 @@ Vérifiez toujours que l'organisme est reconnu par le rectorat pour les épreuve
 
 Des organismes peu scrupuleux promettent des formations esthétique entièrement financées par le CPF sans aucun reste à charge, y compris en 2024/2025/2026 après l'instauration du reste à charge obligatoire. C'est impossible légalement (sauf si vous êtes demandeur d'emploi).
 
-Si un commercial vous dit "votre formation est à 0 euro, votre CPF finance tout", posez des questions précises : comment évitent-ils le reste à charge de 100 euros ? Si la réponse n'est pas claire, méfiez-vous.
+Si un commercial vous dit "votre formation est à 0 euro, votre CPF finance tout", posez des questions précises : comment évitent-ils la participation forfaitaire de 150 euros ? Si la réponse n'est pas claire, méfiez-vous.
 
 Lisez notre article sur les [règles CPF 2025-2026](/blog/financement-cpf-regles-2025-2026) pour vérifier ces promesses.
 

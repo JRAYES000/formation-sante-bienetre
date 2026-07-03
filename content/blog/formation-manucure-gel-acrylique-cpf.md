@@ -86,7 +86,7 @@ Le Compte Personnel de Formation est le principal levier de financement pour une
 
 Rendez-vous sur [Mon Compte Formation](https://www.moncompteformation.gouv.fr) avec votre numéro de sécurité sociale. Votre solde s'affiche en euros (depuis la réforme 2019, les droits sont calculés en euros et non en heures).
 
-Depuis 2023, un reste à charge de 100 € est demandé aux actifs qui financent seuls leur formation via CPF. Ce reste à charge est supprimé si vous êtes demandeur d'emploi, si votre employeur abonde votre CPF, ou si une autre aide publique est mobilisée.
+Depuis avril 2026, une participation forfaitaire de 150 € est demandée aux actifs qui financent seuls leur formation via CPF (100 € entre mai 2024 et avril 2026). Ce reste à charge est supprimé si vous êtes demandeur d'emploi, si votre employeur abonde votre CPF, ou si une autre aide publique est mobilisée.
 
 ### Trouver une formation éligible CPF
 
@@ -260,8 +260,8 @@ Oui, la plupart des formations certifiantes récentes intègrent le polygel au p
 **Faut-il un diplôme d'esthéticienne pour faire de la manucure ?**
 Non, il n'est pas obligatoire d'être esthéticienne diplômée pour exercer la prothésie ongulaire. Une certification RS spécifique suffit. En revanche, si vous souhaitez proposer d'autres soins esthétiques (épilation, soins du visage...), le CAP esthétique est requis.
 
-**Le reste à charge CPF de 100 € s'applique-t-il aux formations manucure ?**
-Oui, depuis 2023, un reste à charge de 100 € est demandé aux actifs qui utilisent seuls leur CPF. Ce reste à charge est supprimé si vous êtes demandeur d'emploi, si votre employeur abonde votre CPF ou si une aide publique est mobilisée.
+**La participation forfaitaire CPF de 150 € s'applique-t-elle aux formations manucure ?**
+Oui, depuis avril 2026, une participation forfaitaire de 150 € est demandée aux actifs qui utilisent seuls leur CPF (100 € entre mai 2024 et avril 2026). Ce reste à charge est supprimé si vous êtes demandeur d'emploi, si votre employeur abonde votre CPF ou si une aide publique est mobilisée.
 
 **Peut-on se former à la manucure entièrement en ligne ?**
 Partiellement. La théorie et les connaissances de base peuvent s'acquérir en ligne. Mais la pratique sur ongles naturels et clientes nécessite des sessions en présentiel. Les meilleures formations hybrides combinent e-learning théorique et ateliers pratiques en centre.

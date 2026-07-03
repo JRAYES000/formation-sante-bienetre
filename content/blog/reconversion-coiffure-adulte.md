@@ -68,7 +68,7 @@ Pour utiliser vos droits CPF :
 3. Vérifiez le coût de la formation et vos droits disponibles (crédit en euros)
 4. Si le coût dépasse vos droits, un reste à charge peut s'appliquer — certains organismes proposent des abondements ou financements complémentaires
 
-**À noter** : depuis mai 2023, un reste à charge de 100 € s'applique aux formations CPF sauf si un cofinancement (employeur, Opco, France Travail) est activé.
+**À noter** : depuis avril 2026, une participation forfaitaire de 150 € s'applique aux formations CPF (100 € entre mai 2024 et avril 2026), sauf si un cofinancement (employeur, Opco, France Travail) est activé.
 
 ### France Travail (ex-Pôle Emploi)
 
@@ -124,6 +124,8 @@ Non. La réglementation française (loi de 1946) impose la détention du CAP coi
 Il n'y a pas de limite d'âge légale pour passer le CAP coiffure ou accéder à une formation d'adulte. Des personnes de plus de 50 ans réussissent cette reconversion. La condition principale est la motivation et la capacité physique (station debout prolongée, mouvements répétitifs des bras).
 
 ---
+
+Retrouvez l'ensemble des [formations coiffure](/formations/coiffure) ouvertes aux adultes en reconversion, la [fiche métier coiffeur ou coiffeuse](/metier/coiffure) pour les débouchés et évolutions de carrière, ainsi que notre [guide financement CPF](/financement-cpf).
 
 ## Conclusion : un projet réaliste, à construire pas à pas
 

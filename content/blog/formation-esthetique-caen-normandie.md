@@ -34,7 +34,7 @@ Rouen (110 000 habitants, agglomération de 500 000) et Le Havre (170 000 habita
 
 ### Le CAP Esthétique Cosmétique Parfumerie
 
-Le [CAP esthétique](https://formation-sante-bienetre.fr/metier/esthetique-soin-corporel) est le diplôme de référence pour entrer dans la profession. À Caen et dans les villes normandes, il est proposé dans les lycées professionnels publics et dans des organismes de formation privés certifiés Qualiopi.
+Le [CAP esthétique](/metier/esthetique-soin-corporel) est le diplôme de référence pour entrer dans la profession. À Caen et dans les villes normandes, il est proposé dans les lycées professionnels publics et dans des organismes de formation privés certifiés Qualiopi.
 
 **Contenu du CAP esthétique :**
 - Soins du visage (démaquillage, nettoyage, hydratation, masques)
@@ -47,29 +47,29 @@ Le [CAP esthétique](https://formation-sante-bienetre.fr/metier/esthetique-soin-
 
 **Durée et coût :**
 - Formation initiale (lycée pro) : 2 ans, gratuit sous statut scolaire
-- Formation accélérée pour adultes : 10 à 14 mois, 3 500 à 7 000 euros selon les organismes, finançable via le [CPF](https://formation-sante-bienetre.fr/financement-cpf)
+- Formation accélérée pour adultes : 10 à 14 mois, 3 500 à 7 000 euros selon les organismes, finançable via le [CPF](/financement-cpf)
 
-Pour connaître toutes les spécificités du CAP, [lisez notre guide dédié](https://formation-sante-bienetre.fr/blog/cap-esthetique-2026).
+Pour connaître toutes les spécificités du CAP, [lisez notre guide dédié](/blog/cap-esthetique-2026).
 
 ### Le Brevet Professionnel (BP) Esthétique
 
-Le [BP esthétique](https://formation-sante-bienetre.fr/blog/bp-cap-esthetique-lequel-choisir) (niveau bac) est le diplôme qui permet d'encadrer une équipe et d'ouvrir son propre salon. En Normandie, il est particulièrement valorisé dans les centres de thalassothérapie et les spas hôteliers du littoral, qui recherchent des responsables de cabine capables de gérer clientèle internationale et équipes saisonnières.
+Le [BP esthétique](/blog/bp-cap-esthetique-lequel-choisir) (niveau bac) est le diplôme qui permet d'encadrer une équipe et d'ouvrir son propre salon. En Normandie, il est particulièrement valorisé dans les centres de thalassothérapie et les spas hôteliers du littoral, qui recherchent des responsables de cabine capables de gérer clientèle internationale et équipes saisonnières.
 
 ### Le BTS et les formations supérieures
 
-Le [BTS esthétique-cosmétique-parfumerie](https://formation-sante-bienetre.fr/blog/bts-esthetique-cosmetique-debouches) (bac+2) est accessible dans certains établissements de la région. Il prépare aux fonctions commerciales dans la distribution spécialisée et aux postes techniques dans les instituts haut de gamme.
+Le [BTS esthétique-cosmétique-parfumerie](/blog/bts-esthetique-cosmetique-debouches) (bac+2) est accessible dans certains établissements de la région. Il prépare aux fonctions commerciales dans la distribution spécialisée et aux postes techniques dans les instituts haut de gamme.
 
 ### Formations spécialisées en soins marins et thalasso
 
 En complément du CAP ou BP esthétique, des formations spécialisées en soins marins (hydrothérapie, enveloppements aux algues, bains hydro-massants, jets sous-marins) existent et sont particulièrement recherchées par les centres de thalassothérapie normands. Ces compétences spécifiques distinguent les candidates sur le marché régional.
 
-Des certifications en [massage bien-être](https://formation-sante-bienetre.fr/blog/devenir-praticien-massage-bien-etre), en [réflexologie plantaire](https://formation-sante-bienetre.fr/blog/formation-reflexologie-cpf) ou en [massage californien](https://formation-sante-bienetre.fr/blog/formation-massage-californien-cpf) complètent efficacement le profil d'une esthéticienne souhaitant intégrer un spa marin.
+Des certifications en [massage bien-être](/blog/devenir-praticien-massage-bien-etre), en [réflexologie plantaire](/blog/formation-reflexologie-cpf) ou en [massage californien](/blog/formation-massage-californien-cpf) complètent efficacement le profil d'une esthéticienne souhaitant intégrer un spa marin.
 
 ## L'alternance esthétique en Normandie
 
 ### Trouver un maître d'apprentissage à Caen et dans la région
 
-L'[alternance en esthétique](https://formation-sante-bienetre.fr/blog/formation-esthetique-alternance-apprentissage) est la voie privilégiée pour préparer un CAP ou BP en Normandie. Le bassin d'emploi caennais offre suffisamment d'instituts de beauté, de salons de manucurie et de spas pour que les apprentis trouvent un employeur dans l'agglomération.
+L'[alternance en esthétique](/blog/formation-esthetique-alternance-apprentissage) est la voie privilégiée pour préparer un CAP ou BP en Normandie. Le bassin d'emploi caennais offre suffisamment d'instituts de beauté, de salons de manucurie et de spas pour que les apprentis trouvent un employeur dans l'agglomération.
 
 Les stations côtières normandes (Deauville-Trouville, Cabourg, Honfleur, Étretat) offrent également des possibilités d'alternance, notamment dans les centres de thalassothérapie et les hôtels. Ces positions sont plus exigeantes logistiquement mais très formatrices.
 
@@ -81,27 +81,27 @@ Les stations côtières normandes (Deauville-Trouville, Cabourg, Honfleur, Étre
 
 ### Conditions du contrat d'apprentissage
 
-Le [contrat d'apprentissage](https://formation-sante-bienetre.fr/blog/alternance-esthetique-salaire-contrat) offre une rémunération pendant la formation (entre 27 % et 100 % du SMIC selon l'âge et l'année). L'employeur bénéficie d'aides à l'embauche. La formation est financée par l'OPCO de l'entreprise.
+Le [contrat d'apprentissage](/blog/alternance-esthetique-salaire-contrat) offre une rémunération pendant la formation (entre 27 % et 100 % du SMIC selon l'âge et l'année). L'employeur bénéficie d'aides à l'embauche. La formation est financée par l'OPCO de l'entreprise.
 
-Pour les adultes en reconversion, le contrat de professionnalisation est une alternative, financée par les [OPCO](https://formation-sante-bienetre.fr/blog/opco-formation-salon-coiffure-beaute).
+Pour les adultes en reconversion, le contrat de professionnalisation est une alternative, financée par les [OPCO](/blog/opco-formation-salon-coiffure-beaute).
 
 ## Financement CPF et aides régionales en Normandie
 
 ### Utiliser le CPF pour se former en Normandie
 
-Le [Compte Personnel de Formation](https://formation-sante-bienetre.fr/financement-cpf) est l'outil principal de financement pour les adultes souhaitant se former à l'esthétique en Normandie. Les formations éligibles doivent préparer à un diplôme RNCP ou à une certification RS.
+Le [Compte Personnel de Formation](/financement-cpf) est l'outil principal de financement pour les adultes souhaitant se former à l'esthétique en Normandie. Les formations éligibles doivent préparer à un diplôme RNCP ou à une certification RS.
 
-Pour utiliser votre CPF : connectez-vous sur moncompteformation.gouv.fr, recherchez les formations esthétique disponibles à Caen ou en Normandie, vérifiez la certification [Qualiopi](https://formation-sante-bienetre.fr/blog/qualiopi-formation-beaute-garantie) des organismes, et engagez la procédure en ligne. [Notre guide CPF complet](https://formation-sante-bienetre.fr/blog/cpf-comment-utiliser-formation-beaute) vous accompagne étape par étape.
+Pour utiliser votre CPF : connectez-vous sur moncompteformation.gouv.fr, recherchez les formations esthétique disponibles à Caen ou en Normandie, vérifiez la certification [Qualiopi](/blog/qualiopi-formation-beaute-garantie) des organismes, et engagez la procédure en ligne. [Notre guide CPF complet](/blog/cpf-comment-utiliser-formation-beaute) vous accompagne étape par étape.
 
 ### Les aides de la Région Normandie
 
 La Région Normandie finance des formations qualifiantes pour les demandeurs d'emploi via son Programme Régional de Formation. Les formations en esthétique et en bien-être y figurent régulièrement. Pour connaître les sessions disponibles, rapprochez-vous de France Travail (ex-Pôle Emploi) à Caen, Rouen ou Le Havre.
 
-Les [aides France Travail pour la formation dans la beauté](https://formation-sante-bienetre.fr/blog/aide-pole-emploi-formation-beaute) peuvent compléter le CPF ou constituer le financement principal pour les demandeurs d'emploi éligibles.
+Les [aides France Travail pour la formation dans la beauté](/blog/aide-pole-emploi-formation-beaute) peuvent compléter le CPF ou constituer le financement principal pour les demandeurs d'emploi éligibles.
 
 ### Si votre CPF est insuffisant
 
-Plusieurs options permettent de pallier un solde CPF insuffisant. [Notre guide sur le reste à charge CPF](https://formation-sante-bienetre.fr/blog/reste-a-charge-cpf-beaute-solutions) détaille toutes les solutions : abondement de l'employeur, aides régionales, Projet de Transition Professionnelle, financement personnel échelonné. [Notre article sur le financement sans CPF](https://formation-sante-bienetre.fr/blog/financer-formation-beaute-sans-cpf) explore les alternatives pour les personnes sans droits CPF.
+Plusieurs options permettent de pallier un solde CPF insuffisant. [Notre guide sur le reste à charge CPF](/blog/reste-a-charge-cpf-beaute-solutions) détaille toutes les solutions : abondement de l'employeur, aides régionales, Projet de Transition Professionnelle, financement personnel échelonné. [Notre article sur le financement sans CPF](/blog/financer-formation-beaute-sans-cpf) explore les alternatives pour les personnes sans droits CPF.
 
 ## Salaires et débouchés en Normandie
 
@@ -115,7 +115,7 @@ Les salaires dans l'esthétique en Normandie sont conformes aux grilles conventi
 - Praticienne en centre de thalassothérapie (Deauville, Cabourg) : 1 600 à 2 000 euros nets/mois selon l'établissement et le poste
 - Responsable d'institut ou de cabine spa : 1 800 à 2 100 euros nets/mois
 
-Pour des données nationales sur les rémunérations, [notre article sur le salaire d'esthéticienne en France](https://formation-sante-bienetre.fr/blog/combien-gagne-estheticienne-france-2026) est la référence.
+Pour des données nationales sur les rémunérations, [notre article sur le salaire d'esthéticienne en France](/blog/combien-gagne-estheticienne-france-2026) est la référence.
 
 ### Les métiers accessibles en Normandie
 
@@ -129,28 +129,28 @@ Pour des données nationales sur les rémunérations, [notre article sur le sala
 **Dans les stations côtières normandes :**
 - Praticienne en thalassothérapie (algothérapie, hydrothérapie, soins corps)
 - Esthéticienne en spa hôtelier
-- Masseuse bien-être ([voir les débouchés massage](https://formation-sante-bienetre.fr/blog/salaire-masseuse-bien-etre-france))
+- Masseuse bien-être ([voir les débouchés massage](/blog/salaire-masseuse-bien-etre-france))
 - Responsable de cabine dans un centre de soins marins
 
 ### Créer son activité esthétique en Normandie
 
 La Normandie offre de réelles opportunités de création d'activité esthétique, notamment dans les zones touristiques et les communes rurales mal desservies. Un institut de beauté mobile (prestations à domicile) peut s'avérer viable dans des zones où les salons sont peu nombreux.
 
-[Notre guide sur l'ouverture d'un institut de beauté](https://formation-sante-bienetre.fr/blog/ouvrir-institut-beaute-formation) vous détaille les conditions requises et les étapes à suivre.
+[Notre guide sur l'ouverture d'un institut de beauté](/blog/ouvrir-institut-beaute-formation) vous détaille les conditions requises et les étapes à suivre.
 
 ## Reconversion esthétique en Normandie
 
 ### Se reconvertir dans l'esthétique à Caen et dans la région
 
-La [reconversion professionnelle vers l'esthétique](https://formation-sante-bienetre.fr/blog/reconversion-estheticienne-30-40-50-ans) est une tendance forte en Normandie, comme partout en France. Des personnes venant de secteurs variés (industrie automobile à Caen-Évreux, agroalimentaire, enseignement, santé) se reconvertissent chaque année dans l'esthétique ou le bien-être.
+La [reconversion professionnelle vers l'esthétique](/blog/reconversion-estheticienne-30-40-50-ans) est une tendance forte en Normandie, comme partout en France. Des personnes venant de secteurs variés (industrie automobile à Caen-Évreux, agroalimentaire, enseignement, santé) se reconvertissent chaque année dans l'esthétique ou le bien-être.
 
-La [reconversion vers les métiers du bien-être](https://formation-sante-bienetre.fr/blog/reconversion-metiers-bien-etre) est particulièrement pertinente en Normandie grâce aux débouchés spécifiques en thalassothérapie. Une formation en soins marins ajoutée à un CAP esthétique crée un profil très recherché sur le littoral normand.
+La [reconversion vers les métiers du bien-être](/blog/reconversion-metiers-bien-etre) est particulièrement pertinente en Normandie grâce aux débouchés spécifiques en thalassothérapie. Une formation en soins marins ajoutée à un CAP esthétique crée un profil très recherché sur le littoral normand.
 
 ## Bien choisir son organisme de formation en Normandie
 
 ### Critères de sélection
 
-Pour ne pas se tromper dans le choix d'un organisme de formation esthétique à Caen ou en Normandie, appliquez les critères recommandés dans [notre guide de sélection](https://formation-sante-bienetre.fr/blog/meilleur-organisme-formation-esthetique-criteres) :
+Pour ne pas se tromper dans le choix d'un organisme de formation esthétique à Caen ou en Normandie, appliquez les critères recommandés dans [notre guide de sélection](/blog/meilleur-organisme-formation-esthetique-criteres) :
 
 1. Certification Qualiopi (obligatoire pour financement CPF)
 2. Habilitation à délivrer le diplôme visé
@@ -159,7 +159,7 @@ Pour ne pas se tromper dans le choix d'un organisme de formation esthétique à 
 5. Réseau de partenaires employeurs
 6. Accompagnement à l'emploi après la formation
 
-Lisez également [les erreurs à éviter lors du choix d'une formation esthétique](https://formation-sante-bienetre.fr/blog/erreurs-choisir-formation-esthetique) avant de vous décider.
+Lisez également [les erreurs à éviter lors du choix d'une formation esthétique](/blog/erreurs-choisir-formation-esthetique) avant de vous décider.
 
 ## FAQ - Formation esthétique à Caen et en Normandie
 
@@ -194,10 +194,10 @@ La reconversion depuis l'industrie (Normandie a plusieurs grands employeurs indu
 Oui. La Normandie offre un marché stable, avec une demande régulière dans les villes et des pics saisonniers sur le littoral. La filière thalassothérapie constitue un débouché original et solide que d'autres régions n'offrent pas au même niveau. Les taux d'emploi post-CAP esthétique en Normandie sont conformes à la moyenne nationale (supérieurs à 70 % à 6 mois).
 
 **Peut-on combiner formation esthétique et formation massage bien-être à Caen ?**
-Oui. Des organismes à Caen et en Normandie proposent des formations en massage bien-être, en réflexologie ou en soins holistiques qui peuvent compléter un CAP ou BP esthétique. Cette combinaison est très appréciée des centres de thalassothérapie qui offrent une gamme complète de soins. [Notre article sur la formation massage bien-être](https://formation-sante-bienetre.fr/metier/massage-bien-etre) vous présente les options disponibles.
+Oui. Des organismes à Caen et en Normandie proposent des formations en massage bien-être, en réflexologie ou en soins holistiques qui peuvent compléter un CAP ou BP esthétique. Cette combinaison est très appréciée des centres de thalassothérapie qui offrent une gamme complète de soins. [Notre article sur la formation massage bien-être](/metier/massage-bien-etre) vous présente les options disponibles.
 
 **Quel diplôme choisir si je veux travailler dans un centre de thalassothérapie normand ?**
-Le CAP esthétique est le minimum requis. Le BP esthétique, qui inclut des soins corps approfondis et des compétences en management, est préféré pour les postes de responsable. Une formation complémentaire en soins marins (algothérapie, hydrothérapie, balnéothérapie) est un atout décisif pour intégrer les meilleurs centres normands. La [voie BP vs CAP](https://formation-sante-bienetre.fr/blog/bp-cap-esthetique-lequel-choisir) mérite d'être étudiée selon votre projet.
+Le CAP esthétique est le minimum requis. Le BP esthétique, qui inclut des soins corps approfondis et des compétences en management, est préféré pour les postes de responsable. Une formation complémentaire en soins marins (algothérapie, hydrothérapie, balnéothérapie) est un atout décisif pour intégrer les meilleurs centres normands. La [voie BP vs CAP](/blog/bp-cap-esthetique-lequel-choisir) mérite d'être étudiée selon votre projet.
 
 ## Conclusion : la Normandie, un marché esthétique enrichi par la thalasso
 
@@ -205,4 +205,4 @@ Caen et la Normandie offrent un contexte de formation esthétique intéressant, 
 
 Que vous soyez en formation initiale à Caen, en alternance dans un salon normand ou en reconversion vers les soins marins, les voies et les financements sont accessibles. Choisissez votre diplôme en fonction de votre projet professionnel, sélectionnez un organisme de formation certifié Qualiopi, et pensez dès la formation aux spécialisations en soins marins qui vous démarqueront sur le marché normand.
 
-[Découvrez toutes les formations esthétique disponibles en Normandie](https://formation-sante-bienetre.fr/formations) et lancez-vous vers une carrière dans la beauté normande.
+[Découvrez toutes les formations esthétique disponibles en Normandie](/formations) et lancez-vous vers une carrière dans la beauté normande.

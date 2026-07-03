@@ -110,7 +110,7 @@ De nombreux organismes de formation proposent des facilités de paiement (3, 6, 
 Certaines banques proposent des **prêts étudiants ou prêts formation** à taux préférentiel. L'État garantit certains de ces prêts via Bpifrance pour les formations certifiantes. Comparez les offres et lisez attentivement les conditions avant de vous engager.
 
 **Coffinancement CPF + reste à charge :**
-Si votre formation est éligible CPF mais que le solde est insuffisant, vous pouvez compléter avec un paiement personnel. Depuis la réforme de 2023, un reste à charge de 100 € minimum est requis si vous financez seul (sans cofinanceur), sauf exceptions (demandeurs d'emploi, salariés avec accord employeur, reconversions spécifiques).
+Si votre formation est éligible CPF mais que le solde est insuffisant, vous pouvez compléter avec un paiement personnel. Depuis le 6 avril 2026, une participation forfaitaire de 150 € minimum est requise si vous financez seul (100 € entre mai 2024 et avril 2026) (sans cofinanceur), sauf exceptions (demandeurs d'emploi, salariés avec accord employeur, reconversions spécifiques).
 
 ---
 

@@ -2,13 +2,13 @@
 slug: reste-a-charge-cpf-beaute-solutions
 title: "Reste à charge CPF formation beauté : toutes les solutions en 2026"
 metaDescription: "CPF insuffisant pour votre formation beauté ? Voici toutes les solutions pour couvrir le reste à charge : OPCO, Conseil Régional, France Travail, abondement employeur."
-excerpt: "Depuis 2023, un reste à charge de 100 euros minimum s'applique au CPF. Mais il existe plusieurs façons de le couvrir, voire de financer l'intégralité de votre formation beauté sans débourser un euro."
+excerpt: "Depuis le 6 avril 2026, une participation forfaitaire de 150 euros minimum s'applique au CPF (100 euros auparavant, depuis mai 2024). Mais il existe plusieurs façons de le couvrir, voire de financer l'intégralité de votre formation beauté sans débourser un euro."
 image: https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80&fit=crop
 publishedAt: 2026-06-13
-updatedAt: 2026-06-15
+updatedAt: 2026-07-03
 ---
 
-Depuis la réforme du CPF de mai 2023, un reste à charge de 100 euros minimum s'applique à toute utilisation du Compte Personnel de Formation par un salarié agissant sans accord de son employeur. Et même sans cette réforme, le solde CPF ne couvre pas toujours intégralement le coût d'une formation beauté qui peut atteindre 5 000 à 8 000 euros. Voici toutes les solutions concrètes pour couvrir ce reste à charge, avec les conditions d'éligibilité et les démarches à effectuer.
+Depuis la réforme du CPF de mai 2024, un reste à charge minimum s'applique à toute utilisation du Compte Personnel de Formation par un salarié agissant sans accord de son employeur. Ce montant, fixé à 100 euros à l'origine, a été porté à 150 euros par le décret n° 2026-234 du 30 mars 2026, entré en vigueur le 6 avril 2026. Et même sans cette réforme, le solde CPF ne couvre pas toujours intégralement le coût d'une formation beauté qui peut atteindre 5 000 à 8 000 euros. Voici toutes les solutions concrètes pour couvrir ce reste à charge, avec les conditions d'éligibilité et les démarches à effectuer.
 
 ## Comprendre le reste à charge en 2026
 
@@ -16,9 +16,9 @@ Depuis la réforme du CPF de mai 2023, un reste à charge de 100 euros minimum s
 
 La première : le montant de la formation est supérieur à votre solde CPF. Si votre compte dispose de 2 000 euros et que la formation coute 4 500 euros, il manque 2 500 euros.
 
-La deuxième : la réforme de 2023 a institué un reste à charge plancher de 100 euros pour les salariés utilisant leur CPF de façon autonome (sans accord préalable de l'employeur). Ce reste à charge minimum est indépendant du prix de la formation.
+La deuxième : la réforme de 2024 a institué un reste à charge plancher pour les salariés utilisant leur CPF de façon autonome (sans accord préalable de l'employeur), fixé à 100 euros puis relevé à 150 euros depuis le 6 avril 2026 (décret n° 2026-234 du 30 mars 2026). Ce reste à charge minimum est indépendant du prix de la formation.
 
-**Exceptions à ce reste à charge de 100 euros** :
+**Exceptions à cette participation forfaitaire de 150 euros** :
 - Votre employeur co-finance la formation (abondement)
 - Vous êtes demandeur d'emploi (exonération totale)
 - Vous êtes agent de la fonction publique dans certains cas
@@ -105,7 +105,7 @@ Ne laissez pas le reste à charge vous décourager. Dans la majorité des situat
 
 ## FAQ - Reste à charge CPF formation beauté
 
-**Le reste à charge de 100 euros est-il obligatoire pour tout le monde ?**
+**La participation forfaitaire de 150 euros est-elle obligatoire pour tout le monde ?**
 Non. Il ne s'applique qu'aux salariés qui utilisent leur CPF de façon autonome sans accord de l'employeur. Les demandeurs d'emploi, les agents de la fonction publique dans certains cas et les salariés dont l'employeur co-finance sont exonérés.
 
 **Peut-on financer le reste à charge avec son CPF ?**
@@ -115,7 +115,7 @@ Non. Le reste à charge est précisément la partie qui ne peut pas être couver
 Oui, si votre conseiller France Travail valide votre projet. L'AIF peut couvrir la totalité du cout de la formation non financé par d'autres sources, y compris la totalité du reste à charge CPF.
 
 **Peut-on négocier le reste à charge avec l'organisme de formation ?**
-Certains organismes proposent des facilités de paiement ou des prix négociés selon les situations. Mais ils ne peuvent pas vous exonérer du reste à charge CPF de 100 euros (c'est une obligation légale). Ils peuvent par contre baisser leur tarif total si vous avez une situation difficile.
+Certains organismes proposent des facilités de paiement ou des prix négociés selon les situations. Mais ils ne peuvent pas vous exonérer de la participation forfaitaire CPF de 150 euros (c'est une obligation légale). Ils peuvent par contre baisser leur tarif total si vous avez une situation difficile.
 
 **Combien de temps prend une demande de PTP ?**
 En général, 2 à 4 mois entre la demande initiale auprès de Transitions Pro et la décision de financement. Anticipez largement, surtout si la formation démarre en septembre.

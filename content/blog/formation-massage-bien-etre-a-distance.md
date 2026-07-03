@@ -111,3 +111,5 @@ Prendre le temps de comparer plusieurs organismes vous permettra de choisir une 
 ---
 
 Vous souhaitez comparer les formations massage bien-être éligibles au CPF disponibles en France ? Consultez notre comparatif des formations dans le domaine santé et bien-être pour trouver le cursus adapté à votre projet — avec filtres par certification, durée, modalité (distanciel, hybride, présentiel) et région.
+
+Retrouvez l'ensemble des [formations massage bien-être](/formations/massage-bien-etre) disponibles, y compris à distance, ainsi que la [fiche métier praticien massage bien-être](/metier/massage-bien-etre) et notre [guide financement CPF](/financement-cpf) pour comparer les modalités de prise en charge.

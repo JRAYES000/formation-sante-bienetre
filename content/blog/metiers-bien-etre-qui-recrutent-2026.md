@@ -84,3 +84,5 @@ Le conseiller beauté guide les clients dans le choix de parfums, soins et cosm�
 Le secteur beauté-bien-être offre des parcours variés, accessibles à différents niveaux et dans des formats adaptés aux contraintes de chacun — formation initiale, alternance, reconversion professionnelle ou montée en compétences. Le financement via le Compte Personnel de Formation (CPF) permet, sous conditions d'éligibilité, de réduire significativement le reste à charge pour les formations certifiantes reconnues.
 
 Consultez notre comparateur pour explorer les formations beauté et bien-être disponibles en France, filtrer par certification, modalité et zone géographique, et trouver le programme qui correspond à votre projet professionnel.
+
+Pour chaque métier évoqué, vous pouvez consulter le [catalogue des formations esthétique](/formations/esthetique-soin-corporel), celui des [formations massage bien-être](/formations/massage-bien-etre), ou parcourir l'ensemble de nos [fiches métiers](/metiers) pour comparer missions, débouchés et salaires avant de choisir votre voie.

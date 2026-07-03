@@ -114,7 +114,7 @@ Pour tout comprendre sur l'utilisation du CPF dans le secteur beauté, lisez not
 
 ### Le reste à charge
 
-Depuis mai 2024, un reste à charge de 100 euros s'applique aux formations CPF pour les salariés. Des solutions existent pour l'éviter ou le réduire, que nous détaillons dans notre article [reste à charge CPF beauté](/blog/reste-a-charge-cpf-beaute-solutions).
+Depuis avril 2026, une participation forfaitaire de 150 euros s'applique aux formations CPF pour les salariés (100 euros entre mai 2024 et avril 2026). Des solutions existent pour l'éviter ou le réduire, que nous détaillons dans notre article [reste à charge CPF beauté](/blog/reste-a-charge-cpf-beaute-solutions).
 
 ### Les autres sources de financement
 

@@ -114,6 +114,8 @@ Voici un parcours type pour devenir praticien en massage bien-être :
 6. **Choisir son statut** (auto-entrepreneur pour commencer) et déclarer l'activité
 7. **Constituer sa clientèle** : réseaux locaux, bouche-à-oreille, présence en ligne, partenariats
 
+Pour aller plus loin, consultez notre [comparatif des formations massage bien-être](/formations/massage-bien-etre) éligibles au CPF, la [fiche métier praticien massage bien-être](/metier/massage-bien-etre) pour un panorama complet des débouchés, et notre [guide du financement CPF](/financement-cpf) pour construire votre plan de financement.
+
 ## Conclusion
 
 Devenir praticien en massage bien-être est un projet professionnel accessible et porteur, à condition de choisir une **formation certifiante sérieuse**, de respecter scrupuleusement le **cadre non médical** et de se préparer aux réalités de la gestion d'une activité indépendante.

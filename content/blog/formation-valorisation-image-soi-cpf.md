@@ -73,7 +73,7 @@ Le conseil en image se complète souvent avec des compétences en maquillage et 
 
 ---
 
-Le conseil en image est un métier réel, porteur et gratifiant, mais qui demande de la persévérance dans la construction d'une clientèle. Si vous avez un attrait naturel pour la mode, la psychologie et la relation d'aide, c'est un projet viable. Consultez les [formations bien-être et développement personnel disponibles](/formations/bien-etre) pour explorer les options CPF dans ce domaine.
+Le conseil en image est un métier réel, porteur et gratifiant, mais qui demande de la persévérance dans la construction d'une clientèle. Si vous avez un attrait naturel pour la mode, la psychologie et la relation d'aide, c'est un projet viable. Consultez les [formations bien-être et développement personnel disponibles](/formations/valorisation-image-de-soi) pour explorer les options CPF dans ce domaine.
 
 ## FAQ - Conseil en image et relooking
 

@@ -154,6 +154,8 @@ Oui. Si vous exercez en tant qu'indépendant(e), vous devez déclarer votre acti
 
 ---
 
+Comparez dès maintenant les [formations prothésiste ongulaire](/formations/manucurie) éligibles au CPF, consultez la [fiche métier manucure et onglerie](/metier/manucurie) pour les débouchés détaillés, et notre [guide financement CPF](/financement-cpf) pour anticiper votre reste à charge.
+
 ## Conclusion
 
 La prothèse ongulaire est un métier technique et créatif qui offre de réelles perspectives d'exercice, que ce soit en salarié, à domicile ou en indépendant. Pour exercer dans de bonnes conditions, une formation sérieuse certifiée RS et dispensée par un organisme Qualiopi est indispensable — à la fois pour acquérir les gestes professionnels et pour mobiliser votre CPF dans les meilleures conditions.
