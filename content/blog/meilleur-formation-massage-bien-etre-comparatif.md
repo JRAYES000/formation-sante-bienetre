@@ -4,6 +4,7 @@ title: "Meilleure formation massage bien-être en 2026 : comparatif complet des 
 metaDescription: "Quelle formation massage bien-être choisir en 2026 ? Comparatif californien, shiatsu, ayurvédique, thai, lomi-lomi, pierres chaudes. Prix, certifications, débouchés."
 excerpt: "Californien, shiatsu, ayurvédique, thai, lomi-lomi, pierres chaudes : quel massage apprendre et quelle formation choisir en 2026 ? Le comparatif complet pour décider selon votre profil."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 ## Quelle formation massage choisir en 2026 ? Le guide pour ne pas se tromper

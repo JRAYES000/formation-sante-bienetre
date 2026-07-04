@@ -4,6 +4,7 @@ title: "Assurance professionnelle en esthétique et coiffure en 2026 : RC Pro, c
 metaDescription: "Guide complet de l'assurance professionnelle esthétique et coiffure en 2026 : RC Pro obligatoire, garanties spécifiques, tarifs (150 à 600 euros/an) et cas particuliers laser, maquillage permanent."
 excerpt: "La RC Pro est indispensable en esthétique et coiffure. Réactions allergiques, brûlures, vol de matériel... voici comment choisir votre assurance, quelles garanties inclure et combien ça coûte en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Assurance professionnelle en esthétique et coiffure en 2026 : RC Pro, choisir et comparer

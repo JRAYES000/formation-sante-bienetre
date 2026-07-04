@@ -5,6 +5,8 @@ metaDescription: "Règles CPF 2025-2026 : participation forfaitaire de 150 euros
 excerpt: "Depuis mai 2024, les règles du CPF ont changé avec l'instauration d'un reste à charge, porté à 150 euros depuis avril 2026. Ce guide détaille les nouvelles règles 2025-2026, les exceptions et comment optimiser votre financement formation beauté."
 image: /images/conseil-1.webp
 updatedAt: 2026-07-03
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Nouvelles règles CPF en 2025-2026 : reste à charge, monétisation et ce qui change
@@ -224,6 +226,6 @@ Le CPF reste en 2026 l'un des outils les plus puissants pour financer une format
 Pour aller plus loin :
 - [Catalogue de formations beauté éligibles CPF](/formations) : trouvez votre formation
 - [Comment utiliser son CPF pour une formation beauté](/blog/cpf-comment-utiliser-formation-beaute) : guide pratique étape par étape
-- [Financer une formation esthétique sans CPF](/blog/financer-formation-esthetique-sans-cpf) : alternatives si votre solde est insuffisant
+- [Financer une formation esthétique sans CPF](/blog/financer-formation-beaute-sans-cpf) : alternatives si votre solde est insuffisant
 - [Renouveler son solde CPF vide](/blog/renouveler-solde-cpf-vide) : quand et comment vos droits se reconstituent
 - [Aide Pôle emploi formation beauté](/blog/aide-pole-emploi-formation-beaute) : si vous êtes demandeur d'emploi, les aides supplémentaires disponibles

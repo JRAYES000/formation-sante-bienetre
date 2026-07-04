@@ -4,6 +4,7 @@ title: "BP coiffure 2026 : formation, programme, débouchés et différence avec
 metaDescription: "Tout savoir sur le BP coiffure en 2026 : programme, durée, différence avec le CAP, débouchés pour gérer un salon et financement CPF pour adultes."
 excerpt: "Le BP coiffure est le diplôme qui permet légalement d'ouvrir et de gérer un salon. Découvrez son programme, ses débouchés et comment le financer en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # BP coiffure 2026 : formation, programme, débouchés et différence avec le CAP

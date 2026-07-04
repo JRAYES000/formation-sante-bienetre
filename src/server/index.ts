@@ -1,6 +1,7 @@
 // Bootstrap Express. En dev : npm run dev (tsx watch). Sert l'API publique.
 import "dotenv/config";
 import express from "express";
+import compression from "compression";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ensureSchema } from "../db/index.ts";
@@ -18,6 +19,28 @@ seedPartenaires();
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const publicDir = resolve(__dirname, "../../dist/public");
+
+// Redirection 301 vers l'origine canonique (https + host de PUBLIC_URL) : évite
+// l'indexation des variantes http:// et www. Inactif sans PUBLIC_URL (dev) et
+// sur /api (healthchecks Railway et appels internes).
+const canonicalOrigin = (() => {
+  try {
+    return process.env.PUBLIC_URL ? new URL(process.env.PUBLIC_URL) : null;
+  } catch {
+    return null;
+  }
+})();
+if (canonicalOrigin) {
+  app.use((req, res, next) => {
+    if (req.path.startsWith("/api") || (req.method !== "GET" && req.method !== "HEAD")) return next();
+    const proto = (req.headers["x-forwarded-proto"] as string | undefined)?.split(",")[0].trim() ?? req.protocol;
+    const host = req.get("host");
+    if (host !== canonicalOrigin.host || proto !== canonicalOrigin.protocol.replace(":", "")) {
+      return res.redirect(301, `${canonicalOrigin.origin}${req.originalUrl}`);
+    }
+    next();
+  });
+}
 
 // En-têtes de sécurité HTTP (défense en profondeur — n'affecte ni le SEO ni le rendu).
 // CSP calibrée pour le site : <style>/JSON-LD inline du SSR, Google Fonts, /analytics.js et GA4 (après consentement).
@@ -49,8 +72,22 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(compression());
 app.use(express.json());
-app.use(express.static(publicDir));
+// index: false → la racine "/" est rendue par le seoRouter (page d'accueil SSR),
+// pas par le index.html de la SPA. Les assets Vite (/assets/*) sont hashés →
+// cache long immutable ; les autres fichiers statiques (images, fonts) 7 jours.
+app.use(
+  express.static(publicDir, {
+    index: false,
+    setHeaders: (res, path) => {
+      res.setHeader(
+        "Cache-Control",
+        path.includes("/assets/") ? "public, max-age=2592000, immutable" : "public, max-age=604800"
+      );
+    },
+  })
+);
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
@@ -65,7 +102,9 @@ app.use("/", analyticsRouter);
 // Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots
 app.use("/", seoRouter);
 
-// SPA fallback pour les routes client (hash routing)
+// SPA (hash routing) : servie sur /app (ex: /app#/formation/123, /app#/admin).
+// Le fallback * reste pour les anciens chemins inconnus.
+app.get("/app", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
 app.get("*", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
 
 const port = Number(process.env.PORT ?? 3001);

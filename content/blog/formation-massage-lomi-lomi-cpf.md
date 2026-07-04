@@ -4,6 +4,7 @@ title: "Formation massage lomi lomi CPF en 2026 : technique hawaïenne, certific
 metaDescription: "Formation massage lomi lomi CPF en 2026 : origine hawaïenne, technique avant-bras, certifications disponibles, financement CPF et débouchés en spa et bien-être."
 excerpt: "Guide complet sur la formation massage lomi lomi : technique hawaïenne traditionnelle, certifications reconnues, financement CPF et débouchés professionnels en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage lomi lomi CPF en 2026 : technique hawaïenne, certifications et débouchés

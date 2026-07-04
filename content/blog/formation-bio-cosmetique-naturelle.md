@@ -4,6 +4,7 @@ title: "Formation cosmétique naturelle et bio CPF en 2026 : créer ses soins, v
 metaDescription: "Formations en cosmétique naturelle et bio finançables CPF en 2026 : formulation de soins, certification COSMOS, règlementation REACH, débouchés créatrice de cosmétiques."
 excerpt: "Créer ses propres cosmétiques naturels est un métier en plein essor en 2026. Des formations certifiantes existent, certaines finançables CPF, pour apprendre la formulation, la réglementation et la vente de cosmétiques bio."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation cosmétique naturelle et bio CPF en 2026 : créer ses soins, vendre et se certifier

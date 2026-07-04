@@ -4,6 +4,8 @@ title: "Mon dossier CPF a été refusé : que faire ? Guide complet des recours 
 metaDescription: "Dossier CPF refusé ? Découvrez les raisons les plus fréquentes, comment contester, les délais à respecter et les alternatives pour financer votre formation."
 excerpt: "Un refus CPF n'est pas une fin de parcours. Ce guide pratique détaille les raisons courantes, les recours possibles et toutes les alternatives pour financer votre formation malgré tout."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 ## Un refus CPF : ce n'est pas une fatalité

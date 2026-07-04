@@ -18,7 +18,7 @@ export default function App() {
           <SiteHeader />
           <main className="flex-1">
             <Switch>
-              <Route path="/">{() => { window.location.replace("/formations"); return null; }}</Route>
+              <Route path="/">{() => { window.location.replace("/"); return null; }}</Route>
               <Route path="/recherche" component={Resultats} />
               <Route path="/recherche/:q" component={Resultats} />
               <Route path="/recherche/:q/:dept" component={Resultats} />

@@ -4,6 +4,8 @@ title: "Formation esthétique à Montpellier en 2026 : CAP, BP, CPF et alternanc
 metaDescription: "Tout savoir sur les formations esthétique à Montpellier : CAP, BP, BTS, alternance, financement CPF. Guide complet pour se former en Hérault et trouver un emploi dans la beauté."
 excerpt: "Montpellier concentre un marché de la beauté dynamique porté par son statut de ville universitaire et son tourisme méditerranéen. Découvrez toutes les voies pour vous former à l'esthétique en Hérault en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation esthétique à Montpellier en 2026 : CAP, BP, CPF et alternance en Hérault

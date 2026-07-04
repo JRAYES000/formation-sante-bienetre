@@ -4,6 +4,7 @@ title: "Formation massage et bien-être à Brest et en Bretagne en 2026 : CPF, t
 metaDescription: "Guide complet des formations massage et bien-être à Brest et en Bretagne en 2026 : CPF, thalasso, débouchés, alternance. Thalasso de Roscoff, Quiberon, Perros-Guirec."
 excerpt: "La Bretagne concentre l'un des marchés du bien-être les plus dynamiques de France grâce à ses centres de thalassothérapie. Découvrez les formations massage disponibles à Brest et dans toute la région pour profiter de ces débouchés."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage et bien-être à Brest et en Bretagne en 2026 : CPF, thalasso et débouchés

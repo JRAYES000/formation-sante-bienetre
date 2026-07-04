@@ -4,6 +4,7 @@ title: "Formation soins des pieds et pédicurie bien-être en 2026 : certificati
 metaDescription: "Formation pédicurie bien-être en 2026 : distinguer pédicurie-podologie médicale et pédicurie esthétique, soins des pieds, réflexologie, certifications CPF disponibles, débouchés salons et spas."
 excerpt: "La pédicurie esthétique bien-être se distingue clairement de la podologie médicale. Formations certifiantes disponibles en 2026 pour les soins des pieds, la réflexologie et les protocoles d'hygiène, éligibles au CPF, avec des débouchés réels en salons et spas."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation soins des pieds et pédicurie bien-être en 2026 : certifications et débouchés

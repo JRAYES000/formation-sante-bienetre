@@ -4,6 +4,7 @@ title: "Formation esthétique à Toulouse en 2026 : CAP, BP, BTS et CPF en Occit
 metaDescription: "Guide complet des formations esthétique à Toulouse en 2026 : CAP, BP, BTS, alternance, financement CPF et débouchés dans le marché beauté de la Haute-Garonne et d'Occitanie."
 excerpt: "Toulouse et l'Occitanie offrent un marché de l'emploi beauté dynamique avec de nombreuses formations esthétique financées par le CPF. Découvrez toutes les options disponibles en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation esthétique à Toulouse en 2026 : CAP, BP, BTS et CPF en Occitanie

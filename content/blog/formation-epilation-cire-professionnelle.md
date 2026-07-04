@@ -4,6 +4,7 @@ title: "Formation épilation à la cire professionnelle en 2026 : techniques, hy
 metaDescription: "Formation épilation à la cire professionnelle en 2026 : cire chaude, froide et orientale, épilation intégrale, hygiène de cabine, certifications disponibles et débouchés en salons."
 excerpt: "L'épilation à la cire professionnelle est une technique clé en esthétique, de la cire froide basique à la cire orientale et au sugaring. Formations initiales, perfectionnements et certifications disponibles en 2026 pour maîtriser toutes les techniques et ouvrir sa clientèle."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation épilation à la cire professionnelle en 2026 : techniques, hygiène et certifications

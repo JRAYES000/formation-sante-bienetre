@@ -4,6 +4,7 @@ title: "Formation enseignant pilates CPF en 2026 : mat, reformer, certifications
 metaDescription: "Formation enseignant pilates CPF en 2026 : pilates mat vs reformer, certifications BASI Stott Body Control vs françaises BPJEPS CQP, financement CPF et débouchés studio cours particuliers."
 excerpt: "Guide complet sur la formation enseignant pilates en 2026 : mat et reformer, comparatif des certifications internationales et françaises, financement CPF et débouchés professionnels réalistes."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation enseignant pilates CPF en 2026 : mat, reformer, certifications et débouchés

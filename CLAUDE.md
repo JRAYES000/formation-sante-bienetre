@@ -9,8 +9,8 @@ Public : agrégateur de formations CPF (vertical **beauté & bien-être**), mod�
 
 Ce projet a **deux moteurs de rendu sur la même origine** :
 
-1. **SPA React (Vite)** en **hash routing** (`/#/recherche`, `/#/formation/:id`) → **NON indexable**. C'est l'interactif (recherche, facettes, formulaire de lead).
-2. **Pages SSR Express** à **URLs propres et crawlables** (`/formations`, `/metier/...`, `/ville/...`, `/blog/...`) → **c'est ICI que vit tout le SEO**.
+1. **SPA React (Vite)** en **hash routing**, servie sur **`/app`** (`/app#/recherche`, `/app#/formation/:id`) → **NON indexable**. C'est l'interactif (recherche, facettes, formulaire de lead).
+2. **Pages SSR Express** à **URLs propres et crawlables** (`/` accueil, `/formations/:categorie`, `/formation/:numero` fiches, `/metier/...`, `/ville/...`, `/blog/...`) → **c'est ICI que vit tout le SEO**. L'ancienne URL `/formations` est redirigée en 301 vers `/`.
 
 > **Règle d'or :** le référencement repose **exclusivement** sur les pages SSR servies par Express. Ne migre jamais le SEO vers le React. Toute page qu'on veut voir dans Google doit être une route Express qui renvoie du HTML complet (title/meta/H1/JSON-LD), pas une vue SPA.
 
@@ -40,6 +40,7 @@ npm run serve         # API Express + pages SEO SSR sur :3001
 npm run web           # front Vite sur :5173 (proxy /api,/formations,/sitemap.xml,/robots.txt → :3001)
 
 npm run build         # build la SPA dans dist/public
+npx tsx scripts/generate-og-images.ts  # régénère les images OG de marque (public/images/og/)
 npm start             # serveur de prod (sert SSR + SPA)
 npm run check         # tsc --noEmit (typecheck, pas de build)
 ```

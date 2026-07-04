@@ -3,6 +3,8 @@ title: "Formation soins du visage : tout savoir pour se lancer en 2026"
 slug: "formation-soins-du-visage"
 metaDescription: "Quelles formations pour apprendre les soins du visage en 2026 ? CAP esthétique, titres RNCP, RS spécialisés, financement CPF. Comparez les cursus et débouchés."
 excerpt: "Du CAP esthétique aux modules spécialisés éligibles CPF, découvrez comment acquérir les techniques de soins du visage reconnues par les professionnels et exercer en institut, spa ou à domicile."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 Les soins du visage constituent l'une des prestations phares de tout institut de beauté ou spa. Nettoyage de peau, soin hydratant, peeling doux, modelage… autant de techniques qui exigent une formation sérieuse, à la fois pour garantir la sécurité des clients et pour se démarquer sur un marché en pleine croissance. Que vous soyez en reconversion ou en quête d'une première qualification, cet article fait le point sur les formations disponibles en France en 2026, les certifications reconnues et les possibilités de financement par le CPF.

@@ -4,6 +4,7 @@ title: "Formation gua sha professionnel en 2026 : technique, certifications et i
 metaDescription: "Formation gua sha professionnel en 2026 : origine médecine chinoise, pierre de jade, quartz ou acier, visage et corps, certifications disponibles et intégration en soin spa."
 excerpt: "Guide complet pour la formation gua sha professionnel : technique traditionnelle chinoise, pierres utilisées, distinction bien-être et médical, certifications disponibles et débouchés en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation gua sha professionnel en 2026 : technique, certifications et intégration en spa

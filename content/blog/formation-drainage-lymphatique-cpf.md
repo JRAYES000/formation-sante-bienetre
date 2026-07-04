@@ -4,6 +4,7 @@ title: "Formation drainage lymphatique manuel CPF en 2026 : technique Vodder, ce
 metaDescription: "Guide complet sur la formation drainage lymphatique manuel CPF 2026 : méthode Vodder vs Leduc, drainage bien-être vs médical, certifications disponibles et débouchés professionnels."
 excerpt: "Le drainage lymphatique manuel est-il finançable par le CPF ? Oui, pour le drainage bien-être. Découvrez la méthode Vodder, les certifications disponibles, les débouchés en esthétique et les différences avec le drainage médical."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation drainage lymphatique manuel CPF en 2026 : technique Vodder, certification et débouchés

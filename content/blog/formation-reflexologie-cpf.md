@@ -4,6 +4,7 @@ title: "Formation réflexologie CPF 2026 : tout ce qu'il faut savoir avant de s'
 metaDescription: "Formation réflexologie finançable CPF : critères d'éligibilité, certifications RNCP, durée, prix et débouchés. Guide complet 2026 pour devenir réflexologue."
 excerpt: "La réflexologie est une technique de bien-être en pleine croissance. Voici comment se former, obtenir une certification reconnue et financer son parcours avec le CPF."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation réflexologie CPF 2026 : tout ce qu'il faut savoir avant de s'inscrire

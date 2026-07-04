@@ -4,6 +4,7 @@ title: "Formation coaching bien-être CPF en 2026 : certifications, cadre légal
 metaDescription: "Formation coaching bien-être CPF en 2026 : certifications RNCP et RS disponibles, différence avec psychologue et coach de vie, CPF possible, débouchés cabinet et entreprise, revenus réalistes."
 excerpt: "Le coaching bien-être est non thérapeutique et distinct de la psychologie. Des certifications RNCP et RS permettent un financement CPF. Voici le guide complet des formations disponibles, du cadre légal et des débouchés réels en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation coaching bien-être CPF en 2026 : certifications, cadre légal et débouchés

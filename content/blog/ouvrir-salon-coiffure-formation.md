@@ -4,6 +4,7 @@ title: "Ouvrir un salon de coiffure en 2026 : formation obligatoire, business pl
 metaDescription: "Comment ouvrir un salon de coiffure en 2026 : diplôme obligatoire (CAP+BP), business plan simplifié, local, matériel, aides à la création et OPCO AKTO."
 excerpt: "Ouvrir un salon de coiffure demande un diplôme reconnu, un business plan solide et les bonnes aides. Voici le guide complet pour réussir votre projet en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Ouvrir un salon de coiffure en 2026 : formation obligatoire, business plan et aides

@@ -4,6 +4,8 @@ title: "Formation esthétique à Marseille et Aix-en-Provence : CAP, BP et alter
 metaDescription: "Guide complet des formations esthétique à Marseille et Aix-en-Provence : CAP, BP, BTS, alternance, CPF. Tout sur le marché beauté en PACA et les diplômes disponibles en 2026."
 excerpt: "Marseille et Aix-en-Provence offrent un marché esthétique dynamique et contrasté. Découvrez les formations disponibles, les voies d'alternance et les financements CPF pour se lancer dans la beauté en PACA."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation esthétique à Marseille et Aix-en-Provence : CAP, BP et alternance en PACA

@@ -4,6 +4,7 @@ title: "Formation vente de cosmétiques en institut en 2026 : techniques, certif
 metaDescription: "Maîtrisez la vente de cosmétiques en institut en 2026 : techniques de vente en cabine, certifications disponibles, CPF, et chiffres d'affaires réels. Guide complet."
 excerpt: "La vente de produits cosmétiques représente en moyenne 20 à 30 % du chiffre d'affaires d'un institut performant. Des formations certifiantes permettent d'acquérir les techniques de vente en cabine et d'augmenter significativement ses revenus."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation vente de cosmétiques en institut en 2026 : techniques, certifications et résultats

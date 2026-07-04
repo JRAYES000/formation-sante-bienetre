@@ -4,6 +4,7 @@ title: "Formation coiffure à Bordeaux et en Gironde en 2026 : CAP, BP, alternan
 metaDescription: "Tout savoir sur les formations coiffure à Bordeaux et en Gironde en 2026 : CAP, BP, alternance, formations adulte et financement CPF. Guide complet."
 excerpt: "Bordeaux et la Gironde concentrent un marché de la coiffure en pleine expansion. Découvrez les formations disponibles, les voies d'accès et les financements CPF pour exercer ce métier dans la métropole bordelaise."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation coiffure à Bordeaux et en Gironde en 2026 : CAP, BP, alternance et CPF

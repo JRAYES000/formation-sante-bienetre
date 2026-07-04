@@ -4,6 +4,7 @@ title: "Exercer l'esthétique à domicile en 2026 : réglementation, formation e
 metaDescription: "Tout savoir pour exercer l'esthétique à domicile en 2026 : réglementation, formations requises, statut auto-entrepreneur ou EURL, assurance et conseils pratiques."
 excerpt: "Travailler en esthétique à domicile - chez vous ou chez vos clients - est possible, mais encadré. Ce guide complet couvre la réglementation, les formations obligatoires, les statuts juridiques et les assurances indispensables."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 ## L'esthétique à domicile : une vraie opportunité, des règles à respecter

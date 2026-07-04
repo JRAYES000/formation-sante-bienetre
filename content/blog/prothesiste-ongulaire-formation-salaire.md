@@ -3,6 +3,8 @@ title: "Formation prothésiste ongulaire : métier, salaire et financement CPF"
 slug: "prothesiste-ongulaire-formation-salaire"
 metaDescription: "Tout savoir sur la formation prothésiste ongulaire en 2026 : titres RS, techniques gel/résine/nail art, salaire indicatif, débouchés et financement CPF Qualiopi."
 excerpt: "Vous souhaitez devenir prothésiste ongulaire en France ? Découvrez les formations reconnues, les techniques à maîtriser, les salaires indicatifs et les modes de financement disponibles via le CPF."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 Le métier de prothésiste ongulaire s'est imposé en quelques années comme l'une des spécialités phares des instituts de beauté et des soins à domicile. Porté par une demande croissante et une clientèle qui renouvelle régulièrement ses poses, ce secteur attire chaque année de nombreux candidats à la reconversion. Avant de se lancer, il est essentiel de comprendre ce que recouvre réellement le métier, quelles formations sont disponibles en France, et comment les financer.

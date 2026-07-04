@@ -4,6 +4,7 @@ title: "Formation herboristerie et phytothérapie bien-être CPF en 2026"
 metaDescription: "Guide complet sur la formation herboristerie et phytothérapie bien-être CPF en 2026 : cadre légal, certifications RS, débouchés boutiques, ateliers et spas."
 excerpt: "L'herboristerie n'a plus de diplôme officiel en France depuis 1941, mais des certifications bien-être accessibles CPF permettent d'exercer légalement. Voici ce qu'il faut savoir."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation herboristerie et phytothérapie bien-être CPF en 2026

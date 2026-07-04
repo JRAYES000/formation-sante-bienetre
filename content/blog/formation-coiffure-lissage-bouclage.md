@@ -4,6 +4,7 @@ title: "Formation lissage et bouclage professionnel en 2026 : kératine, permane
 metaDescription: "Formation lissage kératine, permanente et bouclage professionnel en 2026. Réglementation formaldéhyde, certifications disponibles, financement CPF et OPCO."
 excerpt: "Lissage kératine, lissage japonais, permanente ondulante, bouclage professionnel : techniques, réglementations et formations disponibles en 2026. Financement CPF et OPCO détaillé."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation lissage et bouclage professionnel en 2026 : kératine, permanente et certifications

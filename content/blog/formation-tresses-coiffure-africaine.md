@@ -4,6 +4,7 @@ title: "Formation tresses africaines et coiffures afro professionnelles en 2026"
 metaDescription: "Guide complet sur la formation tresses africaines professionnelles en 2026 : vanilles, locks, cornrows, certifications, CPF, différences avec le CAP coiffure classique."
 excerpt: "Les tresses africaines, locks et coiffures afro constituent un marché en forte croissance. Des formations certifiantes et éligibles CPF permettent d'exercer professionnellement sans CAP coiffure classique."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation tresses africaines et coiffures afro professionnelles en 2026

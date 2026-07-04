@@ -4,6 +4,7 @@ title: "Formation microdermabrasion en esthétique en 2026 : technique, certific
 metaDescription: "Formation microdermabrasion esthétique 2026 : cristaux vs diamant, indications, contre-indications, certifications disponibles, financement CPF et tarification."
 excerpt: "Maîtrisez la microdermabrasion en esthétique en 2026 : techniques cristaux et diamant, indications, contre-indications, certifications CPF et débouchés professionnels."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation microdermabrasion en esthétique en 2026 : technique, certifications et débouchés

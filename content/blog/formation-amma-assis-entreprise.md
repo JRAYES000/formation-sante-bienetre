@@ -4,6 +4,7 @@ title: "Formation amma assis en entreprise en 2026 : massage sur chaise, certifi
 metaDescription: "Formation amma assis en entreprise en 2026 : massage assis sur chaise ergonomique, origines japonaises, certifications disponibles, financement CPF et débouchés en QVT et événementiel."
 excerpt: "Guide complet sur la formation amma assis : massage habillé sur chaise ergonomique, origines japonaises, certifications CPF disponibles, débouchés en entreprise QVT et événementiel en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation amma assis en entreprise en 2026 : massage sur chaise, certification et débouchés QVT

@@ -4,6 +4,7 @@ title: "Formation ayurveda approfondi en 2026 : consultant ayurvédique, certifi
 metaDescription: "Formation ayurvéda approfondi en 2026 : doshas, alimentation, plantes ayurvédiques, shirodhara, certifications de consultant ayurvédique, financement CPF et débouchés professionnels."
 excerpt: "Au-delà du massage abhyanga, l'ayurvéda offre un système complet incluant la consultation des doshas, la phytothérapie ayurvédique et les rituels comme le shirodhara. Découvrez les formations de consultant ayurvédique disponibles en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation ayurveda approfondi en 2026 : consultant ayurvédique, certifications et débouchés

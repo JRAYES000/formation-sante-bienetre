@@ -4,6 +4,7 @@ title: "Formation ventouses et cupping massage en 2026 : techniques, certificati
 metaDescription: "Formation ventouses cupping massage en 2026 : silicone vs verre, bien-être vs médical, certifications disponibles, cadre légal et débouchés en spa et cabinet."
 excerpt: "Guide complet pour se former aux ventouses et au cupping massage : types de ventouses, distinction bien-être et médical, certifications disponibles, financement CPF et débouchés en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation ventouses et cupping massage en 2026 : techniques, certifications et débouchés bien-être

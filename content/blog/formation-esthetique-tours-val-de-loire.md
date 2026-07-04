@@ -4,6 +4,8 @@ title: "Formation esthétique à Tours et dans le Val de Loire en 2026"
 metaDescription: "Guide complet des formations esthétique à Tours et dans le Val de Loire : CAP, BP, alternance, CPF. Marché local, spas des châteaux, débouchés et financements en Centre-Val de Loire 2026."
 excerpt: "Tours et le Val de Loire offrent un marché esthétique original, enrichi par le tourisme des châteaux et les spas hôteliers de la région. Tout sur les formations, alternances et financements CPF en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation esthétique à Tours et dans le Val de Loire en 2026

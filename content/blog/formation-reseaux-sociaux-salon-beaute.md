@@ -4,6 +4,7 @@ title: "Formation réseaux sociaux pour salon de beauté en 2026 : Instagram, Ti
 metaDescription: "Apprenez à utiliser Instagram et TikTok pour votre salon de beauté en 2026. Formation réseaux sociaux finançable CPF, certifications RNCP, cas pratiques et chiffres réels."
 excerpt: "Instagram et TikTok sont devenus les premiers vecteurs de clientèle pour les salons de beauté. Des formations certifiantes, finançables par le CPF, vous permettent de maitriser ces outils et d'attirer de nouveaux clients dès les premières semaines."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation réseaux sociaux pour salon de beauté en 2026 : Instagram, TikTok et CPF

@@ -4,6 +4,7 @@ title: "Formation massage thaïlandais CPF en 2026 : techniques, certification e
 metaDescription: "Formation massage thaïlandais finançable CPF en 2026 : massage au sol vs table, étirements, certifications en France, différences avec formations en Thaïlande."
 excerpt: "Guide complet sur la formation massage thaïlandais CPF en 2026 : techniques au sol, étirements passifs, certifications disponibles en France et débouchés professionnels."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage thaïlandais CPF en 2026 : techniques, certification et débouchés

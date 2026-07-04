@@ -56,7 +56,7 @@ La reconversion à 50 ans dans l'esthétique surprend encore, mais elle se passe
 
 **Les formations adaptées à 50 ans** : le CAP Esthétique reste la voie la plus reconnue. Pour les personnes qui ont déjà des bases (pratique amateur depuis des années), un titre RNCP "Praticien en esthétique" ou une certification de spécialité (onglerie, soins du visage approfondis, épilation) peut être plus adapté et plus court.
 
-**Pour financer à 50 ans** : les droits CPF sont accessibles jusqu'à la retraite, sans discrimination d'âge. Si vous avez été licenciée, le contrat de sécurisation professionnelle (CSP) de France Travail peut financer une reconversion complète. Le FNE-Formation est accessible pour les salariées dans les entreprises en difficulté. Pour toutes les options sans CPF, lisez notre article sur les [solutions de financement sans CPF](/blog/financer-formation-esthetique-sans-cpf).
+**Pour financer à 50 ans** : les droits CPF sont accessibles jusqu'à la retraite, sans discrimination d'âge. Si vous avez été licenciée, le contrat de sécurisation professionnelle (CSP) de France Travail peut financer une reconversion complète. Le FNE-Formation est accessible pour les salariées dans les entreprises en difficulté. Pour toutes les options sans CPF, lisez notre article sur les [solutions de financement sans CPF](/blog/financer-formation-beaute-sans-cpf).
 
 ## Les formations les plus adaptées à la reconversion adulte
 

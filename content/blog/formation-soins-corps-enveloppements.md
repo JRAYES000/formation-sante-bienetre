@@ -4,6 +4,7 @@ title: "Formation soins du corps et enveloppements en esthétique : CPF, techniq
 metaDescription: "Guide complet sur la formation soins du corps et enveloppements en esthétique 2026 : gommages, enveloppements algues et argile, modelages corps, soins spa, financement CPF et débouchés."
 excerpt: "Découvrez la formation aux soins du corps et enveloppements en esthétique : techniques (gommages, enveloppements algues, argile, soins minceur), financement CPF, certifications BP esthétique et débouchés en institut et spa."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation soins du corps et enveloppements en esthétique : CPF, techniques et débouchés

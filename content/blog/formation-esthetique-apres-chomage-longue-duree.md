@@ -4,6 +4,7 @@ title: "Financer une formation esthétique après un chômage de longue durée e
 metaDescription: "En chômage depuis plus d'un an et vous voulez vous former en esthétique ? AIF majorée France Travail, maintien des allocations, formations régionales prioritaires : le guide complet 2026."
 excerpt: "Le chômage de longue durée n'est pas un obstacle à la formation en esthétique. Des aides spécifiques sont prévues pour les demandeurs d'emploi de plus d'un an : AIF majorée, maintien des allocations, formations prioritaires. Voici les démarches concrètes en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Financer une formation esthétique après un chômage de longue durée en 2026

@@ -4,6 +4,7 @@ title: "Formation visagiste CPF en 2026 : morphologie, conseil beauté et débou
 metaDescription: "Formation visagiste CPF 2026 : morphologie du visage, conseil coiffure et maquillage, certifications RS, débouchés conseil en image, shooting, TV. Guide complet."
 excerpt: "Le visagisme est l'art d'adapter coiffure et maquillage à la morphologie du visage. Découvrez les formations CPF disponibles, les certifications et les débouchés en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation visagiste CPF en 2026 : morphologie, conseil beauté et débouchés

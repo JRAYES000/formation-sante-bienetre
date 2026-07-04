@@ -4,6 +4,7 @@ title: "Devenir formateur en esthétique ou coiffure en 2026 : parcours, certifi
 metaDescription: "Comment devenir formateur en esthétique ou coiffure ? Titre RNCP, expérience requise, CPF pédagogie, revenus formateur indépendant vs salarié. Guide complet 2026."
 excerpt: "Vous êtes professionnel de la beauté et souhaitez transmettre votre savoir-faire ? Voici comment devenir formateur en esthétique ou coiffure : parcours, certifications et revenus réalistes."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Devenir formateur en esthétique ou coiffure en 2026 : parcours, certifications et revenus

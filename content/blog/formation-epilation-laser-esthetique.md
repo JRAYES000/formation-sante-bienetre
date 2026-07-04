@@ -4,6 +4,7 @@ title: "Formation épilation laser en esthétique 2026 : réglementation, certif
 metaDescription: "Tout savoir sur la formation épilation laser en esthétique 2026 : cadre légal strict, différence entre photoépilation et laser médical, certifications disponibles, CPF et assurance obligatoire."
 excerpt: "L'épilation laser en esthétique est encadrée par une réglementation stricte en France. Découvrez la différence entre photoépilation esthétique et laser médical, les formations certifiantes disponibles, le financement CPF et les débouchés professionnels."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation épilation laser en esthétique 2026 : réglementation, certifications et débouchés

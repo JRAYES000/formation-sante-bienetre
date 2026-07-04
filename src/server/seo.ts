@@ -1,12 +1,19 @@
 // Pages SEO rendues côté serveur (SSR), à URLs propres et crawlables.
 // La SPA (hash routing) gère l'interactif ; ces pages portent le référencement.
 import { Router, type Request } from "express";
-import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille } from "./storage.ts";
+import { searchFormations, listCategories, seoDepartements, seoCombos, globalStats, seoVilles, seoVilleCombos, formationsForVille, getFormation, similarFormations, listActiveFormationNumeros } from "./storage.ts";
 import { slugify } from "./storage.ts";
 import { getMetier, listMetiers, getArticle, listArticles, articleMetier, listArticlesByMetier, getCategoryFaq } from "./content.ts";
 import { gaId } from "./analytics.ts";
 
 export const seoRouter = Router();
+
+// Cache court sur les pages SSR (elles ne changent qu'à l'ingestion) : soulage le
+// serveur sous crawl intensif sans risquer de servir du contenu périmé longtemps.
+seoRouter.use((_req, res, next) => {
+  res.set("Cache-Control", "public, max-age=300");
+  next();
+});
 
 // ---------- utils ----------
 function esc(s: unknown): string {
@@ -25,19 +32,20 @@ function eur(n: number | null | undefined): string {
   return n == null ? "Prix sur demande" : `${Math.round(n).toLocaleString("fr-FR")} €`;
 }
 
+// Images OG de marque, générées par scripts/generate-og-images.ts (1200×630, self-hébergées).
 const CAT_OG_IMAGES: Record<string, string> = {
-  "esthetique-soin-corporel": "https://images.unsplash.com/photo-1487412947147-5cebf100d293?w=1200&q=80&fit=crop",
-  "massage-bien-etre":        "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=80&fit=crop",
-  "coiffure":                 "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80&fit=crop",
-  "manucurie":                "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&q=80&fit=crop",
-  "maquillage":               "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1200&q=80&fit=crop",
-  "thalasso-thermalisme":     "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&fit=crop",
-  "massage-esthetique":       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1200&q=80&fit=crop",
-  "specialisation-coiffure":  "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=1200&q=80&fit=crop",
-  "valorisation-image-de-soi":"https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80&fit=crop",
-  "art-corporel":             "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&q=80&fit=crop",
+  "esthetique-soin-corporel": "/images/og/esthetique-soin-corporel.jpg",
+  "massage-bien-etre":        "/images/og/massage-bien-etre.jpg",
+  "coiffure":                 "/images/og/coiffure.jpg",
+  "manucurie":                "/images/og/manucurie.jpg",
+  "maquillage":               "/images/og/maquillage.jpg",
+  "thalasso-thermalisme":     "/images/og/thalasso-thermalisme.jpg",
+  "massage-esthetique":       "/images/og/massage-esthetique.jpg",
+  "specialisation-coiffure":  "/images/og/specialisation-coiffure.jpg",
+  "valorisation-image-de-soi":"/images/og/valorisation-image-de-soi.jpg",
+  "art-corporel":             "/images/og/art-corporel.jpg",
 };
-const DEFAULT_OG_IMAGE = "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1200&q=80&fit=crop";
+const DEFAULT_OG_IMAGE = "/images/og/default.jpg";
 
 interface PageOpts {
   title: string;
@@ -55,18 +63,22 @@ interface PageOpts {
 
 function renderPage(o: PageOpts): string {
   const siteBase = o.canonical.split("/").slice(0, 3).join("/");
-  const ogImage = o.ogImage
-    ? (o.ogImage.startsWith("http") ? o.ogImage : `${siteBase}${o.ogImage}`)
-    : DEFAULT_OG_IMAGE;
+  const ogImageRaw = o.ogImage ?? DEFAULT_OG_IMAGE;
+  const ogImage = ogImageRaw.startsWith("http") ? ogImageRaw : `${siteBase}${ogImageRaw}`;
   const ld = [
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Formation Santé Bien-être",
-      url: `${siteBase}/formations`,
+      url: `${siteBase}/`,
       logo: { "@type": "ImageObject", url: `${siteBase}/images/logo-header.png` },
       description: "Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins. Toutes nos formations sont proposées par des organismes certifiés Qualiopi.",
-      sameAs: [],
+      email: "contact@ecole-naturo.fr",
+      address: { "@type": "PostalAddress", streetAddress: "229 rue Saint-Honoré", postalCode: "75001", addressLocality: "Paris", addressCountry: "FR" },
+      contactPoint: { "@type": "ContactPoint", email: "contact@ecole-naturo.fr", contactType: "customer service", availableLanguage: "French" },
+      foundingDate: "2024",
+      parentOrganization: { "@type": "Organization", name: "École de Naturopathie et Sophrologie (SAS)", url: "https://ecole-naturo.fr" },
+      sameAs: ["https://ecole-naturo.fr"],
     },
     {
       "@context": "https://schema.org",
@@ -107,13 +119,16 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <meta name="theme-color" content="#186749">
 <link rel="icon" href="/images/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/analytics.js" defer></script>
 <style>
+  /* Police self-hébergée (ex-Google Fonts) : zéro requête cross-origin bloquante */
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/plus-jakarta-sans-latin-400-normal.woff2) format('woff2')}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/plus-jakarta-sans-latin-600-normal.woff2) format('woff2')}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/plus-jakarta-sans-latin-700-normal.woff2) format('woff2')}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/plus-jakarta-sans-latin-800-normal.woff2) format('woff2')}
   :root{--p:#186749;--p-dark:#145c3f;--p-active:#1b4332;--p-light:#e8f5ef;--ink:#1a1a1a;--body:#444;--muted:#777;--hairline:#e5e5e5;--surface:#f8f8f6;--radius:14px}
   *{box-sizing:border-box}
   body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -151,11 +166,6 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
   /* Popular card flame badge */
   .flame-badge{display:inline-flex;align-items:center;gap:4px;background:#fff3e0;color:#e65100;font-size:.72rem;font-weight:800;border-radius:99px;padding:3px 9px;margin-bottom:4px}
   .pop-card{border:2px solid #ffe0b2}
-  /* Urgency badges */
-  .urgency-badge{display:inline-flex;align-items:center;gap:4px;border-radius:99px;padding:3px 10px;font-size:.72rem;font-weight:800}
-  .urgency-limited{background:#fff3e0;color:#e65100}
-  .urgency-last{background:#fce4ec;color:#c62828}
-  .urgency-spots{background:#e3f2fd;color:#1565c0}
   /* Metier tiles grid */
   .metier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0 32px}
   @media(max-width:700px){.metier-grid{grid-template-columns:repeat(2,1fr)}}
@@ -329,11 +339,11 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 </head>
 <body>
 <header><div class="wrap">
-  <a href="/formations" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
+  <a href="/" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
     <img src="/images/logo-header.png" alt="Formation Santé Bien-être" style="height:36px;width:auto;display:block">
   </a>
   <nav class="header-nav">
-    <a href="/formations">Formations</a>
+    <a href="/">Formations</a>
     <a href="/metiers" class="hide-mobile">Métiers</a>
     <a href="/villes">Villes</a>
     <a href="/blog" class="hide-mobile">Blog</a>
@@ -363,7 +373,7 @@ ${o.body}
         <li><a href="/formations/coiffure">Coiffure</a></li>
         <li><a href="/formations/maquillage">Maquillage</a></li>
         <li><a href="/formations/manucurie">Manucure</a></li>
-        <li><a href="/formations">Toutes les formations →</a></li>
+        <li><a href="/">Toutes les formations →</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -379,6 +389,7 @@ ${o.body}
     <div class="footer-col">
       <h4>Informations</h4>
       <ul>
+        <li><a href="/a-propos">À propos / qui sommes-nous</a></li>
         <li><a href="/mentions-legales">Mentions légales</a></li>
         <li><a href="/politique-confidentialite">Politique de confidentialité</a></li>
         <li><a href="mailto:contact@ecole-naturo.fr">Contact</a></li>
@@ -420,33 +431,17 @@ function categoryEmoji(nom: string): string {
   return "🌿";
 }
 
-function urgencyBadge(index: number, total: number): string {
-  if (index >= Math.ceil(total * 0.3)) return "";
-  // Rare seat-count badges appear only every 10th eligible card
-  const rare = index % 10 === 9;
-  if (rare) {
-    const seats = [3, 4, 5, 6][index % 4];
-    return `<span class="urgency-badge urgency-limited">⚡ ${seats} places disponibles</span>`;
-  }
-  const badges = [
-    `<span class="urgency-badge urgency-limited">⚡ Places limitées</span>`,
-    `<span class="urgency-badge urgency-spots">🎯 Forte demande ce mois-ci</span>`,
-    `<span class="urgency-badge urgency-last">🔥 Très demandée</span>`,
-  ];
-  return badges[index % badges.length];
-}
-
 function formationCards(items: any[]): string {
   if (!items.length) return `<p class="muted">Aucune formation disponible pour ce critère pour le moment.</p>`;
   return `<div class="grid">${items
     .map(
-      (f, i) => `<div class="card" data-price="${f.prix_min ?? 0}">
-<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}${urgencyBadge(i, items.length)}</div>
-<a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}" style="font-size:1.02rem">${esc(f.intitule)}</a>
+      (f) => `<div class="card" data-price="${f.prix_min ?? 0}">
+<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}</div>
+<a class="t" href="/formation/${encodeURIComponent(f.numero_formation)}" style="font-size:1.02rem">${esc(f.intitule)}</a>
 <span class="card-org" style="font-weight:600;color:var(--body)">${esc(f.organisme ?? "")}</span>
 <span class="card-info">${f.a_distance ? "🌐 À distance possible" : "📍 Présentiel"}${f.type_referentiel ? " &middot; " + esc(f.type_referentiel) : ""} &middot; ✅ CPF${f.organisme_qualiopi ? " &middot; <strong>Qualiopi</strong>" : ""}</span>
 <span class="card-price">${eur(f.prix_min)}</span>
-<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
+<a class="card-cta" href="/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
 </div>`
     )
     .join("")}</div>`;
@@ -569,6 +564,7 @@ function courseDescription(f: any): string {
 }
 
 function courseListLd(items: any[], canonical: string): object {
+  const siteBase = canonical.split("/").slice(0, 3).join("/");
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -579,7 +575,7 @@ function courseListLd(items: any[], canonical: string): object {
         "@type": "Course",
         name: f.intitule,
         description: courseDescription(f),
-        url: `${canonical}`,
+        url: `${siteBase}/formation/${encodeURIComponent(f.numero_formation)}`,
         inLanguage: "fr",
         ...(f.organisme ? { provider: { "@type": "Organization", name: f.organisme } } : {}),
         ...(f.prix_min != null ? {
@@ -659,14 +655,16 @@ function deptByCode() {
 }
 
 // ---------- constantes villes ----------
-const TOP_CITIES = [
-  { slug: "paris",     name: "Paris",     emoji: "🗼", gradient: "linear-gradient(145deg,#1565c0,#0d47a1)", region: "Île-de-France",             photo: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80&fit=crop" },
-  { slug: "lyon",      name: "Lyon",      emoji: "🏛️",  gradient: "linear-gradient(145deg,#6a1b9a,#4a148c)", region: "Auvergne-Rhône-Alpes",      photo: "https://images.pexels.com/photos/16632277/pexels-photo-16632277.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  { slug: "marseille", name: "Marseille", emoji: "⛵",  gradient: "linear-gradient(145deg,#0277bd,#005b7a)", region: "Provence-Alpes-Côte d'Azur", photo: "https://images.pexels.com/photos/34059360/pexels-photo-34059360.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  { slug: "bordeaux",  name: "Bordeaux",  emoji: "🍷",  gradient: "linear-gradient(145deg,#880e4f,#560027)", region: "Nouvelle-Aquitaine",          photo: "https://images.pexels.com/photos/34575336/pexels-photo-34575336.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  { slug: "toulouse",  name: "Toulouse",  emoji: "🌸",  gradient: "linear-gradient(145deg,#c62828,#8d1111)", region: "Occitanie",                   photo: "https://images.pexels.com/photos/30753243/pexels-photo-30753243.jpeg?auto=compress&cs=tinysrgb&w=600" },
-  { slug: "nice",      name: "Nice",      emoji: "☀️",  gradient: "linear-gradient(145deg,#006994,#00485f)", region: "Côte d'Azur",                 photo: "https://images.pexels.com/photos/30438481/pexels-photo-30438481.jpeg?auto=compress&cs=tinysrgb&w=600" },
-] as const;
+// Photos self-hébergées uniquement (les hotlinks Unsplash/Pexels pénalisaient le
+// LCP et créaient une dépendance tierce) ; à défaut, le dégradé de la ville.
+const TOP_CITIES: { slug: string; name: string; emoji: string; gradient: string; region: string; photo?: string }[] = [
+  { slug: "paris",     name: "Paris",     emoji: "🗼", gradient: "linear-gradient(145deg,#1565c0,#0d47a1)", region: "Île-de-France",              photo: "/images/ville-paris.webp" },
+  { slug: "lyon",      name: "Lyon",      emoji: "🏛️",  gradient: "linear-gradient(145deg,#6a1b9a,#4a148c)", region: "Auvergne-Rhône-Alpes" },
+  { slug: "marseille", name: "Marseille", emoji: "⛵",  gradient: "linear-gradient(145deg,#0277bd,#005b7a)", region: "Provence-Alpes-Côte d'Azur", photo: "/images/ville-marseille.webp" },
+  { slug: "bordeaux",  name: "Bordeaux",  emoji: "🍷",  gradient: "linear-gradient(145deg,#880e4f,#560027)", region: "Nouvelle-Aquitaine" },
+  { slug: "toulouse",  name: "Toulouse",  emoji: "🌸",  gradient: "linear-gradient(145deg,#c62828,#8d1111)", region: "Occitanie" },
+  { slug: "nice",      name: "Nice",      emoji: "☀️",  gradient: "linear-gradient(145deg,#006994,#00485f)", region: "Côte d'Azur" },
+];
 
 const REGION_MAP: Record<string, string[]> = {
   "Île-de-France":             ["paris","paris-04","versailles","boulogne-billancourt","nanterre","creteil","montreuil","montrouge","argenteuil","saint-denis","ivry-sur-seine","vitry-sur-seine","colombes","vincennes","noisiel","rueil-malmaison","saint-maur-des-fosses","goussainville","levallois-perret","le-plessis-robinson","brunoy","villemomble","thiais","nangis","neuilly-plaisance","meudon","lieusaint","les-chapelles-bourbon","le-chesnay-rocquencourt","fontainebleau","mery-sur-oise","meaux","epinay-sur-orge","corbeil-essonnes","saint-mande","nanteuil-les-meaux","saint-mammes","aubervilliers","rosny-sous-bois","neuilly-sur-marne","chelles","aulnay-sous-bois"],
@@ -810,7 +808,7 @@ seoRouter.get("/llms.txt", (req, res) => {
     "",
     "## Optional",
     "",
-    `- [Toutes les formations](${base}/formations)`,
+    `- [Toutes les formations](${base}/)`,
     `- [Catalogue par ville](${base}/villes)`,
   ];
   res.type("text/plain").send(lines.join("\n") + "\n");
@@ -821,7 +819,7 @@ seoRouter.get("/llms.txt", (req, res) => {
 export function allIndexableUrls(base: string): string[] {
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
-  const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`];
+  const urls: string[] = [`${base}/`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`, `${base}/a-propos`];
   for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
   for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
   for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
@@ -832,16 +830,18 @@ export function allIndexableUrls(base: string): string[] {
     const d = dcode.get(combo.code);
     if (d) urls.push(`${base}/formations/${combo.categorie}/${d.slug}`);
   }
+  for (const n of listActiveFormationNumeros()) urls.push(`${base}/formation/${encodeURIComponent(n)}`);
   return urls;
 }
 
 function sitemapPriority(url: string): string {
-  if (/\/formations$/.test(url)) return "1.0";
+  if (/^https?:\/\/[^/]+\/$/.test(url)) return "1.0";
   if (/\/formations\/[^/]+$/.test(url)) return "0.9";
   if (/\/metier\//.test(url)) return "0.8";
   if (/\/blog$/.test(url) || /\/financement-cpf$/.test(url) || /\/faq$/.test(url)) return "0.8";
   if (/\/blog\//.test(url)) return "0.7";
   if (/\/ville\/[^/]+$/.test(url) || /\/villes$/.test(url)) return "0.6";
+  if (/\/formation\//.test(url)) return "0.6";
   return "0.5";
 }
 
@@ -853,24 +853,33 @@ function sitemapChangefreq(url: string): string {
 
 seoRouter.get("/sitemap.xml", (req, res) => {
   const base = baseUrl(req);
-  const today = new Date().toISOString().split("T")[0];
+  // lastmod uniquement quand une date réelle est connue (front-matter des articles) :
+  // émettre la date du jour partout, chaque jour, apprend à Google à l'ignorer.
   const articleDates = new Map(
-    listArticles().map((a) => [`${base}/blog/${a.slug}`, a.updatedAt ?? a.publishedAt ?? today])
+    listArticles()
+      .filter((a) => a.updatedAt || a.publishedAt)
+      .map((a) => [`${base}/blog/${a.slug}`, (a.updatedAt ?? a.publishedAt) as string])
   );
   const urls = allIndexableUrls(base);
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    urls.map((u) => `  <url><loc>${esc(u)}</loc><lastmod>${articleDates.get(u) ?? today}</lastmod><changefreq>${sitemapChangefreq(u)}</changefreq><priority>${sitemapPriority(u)}</priority></url>`).join("\n") +
+    urls.map((u) => {
+      const lastmod = articleDates.get(u);
+      return `  <url><loc>${esc(u)}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}<changefreq>${sitemapChangefreq(u)}</changefreq><priority>${sitemapPriority(u)}</priority></url>`;
+    }).join("\n") +
     `\n</urlset>\n`;
   res.type("application/xml").send(xml);
 });
 
-// ---------- hub ----------
-seoRouter.get("/formations", (req, res) => {
+// ---------- hub (page d'accueil SSR) ----------
+// L'ancienne URL /formations est redirigée en 301 : une seule URL d'accueil, la racine.
+seoRouter.get("/formations", (_req, res) => res.redirect(301, "/"));
+
+seoRouter.get("/", (req, res) => {
   const allCats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0);
   const HIDDEN_CAT_SLUGS = ["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"];
   const cats = allCats.filter((c) => !HIDDEN_CAT_SLUGS.includes(c.slug));
-  const canonical = `${baseUrl(req)}/formations`;
+  const canonical = `${baseUrl(req)}/`;
   const stats = globalStats();
   const allVilles = seoVilles();
   const articles = listArticles().slice(0, 3);
@@ -893,7 +902,7 @@ seoRouter.get("/formations", (req, res) => {
   const villeMap = new Map(allVilles.map((v) => [v.slug, v.n]));
   const cityCards = TOP_CITIES.map((city) => {
     const n = villeMap.get(city.slug) ?? 0;
-    return `<a class="city-card" href="/ville/${city.slug}" style="background-image:url('${city.photo}'),${city.gradient}">
+    return `<a class="city-card" href="/ville/${city.slug}" style="background-image:${city.photo ? `url('${city.photo}'),` : ""}${city.gradient}">
   <span class="city-card-em">${city.emoji}</span>
   <div>
     <div class="city-card-name">${esc(city.name)}</div>
@@ -910,7 +919,7 @@ seoRouter.get("/formations", (req, res) => {
   ).join("");
   const allRegions = [...new Set(otherVilles.map((v) => cityRegion(v.slug)))].sort();
 
-  const hero = `<h1 style="color:#fff">2&nbsp;086 formations santé et bien-être éligibles au CPF</h1>
+  const hero = `<h1 style="color:#fff">${stats.formations.toLocaleString("fr-FR").replace(/ |\s/g, "&nbsp;")} formations santé et bien-être éligibles au CPF</h1>
 <p class="sub">Trouvez gratuitement la meilleure formation près de chez vous</p>
 <div class="search-wrap" id="sw">
   <input type="text" id="hero-q" placeholder="Ex : massage, esthétique, coiffure…" autocomplete="off" aria-label="Rechercher une formation">
@@ -931,6 +940,8 @@ seoRouter.get("/formations", (req, res) => {
 ${heroChips.map((c) => `<a href="${c.href}">${esc(c.label)}</a>`).join("")}
 </nav>
 <script>
+// Anciens liens profonds de la SPA (/#/formation/…) : la SPA vit désormais sur /app.
+if(location.hash.indexOf('#/')===0){location.replace('/app'+location.hash);}
 (function(){
   var cats=${catsJson};
   var villes=${villesJson};
@@ -939,7 +950,7 @@ ${heroChips.map((c) => `<a href="${c.href}">${esc(c.label)}</a>`).join("")}
   function renderCats(list){sd.innerHTML=list.map(function(c){return'<a class="sd-item" href="/formations/'+c.slug+'" role="option"><span class="em">'+c.emoji+'</span><span class="sdn">'+c.nom+'</span><span class="sdc">'+c.n+' formations</span></a>';}).join('');}
   inp.addEventListener('focus',function(){renderCats(cats);sd.classList.add('open');});
   inp.addEventListener('input',function(){var q=inp.value.toLowerCase().trim();renderCats(q?cats.filter(function(c){return c.nom.toLowerCase().includes(q);}):cats);sd.classList.add('open');});
-  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=inp.value.trim();window.location.href=q?'/#/recherche/'+encodeURIComponent(q):'/#/recherche';}});
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=inp.value.trim();window.location.href=q?'/app#/recherche/'+encodeURIComponent(q):'/app#/recherche';}});
   document.getElementById('search-submit-btn').addEventListener('click',function(){renderCats(cats);sd.classList.add('open');inp.focus();});
   // City search
   var cinp=document.getElementById('city-q'),csd=document.getElementById('csd');
@@ -975,13 +986,13 @@ function filterReg(btn,reg){
 
 <div class="section-label"><h2>🔥 Formations populaires</h2><span class="section-label-line"></span></div>
 <div class="grid">
-${popularFormations.map((f: any, i: number) => `<div class="card pop-card" data-price="${f.prix_min ?? 0}">
-<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}${urgencyBadge(i, popularFormations.length)}</div>
-<a class="t" href="/#/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
+${popularFormations.map((f: any) => `<div class="card pop-card" data-price="${f.prix_min ?? 0}">
+<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom ?? "")}</span>${f.categorie_nom ? `<span class="badge">${esc(normCat(f.categorie_nom))}</span>` : ""}</div>
+<a class="t" href="/formation/${encodeURIComponent(f.numero_formation)}">${esc(f.intitule)}</a>
 <span class="card-org">${esc(f.organisme ?? "")}</span>
 <span class="card-info">${f.a_distance ? "🌐 À distance" : "📍 Présentiel"} &middot; ✅ CPF${f.organisme_qualiopi ? " &middot; <strong>Qualiopi</strong>" : ""}</span>
 <span class="card-price">${eur(f.prix_min)}</span>
-<a class="card-cta" href="/#/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
+<a class="card-cta" href="/formation/${encodeURIComponent(f.numero_formation)}">Je m'informe gratuitement →</a>
 </div>`).join("")}
 </div>
 
@@ -1036,11 +1047,6 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
     name: "Formation Santé Bien-être",
     url: canonical,
     description: "Comparateur de formations CPF en esthétique, massage bien-être, coiffure et soins.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${canonical}?q={search_term_string}` },
-      "query-input": "required name=search_term_string",
-    },
   };
 
   res.send(
@@ -1049,7 +1055,7 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
       description: "Comparez les formations en esthétique, massage bien-être, coiffure et soins, financées par le CPF, par métier et par département.",
       canonical,
       jsonLd: [websiteLd],
-      breadcrumb: [{ name: "Accueil", url: `${baseUrl(req)}/formations` }, { name: "Formations" }],
+      breadcrumb: [{ name: "Accueil" }],
       hero,
       body,
     })
@@ -1087,9 +1093,9 @@ seoRouter.get("/financement-cpf", (req, res) => {
   const body = `<h1>Financer sa formation bien-être avec le CPF</h1>
 <p class="lead">Le Compte Personnel de Formation (CPF) finance les formations certifiantes en esthétique, massage bien-être, coiffure et soins — souvent <strong>jusqu'à 100 %</strong>.</p>
 <div class="chips" style="margin:0 0 24px">
-  <a class="chip" href="/formations"><strong>${s.formations.toLocaleString("fr-FR")}</strong> formations CPF</a>
-  <a class="chip" href="/formations"><strong>${s.organismes}</strong> organismes</a>
-  <a class="chip" href="/formations"><strong>${s.qualiopi}</strong> certifiés Qualiopi</a>
+  <a class="chip" href="/"><strong>${s.formations.toLocaleString("fr-FR")}</strong> formations CPF</a>
+  <a class="chip" href="/"><strong>${s.organismes}</strong> organismes</a>
+  <a class="chip" href="/"><strong>${s.qualiopi}</strong> certifiés Qualiopi</a>
 </div>
 <div class="mesh"><h2>Comment ça marche, en 3 étapes</h2>
   <p>1. <strong>Vérifiez vos droits</strong> sur moncompteformation.gouv.fr.<br>
@@ -1099,7 +1105,7 @@ seoRouter.get("/financement-cpf", (req, res) => {
 <div class="mesh"><h2>Explorer les formations finançables</h2><div class="chips">
 ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} (${c.n})</a>`).join("")}
 </div></div>
-<a class="cta" href="/formations">Trouver ma formation CPF</a>`;
+<a class="cta" href="/">Trouver ma formation CPF</a>`;
 
   res.send(
     renderPage({
@@ -1107,7 +1113,57 @@ ${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${esc(c.nom)} ($
       description: "Comment financer une formation bien-être (esthétique, massage, coiffure) avec le CPF : éligibilité, démarches, jusqu'à 100 % pris en charge.",
       canonical,
       jsonLd: [faq],
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Financement CPF" }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Financement CPF" }],
+      body,
+    })
+  );
+});
+
+// ---------- à propos (E-E-A-T : qui édite le site, d'où viennent les données) ----------
+seoRouter.get("/a-propos", (req, res) => {
+  const base = baseUrl(req);
+  const canonical = `${base}/a-propos`;
+  const s = globalStats();
+  const body = `<h1>À propos de Formation Santé Bien-être</h1>
+<p class="lead">Qui édite ce site, d'où viennent les données affichées et comment nous nous rémunérons — en toute transparence.</p>
+<div class="mesh"><h2>Qui sommes-nous ?</h2><p>
+Formation Santé Bien-être est un <strong>comparateur indépendant de formations éligibles au CPF</strong> dans les métiers de la beauté et du bien-être : esthétique, coiffure, manucure, maquillage, massage bien-être. Le site est édité par l'<strong>École de Naturopathie et Sophrologie</strong> (SAS, Paris 1<sup>er</sup>), organisme spécialisé dans les formations bien-être — voir nos <a href="/mentions-legales">mentions légales</a>.
+</p></div>
+<div class="mesh"><h2>D'où viennent les données ?</h2><p>
+Le catalogue (${s.formations.toLocaleString("fr-FR")} formations, ${s.organismes} organismes) est issu du <strong>catalogue public « Mon Compte Formation » (EDOF)</strong>, publié en open data par la Caisse des Dépôts. Il est resynchronisé régulièrement : les formations retirées du catalogue officiel sont désactivées chez nous. Les intitulés, prix, durées et certifications affichés sont ceux déclarés par les organismes de formation sur la plateforme officielle.
+</p></div>
+<div class="mesh"><h2>Nos critères</h2><ul>
+<li>Nous ne référençons que des formations <strong>éligibles au CPF</strong>, dispensées par des organismes déclarés sur Mon Compte Formation.</li>
+<li>La certification <strong>Qualiopi</strong> de l'organisme est signalée sur chaque fiche quand elle est vérifiée.</li>
+<li>Nous restons factuels : pas de promesse de salaire garanti ni de « diplôme facile ». Les métiers du bien-être demandent une vraie formation et de la pratique.</li>
+</ul></div>
+<div class="mesh"><h2>Comment le site se rémunère</h2><p>
+Le service est <strong>gratuit et sans engagement</strong> pour vous. Lorsque vous demandez des informations via nos formulaires, vos coordonnées sont transmises à l'organisme concerné et à nos <strong>partenaires de formation</strong> (dont École Naturo), qui peuvent nous rémunérer pour cette mise en relation. Cela n'influence ni les données affichées ni l'ordre des résultats. Le traitement de vos données est détaillé dans notre <a href="/politique-confidentialite">politique de confidentialité</a>.
+</p></div>
+<div class="mesh"><h2>Nous contacter</h2><p>
+Une erreur sur une fiche, une question, un organisme à signaler ? Écrivez-nous : <a href="mailto:contact@ecole-naturo.fr">contact@ecole-naturo.fr</a>.
+</p></div>
+<div class="mesh"><h2>Explorer le site</h2><div class="chips">
+  <a class="chip" href="/">🌿 Toutes les formations</a>
+  <a class="chip" href="/metiers">🎯 Fiches métiers</a>
+  <a class="chip" href="/financement-cpf">💰 Financement CPF</a>
+  <a class="chip" href="/faq">❓ FAQ</a>
+  <a class="chip" href="/blog">📖 Blog</a>
+</div></div>`;
+  const aboutLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "À propos de Formation Santé Bien-être",
+    url: canonical,
+    inLanguage: "fr",
+  };
+  res.send(
+    renderPage({
+      title: "À propos : qui sommes-nous, nos données, nos critères | Formation Santé Bien-être",
+      description: "Qui édite Formation Santé Bien-être, d'où viennent les données (catalogue officiel Mon Compte Formation), nos critères et notre modèle : transparence complète.",
+      canonical,
+      jsonLd: [aboutLd],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "À propos" }],
       body,
     })
   );
@@ -1135,7 +1191,7 @@ La présentation, la charte graphique et les contenus éditoriaux du site sont p
 <div class="mesh"><h2>Données personnelles</h2><p>
 Le traitement de vos données est décrit dans notre <a href="/politique-confidentialite">Politique de confidentialité</a>.
 </p></div>`;
-  res.send(renderPage({ title: "Mentions légales | Formation Santé Bien-être", description: "Mentions légales du site formation-sante-bienetre.fr.", canonical: `${base}/mentions-legales`, noindex: true, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Mentions légales" }], body }));
+  res.send(renderPage({ title: "Mentions légales | Formation Santé Bien-être", description: "Mentions légales du site formation-sante-bienetre.fr.", canonical: `${base}/mentions-legales`, noindex: true, breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Mentions légales" }], body }));
 });
 
 // ---------- FAQ ----------
@@ -1258,7 +1314,7 @@ ${faqSections.map((sec) => `
     <a class="chip" href="/blog">📖 Blog &amp; conseils</a>
   </div>
 </div>
-<a class="cta" href="/formations">Trouver ma formation CPF →</a>`;
+<a class="cta" href="/">Trouver ma formation CPF →</a>`;
 
   res.send(
     renderPage({
@@ -1266,7 +1322,7 @@ ${faqSections.map((sec) => `
       description: "Toutes les réponses sur le CPF beauté bien-être : financement, Qualiopi, CAP vs BP, alternance, débouchés, salaires. 4 thèmes, 29 questions. Guide 2026.",
       canonical,
       jsonLd: [faqLd],
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "FAQ" }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "FAQ" }],
       body,
     })
   );
@@ -1296,7 +1352,7 @@ seoRouter.get("/politique-confidentialite", (req, res) => {
 <div class="mesh"><h2>Durée de conservation</h2><p>Vos données sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées au plus tard <strong>3 ans</strong> après le dernier contact.</p></div>
 <div class="mesh"><h2>Vos droits</h2><p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition, de portabilité et de retrait du consentement. Pour les exercer : <a href="mailto:contact@ecole-naturo.fr">contact@ecole-naturo.fr</a>. Vous pouvez aussi introduire une réclamation auprès de la <strong>CNIL</strong> (cnil.fr).</p></div>
 ${cookiesSection}`;
-  res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, noindex: true, breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Politique de confidentialité" }], body }));
+  res.send(renderPage({ title: "Politique de confidentialité | Formation Santé Bien-être", description: "Comment vos données personnelles sont traitées sur formation-sante-bienetre.fr (RGPD).", canonical: `${base}/politique-confidentialite`, noindex: true, breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Politique de confidentialité" }], body }));
 });
 
 // ---------- pages ville ----------
@@ -1316,7 +1372,7 @@ seoRouter.get("/villes", (req, res) => {
 
   const cityCards = TOP_CITIES.map((city) => {
     const n = villeMap.get(city.slug) ?? 0;
-    return `<a class="city-card" href="/ville/${city.slug}" style="background-image:url('${city.photo}'),${city.gradient}">
+    return `<a class="city-card" href="/ville/${city.slug}" style="background-image:${city.photo ? `url('${city.photo}'),` : ""}${city.gradient}">
   <span class="city-card-em">${city.emoji}</span>
   <div>
     <div class="city-card-name">${esc(city.name)}</div>
@@ -1357,7 +1413,7 @@ function filterReg(btn,reg){
       title: "Formations par ville | Formation Santé Bien-être",
       description: "Trouvez une formation beauté et bien-être dans votre ville (esthétique, massage, coiffure).",
       canonical: `${base}/villes`,
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Villes" }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Villes" }],
       body,
     })
   );
@@ -1402,7 +1458,7 @@ ${mesh ? `<div class="mesh"><h2>Formations par categorie a ${esc(nomV)}</h2><div
       description: `${v.n} formations CPF en beauté et bien-être à ${nomV}. Comparez les organismes et demandez vos informations.`,
       canonical,
       jsonLd: [courseListLd(items, canonical)],
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Villes", url: `${base}/villes` }, { name: nomV }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Villes", url: `${base}/villes` }, { name: nomV }],
       body,
     })
   );
@@ -1443,7 +1499,7 @@ ${withSidebar(sidebar2, formationCards(items))}`;
       noindex: items.length < 3,
       jsonLd: [courseListLd(items, canonical)],
       breadcrumb: [
-        { name: "Accueil", url: `${base}/formations` },
+        { name: "Accueil", url: `${base}/` },
         { name: "Villes", url: `${base}/villes` },
         { name: nomV, url: `${base}/ville/${v.slug}` },
         { name: cat.nom },
@@ -1469,12 +1525,12 @@ seoRouter.get("/metiers", (req, res) => {
     { slug: "maquillage", label: "Maquillage", emoji: "💄", color: "#be185d", bg: "#fdf2f8", desc: "Maquillage de scène, événementiel, beauté", href: "/metier/maquillage" },
     { slug: "massage-bien-etre", label: "Massage & bien-être", emoji: "💆‍♀️", color: "#0369a1", bg: "#f0f9ff", desc: "Massage suédois, californien, ayurvédique...", href: "/metier/massage-bien-etre" },
     { slug: "specialisation-coiffure", label: "Spécialisation coiffure", emoji: "🎨", color: "#92400e", bg: "#fefce8", desc: "Balayage, colorimétrie, extensions, permanente", href: "/metier/specialisation-coiffure" },
-    { slug: "spa-manager", label: "Spa manager", emoji: "🏪", color: "#0f766e", bg: "#f0fdfa", desc: "Gérer et diriger un spa ou un institut de beauté", href: "/#/recherche/spa%20manager" },
-    { slug: "naturopathie", label: "Naturopathie", emoji: "🌿", color: "#15803d", bg: "#f7fef2", desc: "Approches naturelles et holistiques du bien-être", href: "/#/recherche/naturopathie" },
-    { slug: "reflexologie", label: "Réflexologie", emoji: "👣", color: "#7c3aed", bg: "#f5f3ff", desc: "Réflexologie plantaire, palmaire, faciale", href: "/#/recherche/reflexologie" },
-    { slug: "aromatherapie", label: "Aromathérapie", emoji: "🌸", color: "#db2777", bg: "#fdf2f8", desc: "Huiles essentielles, phytothérapie, soins naturels", href: "/#/recherche/aromatherapie" },
-    { slug: "formation-en-entreprise", label: "Formation en salon", emoji: "🏢", color: "#1d4ed8", bg: "#eff6ff", desc: "Perfectionnement en entreprise via OPCO AKTO", href: "/#/recherche/salon" },
-    { slug: "maquillage-permanent", label: "Maquillage permanent", emoji: "✨", color: "#b45309", bg: "#fffbeb", desc: "Microblading, sourcils, tatouage cosmétique", href: "/#/recherche/maquillage%20permanent" },
+    { slug: "spa-manager", label: "Spa manager", emoji: "🏪", color: "#0f766e", bg: "#f0fdfa", desc: "Gérer et diriger un spa ou un institut de beauté", href: "/blog/formation-responsable-spa-manager" },
+    { slug: "naturopathie", label: "Naturopathie", emoji: "🌿", color: "#15803d", bg: "#f7fef2", desc: "Approches naturelles et holistiques du bien-être", href: "/blog/formation-naturopathie-cpf" },
+    { slug: "reflexologie", label: "Réflexologie", emoji: "👣", color: "#7c3aed", bg: "#f5f3ff", desc: "Réflexologie plantaire, palmaire, faciale", href: "/blog/formation-reflexologie-cpf" },
+    { slug: "aromatherapie", label: "Aromathérapie", emoji: "🌸", color: "#db2777", bg: "#fdf2f8", desc: "Huiles essentielles, phytothérapie, soins naturels", href: "/blog/formation-aromatherapie-cpf" },
+    { slug: "formation-en-entreprise", label: "Formation en salon", emoji: "🏢", color: "#1d4ed8", bg: "#eff6ff", desc: "Perfectionnement en entreprise via OPCO AKTO", href: "/blog/opco-formation-salon-coiffure-beaute" },
+    { slug: "maquillage-permanent", label: "Maquillage permanent", emoji: "✨", color: "#b45309", bg: "#fffbeb", desc: "Microblading, sourcils, tatouage cosmétique", href: "/blog/formation-maquillage-permanent-cpf" },
   ];
 
   const metierGrid = METIER_CONFIG.map((m) => `
@@ -1503,7 +1559,7 @@ seoRouter.get("/metiers", (req, res) => {
 <div class="metier-grid-big">${metierGrid}</div>
 <div class="card" style="margin-top:32px;text-align:center">
   <p style="margin:0 0 12px;font-weight:600">Vous ne trouvez pas votre métier ?</p>
-  <a class="btn" href="/formations">Explorer toutes les formations →</a>
+  <a class="btn" href="/">Explorer toutes les formations →</a>
 </div>`;
 
   res.send(
@@ -1511,7 +1567,7 @@ seoRouter.get("/metiers", (req, res) => {
       title: "Métiers de la beauté et du bien-être | Formation Santé Bien-être",
       description: "Découvrez les métiers de la beauté et du bien-être : missions, formations CPF, salaires et débouchés concrets.",
       canonical: `${base}/metiers`,
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers" }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Métiers" }],
       body,
     })
   );
@@ -1542,7 +1598,7 @@ seoRouter.get("/metier/:slug", (req, res, next) => {
     : "";
   const body = `<h1>${esc(m.titre)}</h1>
 <p class="lead">${esc(m.intro ?? "")}</p>
-<a class="cta" href="${hasCat ? `/formations/${m.slug}` : "/#/recherche"}">Voir les formations ${esc(m.metier)}</a>
+<a class="cta" href="${hasCat ? `/formations/${m.slug}` : "/app#/recherche"}">Voir les formations ${esc(m.metier)}</a>
 ${ulBlock("Missions", m.missions)}
 ${ulBlock("Compétences", m.competences)}
 ${ulBlock("Débouchés", m.debouches)}
@@ -1562,7 +1618,7 @@ ${metierDeptsHtml}
       description: m.metaDescription ?? m.intro ?? "",
       canonical,
       jsonLd: faqLd ? [faqLd] : [],
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Métiers", url: `${base}/metiers` }, { name: m.metier }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Métiers", url: `${base}/metiers` }, { name: m.metier }],
       body,
     })
   );
@@ -1616,7 +1672,7 @@ ${gridHtml}
     name: "Blog Formation Santé Bien-être",
     url: `${base}/blog`,
     description: "Conseils pratiques, guides financement CPF et fiches métiers pour se former en esthétique, massage, coiffure et bien-être.",
-    publisher: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
+    publisher: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/` },
     blogPost: arts.slice(0, 10).map((a) => ({
       "@type": "BlogPosting",
       headline: a.title,
@@ -1630,14 +1686,22 @@ ${gridHtml}
       title: "Blog formations beauté & bien-être | Formation Santé Bien-être",
       description: "Conseils pratiques, guides financement CPF et fiches métiers pour se former en esthétique, massage, coiffure et bien-être.",
       canonical: `${base}/blog`,
+      ogImage: "/images/og/blog.jpg",
       jsonLd: [blogLd],
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog" }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Blog" }],
       body,
     })
   );
 });
 
+// Articles fusionnés (anti-cannibalisation) : ancien slug → slug cible, en 301.
+const BLOG_REDIRECTS: Record<string, string> = {
+  "financer-formation-esthetique-sans-cpf": "financer-formation-beaute-sans-cpf",
+};
+
 seoRouter.get("/blog/:slug", (req, res, next) => {
+  const target = BLOG_REDIRECTS[req.params.slug];
+  if (target) return res.redirect(301, `/blog/${target}`);
   const a = getArticle(req.params.slug);
   if (!a) return next();
   const base = baseUrl(req);
@@ -1655,7 +1719,7 @@ seoRouter.get("/blog/:slug", (req, res, next) => {
     headline: a.title,
     description: a.metaDescription,
     mainEntityOfPage: canonical,
-    publisher: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
+    publisher: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/` },
   };
   const relatedHtml = arts.length ? `<div class="mesh"><h2>Articles similaires</h2><div class="blog-grid blog-grid--small">
 ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-card-body"><h3 class="blog-card-title" style="font-size:.95rem">${esc(x.title)}</h3><span class="blog-read-more">Lire →</span></div></a>`).join("")}
@@ -1668,21 +1732,33 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
     ...(a.publishedAt ? { datePublished: a.publishedAt } : {}),
     ...(a.updatedAt ? { dateModified: a.updatedAt } : {}),
     ...(a.image ? { image: a.image } : {}),
-    author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/formations` },
+    author: { "@type": "Organization", name: "Formation Santé Bien-être", url: `${base}/a-propos` },
   };
   // Regle R3 (Pilier 4) : bloc "Explorer les formations" contextuel pour les articles
   // rattaches a un metier (front-matter metier: ou dictionnaire de mots-cles sur le slug).
   // Articles transverses : bloc generique inchange.
   const artMetier = articleMetier(a);
   const metierFiche = artMetier ? getMetier(artMetier) : null;
+  // Maillage article → page ville : si le slug de l'article contient une ville qui a
+  // sa page /ville/…, on ajoute le lien transactionnel correspondant (anti-cannibalisation :
+  // l'article garde l'intention guide, la page ville l'intention liste/comparateur).
+  const artSlugTokens = new Set(a.slug.split("-"));
+  const artVille = seoVilles()
+    .filter((v) => v.slug.split("-").every((t) => artSlugTokens.has(t)))
+    .sort((x, y) => y.slug.length - x.slug.length)[0];
+  const villeChip = artVille
+    ? `<a class="chip" href="/ville/${artVille.slug}">🏙️ Toutes les formations à ${esc(titleCaseVille(artVille.ville))}</a>`
+    : "";
   const exploreHtml = artMetier && metierFiche
     ? `<div class="mesh"><h2>Explorer les formations ${esc(normCat(metierFiche.metier))}</h2><div class="chips">
   <a class="chip" href="/formations/${artMetier}">📚 Toutes les formations ${esc(normCat(metierFiche.metier))}</a>
   <a class="chip" href="/metier/${artMetier}">🎯 Fiche metier ${esc(metierFiche.metier)}</a>
+  ${villeChip}
   ${topDeptsForMetier(artMetier, 6).map((d) => `<a class="chip" href="/formations/${artMetier}/${d.slug}">📍 ${esc(d.nom)}</a>`).join("")}
   <a class="chip" href="/financement-cpf">💰 Financement CPF</a>
 </div></div>`
     : `<div class="mesh"><h2>Explorer les formations</h2><div class="chips">
+  ${villeChip}
   <a class="chip" href="/formations/esthetique-soin-corporel">💆 Esthetique</a>
   <a class="chip" href="/formations/massage-bien-etre">🤝 Massage bien-etre</a>
   <a class="chip" href="/formations/coiffure">Coiffure</a>
@@ -1703,12 +1779,12 @@ ${arts.map((x) => `<a class="blog-card" href="/blog/${x.slug}"><div class="blog-
     });
   }
   const body = `<h1>${esc(a.title)}</h1>
-${dateDisplay ? `<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px"><time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""}</p>` : ""}
+<p style="font-size:.82rem;color:var(--muted);margin:-8px 0 18px;display:flex;align-items:center;gap:6px;flex-wrap:wrap">${dateDisplay ? `<time datetime="${esc(dateStr ?? "")}">${dateDisplay}</time>${a.updatedAt && a.updatedAt !== a.publishedAt ? " · Mis à jour" : ""} · ` : ""}Par <a href="/a-propos" style="color:var(--p)">l'équipe Formation Santé Bien-être</a></p>
 <p class="lead" style="font-size:1rem;border-left:3px solid var(--p);padding-left:14px;color:var(--body)">${esc(a.metaDescription)}</p>
 <article class="article">${a.html}</article>
 <div class="article-cta-block">
   <p style="font-weight:700;font-size:1.05rem;margin:0 0 12px">Prêt(e) à te former ?</p>
-  <a class="cta" href="/formations">Voir toutes les formations CPF</a>
+  <a class="cta" href="/">Voir toutes les formations CPF</a>
   <a class="cta" href="/financement-cpf" style="background:transparent;color:var(--p);border:2px solid var(--p);margin-left:10px">Guide financement</a>
 </div>
 ${exploreHtml}
@@ -1723,11 +1799,37 @@ ${relatedHtml}`;
       publishedAt: a.publishedAt,
       updatedAt: a.updatedAt,
       jsonLd: articleJsonLd,
-      breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Blog", url: `${base}/blog` }, { name: a.title }],
+      breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Blog", url: `${base}/blog` }, { name: a.title }],
       body,
     })
   );
 });
+
+// Pagination SSR des hubs : chips numérotées, canonical auto-référent par page.
+function pageParam(req: Request): number {
+  const p = parseInt(String(req.query.page ?? "1"), 10);
+  return Number.isFinite(p) && p > 1 ? p : 1;
+}
+
+function paginationNav(basePath: string, page: number, pages: number): string {
+  if (pages <= 1) return "";
+  const href = (p: number) => (p === 1 ? basePath : `${basePath}?page=${p}`);
+  const parts: string[] = [];
+  if (page > 1) parts.push(`<a class="chip" href="${href(page - 1)}">← Précédent</a>`);
+  let ellipsis = false;
+  for (let p = 1; p <= pages; p++) {
+    if (pages > 9 && p !== 1 && p !== pages && Math.abs(p - page) > 2) {
+      if (!ellipsis) { parts.push(`<span class="chip" style="border-color:transparent;background:none">…</span>`); ellipsis = true; }
+      continue;
+    }
+    ellipsis = false;
+    parts.push(p === page
+      ? `<span class="chip" style="background:var(--p);border-color:var(--p);color:#fff" aria-current="page">${p}</span>`
+      : `<a class="chip" href="${href(p)}">${p}</a>`);
+  }
+  if (page < pages) parts.push(`<a class="chip" href="${href(page + 1)}">Suivant →</a>`);
+  return `<nav class="chips" style="margin:24px 0" aria-label="Pagination">${parts.join("")}</nav>`;
+}
 
 // ---------- métier (national) ----------
 seoRouter.get("/formations/:categorie", (req, res, next) => {
@@ -1735,9 +1837,11 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
   const cat = cats.get(req.params.categorie);
   if (!cat) return next();
   const slug = req.params.categorie;
-  const r = searchFormations({ categorie: slug, pageSize: 50 });
+  const page = pageParam(req);
+  const r = searchFormations({ categorie: slug, page, pageSize: 50 });
+  if (page > 1 && r.items.length === 0) return next();
   const base = baseUrl(req);
-  const canonical = `${base}/formations/${slug}`;
+  const canonical = page > 1 ? `${base}/formations/${slug}?page=${page}` : `${base}/formations/${slug}`;
   const dcode = deptByCode();
 
   const sidebarDepts = r.facets.departements
@@ -1781,28 +1885,108 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
     <a class="chip" href="/faq">❓ FAQ formations</a>
     <a class="chip" href="/metiers">🎯 Fiches metiers</a>
   </div></div>`;
-  const catFaq = getCategoryFaq(slug);
+  const catFaq = page === 1 ? getCategoryFaq(slug) : [];
   const faqHtml = faqAccordionHtml(`Questions fréquentes — formations ${catDisplay}`, catFaq, `faq-${slug}`);
-  const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
-<h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
+  const pagesNav = paginationNav(`/formations/${slug}`, page, r.pages);
+  const body = `<a class="back-btn" href="/">← Toutes les formations</a>
+<h1>Formations ${esc(catDisplay)} éligibles CPF${page > 1 ? ` — page ${page}` : ""}</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
-${decouvrirMetierHtml}
+${page === 1 ? decouvrirMetierHtml : ""}
 ${withSidebar(sidebar, cards)}
+${pagesNav}
 ${faqHtml}
-${blogLinks}`;
+${page === 1 ? blogLinks : ""}`;
 
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
   res.send(
     renderPage({
-      title: `Formations ${catDisplay} CPF – ${r.total} formations Qualiopi | Formation Santé Bien-être`,
-      description: metaDesc,
+      title: `Formations ${catDisplay} CPF – organismes Qualiopi${page > 1 ? ` – page ${page}` : ""} | Formation Santé Bien-être`,
+      description: page > 1 ? `Formations ${catDisplay} éligibles CPF, page ${page} sur ${r.pages}. ${metaDesc}`.slice(0, 158) : metaDesc,
       canonical,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
       jsonLd: catFaq.length ? [courseListLd(r.items, canonical), faqPageLd(catFaq)] : [courseListLd(r.items, canonical)],
       breadcrumb: [
-        { name: "Accueil", url: `${base}/formations` },
-        { name: "Formations", url: `${base}/formations` },
+        { name: "Accueil", url: `${base}/` },
         { name: normCat(cat.nom) },
+      ],
+      body,
+    })
+  );
+});
+
+// ---------- fiche formation (SSR) ----------
+// Une URL indexable par formation active : le gisement de longue traîne du site
+// (intitulé + organisme + certification). Le formulaire de lead reste dans la SPA (/app).
+seoRouter.get("/formation/:numero", (req, res, next) => {
+  const f = getFormation(req.params.numero) as any;
+  if (!f) return next();
+  const base = baseUrl(req);
+  const canonical = `${base}/formation/${encodeURIComponent(f.numero_formation)}`;
+  const catNom = f.categorie_nom ? normCat(f.categorie_nom) : null;
+  const leadHref = `/app#/formation/${encodeURIComponent(f.numero_formation)}`;
+
+  const infoRows: [string, string][] = [];
+  infoRows.push(["Organisme", `${esc(f.organisme ?? "—")}${f.organisme_qualiopi ? ` <span class="badge">Qualiopi</span>` : ""}`]);
+  if (f.intitule_certification && f.intitule_certification !== f.intitule)
+    infoRows.push(["Certification préparée", esc(f.intitule_certification)]);
+  if (f.type_referentiel) infoRows.push(["Type de certification", esc(f.type_referentiel)]);
+  if (f.niveau) infoRows.push(["Niveau de sortie", esc(f.niveau)]);
+  if (f.heures) infoRows.push(["Durée", `${f.heures} heures`]);
+  infoRows.push(["Prix", f.prix_min != null && f.prix_max != null && f.prix_max > f.prix_min ? `${eur(f.prix_min)} à ${eur(f.prix_max)}` : eur(f.prix_min)]);
+  infoRows.push(["Modalité", f.a_distance ? "🌐 À distance possible" : "📍 Présentiel"]);
+  infoRows.push(["Financement", "✅ Éligible CPF (Mon Compte Formation)"]);
+  const depts = (f.departements ?? []) as { code: string; nom: string }[];
+  if (depts.length) infoRows.push(["Départements", esc(depts.map((d) => d.nom).join(", "))]);
+
+  const similar = similarFormations(f.numero_formation, 4);
+  const ficheMetier = f.categorie_slug ? getMetier(f.categorie_slug) : null;
+  const villeInfo = f.organisme_ville ? villeBySlug().get(slugify(f.organisme_ville)) : undefined;
+
+  const meshChips = [
+    catNom && f.categorie_slug ? `<a class="chip" href="/formations/${esc(f.categorie_slug)}">📚 Toutes les formations ${esc(catNom)}</a>` : "",
+    ficheMetier ? `<a class="chip" href="/metier/${esc(f.categorie_slug)}">🎯 Fiche métier ${esc(ficheMetier.metier)}</a>` : "",
+    villeInfo ? `<a class="chip" href="/ville/${villeInfo.slug}">📍 Formations à ${esc(titleCaseVille(villeInfo.ville))}</a>` : "",
+    `<a class="chip" href="/financement-cpf">💰 Financement CPF</a>`,
+  ].filter(Boolean).join("");
+
+  const body = `<a class="back-btn" href="${catNom && f.categorie_slug ? `/formations/${esc(f.categorie_slug)}` : "/"}">← ${catNom ? `Toutes les formations ${esc(catNom)}` : "Toutes les formations"}</a>
+<h1>${esc(f.intitule)}</h1>
+<p class="lead">${esc(courseDescription(f))}</p>
+${catNom ? `<div class="card-cat-line"><span class="em">${categoryEmoji(f.categorie_nom)}</span><span class="badge">${esc(catNom)}</span></div>` : ""}
+<div class="mesh"><h2>Informations clés</h2>
+<table style="border-collapse:collapse;width:100%;font-size:.95rem">
+${infoRows.map(([k, v]) => `<tr><th style="border:1px solid var(--hairline);background:var(--surface);padding:9px 12px;text-align:left;white-space:nowrap">${k}</th><td style="border:1px solid var(--hairline);padding:9px 12px">${v}</td></tr>`).join("")}
+</table></div>
+<a class="cta" href="${leadHref}">Je m'informe gratuitement →</a>
+<p class="muted">Demande d'information sans engagement. Vos coordonnées sont transmises uniquement à l'organisme et à nos partenaires pour répondre à votre demande.</p>
+${similar.length ? `<div class="mesh"><h2>Formations similaires</h2>${formationCards(similar)}</div>` : ""}
+<div class="mesh"><h2>Explorer</h2><div class="chips">${meshChips}</div></div>`;
+
+  const courseLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: f.intitule,
+    description: courseDescription(f),
+    url: canonical,
+    inLanguage: "fr",
+    ...(f.organisme ? { provider: { "@type": "Organization", name: f.organisme } } : {}),
+    ...(f.prix_min != null ? { offers: { "@type": "Offer", price: f.prix_min, priceCurrency: "EUR" } } : {}),
+    courseMode: f.a_distance ? "online" : "onsite",
+    ...(f.intitule_certification ? { educationalCredentialAwarded: f.intitule_certification } : {}),
+    ...(f.heures ? { timeRequired: `PT${f.heures}H` } : {}),
+  };
+
+  res.send(
+    renderPage({
+      title: `${f.intitule} – ${f.organisme ?? "formation CPF"} | Formation Santé Bien-être`,
+      description: `${f.intitule} : ${courseDescription(f)} Demandez gratuitement des informations.`.slice(0, 158),
+      canonical,
+      ogImage: (f.categorie_slug && CAT_OG_IMAGES[f.categorie_slug]) || DEFAULT_OG_IMAGE,
+      jsonLd: [courseLd],
+      breadcrumb: [
+        { name: "Accueil", url: `${base}/` },
+        ...(catNom && f.categorie_slug ? [{ name: catNom, url: `${base}/formations/${f.categorie_slug}` }] : []),
+        { name: f.intitule },
       ],
       body,
     })
@@ -1815,12 +1999,13 @@ function render404(req: Request): string {
   return renderPage({
     title: "Page introuvable (404) | Formation Santé Bien-être",
     description: "La page que vous cherchez n'existe pas. Retrouvez toutes nos formations CPF en beauté et bien-être.",
-    canonical: `${base}/formations`,
-    breadcrumb: [{ name: "Accueil", url: `${base}/formations` }, { name: "Page introuvable" }],
+    canonical: `${base}/`,
+    noindex: true,
+    breadcrumb: [{ name: "Accueil", url: `${base}/` }, { name: "Page introuvable" }],
     body: `<h1>Page introuvable</h1>
 <p class="lead">La page que vous cherchez n'existe pas ou a été déplacée.</p>
 <div class="mesh"><h2>Que recherchez-vous ?</h2><div class="chips">
-  <a class="chip" href="/formations">🌿 Toutes les formations</a>
+  <a class="chip" href="/">🌿 Toutes les formations</a>
   <a class="chip" href="/formations/esthetique-soin-corporel">💆 Esthétique</a>
   <a class="chip" href="/formations/massage-bien-etre">🤲 Massage bien-être</a>
   <a class="chip" href="/formations/coiffure">✂️ Coiffure</a>
@@ -1837,9 +2022,11 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
   const dept = deptBySlug().get(req.params.dept);
   if (!cat || !dept) return next();
   const slug = req.params.categorie;
-  const r = searchFormations({ categorie: slug, dept: dept.code, pageSize: 50 });
+  const page = pageParam(req);
+  const r = searchFormations({ categorie: slug, dept: dept.code, page, pageSize: 50 });
+  if (page > 1 && r.items.length === 0) return next();
   const base = baseUrl(req);
-  const canonical = `${base}/formations/${slug}/${dept.slug}`;
+  const canonical = page > 1 ? `${base}/formations/${slug}/${dept.slug}?page=${page}` : `${base}/formations/${slug}/${dept.slug}`;
 
   const national = searchFormations({ categorie: slug, pageSize: 1 });
   const dcode = deptByCode();
@@ -1883,9 +2070,10 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
     : "";
 
   const body = `<a class="back-btn" href="/formations/${slug}">← ${esc(catDisplay2)} — toute la France</a>
-<h1>Formation ${esc(catDisplay2)} ${esc(dept.nom)} – CPF</h1>
+<h1>Formation ${esc(catDisplay2)} ${esc(dept.nom)} – CPF${page > 1 ? ` — page ${page}` : ""}</h1>
 <p class="lead">${r.total} formation${r.total > 1 ? "s" : ""} ${esc(catDisplay2)} dans le ${esc(dept.nom)}, éligibles au CPF${qualiopi2 > 0 ? ` dont ${qualiopi2} certifiées Qualiopi` : ""}. Comparez les organismes et demandez vos informations.</p>
 ${withSidebar(sidebar, cards)}
+${paginationNav(`/formations/${slug}/${dept.slug}`, page, r.pages)}
 ${voisinsHtml}
 <div class="mesh"><h2>Formations ${esc(catDisplay2)} dans d'autres régions</h2><div class="chips">
   <a class="chip" href="/formations/${esc(slug)}">🗺️ Toute la France (${national.total})</a>
@@ -1895,15 +2083,14 @@ ${voisinsHtml}
 
   res.send(
     renderPage({
-      title: `Formation ${catDisplay2} ${dept.nom} – CPF | Formation Santé Bien-être`,
+      title: `Formation ${catDisplay2} ${dept.nom} – CPF${page > 1 ? ` – page ${page}` : ""} | Formation Santé Bien-être`,
       description: `${r.total} formation${r.total > 1 ? "s" : ""} ${catDisplay2} dans le ${dept.nom} éligibles au CPF. Organismes certifiés Qualiopi, présentiel et distance. Demande gratuite.`,
       canonical,
       noindex: r.items.length < 3,
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
       jsonLd: [courseListLd(r.items, canonical)],
       breadcrumb: [
-        { name: "Accueil", url: `${base}/formations` },
-        { name: "Formations", url: `${base}/formations` },
+        { name: "Accueil", url: `${base}/` },
         { name: normCat(cat.nom), url: `${base}/formations/${slug}` },
         { name: dept.nom },
       ],
@@ -1916,6 +2103,7 @@ ${voisinsHtml}
 // Empêche les soft 404 (200 avec shell SPA) sur des URLs SSR invalides.
 seoRouter.get("/formations/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/formations/:a/:b", (req, res) => res.status(404).send(render404(req)));
+seoRouter.get("/formation/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/metier/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/blog/:a", (req, res) => res.status(404).send(render404(req)));
 seoRouter.get("/ville/:a", (req, res) => res.status(404).send(render404(req)));

@@ -4,6 +4,7 @@ title: "Bilan de compétences avant une reconversion dans la beauté et le bien-
 metaDescription: "Bilan de compétences reconversion beauté en 2026 : financement CPF jusqu'à 1500 euros, durée 24h sur 3 mois, comment choisir son prestataire et utiliser les résultats pour sa formation beauté."
 excerpt: "Le bilan de compétences, finançable via le CPF jusqu'à 1 500 euros, aide à valider un projet de reconversion dans la beauté ou le bien-être avant d'investir dans une formation longue."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Bilan de compétences avant une reconversion dans la beauté et le bien-être en 2026

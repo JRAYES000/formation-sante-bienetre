@@ -4,6 +4,7 @@ title: "CAP coiffure 2026 : programme, durée, alternance, débouchés et salair
 metaDescription: "Tout savoir sur le CAP coiffure en 2026 : programme complet, voies d'accès (scolaire, alternance, candidat libre), taux de réussite, débouchés et salaire débutant."
 excerpt: "Le CAP coiffure est le diplôme de référence pour entrer dans le métier. Découvrez le programme, les 3 voies d'accès, le taux de réussite et les débouchés concrets en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # CAP coiffure 2026 : programme, durée, alternance, débouchés et salaire

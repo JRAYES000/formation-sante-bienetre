@@ -4,6 +4,7 @@ title: "Formation tatouage professionnel en 2026 : réglementation, hygiène, ce
 metaDescription: "Tout savoir sur la formation tatouage professionnel en 2026 : réglementation française, formation hygiène obligatoire, certifications, CPF et débouchés studio."
 excerpt: "Déclaration en mairie, formation hygiène obligatoire, matériel de stérilisation... Voici ce qu'il faut savoir avant de se lancer dans le tatouage professionnel en France."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation tatouage professionnel en 2026 : réglementation, hygiène, certifications et débouchés

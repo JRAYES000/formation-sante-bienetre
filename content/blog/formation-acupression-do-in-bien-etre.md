@@ -4,6 +4,7 @@ title: "Formation acupression et Do-In bien-être CPF en 2026 : points d'énergi
 metaDescription: "Formation acupression bien-être CPF en 2026 : acupression vs acupuncture, Do-In auto-massage, shiatsu simplifié, certifications disponibles, débouchés cabinet et cours collectifs."
 excerpt: "L'acupression et le Do-In sont des pratiques de bien-être issues de la médecine traditionnelle chinoise, sans aiguilles ni acte médical. Découvrez les formations certifiantes éligibles au CPF, le cadre légal et les débouchés en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation acupression et Do-In bien-être CPF en 2026 : points d'énergie, certifications et débouchés

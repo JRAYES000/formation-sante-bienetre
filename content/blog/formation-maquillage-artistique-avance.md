@@ -4,6 +4,7 @@ title: "Formation maquillage artistique professionnel avancé 2026 : cinéma, sc
 metaDescription: "Formation maquillage artistique avancé : cinéma, effets spéciaux, théâtre, mariage. Certifications, CPF, revenus freelance. Guide complet 2026."
 excerpt: "Le maquillage artistique avancé va bien au-delà du maquillage beauté classique. Cinéma, effets spéciaux latex, scène, événementiel : voici les formations disponibles et les débouchés réels en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation maquillage artistique professionnel avancé 2026 : cinéma, scène et effets spéciaux

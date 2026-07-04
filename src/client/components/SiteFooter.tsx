@@ -46,7 +46,7 @@ export default function SiteFooter() {
             <ul className="space-y-1.5 text-white/75">
               <li><a href="/blog" className="hover:text-white transition">Conseils & guides</a></li>
               <li><a href="/financement-cpf" className="hover:text-white transition">Financement CPF</a></li>
-              <li><a href="/formations" className="hover:text-white transition">Toutes les formations</a></li>
+              <li><a href="/" className="hover:text-white transition">Toutes les formations</a></li>
               <li><a href="/metiers" className="hover:text-white transition">Tous les métiers</a></li>
               <li><a href="/villes" className="hover:text-white transition">Par ville</a></li>
             </ul>

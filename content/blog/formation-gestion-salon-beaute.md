@@ -4,6 +4,7 @@ title: "Formation gestion d'un salon de beauté en 2026 : compta, RH, marketing 
 metaDescription: "Découvrez les formations en gestion de salon de beauté disponibles en 2026 : BTS MUC, titre manager, logiciels de caisse, marketing réseaux sociaux, et financement CPF."
 excerpt: "Gérer un salon de beauté ne s'improvise pas. Compta, RH, marketing local, gestion des plannings : voici les formations disponibles en 2026 pour maîtriser le business de la beauté et les financer via CPF."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation gestion d'un salon de beauté en 2026 : compta, RH, marketing et CPF

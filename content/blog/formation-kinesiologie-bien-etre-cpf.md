@@ -4,6 +4,7 @@ title: "Formation kinésiologie bien-être CPF en 2026 : muscle test, certificat
 metaDescription: "Formation kinésiologie bien-être CPF en 2026 : différence avec kinésithérapie, muscle test Touch for Health, certifications disponibles, financement CPF et débouchés en cabinet bien-être."
 excerpt: "Guide complet sur la formation kinésiologie bien-être CPF : distinction kinésithérapie vs kinésiologie, muscle test, certifications Touch for Health, financement CPF et débouchés professionnels en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation kinésiologie bien-être CPF en 2026 : muscle test, certifications et débouchés

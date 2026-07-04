@@ -4,6 +4,7 @@ title: "Reconversion infirmière ou aide-soignante vers l'esthétique et le bien
 metaDescription: "Guide complet de la reconversion infirmière ou aide-soignante vers l'esthétique et le bien-être en 2026 : passerelles, formations adaptées, VAE, financement CPF et France Travail."
 excerpt: "Infirmière ou aide-soignante qui souhaite se reconvertir dans l'esthétique ou le bien-être : vos compétences soins sont un atout réel. Voici les formations adaptées, la VAE possible et les financements disponibles."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Reconversion infirmière ou aide-soignante vers l'esthétique et le bien-être en 2026

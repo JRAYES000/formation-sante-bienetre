@@ -4,6 +4,7 @@ title: "Formation volume russe extensions de cils en 2026 : technique 2D-10D, ce
 metaDescription: "Formation volume russe cils 2026 : technique 2D à 10D, différences avec classique, certifications disponibles, CPF, tarification et débouchés professionnels."
 excerpt: "Maîtrisez le volume russe en extensions de cils en 2026 : de la technique 2D au mega volume 10D+, certifications, financement CPF et débouchés en institut ou à domicile."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation volume russe extensions de cils en 2026 : technique 2D-10D, certifications et débouchés

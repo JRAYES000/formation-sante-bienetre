@@ -4,6 +4,7 @@ title: "Prime à l'embauche d'un apprenti en beauté en 2026 : montants, conditi
 metaDescription: "Prime embauche apprenti beauté 2026 : montants des aides, conditions TPE/PME, démarches OPCO AKTO, cumul avec d'autres aides. Tout ce que l'employeur doit savoir pour recruter en alternance."
 excerpt: "En 2026, les employeurs du secteur beauté peuvent bénéficier d'aides financières à l'embauche d'un apprenti. Montants, conditions d'éligibilité et démarches pratiques : guide complet pour les salons et instituts."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Prime à l'embauche d'un apprenti en beauté en 2026 : montants, conditions et démarches

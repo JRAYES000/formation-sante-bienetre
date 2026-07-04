@@ -4,6 +4,7 @@ title: "Formation épilation lumière pulsée IPL en 2026 : réglementation, cer
 metaDescription: "Formation IPL lumière pulsée esthétique 2026 : distinction laser médical vs IPL, phototypes Fitzpatrick, certifications, assurance spécifique et débouchés professionnels."
 excerpt: "Formez-vous à l'épilation lumière pulsée IPL en 2026 : réglementation, phototypes de Fitzpatrick, contre-indications, certifications éligibles CPF et débouchés en institut."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation épilation lumière pulsée IPL en 2026 : réglementation, certifications et débouchés

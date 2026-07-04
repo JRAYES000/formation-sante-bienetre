@@ -38,7 +38,7 @@ Le maquillage n'est pas une profession réglementée. N'importe qui peut se pré
 
 Seules les formations menant à une certification RNCP ou RS sont finançables CPF. Sur Mon Compte Formation, cherchez "maquillage artistique" ou "maquillage professionnel" pour voir les offres disponibles et certifiées.
 
-Les formations d'écoles privées sans certification RS ne sont pas finançables CPF. Si vous visez une école réputée qui n'est pas sur la plateforme, explorez les autres options de financement : alternance, Région, OPCO. Lisez notre article sur le [financement des formations beauté sans CPF](/blog/financer-formation-esthetique-sans-cpf).
+Les formations d'écoles privées sans certification RS ne sont pas finançables CPF. Si vous visez une école réputée qui n'est pas sur la plateforme, explorez les autres options de financement : alternance, Région, OPCO. Lisez notre article sur le [financement des formations beauté sans CPF](/blog/financer-formation-beaute-sans-cpf).
 
 ## La réalité économique du maquillage artistique
 

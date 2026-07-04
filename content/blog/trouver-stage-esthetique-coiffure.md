@@ -4,6 +4,7 @@ title: "Comment trouver un stage en esthétique ou coiffure en 2026 : méthodes,
 metaDescription: "Trouver un stage en esthétique ou coiffure en 2026 : PFMP, conventions de stage, droits du stagiaire, gratification, méthodes de prospection et lettres de motivation efficaces. Guide complet."
 excerpt: "Trouver un stage en esthétique ou coiffure demande méthode et persévérance. Ce guide détaille toutes les démarches, vos droits en tant que stagiaire, et les techniques de prospection qui fonctionnent vraiment."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Comment trouver un stage en esthétique ou coiffure en 2026 : méthodes, démarches et droits

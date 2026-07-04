@@ -4,6 +4,7 @@ title: "VAE en esthétique et coiffure en 2026 : valider ses acquis sans repasse
 metaDescription: "VAE en esthétique et coiffure en 2026 : conditions, dossier de preuves, jury, taux de réussite, financement via CPF. Guide complet pour valider le CAP, BP ou BTS sans repasser les examens."
 excerpt: "La VAE permet d'obtenir le CAP, BP ou BTS esthétique ou coiffure grâce à son expérience professionnelle, sans repasser les épreuves classiques. Voici comment ça fonctionne concrètement en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # VAE en esthétique et coiffure en 2026 : valider ses acquis sans repasser les examens

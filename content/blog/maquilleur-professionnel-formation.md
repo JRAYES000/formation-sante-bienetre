@@ -3,6 +3,8 @@ title: "Formation maquilleur professionnel : devenir maquilleur(se) en 2026"
 slug: "maquilleur-professionnel-formation"
 metaDescription: "Formations maquilleur professionnel en France : CAP, titres RS, écoles spécialisées, spécialisations, salaire indicatif, débouchés et financement CPF."
 excerpt: "Vous souhaitez exercer le métier de maquilleur(se) professionnel(le) ? Découvrez les formations disponibles en France, les spécialisations possibles, les débouchés réels et les options de financement CPF."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 ## Devenir maquilleur(se) professionnel(le) en France

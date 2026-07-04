@@ -4,6 +4,7 @@ title: "Formation esthétique à Toulon et dans le Var en 2026 : guide CPF, alte
 metaDescription: "Guide complet des formations esthétique à Toulon et dans le Var en 2026 : CAP, BP, alternance, CPF, spas du littoral provençal et clientèle marine nationale. Distinct de Nice."
 excerpt: "Toulon et le Var offrent un marché de la beauté spécifique : clientèle marine nationale, spas côtiers, tourisme estival intense et proximité de la Côte d'Azur est. Découvrez les formations esthétique disponibles et les financements CPF en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation esthétique à Toulon et dans le Var en 2026 : guide CPF, alternance et débouchés

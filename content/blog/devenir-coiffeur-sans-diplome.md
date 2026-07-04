@@ -4,6 +4,7 @@ title: "Devenir coiffeur sans diplôme en 2026 : ce que dit la loi et les voies 
 metaDescription: "Peut-on exercer la coiffure sans diplôme en France en 2026 ? Réglementation, obligations légales, CAP, BP, VAE et alternance : tout ce qu'il faut savoir."
 excerpt: "En France, exercer la coiffure sans aucune qualification est illégal si vous souhaitez diriger un salon. Découvrez les voies légales pour vous former et exercer ce métier."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 ## Peut-on vraiment exercer la coiffure sans diplôme en France ?

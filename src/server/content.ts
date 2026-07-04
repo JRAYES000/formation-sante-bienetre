@@ -1,6 +1,6 @@
 // Chargement du contenu éditorial (fiches métier JSON + articles blog Markdown)
 // généré dans content/. Lu depuis le disque au runtime (présent dans l'image Docker).
-import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { marked } from "marked";
@@ -181,8 +181,8 @@ export function getArticle(slug: string): Article | null {
   const f = join(BLOG_DIR, `${slug}.md`);
   if (!existsSync(f)) return null;
   const { meta, body } = parseFrontmatter(readFileSync(f, "utf8"));
-  // Fallback : date de modification du fichier si pas de date dans le front-matter
-  const fileMtime = statSync(f).mtime.toISOString().split("T")[0];
+  // Pas de fallback mtime : dans l'image Docker, le mtime = date du build, donc
+  // toutes les dates auraient changé à chaque déploiement. Seul le front-matter fait foi.
   const faq = extractFaqFromMarkdown(body);
   return {
     slug: meta.slug || slug,
@@ -190,7 +190,7 @@ export function getArticle(slug: string): Article | null {
     metaDescription: meta.metaDescription || "",
     excerpt: meta.excerpt || "",
     image: meta.image || undefined,
-    publishedAt: meta.publishedAt || fileMtime,
+    publishedAt: meta.publishedAt || undefined,
     updatedAt: meta.updatedAt || undefined,
     metier: meta.metier || undefined,
     html: (marked.parse(body, { async: false }) as string).replace(/^<h1[^>]*>[\s\S]*?<\/h1>\s*/i, ""),

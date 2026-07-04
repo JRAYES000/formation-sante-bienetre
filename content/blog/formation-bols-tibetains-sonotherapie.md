@@ -4,6 +4,7 @@ title: "Formation bols tibétains et sonothérapie CPF en 2026 : certifications,
 metaDescription: "Formation bols tibétains sonothérapie CPF en 2026 : bols en métal vs cristal, bain sonore, certifications disponibles, financement CPF et débouchés en cabinet, spa et retraites."
 excerpt: "Guide complet sur la formation bols tibétains et sonothérapie : types de bols, bain sonore, certifications CPF disponibles, cadre légal non médical et débouchés professionnels en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation bols tibétains et sonothérapie CPF en 2026 : certifications, pratique et débouchés
