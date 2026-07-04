@@ -97,7 +97,7 @@ Si vous êtes salarié(e) dans le secteur de la coiffure ou de l'esthétique et 
 
 ## Les solutions sans CPF
 
-Si votre CPF est vide ou quasi-vide (début de carrière, période sans emploi...), vous n'êtes pas sans recours. Consultez notre guide complet sur les [solutions pour financer une formation beauté sans CPF](/blog/financer-formation-esthetique-sans-cpf).
+Si votre CPF est vide ou quasi-vide (début de carrière, période sans emploi...), vous n'êtes pas sans recours. Consultez notre guide complet sur les [solutions pour financer une formation beauté sans CPF](/blog/financer-formation-beaute-sans-cpf).
 
 ---
 

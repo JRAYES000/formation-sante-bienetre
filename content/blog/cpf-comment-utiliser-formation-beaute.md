@@ -119,7 +119,7 @@ A la date convenue, vous commencez votre formation. Votre organisme Qualiopi a d
 
 **Les aides régionales** : chaque Conseil Régional a ses propres dispositifs. Renseignez-vous auprès de votre Mission Locale.
 
-Pour toutes les solutions sans CPF, consultez notre guide [financer une formation beauté sans CPF](/blog/financer-formation-esthetique-sans-cpf).
+Pour toutes les solutions sans CPF, consultez notre guide [financer une formation beauté sans CPF](/blog/financer-formation-beaute-sans-cpf).
 
 ---
 

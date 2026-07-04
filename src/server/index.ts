@@ -1,6 +1,7 @@
 // Bootstrap Express. En dev : npm run dev (tsx watch). Sert l'API publique.
 import "dotenv/config";
 import express from "express";
+import compression from "compression";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ensureSchema } from "../db/index.ts";
@@ -71,10 +72,22 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(compression());
 app.use(express.json());
 // index: false → la racine "/" est rendue par le seoRouter (page d'accueil SSR),
-// pas par le index.html de la SPA.
-app.use(express.static(publicDir, { index: false }));
+// pas par le index.html de la SPA. Les assets Vite (/assets/*) sont hashés →
+// cache long immutable ; les autres fichiers statiques (images, fonts) 7 jours.
+app.use(
+  express.static(publicDir, {
+    index: false,
+    setHeaders: (res, path) => {
+      res.setHeader(
+        "Cache-Control",
+        path.includes("/assets/") ? "public, max-age=2592000, immutable" : "public, max-age=604800"
+      );
+    },
+  })
+);
 
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 

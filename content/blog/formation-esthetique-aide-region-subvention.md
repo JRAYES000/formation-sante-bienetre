@@ -259,7 +259,7 @@ La clé est de se renseigner en amont, auprès du Carif-Oref de votre région, d
 Pour construire votre plan de financement complet :
 - [Financement CPF](/financement-cpf) : comprendre et utiliser votre CPF
 - [Règles CPF 2025-2026](/blog/financement-cpf-regles-2025-2026) : les évolutions récentes
-- [Financer une formation esthétique sans CPF](/blog/financer-formation-esthetique-sans-cpf) : toutes les alternatives
+- [Financer une formation esthétique sans CPF](/blog/financer-formation-beaute-sans-cpf) : toutes les alternatives
 - [Aides Pôle emploi formation beauté](/blog/aide-pole-emploi-formation-beaute) : si vous êtes demandeur d'emploi
 - [OPCO formation salon coiffure beauté](/blog/opco-formation-salon-coiffure-beaute) : si vous êtes salarié dans le secteur
 - Explorez [toutes les formations beauté disponibles](/formations) pour trouver votre formation

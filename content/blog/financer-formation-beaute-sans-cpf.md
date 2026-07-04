@@ -116,6 +116,12 @@ Si votre formation est éligible CPF mais que le solde est insuffisant, vous pou
 
 ---
 
+## VAE et AFPR : deux leviers souvent oubliés
+
+**La VAE (Validation des Acquis de l'Expérience)** ne finance pas une formation : elle permet d'obtenir tout ou partie d'un diplôme (CAP Esthétique, BP Coiffure, titre RNCP) en faisant reconnaître votre expérience professionnelle — au moins un an d'activité en rapport avec la certification visée. C'est souvent l'option la plus économique pour les personnes qui exercent déjà : seuls l'accompagnement et le jury restent à financer, et ils sont éligibles aux aides classiques (employeur, OPCO, France Travail). Pour la démarche complète, consultez notre guide [VAE dans les métiers de la beauté](/blog/vae-esthetique-coiffure-beaute).
+
+**L'AFPR (Action de Formation Préalable au Recrutement)** s'adresse aux demandeurs d'emploi ayant une promesse d'embauche : France Travail finance une formation courte (400 heures maximum) pour combler l'écart entre vos compétences et le poste visé — par exemple une spécialisation technique avant d'intégrer un salon ou un institut. Le dossier se monte avec l'employeur et votre conseiller France Travail.
+
 ## Tableau récapitulatif des dispositifs
 
 | Dispositif | Pour qui | Couvre quoi | Démarche principale |

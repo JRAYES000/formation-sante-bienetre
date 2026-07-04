@@ -40,6 +40,7 @@ npm run serve         # API Express + pages SEO SSR sur :3001
 npm run web           # front Vite sur :5173 (proxy /api,/formations,/sitemap.xml,/robots.txt → :3001)
 
 npm run build         # build la SPA dans dist/public
+npx tsx scripts/generate-og-images.ts  # régénère les images OG de marque (public/images/og/)
 npm start             # serveur de prod (sert SSR + SPA)
 npm run check         # tsc --noEmit (typecheck, pas de build)
 ```

@@ -4,6 +4,12 @@ Audit réalisé sur le code (`src/server/seo.ts`, `src/server/index.ts`, `conten
 données live du domaine (Ubersuggest, marché France). **Périmètre : tout sauf netlinking** —
 aucune action d'acquisition de backlinks n'est proposée ici, conformément à la demande.
 
+> **Statut (juillet 2026)** : toutes les actions code (1–5, 7–12) sont **implémentées** sur la
+> branche `claude/seo-audit-improvements-v7skiv`. Reste à faire côté humain : l'action 6
+> (vérification Google Search Console + Bing Webmaster, soumission du sitemap), la définition
+> de `PUBLIC_URL` en prod, et la partie continue de l'action 11 (surveillance de la
+> cannibalisation à mesure que le blog grandit).
+
 ## État des lieux
 
 | Indicateur (Ubersuggest, FR) | Valeur |
