@@ -4,6 +4,7 @@ title: "Formation barbier CPF en 2026 : certifications, durée, prix et débouch
 metaDescription: "Formation barbier CPF 2026 : certifications disponibles, durée, prix, débouchés et comment ouvrir un barbershop. Marché masculin en forte croissance."
 excerpt: "Le métier de barbier connaît un retour en grâce spectaculaire en France. Découvrez les formations certifiées CPF, les prix et comment vous lancer en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation barbier CPF en 2026 : certifications, durée, prix et débouchés

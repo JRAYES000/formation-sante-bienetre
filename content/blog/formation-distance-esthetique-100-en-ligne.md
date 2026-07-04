@@ -4,6 +4,8 @@ title: "Formation esthétique 100 % en ligne en 2026 : ce qui est possible et ce
 metaDescription: "Formation esthétique en ligne 2026 : ce qui peut se faire à distance (théorie, anatomie, réglementation), pourquoi la pratique est impossible 100 % en ligne, formats hybrides, organismes sérieux et arnaques."
 excerpt: "La formation esthétique entièrement en ligne est-elle possible en 2026 ? La théorie oui, la pratique non. Ce guide explique les limites du 100 % en ligne, les formats hybrides recommandés et comment identifier les organismes sérieux."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation esthétique 100 % en ligne en 2026 : ce qui est possible et ce qui ne l'est pas

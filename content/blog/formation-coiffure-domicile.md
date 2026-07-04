@@ -4,6 +4,7 @@ title: "Devenir coiffeur à domicile en 2026 : formation, réglementation et com
 metaDescription: "Tout savoir pour devenir coiffeur à domicile en 2026 : diplôme obligatoire, matériel mobile, tarification, assurance, statut auto-entrepreneur et clientèle seniors."
 excerpt: "La coiffure à domicile est un marché en croissance, notamment grâce au vieillissement de la population. Voici comment vous lancer légalement et rentablement en 2026."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Devenir coiffeur à domicile en 2026 : formation, réglementation et comment se lancer

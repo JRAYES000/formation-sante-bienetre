@@ -4,6 +4,8 @@ title: "Formation massage bien-être à Lyon et en Auvergne-Rhône-Alpes en 2026
 metaDescription: "Guide complet des formations massage bien-être à Lyon et en AuRA : certifications CPF, praticien bien-être, débouchés, salaires, thermes des Alpes et spas lyonnais en 2026."
 excerpt: "Lyon, deuxième pôle économique français, concentre une offre de formation massage bien-être riche et des débouchés variés entre spas urbains et thermes alpins. Guide complet 2026 pour se former en AuRA."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation massage bien-être à Lyon et en Auvergne-Rhône-Alpes en 2026

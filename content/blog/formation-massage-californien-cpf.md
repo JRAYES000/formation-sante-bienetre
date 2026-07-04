@@ -4,6 +4,7 @@ title: "Formation massage californien CPF 2026 : guide complet pour se lancer"
 metaDescription: "Tout savoir sur la formation massage californien finançable CPF : durée, prix, RNCP, débouchés et comment choisir le bon organisme certifié Qualiopi."
 excerpt: "Le massage californien est l'une des techniques les plus demandées en bien-être. Voici comment le financer avec le CPF et décrocher une certification reconnue."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage californien CPF 2026 : guide complet pour se lancer

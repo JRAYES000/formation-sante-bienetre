@@ -4,6 +4,8 @@ title: "Aides régionales pour financer une formation esthétique en 2026 : subv
 metaDescription: "Aide région formation esthétique 2026 : dispositifs par région (Île-de-France, PACA, Bretagne, Auvergne-Rhône-Alpes), comment les trouver via Carif-Oref, cumul avec CPF, exemples concrets de financement."
 excerpt: "Chaque région a ses propres aides pour financer une formation esthétique. Ce guide détaille les dispositifs régionaux existants en 2026, comment les trouver et comment les cumuler avec votre CPF."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Aides régionales pour financer une formation esthétique en 2026 : subventions et dispositifs

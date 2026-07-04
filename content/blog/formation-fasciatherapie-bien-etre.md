@@ -4,6 +4,7 @@ title: "Formation fasciathérapie bien-être en 2026 : fascias, certifications e
 metaDescription: "Formation fasciathérapie bien-être en 2026 : comprendre les fascias, méthode Danis Bois (MDB), distinction bien-être vs thérapeutique, certifications disponibles, CPF et débouchés professionnels."
 excerpt: "La fasciathérapie travaille sur les fascias, le tissu conjonctif qui enveloppe l'ensemble du corps. Découvrez les formations bien-être disponibles en 2026, la méthode Danis Bois, les certifications et les débouchés en cabinet."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation fasciathérapie bien-être en 2026 : fascias, certifications et débouchés

@@ -4,6 +4,8 @@ title: "Formation nail art finançable CPF en 2026 : certification, prix et déb
 metaDescription: "Tout savoir sur la formation nail art CPF en 2026 : certifications RNCP disponibles, différence avec la prothésie ongulaire, prix, débouchés et salaires."
 excerpt: "La formation nail art est-elle finançable par le CPF en 2026 ? Oui, sous conditions. Découvrez les certifications RNCP disponibles, les tarifs, le matériel requis et les débouchés réels dans ce guide complet."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation nail art finançable CPF en 2026 : certification, prix et débouchés

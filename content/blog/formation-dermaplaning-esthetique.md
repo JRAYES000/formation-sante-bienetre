@@ -4,6 +4,7 @@ title: "Formation dermaplaning en esthétique en 2026 : exfoliation au bistouri,
 metaDescription: "Formation dermaplaning esthétique 2026 : technique bistouri, poils vellus, éclat de peau, contre-indications, certifications disponibles, financement CPF et tarification."
 excerpt: "Découvrez le dermaplaning en esthétique en 2026 : technique d'exfoliation au bistouri, élimination du duvet, résultats éclat et pénétration des soins, certifications CPF."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation dermaplaning en esthétique en 2026 : exfoliation au bistouri, certifications et résultats

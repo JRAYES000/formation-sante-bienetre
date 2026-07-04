@@ -4,6 +4,7 @@ title: "Formation massage kobido CPF en 2026 : lifting japonais naturel, techniq
 metaDescription: "Formation massage kobido CPF en 2026 : art japonais des 48 manoeuvres, lifting naturel du visage, certifications disponibles et débouchés en instituts haut de gamme et spas."
 excerpt: "Tout savoir sur la formation kobido : art japonais du lifting naturel, 48 manoeuvres codifiées, certifications CPF disponibles, tarification et débouchés en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage kobido CPF en 2026 : lifting japonais naturel, techniques et débouchés

@@ -4,6 +4,7 @@ title: "Formation massage aux pierres chaudes CPF en 2026 : basalte, protocoles 
 metaDescription: "Formation massage aux pierres chaudes CPF en 2026 : pierres de basalte, températures, protocoles dos/ventre/visage, certifications reconnues et débouchés spas et thalasso."
 excerpt: "Tout savoir sur la formation massage aux pierres chaudes finançable CPF : basalte volcanique, protocoles professionnels, certifications disponibles et débouchés en spa et thalassothérapie."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage aux pierres chaudes CPF en 2026 : basalte, protocoles et certifications

@@ -3,6 +3,8 @@ title: "Reconversion dans les métiers du bien-être : par où commencer ?"
 slug: "reconversion-metiers-bien-etre"
 metaDescription: "Envie de vous reconvertir dans les métiers du bien-être ? Découvrez les formations, certifications et financements CPF disponibles en France pour franchir le pas."
 excerpt: "Se reconvertir dans le bien-être, c'est possible à tout âge et à tout niveau — à condition de s'orienter vers les bons dispositifs. Voici les étapes concrètes pour construire votre projet sereinement."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 ## Un désir de sens qui pousse à changer de cap

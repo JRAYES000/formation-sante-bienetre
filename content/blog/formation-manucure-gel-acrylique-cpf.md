@@ -4,6 +4,8 @@ title: "Formation manucure gel et acrylique finançable CPF 2026 : guide complet
 metaDescription: "Formation manucure gel, acrylique et polygel finançable CPF en 2026. Techniques, certifications RNCP/RS, prix, débouchés et conseils pour se lancer."
 excerpt: "Gel UV, polygel, acrylique, semi-permanent : tout ce qu'il faut savoir pour choisir sa formation manucure en 2026, la financer avec le CPF et lancer son activité."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 ## Pourquoi se former à la manucure gel et acrylique en 2026

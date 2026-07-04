@@ -4,6 +4,7 @@ title: "Formation pressothérapie CPF en 2026 : certification, utilisation et re
 metaDescription: "Tout savoir sur la formation pressothérapie CPF en 2026 : différence entre pressothérapie bien-être et médicale, matériel requis, formations certifiantes, tarifs et rentabilité en institut."
 excerpt: "La pressothérapie est une prestation premium très demandée en instituts de beauté et spas. Découvrez comment se former, financer sa formation avec le CPF, quel matériel choisir et comment rentabiliser un appareil de pressothérapie."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation pressothérapie CPF en 2026 : certification, utilisation et rentabilité en institut

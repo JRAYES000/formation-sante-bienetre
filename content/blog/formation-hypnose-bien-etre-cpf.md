@@ -4,6 +4,7 @@ title: "Formation hypnose CPF en 2026 : hypnose ericksonienne, certifications et
 metaDescription: "Formation hypnose bien-être finançable CPF en 2026 : hypnose ericksonienne, certifications disponibles, cadre légal strict en France et débouchés cabinet privé."
 excerpt: "Tout savoir sur la formation hypnose CPF 2026 : hypnose ericksonienne vs spectacle, certifications, cadre légal en France, débouchés et revenus réels."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation hypnose CPF en 2026 : hypnose ericksonienne, certifications et cadre légal

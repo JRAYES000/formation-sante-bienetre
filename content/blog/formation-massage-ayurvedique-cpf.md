@@ -4,6 +4,7 @@ title: "Formation massage ayurvédique CPF en 2026 : abhyanga, certifications et
 metaDescription: "Formation massage ayurvédique finançable CPF en 2026 : abhyanga, shirodhara, doshas, certifications RS, durée, prix et débouchés réels en France."
 excerpt: "Tout ce qu'il faut savoir sur la formation massage ayurvédique CPF en 2026 : techniques (abhyanga, shirodhara), doshas, certifications disponibles, tarifs et débouchés concrets."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage ayurvédique CPF en 2026 : abhyanga, certifications et débouchés

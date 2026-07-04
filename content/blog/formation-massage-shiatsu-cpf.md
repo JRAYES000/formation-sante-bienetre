@@ -4,6 +4,7 @@ title: "Formation shiatsu CPF en 2026 : méridiens, certifications et comment se
 metaDescription: "Formation shiatsu finançable CPF en 2026 : méridiens, tsubos, certifications disponibles en France, cadre légal et débouchés réels. Guide complet."
 excerpt: "Tout savoir sur la formation shiatsu CPF en 2026 : méridiens, tsubos, certifications disponibles, cadre légal en France et débouchés professionnels concrets."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation shiatsu CPF en 2026 : méridiens, certifications et comment se lancer

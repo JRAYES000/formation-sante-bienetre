@@ -4,6 +4,7 @@ title: "Reconversion rapide en esthétique en 2026 : CAP accéléré, formations
 metaDescription: "Reconversion rapide en esthétique en 2026 : CAP candidat libre en 1 an, formations intensives courtes, financement France Travail et CPF, erreurs à éviter et profils types de reconversion réussie."
 excerpt: "Se reconvertir rapidement en esthétique est possible grâce au CAP candidat libre ou aux formations intensives. Voici un guide réaliste des délais, des coûts et des débouchés selon votre profil."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Reconversion rapide en esthétique en 2026 : CAP accéléré, formations intensives et débouchés

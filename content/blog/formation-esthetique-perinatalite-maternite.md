@@ -4,6 +4,7 @@ title: "Formation esthétique périnatale en 2026 : soins adaptés à la grosses
 metaDescription: "Guide complet sur la formation esthétique grossesse maternité en 2026 : soins adaptés, contre-indications par trimestre, certifications, débouchés maternités et spas."
 excerpt: "Les soins esthétiques adaptés à la grossesse et au post-partum constituent un marché en croissance. Voici comment se former, quelles certifications obtenir et où exercer en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation esthétique périnatale en 2026 : soins adaptés à la grossesse et au post-partum

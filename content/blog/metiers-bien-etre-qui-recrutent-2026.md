@@ -3,6 +3,8 @@ title: "7 métiers du bien-être et de la beauté qui recrutent en 2026"
 slug: "metiers-bien-etre-qui-recrutent-2026"
 metaDescription: "Découvrez 7 métiers du bien-être et de la beauté qui offrent de réelles opportunités en 2026 : formations CPF, certifications et salaires indicatifs en France."
 excerpt: "Le secteur beauté-bien-être recrute activement en 2026. Tour d'horizon de 7 métiers accessibles via des formations éligibles CPF, avec missions, certifications et niveaux de rémunération."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 Le secteur de la beauté et du bien-être s'est profondément transformé ces dernières années. La demande de soins, de détente et de mise en valeur de soi ne faiblit pas, et les professionnels qualifiés restent recherchés dans les instituts, les spas, les salons et les centres de remise en forme. Si vous envisagez une reconversion ou une montée en compétences, voici sept métiers qui présentent de réelles perspectives d'activité en 2026, avec les formations et certifications qui permettent d'y accéder.

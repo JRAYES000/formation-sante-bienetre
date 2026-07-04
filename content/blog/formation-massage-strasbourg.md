@@ -4,6 +4,7 @@ title: "Formation massage et bien-être à Strasbourg en 2026 : CPF, certificati
 metaDescription: "Guide complet des formations massage et bien-être à Strasbourg en 2026 : CPF, certifications RNCP, spas transfrontaliers, thermes alsaciens et débouchés en Grand Est."
 excerpt: "Strasbourg et l'Alsace offrent un marché du bien-être unique, influencé par la culture germanique et les traditions thermales. Découvrez les formations massage disponibles, les financements CPF et les débouchés transfrontaliers en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage et bien-être à Strasbourg en 2026 : CPF, certifications et débouchés

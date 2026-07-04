@@ -4,6 +4,7 @@ title: "Reconversion massage bien-être après 40 ou 50 ans : parcours réels, f
 metaDescription: "Reconversion dans le massage bien-être à 40 ou 50 ans : formation, financement CPF, France Travail, Transition Pro, durée de retour sur investissement et témoignages de profils qui ont réussi."
 excerpt: "Se reconvertir dans le massage bien-être après 40 ou 50 ans est tout à fait possible en 2026. Les dispositifs de financement sont même plus favorables pour les seniors. Voici les parcours réels, les coûts réels et les débouchés réels."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Reconversion massage bien-être après 40 ou 50 ans : parcours réels, financement et débouchés

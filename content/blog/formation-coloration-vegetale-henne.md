@@ -4,6 +4,7 @@ title: "Formation coloration végétale et henné professionnel en 2026 : techni
 metaDescription: "Formation coloration végétale et henné professionnel 2026 : henné vrai vs noir, indigo, cassia, certifications disponibles. Tendances bio et clientèle sensible."
 excerpt: "Apprenez les techniques de coloration végétale et henné professionnel en 2026 : distinctions essentielles, certifications disponibles, financement CPF et débouchés en salon bio."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation coloration végétale et henné professionnel en 2026 : techniques et certifications

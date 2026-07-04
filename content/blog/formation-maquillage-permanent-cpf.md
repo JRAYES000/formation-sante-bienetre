@@ -4,6 +4,7 @@ title: "Formation maquillage permanent CPF 2026 : microblading, sourcils, tatoua
 metaDescription: "Formation maquillage permanent finançable CPF : microblading, sourcils, lèvres, eye-liner. Certifications RNCP, durée, prix, hygiène et débouchés en 2026."
 excerpt: "Le maquillage permanent explose en France. Microblading, sourcils, lèvres, eye-liner : voici comment se former, se certifier et financer son parcours avec le CPF."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation maquillage permanent CPF 2026 : microblading, sourcils, tatouage cosmétique

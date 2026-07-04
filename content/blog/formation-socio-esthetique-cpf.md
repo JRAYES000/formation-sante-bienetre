@@ -4,6 +4,7 @@ title: "Formation socio-esthétique CPF en 2026 : prendre soin des personnes vul
 metaDescription: "La socio-esthétique : soins en milieu hospitalier, EHPAD, prison et inclusion sociale. Certifications CODES, RNCP, financement CPF, débouchés et sens du métier. Guide complet 2026."
 excerpt: "La socio-esthétique consiste à prodiguer des soins esthétiques à des personnes en situation de vulnérabilité (patients hospitalisés, résidents en EHPAD, personnes incarcérées). Un métier profondément humain, financé par le CPF. Guide complet 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation socio-esthétique CPF en 2026 : prendre soin des personnes vulnérables

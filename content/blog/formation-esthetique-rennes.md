@@ -4,6 +4,7 @@ title: "Formation esthétique à Rennes et en Bretagne en 2026 : CAP, BP, CPF et
 metaDescription: "Guide complet des formations esthétique à Rennes et en Bretagne en 2026 : CAP, BP, CPF, alternance, thalassothérapie et marché de l'emploi beauté breton."
 excerpt: "Rennes est l'une des villes étudiantes les plus dynamiques de France. Découvrez les formations esthétique disponibles en Bretagne en 2026, les financements CPF et les débouchés en thalasso et spas côtiers."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation esthétique à Rennes et en Bretagne en 2026 : CAP, BP, CPF et alternance

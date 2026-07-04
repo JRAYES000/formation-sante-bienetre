@@ -3,6 +3,8 @@ title: "Financer sa formation beauté sans CPF : toutes les solutions en 2026"
 slug: "financer-formation-beaute-sans-cpf"
 metaDescription: "CPF insuffisant ou inéligible ? Découvrez toutes les solutions pour financer votre formation beauté en 2026 : France Travail, OPCO, Région, employeur et plus."
 excerpt: "Le CPF n'est pas toujours suffisant — ni même accessible. Voici toutes les alternatives concrètes pour financer une formation dans les métiers de la beauté et du bien-être en France en 2026."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 ## Votre CPF ne suffit pas ? Vous avez d'autres options

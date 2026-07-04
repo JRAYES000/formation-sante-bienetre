@@ -4,6 +4,7 @@ title: "Formation cranio-sacré bien-être en 2026 : approche douce, certificati
 metaDescription: "Formation cranio-sacré bien-être en 2026 : différence avec l'ostéopathie crânienne, approche douce du rythme cranio-sacré, certifications disponibles, CPF et cadre légal."
 excerpt: "Guide complet sur la formation cranio-sacré bien-être : distinction avec la thérapie ostéopathique, approche douce légère, certifications disponibles, financement CPF et cadre légal en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation cranio-sacré bien-être en 2026 : approche douce, certifications et cadre légal

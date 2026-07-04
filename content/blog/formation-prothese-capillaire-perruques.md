@@ -4,6 +4,7 @@ title: "Formation prothésiste capillaire et perruques en 2026 : cancer, alopéc
 metaDescription: "Formation prothésiste capillaire 2026 : perruques médicales, cancer du sein, alopécie. Prise en charge Sécurité sociale jusqu'à 250 euros/an, certifications RNCP, débouchés."
 excerpt: "Devenez prothésiste capillaire en 2026 : formation perruques médicales, prise en charge Sécu, certifications disponibles, conventions hôpitaux et débouchés en forte croissance."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation prothésiste capillaire et perruques en 2026 : cancer, alopécie et certification

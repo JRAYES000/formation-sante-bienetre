@@ -4,6 +4,7 @@ title: "Esthétique masculine en 2026 : formations, marché en plein essor et d�
 metaDescription: "Le marché de l'esthétique masculine en France explose en 2026. Découvrez les formations pour exercer dans ce secteur en plein essor : soins visage, épilation, onglerie et barbier."
 excerpt: "L'esthétique masculine est l'un des segments beauté qui croit le plus vite en France. En 2026, les hommes représentent 25 à 30% de la clientèle des instituts de beauté. Voici les formations pour se positionner sur ce marché."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 # Esthétique masculine en 2026 : formations, marché en plein essor et débouchés

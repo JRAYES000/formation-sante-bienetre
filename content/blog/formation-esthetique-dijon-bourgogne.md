@@ -4,6 +4,8 @@ title: "Formation esthétique à Dijon et en Bourgogne en 2026 : guide CPF et al
 metaDescription: "Tout sur les formations esthétique à Dijon et en Bourgogne-Franche-Comté : CAP, BP, BTS, alternance, financement CPF. Marché local, tourisme viticole, débouchés professionnels en 2026."
 excerpt: "Dijon et la Bourgogne offrent un marché esthétique enrichi par le tourisme viticole et gastronomique. Guide complet des formations, alternances et financements CPF disponibles en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation esthétique à Dijon et en Bourgogne en 2026 : guide CPF et alternance

@@ -4,6 +4,7 @@ title: "Formation personal shopper CPF en 2026 : accompagnement style, certifica
 metaDescription: "Formation personal shopper CPF 2026 : différence avec conseillère en image, capsule wardrobe, clientèle luxe, certifications disponibles et débouchés freelance."
 excerpt: "Personal shopper vs conseillère en image : deux métiers complémentaires. Certifications CPF, capsule wardrobe, clientèle luxe ou budget, revenus freelance et grands magasins en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation personal shopper CPF en 2026 : accompagnement style, certifications et débouchés

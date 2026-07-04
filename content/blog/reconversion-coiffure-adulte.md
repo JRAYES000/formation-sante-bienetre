@@ -3,6 +3,8 @@ title: "Reconversion coiffure adulte : formations, financement et débouchés en
 slug: "reconversion-coiffure-adulte"
 metaDescription: "Reconversion dans la coiffure à l'âge adulte : CAP coiffure en 1 an, alternance, VAE, financement CPF et France Travail. Guide complet pour réussir votre projet en 2026."
 excerpt: "Se reconvertir dans la coiffure à l'âge adulte est un projet accessible, à condition de choisir la bonne formule de formation et les bons dispositifs de financement. Voici un guide concret pour construire votre parcours sereinement."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 ## La coiffure, un métier toujours attractif pour les adultes en reconversion

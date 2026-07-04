@@ -4,6 +4,7 @@ title: "Formation nutrition et beauté holistique en 2026 : micronutrition, peau
 metaDescription: "Guide complet sur la formation nutrition beauté holistique en 2026 : micronutrition, peau, cheveux, certifications, distinctions avec la diététique médicale et CPF."
 excerpt: "La micronutrition appliquée à la beauté (peau, cheveux, ongles) s'apprend via des certifications bien-être accessibles CPF. Voici ce qu'il faut savoir en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation nutrition et beauté holistique en 2026 : micronutrition, peau et CPF

@@ -4,6 +4,7 @@ title: "Formation sophrologie CPF en 2026 : certifications RNCP, durée, prix et
 metaDescription: "Formation sophrologie CPF en 2026 : certifications RNCP et RS disponibles, durée 1 à 2 ans, prix, débouchés réels et revenus. Guide complet pour se former."
 excerpt: "La sophrologie n'est pas réglementée en France, mais des certifications RS et RNCP permettent d'exercer dans un cadre reconnu. Voici tout ce qu'il faut savoir avant de vous former."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation sophrologie CPF en 2026 : certifications RNCP, durée, prix et débouchés réels

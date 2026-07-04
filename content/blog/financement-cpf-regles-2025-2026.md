@@ -5,6 +5,8 @@ metaDescription: "Règles CPF 2025-2026 : participation forfaitaire de 150 euros
 excerpt: "Depuis mai 2024, les règles du CPF ont changé avec l'instauration d'un reste à charge, porté à 150 euros depuis avril 2026. Ce guide détaille les nouvelles règles 2025-2026, les exceptions et comment optimiser votre financement formation beauté."
 image: /images/conseil-1.webp
 updatedAt: 2026-07-03
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Nouvelles règles CPF en 2025-2026 : reste à charge, monétisation et ce qui change

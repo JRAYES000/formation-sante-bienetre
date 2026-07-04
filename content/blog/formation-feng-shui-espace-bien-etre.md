@@ -4,6 +4,7 @@ title: "Formation feng shui pour l'aménagement d'un espace bien-être en 2026"
 metaDescription: "Formation feng shui espace bien-être en 2026 : principes d'aménagement d'un institut ou spa, certifications disponibles, financement CPF et valeur ajoutée pour votre cabinet."
 excerpt: "Le feng shui appliqué à un cabinet bien-être, un spa ou un institut améliore l'attractivité de l'espace et le confort des clients. Découvrez les formations, certifications et applications pratiques en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation feng shui pour l'aménagement d'un espace bien-être en 2026

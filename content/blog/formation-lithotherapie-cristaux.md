@@ -4,6 +4,7 @@ title: "Formation lithothérapie et cristaux en 2026 : certifications, cadre lé
 metaDescription: "Formation lithothérapie et cristaux en 2026 : certifications RS disponibles, cadre légal important, intégration en spa et esthétique, débouchés réels. Ce qu'il faut savoir avant de se former."
 excerpt: "La lithothérapie n'a aucune validation scientifique et ne constitue pas une pratique médicale. Des formations et certifications existent dans le cadre du bien-être. Voici ce qu'il faut savoir avant de se lancer."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation lithothérapie et cristaux en 2026 : certifications, cadre légal et débouchés

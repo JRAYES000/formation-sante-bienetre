@@ -4,6 +4,7 @@ title: "Se former en esthétique après une maternité ou un congé parental en 
 metaDescription: "Vous avez un bébé et vous voulez vous former en esthétique ? CPF accessible pendant le congé parental, France Travail, aide CAF pour la garde d'enfants, formations à distance : le guide complet 2026."
 excerpt: "Le congé maternité ou parental est une opportunité méconnue pour se former en esthétique. CPF accessible, formations flexibles à distance, aides à la garde d'enfants : voici tout ce que vous devez savoir pour lancer votre projet en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Se former en esthétique après une maternité ou un congé parental en 2026

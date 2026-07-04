@@ -218,7 +218,7 @@ export function getFormation(numero: string) {
     .prepare(
       `SELECT f.*, c.slug AS categorie_slug, c.nom AS categorie_nom,
               o.nom AS organisme, o.departement AS organisme_dept, o.region AS organisme_region,
-              o.qualiopi AS organisme_qualiopi
+              o.ville AS organisme_ville, o.qualiopi AS organisme_qualiopi
        FROM formations f
        JOIN organismes o ON o.siret = f.siret
        LEFT JOIN categories c ON c.id = f.categorie_id
@@ -492,6 +492,16 @@ export function getPartenaireById(id: number) {
   return sqlite.prepare(`SELECT * FROM partenaires WHERE id = @id`).get({ id }) as
     | { id: number; nom: string; email: string }
     | undefined;
+}
+
+// Numéros de toutes les formations actives — pour les fiches SSR /formation/:numero
+// (sitemap + IndexNow).
+export function listActiveFormationNumeros(): string[] {
+  return (
+    sqlite.prepare(`SELECT numero_formation n FROM formations WHERE is_active = 1 ORDER BY numero_formation`).all() as {
+      n: string;
+    }[]
+  ).map((r) => r.n);
 }
 
 export function countFormations(): number {

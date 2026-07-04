@@ -4,6 +4,7 @@ title: "Formation coiffure mariage et chignons en 2026 : certifications, techniq
 metaDescription: "Formation coiffure mariage et chignons : techniques, certifications post CAP/BP, débouchés freelance et tarification. Guide complet 2026."
 excerpt: "Spécialiste coiffure mariage : chignons de mariée, tresses, coiffures cérémonie. Quelles formations après le CAP ou BP ? Débouchés et tarifs freelance en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation coiffure mariage et chignons en 2026 : certifications, techniques et débouchés

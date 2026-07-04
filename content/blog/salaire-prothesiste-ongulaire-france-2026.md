@@ -4,6 +4,7 @@ title: "Salaire prothésiste ongulaire en France en 2026 : combien gagne-t-on vr
 metaDescription: "Salaire prothésiste ongulaire en 2026 : salarié, auto-entrepreneur, région par région. Revenus réels avec chiffres concrets et comparatif esthéticienne."
 excerpt: "Entre 1 400 € net en salon et plus de 3 500 € en indépendante bien établie, les revenus d'une prothésiste ongulaire varient énormément. Voici les chiffres réels."
 image: /images/conseil-2.webp
+publishedAt: 2026-06-16
 ---
 
 ## Ce que gagne vraiment une prothésiste ongulaire en 2026

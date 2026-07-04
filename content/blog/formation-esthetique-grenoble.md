@@ -4,6 +4,8 @@ title: "Formation esthétique à Grenoble et en Isère en 2026 : guide complet"
 metaDescription: "Guide complet des formations esthétique à Grenoble et en Isère : CAP, BP, BTS, alternance, CPF. Marché local, spas de montagne, débouchés et financements en Auvergne-Rhône-Alpes."
 excerpt: "Grenoble, capitale des Alpes, offre un marché esthétique atypique entre ville universitaire et destination montagnarde. Découvrez les formations disponibles, l'alternance et les débouchés en Isère en 2026."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
+updatedAt: 2026-07-03
 ---
 
 # Formation esthétique à Grenoble et en Isère en 2026 : guide complet

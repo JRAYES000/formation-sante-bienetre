@@ -3,6 +3,8 @@ title: "Formation spa praticien : métier, compétences, certifications et CPF"
 slug: "devenir-spa-praticien"
 metaDescription: "Tout savoir sur la formation spa praticien en France : certifications RS, compétences soins et modelages, lieux d'exercice, salaire indicatif et financement CPF."
 excerpt: "Le spa praticien est au cœur de l'expérience bien-être dans les spas hôteliers, thalassos et centres de remise en forme. Découvrez les formations, certifications et financements disponibles en France pour exercer ce métier."
+publishedAt: 2026-06-05
+updatedAt: 2026-07-03
 ---
 
 # Formation spa praticien : métier, compétences, certifications et CPF

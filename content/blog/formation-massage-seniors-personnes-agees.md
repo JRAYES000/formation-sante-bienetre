@@ -4,6 +4,7 @@ title: "Formation massage pour seniors et personnes âgées en 2026 : bien-être
 metaDescription: "Formation massage seniors en 2026 : marché EHPAD et domicile en croissance, adaptations techniques, certifications disponibles et débouchés résidences seniors, SSIAD et libéral."
 excerpt: "Le massage pour seniors est un marché en forte croissance porté par le vieillissement de la population. Formations certifiantes disponibles en 2026 pour intervenir en EHPAD, résidences seniors, SSIAD et en libéral avec les adaptations techniques indispensables."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation massage pour seniors et personnes âgées en 2026 : bien-être et douceur

@@ -4,6 +4,7 @@ title: "Contrat d'apprentissage en esthétique et coiffure 2026 : tout comprendr
 metaDescription: "Contrat d'apprentissage esthétique et coiffure 2026 : différences avec le contrat de professionnalisation, droits de l'apprenti, rôle du maître d'apprentissage, rupture et médiation. Guide complet."
 excerpt: "Avant de signer un contrat d'apprentissage en esthétique ou coiffure, il faut connaître vos droits, vos obligations et les recours disponibles. Ce guide détaille tout ce que vous devez savoir en 2026."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Contrat d'apprentissage en esthétique et coiffure 2026 : tout comprendre avant de signer

@@ -4,6 +4,7 @@ title: "Témoignages de reconversion réussie en esthétique et bien-être : 10 
 metaDescription: "10 témoignages de reconversions réussies en esthétique et bien-être : ex-comptable masseuse, ex-commerciale esthéticienne, enseignante naturopathe... Parcours, financement, premiers pas et résultats concrets."
 excerpt: "Ils ont quitté la comptabilité, le commerce, l'enseignement ou l'informatique pour se lancer dans l'esthétique, le massage ou la naturopathie. Voici 10 parcours de reconversion réussie, avec les formations suivies, les financements utilisés et les résultats obtenus."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Témoignages de reconversion réussie en esthétique et bien-être : 10 parcours inspirants

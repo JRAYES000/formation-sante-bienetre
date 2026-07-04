@@ -4,6 +4,7 @@ title: "Formation esthétique sans bac en 2026 : CAP, alternance et accès sans 
 metaDescription: "Formation esthétique sans bac en 2026 : CAP accessible sans bac, alternance dès 16 ans, candidat libre, VAE avec expérience, aides disponibles. Guide complet pour se former sans diplôme."
 excerpt: "Le CAP Esthétique est accessible sans bac, souvent dès le niveau 3ème. L'alternance, le candidat libre et la VAE ouvrent la voie même sans parcours scolaire classique. Voici toutes les options."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation esthétique sans bac en 2026 : CAP, alternance et accès sans diplôme

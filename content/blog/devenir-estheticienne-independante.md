@@ -4,6 +4,7 @@ title: "Devenir esthéticienne indépendante en 2026 : statuts, démarches, reve
 metaDescription: "Tout savoir pour devenir esthéticienne indépendante en 2026 : quel statut choisir, quel diplôme est requis, comment fixer ses prix, trouver ses premiers clients et financer sa formation via CPF."
 excerpt: "Devenir esthéticienne indépendante est un projet concret et accessible en 2026. Micro-entreprise, EURL, portage salarial, à domicile ou en location de salle : voici le guide complet pour vous lancer sans faire d'erreur."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Devenir esthéticienne indépendante en 2026 : statuts, démarches, revenus et formation

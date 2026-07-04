@@ -4,6 +4,7 @@ title: "Formation esthétique à Nantes en 2026 : guide complet CAP, BP, CPF et 
 metaDescription: "Tout savoir sur la formation esthétique à Nantes en 2026 : CAP esthétique, BP esthétique, financement CPF, alternance en Loire-Atlantique et débouchés locaux."
 excerpt: "Nantes figure parmi les villes françaises les plus dynamiques pour se former aux métiers de l'esthétique. Découvrez les formations disponibles, les financements CPF et le marché de l'emploi beauté en Loire-Atlantique."
 image: /images/conseil-1.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation esthétique à Nantes en 2026 : guide complet CAP, BP, CPF et alternance

@@ -4,6 +4,7 @@ title: "Formation radiofréquence esthétique en 2026 : fermeté, amincissement 
 metaDescription: "Formation radiofréquence esthétique 2026 : lifting visage, remodelage corporel, cadre légal, certifications disponibles, CPF et assurance obligatoire."
 excerpt: "Maîtrisez la radiofréquence esthétique en 2026 : lifting visage, remodelage corporel, réglementation des appareils, certifications, financement CPF et assurance professionnelle."
 image: /images/conseil-3.webp
+publishedAt: 2026-06-16
 ---
 
 # Formation radiofréquence esthétique en 2026 : fermeté, amincissement et certifications
