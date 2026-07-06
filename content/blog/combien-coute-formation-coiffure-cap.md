@@ -1,6 +1,6 @@
 ---
 slug: combien-coute-formation-coiffure-cap
-title: "Combien coûte une formation CAP coiffure en 2026 ? Prix, aides et comparatif"
+title: "CAP coiffure : prix de la formation et aides (2026)"
 metaDescription: "Prix d'une formation CAP coiffure en 2026 : de 0 € en alternance à 8 000 € en centre privé. Comparatif complet, CPF, aides régionales et conseils."
 excerpt: "Le coût d'une formation CAP coiffure varie de 0 € en alternance à plus de 8 000 € en centre privé. Découvrez tous les tarifs, les aides disponibles et comment financer votre projet."
 image: /images/conseil-1.webp

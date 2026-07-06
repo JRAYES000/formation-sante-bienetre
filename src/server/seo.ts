@@ -820,6 +820,17 @@ seoRouter.get("/llms.txt", (req, res) => {
 // exclues du sitemap et passées en noindex (audit Challenge #1, constat n°3, Option A).
 const HIDDEN_CAT_SLUGS = ["maquillage-spectacle", "secretariat-assistanat-specialise", "communication-professionnelle", "action-commerciale"];
 
+// Mot-clé principal par catégorie pour les titles/H1 (audit Challenge #1, constat n°4 :
+// la demande porte d'abord sur le diplôme/métier — ex. « cap esthétique » 8 100 rech./mois
+// vs « formation esthétique cpf » 170/mois). Fallback : « Formation {catégorie} ».
+const CAT_TITLE_KEYWORDS: Record<string, string> = {
+  "coiffure": "CAP Coiffure",
+  "esthetique-soin-corporel": "CAP Esthétique",
+  "manucurie": "Formation prothésiste ongulaire",
+  "massage-bien-etre": "Formation massage bien-être",
+  "maquillage": "Formation maquillage professionnel",
+};
+
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
 // Les pages légales sont exclues : elles ne génèrent pas de trafic SEO et diluent le PageRank.
 export function allIndexableUrls(base: string): string[] {
@@ -1054,7 +1065,7 @@ ${articles.map((a) => `<div class="card"><div class="card-cat-line"><span class=
 
   res.send(
     renderPage({
-      title: "Formations santé & bien-être éligibles CPF | Formation Santé Bien-être",
+      title: `Formations beauté & bien-être CPF : comparez ${stats.formations.toLocaleString("fr-FR")} offres`,
       description: "Comparez les formations en esthétique, massage bien-être, coiffure et soins, financées par le CPF, par métier et par département.",
       canonical,
       jsonLd: [websiteLd],
@@ -1407,7 +1418,7 @@ ${withSidebar(sidebar, formationCards(items))}
 ${mesh ? `<div class="mesh"><h2>Formations par categorie a ${esc(nomV)}</h2><div class="chips">${mesh}</div></div>` : ""}`;
   res.send(
     renderPage({
-      title: `Formations beauté & bien-être à ${nomV} – CPF | Formation Santé Bien-être`,
+      title: `Formations beauté & bien-être à ${nomV} : comparez (CPF)`,
       description: `${v.n} formations CPF en beauté et bien-être à ${nomV}. Comparez les organismes et demandez vos informations.`,
       canonical,
       jsonLd: [courseListLd(items, canonical)],
@@ -1567,7 +1578,7 @@ ${metierDeptsHtml}
     .join("")}</div></div>`;
   res.send(
     renderPage({
-      title: `${m.titre} | Formation Santé Bien-être`,
+      title: `${m.metier} : missions, salaire, formation CPF`.length <= 55 ? `Métier ${m.metier} : missions, salaire, formation CPF` : `${m.metier} : missions, salaire, CPF`,
       description: m.metaDescription ?? m.intro ?? "",
       canonical,
       jsonLd: faqLd ? [faqLd] : [],
@@ -1725,7 +1736,8 @@ ${relatedHtml}`;
 
   res.send(
     renderPage({
-      title: `${a.title} | Formation Santé Bien-être`,
+      // Suffixe de marque uniquement si le title total reste affichable en SERP (~60c).
+      title: a.title.length <= 32 ? `${a.title} | Formation Santé Bien-être` : a.title,
       description: a.metaDescription,
       canonical,
       ogImage: a.image,
@@ -1793,7 +1805,7 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
   const catFaq = getCategoryFaq(slug);
   const faqHtml = faqAccordionHtml(`Questions fréquentes — formations ${catDisplay}`, catFaq, `faq-${slug}`);
   const body = `<a class="back-btn" href="/formations">← Toutes les formations</a>
-<h1>Formations ${esc(catDisplay)} éligibles CPF</h1>
+<h1>${esc(CAT_TITLE_KEYWORDS[slug] ?? `Formation ${catDisplay}`)} : ${r.total} formations éligibles CPF</h1>
 <p class="lead">${r.total} formations en ${esc(catDisplay)} finançables 100&nbsp;% par le CPF, dont ${qualiopi} certifiées Qualiopi${distance > 0 ? ` et ${distance} disponibles à distance` : ""}. Comparez les organismes et demandez vos informations gratuitement.</p>
 ${decouvrirMetierHtml}
 ${withSidebar(sidebar, cards)}
@@ -1803,7 +1815,7 @@ ${blogLinks}`;
   const metaDesc = `${r.total} formations ${catDisplay} certifiées Qualiopi, 100 % éligibles CPF. Présentiel et distance disponibles. Comparez les organismes et demandez vos informations gratuitement.`;
   res.send(
     renderPage({
-      title: `Formations ${catDisplay} CPF – ${r.total} formations Qualiopi | Formation Santé Bien-être`,
+      title: `${CAT_TITLE_KEYWORDS[slug] ?? `Formation ${catDisplay}`} : ${r.total} formations finançables CPF`.length <= 62 ? `${CAT_TITLE_KEYWORDS[slug] ?? `Formation ${catDisplay}`} : ${r.total} formations finançables CPF` : `${CAT_TITLE_KEYWORDS[slug] ?? `Formation ${catDisplay}`} : ${r.total} formations CPF`,
       description: metaDesc,
       canonical,
       noindex: HIDDEN_CAT_SLUGS.includes(slug),

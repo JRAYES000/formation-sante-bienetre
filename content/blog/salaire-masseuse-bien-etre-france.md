@@ -1,6 +1,6 @@
 ---
 slug: salaire-masseuse-bien-etre-france
-title: "Salaire d'une masseuse bien-être en France : chiffres réels 2026"
+title: "Salaire d'une masseuse bien-être : chiffres réels 2026"
 metaDescription: "Salaire masseuse bien-être France 2026 : combien gagne vraiment un praticien massage ? Chiffres par statut, région et niveau d'expérience. Guide complet."
 excerpt: "Combien gagne vraiment une masseuse bien-être en France ? En salariat, en spa hôtelier, en libéral ou à domicile, les revenus varient énormément. Voici les chiffres réels et les leviers pour les augmenter."
 image: https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80&fit=crop

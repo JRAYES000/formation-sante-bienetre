@@ -1,5 +1,5 @@
 ---
-title: "Formation massage bien-être à distance : ce que vous devez savoir avant de vous lancer"
+title: "Formation massage bien-être à distance : guide CPF 2026"
 slug: "formation-massage-bien-etre-a-distance"
 metaDescription: "Formation massage bien-être à distance : théorie en ligne, pratique présentielle, éligibilité CPF, certifications Qualiopi. Tout ce qu'il faut savoir en 2026."
 excerpt: "La formation massage bien-être à distance permet d'acquérir les bases théoriques en ligne tout en complétant la pratique en présentiel. Découvrez comment ça fonctionne, ce que couvre le CPF et comment choisir votre formation."
