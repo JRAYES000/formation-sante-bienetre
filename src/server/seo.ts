@@ -816,19 +816,24 @@ seoRouter.get("/llms.txt", (req, res) => {
   res.type("text/plain").send(lines.join("\n") + "\n");
 });
 
+// Catégories hors positionnement santé & bien-être : masquées de la navigation,
+// exclues du sitemap et passées en noindex (audit Challenge #1, constat n°3, Option A).
+const HIDDEN_CAT_SLUGS = ["maquillage-spectacle", "secretariat-assistanat-specialise", "communication-professionnelle", "action-commerciale"];
+
 // Liste de toutes les URLs indexables (sitemap + IndexNow).
 // Les pages légales sont exclues : elles ne génèrent pas de trafic SEO et diluent le PageRank.
 export function allIndexableUrls(base: string): string[] {
   const cats = listCategories() as { slug: string; n: number }[];
   const dcode = deptByCode();
   const urls: string[] = [`${base}/formations`, `${base}/financement-cpf`, `${base}/faq`, `${base}/metiers`, `${base}/blog`];
-  for (const c of cats) if (c.n > 0) urls.push(`${base}/formations/${c.slug}`);
+  for (const c of cats) if (c.n > 0 && !HIDDEN_CAT_SLUGS.includes(c.slug)) urls.push(`${base}/formations/${c.slug}`);
   for (const m of listMetiers()) urls.push(`${base}/metier/${m.slug}`);
   for (const a of listArticles()) urls.push(`${base}/blog/${a.slug}`);
   urls.push(`${base}/villes`);
   for (const v of seoVilles()) urls.push(`${base}/ville/${v.slug}`);
-  for (const c of seoVilleCombos()) urls.push(`${base}/ville/${slugify(c.ville)}/${c.categorie}`);
+  for (const c of seoVilleCombos()) if (!HIDDEN_CAT_SLUGS.includes(c.categorie)) urls.push(`${base}/ville/${slugify(c.ville)}/${c.categorie}`);
   for (const combo of seoCombos()) {
+    if (HIDDEN_CAT_SLUGS.includes(combo.categorie)) continue;
     const d = dcode.get(combo.code);
     if (d) urls.push(`${base}/formations/${combo.categorie}/${d.slug}`);
   }
@@ -868,7 +873,6 @@ seoRouter.get("/sitemap.xml", (req, res) => {
 // ---------- hub ----------
 seoRouter.get("/formations", (req, res) => {
   const allCats = (listCategories() as { slug: string; nom: string; n: number }[]).filter((c) => c.n > 0);
-  const HIDDEN_CAT_SLUGS = ["maquillage-spectacle","secretariat-assistanat-specialise","communication-professionnelle","action-commerciale"];
   const cats = allCats.filter((c) => !HIDDEN_CAT_SLUGS.includes(c.slug));
   const canonical = `${baseUrl(req)}/formations`;
   const stats = globalStats();
@@ -996,6 +1000,11 @@ ${listMetiers().map((m) => {
   <span class="mt-cta">Voir les formations →</span>
 </a>`;}).join("")}
 </div>
+
+<div class="section-label"><h2>🗂️ Toutes les formations par catégorie</h2><span class="section-label-line"></span></div>
+<nav class="chips" aria-label="Catégories de formations">
+${cats.map((c) => `<a class="chip" href="/formations/${c.slug}">${categoryEmoji(c.nom)} ${esc(normCat(c.nom))} (${c.n})</a>`).join("")}
+</nav>
 
 <div class="section-label"><h2>📖 Conseils &amp; guides</h2><span class="section-label-line"></span></div>
 <div class="grid">
@@ -1440,7 +1449,7 @@ ${withSidebar(sidebar2, formationCards(items))}`;
       title: `Formation ${cat.nom} à ${nomV} – CPF | Formation Santé Bien-être`,
       description: `Formations ${cat.nom} à ${nomV} éligibles au CPF. Organismes, tarifs, à distance ou présentiel.`,
       canonical,
-      noindex: items.length < 3,
+      noindex: items.length < 3 || HIDDEN_CAT_SLUGS.includes(req.params.categorie),
       jsonLd: [courseListLd(items, canonical)],
       breadcrumb: [
         { name: "Accueil", url: `${base}/formations` },
@@ -1797,6 +1806,7 @@ ${blogLinks}`;
       title: `Formations ${catDisplay} CPF – ${r.total} formations Qualiopi | Formation Santé Bien-être`,
       description: metaDesc,
       canonical,
+      noindex: HIDDEN_CAT_SLUGS.includes(slug),
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
       jsonLd: catFaq.length ? [courseListLd(r.items, canonical), faqPageLd(catFaq)] : [courseListLd(r.items, canonical)],
       breadcrumb: [
@@ -1898,7 +1908,7 @@ ${voisinsHtml}
       title: `Formation ${catDisplay2} ${dept.nom} – CPF | Formation Santé Bien-être`,
       description: `${r.total} formation${r.total > 1 ? "s" : ""} ${catDisplay2} dans le ${dept.nom} éligibles au CPF. Organismes certifiés Qualiopi, présentiel et distance. Demande gratuite.`,
       canonical,
-      noindex: r.items.length < 3,
+      noindex: r.items.length < 3 || HIDDEN_CAT_SLUGS.includes(slug),
       ogImage: CAT_OG_IMAGES[slug] ?? DEFAULT_OG_IMAGE,
       jsonLd: [courseListLd(r.items, canonical)],
       breadcrumb: [

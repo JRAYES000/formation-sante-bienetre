@@ -297,7 +297,9 @@ export function seoDepartements(): SeoDept[] {
   }));
 }
 
-// Couples (catégorie × département) existants → pour le sitemap et la validation des routes.
+// Couples (catégorie × département) pour le sitemap et IndexNow.
+// Aligné sur la règle noindex des pages (items.length < 3 → noindex, cf. seo.ts) :
+// on n'inclut dans le sitemap que les combos réellement indexables (n >= 3).
 export function seoCombos(): { categorie: string; code: string; dept: string; n: number }[] {
   return sqlite
     .prepare(
@@ -308,7 +310,7 @@ export function seoCombos(): { categorie: string; code: string; dept: string; n:
        JOIN formation_departements fd ON fd.numero_formation = f.numero_formation
        WHERE f.is_active = 1 AND fd.departement IS NOT NULL
        GROUP BY c.slug, fd.code_departement
-       HAVING n > 0`
+       HAVING n >= 3`
     )
     .all() as { categorie: string; code: string; dept: string; n: number }[];
 }
