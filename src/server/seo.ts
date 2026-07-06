@@ -330,7 +330,7 @@ ${o.updatedAt ? `<meta property="article:modified_time" content="${esc(o.updated
 <body>
 <header><div class="wrap">
   <a href="/formations" style="text-decoration:none;flex-shrink:0;display:flex;align-items:center">
-    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" style="height:36px;width:auto;display:block">
+    <img src="/images/logo-header.png" alt="Formation Santé Bien-être" width="1313" height="248" style="height:36px;width:auto;display:block">
   </a>
   <nav class="header-nav">
     <a href="/formations">Formations</a>
@@ -495,7 +495,7 @@ function buildSidebar(o: SidebarOpts): string {
   <h3>Par métier</h3>
   <div class="sb-scroll">
     ${o.allCats
-      .filter((c) => c.slug !== "maquillage-spectacle")
+      .filter((c) => !HIDDEN_CAT_SLUGS.includes(c.slug))
       .map((c) => {
         const active = c.slug === o.currentCatSlug;
         return `<a class="sb-link${active ? " active" : ""}" href="/formations/${c.slug}">
@@ -1761,7 +1761,10 @@ seoRouter.get("/formations/:categorie", (req, res, next) => {
   const canonical = `${base}/formations/${slug}`;
   const dcode = deptByCode();
 
+  // Ne lier que les départements dont la page est indexable (n >= 3, cf. règle noindex) :
+  // jamais de lien interne vers une page noindex (audit Challenge #1, constat n°6).
   const sidebarDepts = r.facets.departements
+    .filter((d: any) => d.n >= 3)
     .slice(0, 30)
     .map((d: any) => {
       const di = dcode.get(d.code);
@@ -1832,7 +1835,7 @@ ${blogLinks}`;
 });
 
 // ---------- 404 SSR helper ----------
-function render404(req: Request): string {
+export function render404(req: Request): string {
   const base = baseUrl(req);
   return renderPage({
     title: "Page introuvable (404) | Formation Santé Bien-être",
@@ -1904,11 +1907,25 @@ seoRouter.get("/formations/:categorie/:dept", (req, res, next) => {
 </div></div>`
     : "";
 
+  // Audit Challenge #1, constat n°7 : maillage vers les pages ville×catégorie
+  // (382 pages ville non découvertes). Uniquement des villes indexables (n >= 3).
+  const villesCat = seoVilleCombos()
+    .filter((c) => c.categorie === slug)
+    .sort((a, b) => b.n - a.n)
+    .slice(0, 8);
+  const villesCatHtml = villesCat.length
+    ? `<div class="mesh"><h2>${esc(catDisplay2)} dans les grandes villes</h2><div class="chips">
+  ${villesCat.map((c) => `<a class="chip" href="/ville/${slugify(c.ville)}/${esc(slug)}">🏙️ ${esc(titleCaseVille(c.ville))} (${c.n})</a>`).join("")}
+  <a class="chip" href="/villes">📍 Toutes les villes</a>
+</div></div>`
+    : "";
+
   const body = `<a class="back-btn" href="/formations/${slug}">← ${esc(catDisplay2)} — toute la France</a>
 <h1>Formation ${esc(catDisplay2)} ${esc(dept.nom)} – CPF</h1>
 <p class="lead">${r.total} formation${r.total > 1 ? "s" : ""} ${esc(catDisplay2)} dans le ${esc(dept.nom)}, éligibles au CPF${qualiopi2 > 0 ? ` dont ${qualiopi2} certifiées Qualiopi` : ""}. Comparez les organismes et demandez vos informations.</p>
 ${withSidebar(sidebar, cards)}
 ${voisinsHtml}
+${villesCatHtml}
 <div class="mesh"><h2>Formations ${esc(catDisplay2)} dans d'autres régions</h2><div class="chips">
   <a class="chip" href="/formations/${esc(slug)}">🗺️ Toute la France (${national.total})</a>
   <a class="chip" href="/blog">📖 Nos guides</a>

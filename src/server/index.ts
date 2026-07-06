@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { ensureSchema } from "../db/index.ts";
 import { seedPartenaires, countFormations } from "./storage.ts";
 import { publicRouter, adminRouter } from "./routes.ts";
-import { seoRouter } from "./seo.ts";
+import { seoRouter, render404 } from "./seo.ts";
 import { analyticsRouter } from "./analytics.ts";
 import { INDEXNOW_KEY } from "./indexnow.ts";
 import { ingestPole } from "../ingest/ingest.ts";
@@ -65,8 +65,13 @@ app.use("/", analyticsRouter);
 // Pages SEO rendues côté serveur (URLs propres crawlables) + sitemap/robots
 app.use("/", seoRouter);
 
-// SPA fallback pour les routes client (hash routing)
-app.get("*", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
+// SPA servie uniquement à la racine : le front est en hash routing (/#/...),
+// aucune route client ne nécessite d'autre chemin serveur que "/".
+app.get("/", (_req, res) => res.sendFile(resolve(publicDir, "index.html")));
+
+// Tout chemin inconnu renvoie désormais un vrai 404 SSR
+// (fin des soft 404 — audit Challenge #1, constat n°9).
+app.use((req, res) => res.status(404).send(render404(req)));
 
 const port = Number(process.env.PORT ?? 3001);
 app.listen(port, () => {
